@@ -6,7 +6,7 @@ from PIL import Image  # Importujemy bibliotekę PIL
 
 # Menu boczne (sidebar)
 st.sidebar.title("Menu")
-page = st.sidebar.selectbox("Choose", ["MAIN", "STRING Network", "Cytoscape", "Metascape"])
+page = st.sidebar.selectbox("Choose", ["MAIN", "Introduction", "Datasets description", "MOUSE COMPARATIVE PALMITOYLOME", "RAT COMPARATIVE PALMITOYLOME"])
 # Strona główna
 if page == "MAIN":
     st.title("RAT AND MOUSE COMPARATIVE") 
