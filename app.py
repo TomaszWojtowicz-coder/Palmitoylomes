@@ -4,12 +4,12 @@ from PIL import Image  # Importujemy bibliotekę PIL
 
 # Menu boczne (sidebar)
 st.sidebar.title("Menu")
-page = st.sidebar.selectbox("Wybierz stronę", ["Główna", "STRING Network", "Cytoscape", "Metascape"])
+page = st.sidebar.selectbox("Choose", ["MAIN", "STRING Network", "Cytoscape", "Metascape"])
 
 # Strona główna
-if page == "Główna":
-    st.title("Witamy w aplikacji")
-    st.write("Wybierz jedną z sekcji w menu po lewej stronie.")
+if page == "MAIN":
+    st.title("WELCOME TO RAT AND MOUSE BRAIN TISSUE PALMITOYLOME")
+    st.write("CHOOSE SECTION")
 
 # Sekcja: STRING Network
 elif page == "STRING Network":
@@ -45,7 +45,7 @@ elif page == "Cytoscape":
 # Sekcja: Metascape
 elif page == "Metascape":
     st.title("Metascape Visualization")
-    st.markdown("[Otwórz wizualizację Metascape](https://metascape.org/gp/Content/CyJS/index.html?session_id=thqv3v8hs&Network=GONetwork&Style=ColorByCluster#/)")
+    st.markdown("[OPEN Metascape Visualization](https://metascape.org/gp/Content/CyJS/index.html?session_id=thqv3v8hs&Network=GONetwork&Style=ColorByCluster#/)")
     st.write("Lub zobacz podgląd tutaj:")
     st.components.v1.iframe(
         "https://metascape.org/gp/Content/CyJS/index.html?session_id=thqv3v8hs&Network=GONetwork&Style=ColorByCluster#/",
@@ -55,8 +55,8 @@ elif page == "Metascape":
     )
 
 # Sekcja: Enrichment Heatmap
-st.sidebar.header("Dodatkowe zasoby")
-if st.sidebar.checkbox("Pokaż Heatmap PDF"):
+st.sidebar.header("EXTRAS")
+if st.sidebar.checkbox("SHOW Heatmap PDF"):
     st.title("Enrichment Heatmap")
     try:
         with open("Enrichment_heatmap_HeatmapSelectedGO.pdf", "rb") as pdf_file:
