@@ -48,10 +48,10 @@ elif page == "Metascape":
     st.markdown("[Otwórz wizualizację Metascape](https://metascape.org/gp/Content/CyJS/index.html?session_id=thqv3v8hs&Network=GONetwork&Style=ColorByCluster#/)")
     st.write("Lub zobacz podgląd tutaj:")
     st.components.v1.iframe(
-       src="https://metascape.org/gp/Content/CyJS/index.html?session_id=thqv3v8hs&Network=GONetwork&Style=ColorByCluster#/",
-       height=800,  # Dopasuj wysokość do swoich potrzeb
-       width="90%",  # Ustaw szerokość na 90% szerokości strony
-       scrolling=True
+        "https://metascape.org/gp/Content/CyJS/index.html?session_id=thqv3v8hs&Network=GONetwork&Style=ColorByCluster#/",
+        height=800,  # Dopasuj wysokość do swoich potrzeb
+        width="90%",  # Ustaw szerokość na 90% szerokości strony
+        scrolling=True
     )
 
 # Sekcja: Enrichment Heatmap
