@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit_image_zoom import image_zoom
 
 # Menu boczne (sidebar)
 st.sidebar.title("Menu")
@@ -13,6 +14,19 @@ if page == "Główna":
 elif page == "STRING Network":
     st.title("STRING Network")
     st.image("STRING network - 2--clustered.png", caption="STRING Network Visualization", use_container_width=True)
+
+# Ładowanie obrazu z opcją zoom
+try:
+    img_path = "STRING network - 2--clustered.png"
+    zoomed_img = image_zoom(img_path)
+    if zoomed_img is not None:
+        st.image(zoomed_img, caption="STRING Network Visualization (Zoomed)", use_container_width=True)
+except FileNotFoundError:
+    st.error(f"Nie znaleziono pliku: {img_path}. Upewnij się, że plik istnieje.")
+
+
+
+
 
 # Sekcja: Cytoscape
 elif page == "Cytoscape":
@@ -40,3 +54,5 @@ if st.sidebar.checkbox("Pokaż Heatmap PDF"):
     st.download_button(label="Pobierz PDF", data=pdf_data, file_name="Enrichment_heatmap_HeatmapSelectedGO.pdf", mime="application/pdf")
     st.write("Podgląd:")
     st.pdf("Enrichment_heatmap_HeatmapSelectedGO.pdf")
+
+st.title("STRING Network with Zoom")
