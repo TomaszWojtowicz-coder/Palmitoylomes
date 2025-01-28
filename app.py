@@ -2,6 +2,22 @@ import streamlit as st
 from streamlit_image_zoom import image_zoom
 from PIL import Image  # Importujemy bibliotekę PIL
 
+
+# Load and display the logo
+logo_path = "Logo.webp"  # Update the path if needed
+st.image(logo_path, use_column_width=True)
+
+# Menu boczne (sidebar)
+st.sidebar.title("Menu")
+page = st.sidebar.selectbox("Wybierz stronę", ["Główna", "STRING Network", "Cytoscape", "Metascape"])
+
+# Rest of your code continues...
+if page == "Główna":
+    st.title("Witamy w aplikacji")
+    st.write("Wybierz jedną z sekcji w menu po lewej stronie.")
+
+
+
 # Menu boczne (sidebar)
 st.sidebar.title("Menu")
 page = st.sidebar.selectbox("Choose", ["MAIN", "STRING Network", "Cytoscape", "Metascape"])
