@@ -8,8 +8,10 @@ page = st.sidebar.selectbox("Choose", ["MAIN", "STRING Network", "Cytoscape", "M
 
 # Strona główna
 if page == "MAIN":
-    st.title("WELCOME TO RAT AND MOUSE BRAIN TISSUE PALMITOYLOME")
-    st.write("CHOOSE SECTION")
+    st.title("WELCOME TO RAT AND MOUSE") 
+    st.title("")
+    st.title("BRAIN TISSUE PALMITOYLOME")
+    #st.write("CHOOSE SECTION")
 
 # Sekcja: STRING Network
 elif page == "STRING Network":
