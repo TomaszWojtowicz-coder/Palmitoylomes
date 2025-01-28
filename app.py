@@ -2,10 +2,6 @@ import streamlit as st
 from streamlit_image_zoom import image_zoom
 from PIL import Image  # Importujemy bibliotekę PIL
 
-# Menu boczne (sidebar)
-st.sidebar.title("Menu")
-page = st.sidebar.selectbox("Choose", ["MAIN", "STRING Network", "Cytoscape", "Metascape"])
-
 # Strona główna
 if page == "MAIN":
     st.title("WELCOME TO RAT AND MOUSE") 
@@ -15,6 +11,11 @@ if page == "MAIN":
 # Load and display the logo
 logo_path = "Logo.webp"  # Update the path if needed
 st.image(logo_path, use_column_width=True)
+
+
+# Menu boczne (sidebar)
+st.sidebar.title("Menu")
+page = st.sidebar.selectbox("Choose", ["MAIN", "STRING Network", "Cytoscape", "Metascape"])
 
 # Sekcja: STRING Network
 elif page == "STRING Network":
