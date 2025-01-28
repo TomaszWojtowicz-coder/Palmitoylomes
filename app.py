@@ -49,8 +49,8 @@ elif page == "Metascape":
     st.write("Lub zobacz podgląd tutaj:")
     st.components.v1.iframe(
         "https://metascape.org/gp/Content/CyJS/index.html?session_id=thqv3v8hs&Network=GONetwork&Style=ColorByCluster#/",
-        height=800,  # Dopasuj wysokość do swoich potrzeb
-        width="90%",  # Ustaw szerokość na 90% szerokości strony
+        height=800,  # Wysokość iframe
+        width=1200,  # Szerokość w pikselach
         scrolling=True
     )
 
