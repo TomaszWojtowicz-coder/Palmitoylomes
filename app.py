@@ -9,9 +9,9 @@ st.sidebar.title("Menu")
 page = st.sidebar.selectbox("Choose", ["MAIN", "STRING Network", "Cytoscape", "Metascape"])
 # Strona główna
 if page == "MAIN":
-    st.title("WELCOME TO RAT AND MOUSE") 
+    st.title("RAT AND MOUSE COMPARATIVE") 
     #st.title("")
-    st.title("BRAIN TISSUE PALMITOYLOME")
+    st.title("BRAIN TISSUE PALMITOYLOMES")
     # st.write("CHOOSE SECTION")
 # Load and display the logo
     # Load and display the logo
