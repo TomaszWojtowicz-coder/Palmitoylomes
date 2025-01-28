@@ -12,7 +12,7 @@ if page == "Główna":
 # Sekcja: STRING Network
 elif page == "STRING Network":
     st.title("STRING Network")
-    st.image("2--clustered.png", caption="STRING Network Visualization", use_column_width=True)
+    st.image("STRING network - 2--clustered.png", caption="STRING Network Visualization", use_container_width=True)
 
 # Sekcja: Cytoscape
 elif page == "Cytoscape":
