@@ -1,6 +1,6 @@
 import streamlit as st
-from PIL import Image
-import matplotlib.pyplot as plt
+from streamlit_image_zoom import image_zoom
+from PIL import Image  # Importujemy bibliotekę PIL
 
 # Menu boczne (sidebar)
 st.sidebar.title("Menu")
@@ -14,21 +14,20 @@ if page == "Główna":
 # Sekcja: STRING Network
 elif page == "STRING Network":
     st.title("STRING Network")
-    
-    # Wczytanie obrazu
-    img_path = "STRING network - 2--clustered.png"
     try:
-        img = Image.open(img_path)
-        st.image(img, caption="STRING Network Visualization", use_container_width=True)
+        img_path = "STRING network - 2--clustered.png"
         
-        # Wyświetlanie obrazu z możliwością powiększania
-        st.write("Kliknij na obrazek, aby powiększyć (zoom).")
-        fig, ax = plt.subplots()
-        ax.imshow(img)
-        ax.axis('off')  # Wyłącz osie
-        st.pyplot(fig)
+        # Otwieramy obraz przy użyciu PIL (Pillow)
+        img = Image.open(img_path)
+
+        # Przekazujemy obraz do funkcji image_zoom
+        zoomed_img = image_zoom(img)
+        if zoomed_img is not None:
+            st.image(zoomed_img, caption="STRING Network Visualization (Zoomed)", use_container_width=True)
     except FileNotFoundError:
         st.error(f"Nie znaleziono pliku: {img_path}. Upewnij się, że plik istnieje.")
+    except Exception as e:
+        st.error(f"Wystąpił błąd: {e}")
 
 # Sekcja: Cytoscape
 elif page == "Cytoscape":
