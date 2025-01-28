@@ -6,7 +6,7 @@ from PIL import Image  # Importujemy bibliotekę PIL
 
 # Menu boczne (sidebar)
 st.sidebar.title("Menu")
-page = st.sidebar.selectbox("Choose", ["MAIN", "Introduction", "Datasets description", "MOUSE COMPARATIVE PALMITOYLOME", "RAT COMPARATIVE PALMITOYLOME"])
+page = st.sidebar.selectbox("Choose", ["MAIN", "Project description", "Datasets description"])
 # Strona główna
 if page == "MAIN":
     st.title("RAT AND MOUSE COMPARATIVE") 
@@ -64,6 +64,8 @@ elif page == "Metascape":
     )
 
 # Sekcja: Enrichment Heatmap
+st.sidebar.header("MOUSE COMPARATIVE PALMITOYLOME")
+st.sidebar.header("RAT COMPARATIVE PALMITOYLOME")
 st.sidebar.header("EXTRAS")
 if st.sidebar.checkbox("SHOW Heatmap PDF"):
     st.title("Enrichment Heatmap")
