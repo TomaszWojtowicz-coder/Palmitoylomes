@@ -1,5 +1,6 @@
 import streamlit as st
-from streamlit_image_zoom import image_zoom
+from PIL import Image
+import matplotlib.pyplot as plt
 
 # Menu boczne (sidebar)
 st.sidebar.title("Menu")
@@ -13,11 +14,19 @@ if page == "Główna":
 # Sekcja: STRING Network
 elif page == "STRING Network":
     st.title("STRING Network")
+    
+    # Wczytanie obrazu
+    img_path = "STRING network - 2--clustered.png"
     try:
-        img_path = "STRING network - 2--clustered.png"
-        zoomed_img = image_zoom(img_path)
-        if zoomed_img is not None:
-            st.image(zoomed_img, caption="STRING Network Visualization (Zoomed)", use_container_width=True)
+        img = Image.open(img_path)
+        st.image(img, caption="STRING Network Visualization", use_container_width=True)
+        
+        # Wyświetlanie obrazu z możliwością powiększania
+        st.write("Kliknij na obrazek, aby powiększyć (zoom).")
+        fig, ax = plt.subplots()
+        ax.imshow(img)
+        ax.axis('off')  # Wyłącz osie
+        st.pyplot(fig)
     except FileNotFoundError:
         st.error(f"Nie znaleziono pliku: {img_path}. Upewnij się, że plik istnieje.")
 
