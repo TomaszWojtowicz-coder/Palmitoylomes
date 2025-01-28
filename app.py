@@ -15,7 +15,7 @@ if page == "MAIN":
     # st.write("CHOOSE SECTION")
 # Load and display the logo
     # Load and display the logo
-    logo_path = "logo.webp"  # Update the path if needed
+    logo_path = "Logo.webp"  # Update the path if needed
     st.image(logo_path, use_container_width=True)
 #logo_path = "logo3.webp"  # Update the path if needed
  #   st.image(logo_path, use_column_width=True)
