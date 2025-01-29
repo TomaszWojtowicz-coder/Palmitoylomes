@@ -6,19 +6,39 @@ import os
 
 # Ustawienie strony na pełną szerokość
 st.set_page_config(layout="wide")
+
 # CSS for dark theme
 st.markdown("""
     <style>
         body {
-            background-color: black;
-            color: white;
+            background-color: #0b132b; /* Granatowe tło */
+            color: white; /* Biały tekst */
+            font-family: 'Arial', sans-serif;
         }
         .stApp {
-            background-color: black;
+            background-color: #0b132b;
+        }
+        .block-container {
+            padding: 2rem;
+            border-radius: 10px;
+            background-color: #1a1a40; /* Ciemnofioletowy pasek wokół aplikacji */
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #ffcc00; /* Złote nagłówki */
         }
         .stDataFrame, .stTable {
-            background-color: #1e1e1e; /* Ciemniejszy kolor dla tabel */
+            background-color: #1c2541; /* Ciemnogranatowe tabele */
             color: white;
+        }
+        .stButton > button {
+            background-color: #ffcc00; /* Złote przyciski */
+            color: black;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .sidebar .sidebar-content {
+            background-color: #1a1a40; /* Ciemnofioletowy sidebar */
         }
     </style>
 """, unsafe_allow_html=True)
