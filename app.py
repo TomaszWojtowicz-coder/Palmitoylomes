@@ -54,7 +54,7 @@ elif page == "PROJECT DESCRIPTION":
 #DATASETS DESCRIPTION
 # 📊 Sekcja: Wyświetlanie danych z Excela
 elif page == "ALL PROTEINS MERGED-TABLE":
-    #st.title("Excel Data: All Merged")
+    #st.title("All reported palmitoylated proteins merged in single database. Use multifilter to filter data")
     #filtered_df = st.data_editor(df, use_container_width=True, num_rows="dynamic")  # Enables filtering
 
     df = pd.read_excel(file_path, engine="openpyxl")
