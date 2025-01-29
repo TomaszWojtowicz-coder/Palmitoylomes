@@ -8,7 +8,7 @@ import os
 # Ustawienie strony na pełną szerokość
 st.set_page_config(layout="wide")
 
-# CSS for dark theme with updates to smaller text (white or gold)
+# CSS for dark theme with updated text size, color (gold), and sidebar color
 st.markdown("""
     <style>
         /* Zmiana ogólnych ustawień tła aplikacji */
@@ -24,12 +24,12 @@ st.markdown("""
 
         /* Zmiana stylu nagłówków */
         h1, h2, h3, h4, h5, h6 {
-            color: #EAB8E4 !important;  /* Kolor nagłówków na różowy */
+            color: #EAB8E4 !important;  /* Kolor nagłówków na złoty (gold) */
         }
 
         /* Sidebar (menu z lewej strony) */
         .stSidebar {
-            background-color: #6A0DAD !important;  /* Kolor tła bocznego menu */
+            background-color: #1F1A3D !important;  /* Kolor tła bocznego menu - teraz taki sam jak górny pasek */
             color: white !important;  /* Kolor czcionki na biały */
         }
 
@@ -40,12 +40,12 @@ st.markdown("""
 
         /* Styl dla elementów w sidebarze */
         .stSidebarContent {
-            background-color: #6A0DAD !important;
+            background-color: #1F1A3D !important;
         }
 
         /* Zmiana tła dla przycisków */
         .stButton > button {
-            background-color: #EAB8E4;  /* Kolor tła przycisków na różowy */
+            background-color: #EAB8E4;  /* Kolor tła przycisków na złoty */
             color: black;  /* Kolor czcionki przycisków na czarny */
         }
 
@@ -66,15 +66,12 @@ st.markdown("""
             color: #EAB8E4 !important;
         }
 
-        /* Target smaller font text, set to white or gold */
+        /* Target smaller font text, set to gold and increase font size */
         .stMarkdown p, .stText {
-            color: white !important;  /* White text */
-            font-size: 14px;  /* Optional: adjust font size for better readability */
+            color: #EAB8E4 !important;  /* Gold text */
+            font-size: 18px !important;  /* Increase font size */
         }
 
-        .stMarkdown p {
-            color: #EAB8E4 !important;  /* Optional: Change to gold */
-        }
     </style>
 """, unsafe_allow_html=True)
 
@@ -84,20 +81,15 @@ file_path = "All_merged.xlsx"
 # Menu boczne (sidebar)
 st.sidebar.title("Menu")
 page = st.sidebar.selectbox("GENERAL INFORMATION", ["MAIN", "PROJECT DESCRIPTION", "DATASETS DESCRIPTION", "ALL PROTEINS MERGED-TABLE"])
+
 # Strona główna
 if page == "MAIN":
     st.title("RAT AND MOUSE COMPARATIVE") 
-    #st.title("")
     st.title("BRAIN TISSUE PALMITOYLOMES")
-    # st.write("CHOOSE SECTION")
-# Load and display the logo
-    # Load and display the logo
     logo_path = "Logo.webp"  # Update the path if needed
     st.image(logo_path, use_container_width=True)
-#logo_path = "logo3.webp"  # Update the path if needed
- #   st.image(logo_path, use_column_width=True)
 
-#PROJECT DESCRIPTION
+# PROJECT DESCRIPTION
 elif page == "PROJECT DESCRIPTION":
     st.title("Project Description")
     st.write("""
@@ -122,45 +114,29 @@ elif page == "PROJECT DESCRIPTION":
     """)
 
 
-#DATASETS DESCRIPTION
-# 📊 Sekcja: Wyświetlanie danych z Excela
+# DATASETS DESCRIPTION
 elif page == "ALL PROTEINS MERGED-TABLE":
-    #st.title("a")
-    #filtered_df = st.data_editor(df, use_container_width=True, num_rows="dynamic")  # Enables filtering
-
     df = pd.read_excel(file_path, engine="openpyxl")
     st.title("Multi-Filter Excel Data")
-    # Select multiple columns to filter
     filter_columns = st.multiselect("All reported palmitoylated proteins merged in single database. Use multifilter to filter data:", df.columns, default=df.columns[:8])  # Limit to 8
-    # Dictionary to store selected filters
     filters = {}
-    # Create multiselect filters for each selected column
     for column in filter_columns:
         unique_values = df[column].dropna().unique()  # Get unique values
         selected_values = st.multiselect(f"Filter {column}:", unique_values)  # Allow selection
         if selected_values:
             filters[column] = selected_values  # Store selections
 
-    # Apply multiple filters dynamically
     for column, selected_values in filters.items():
         df = df[df[column].isin(selected_values)]
 
-    # Display the filtered table
     st.dataframe(df, use_container_width=True)
-    
-    
 
-
-# Sekcja: STRING Network
+# STRING Network
 elif page == "STRING Network":
     st.title("STRING Network")
     try:
         img_path = "STRING network - 2--clustered.png"
-        
-        # Otwieramy obraz przy użyciu PIL (Pillow)
         img = Image.open(img_path)
-
-        # Przekazujemy obraz do funkcji image_zoom
         zoomed_img = image_zoom(img)
         if zoomed_img is not None:
             st.image(zoomed_img, caption="STRING Network Visualization (Zoomed)", use_container_width=True)
@@ -169,7 +145,7 @@ elif page == "STRING Network":
     except Exception as e:
         st.error(f"An error occurred: {e}")
 
-# Sekcja: Cytoscape
+# Cytoscape
 elif page == "Cytoscape":
     st.title("Cytoscape Network")
     st.write("Download the .cys file for visualization in Cytoscape:")
@@ -182,31 +158,14 @@ elif page == "Cytoscape":
     except FileNotFoundError:
         st.error("Cytoscape file not found. Make sure it has been uploaded.")
 
-# Sekcja: Metascape
+# Metascape
 elif page == "Metascape":
     st.title("Metascape Visualization")
     st.markdown("[OPEN Metascape Visualization](https://metascape.org/gp/Content/CyJS/index.html?session_id=thqv3v8hs&Network=GONetwork&Style=ColorByCluster#/)")
     st.write("Or view a preview here:")
     st.components.v1.iframe(
         "https://metascape.org/gp/Content/CyJS/index.html?session_id=thqv3v8hs&Network=GONetwork&Style=ColorByCluster#/",
-        height=800,  # Wysokość iframe
-        width="100%",  # Szerokość w procentach
+        height=800,
+        width="100%",
         scrolling=True
     )
-
-# Sekcja: Enrichment Heatmap
-#st.sidebar.header("MOUSE COMPARATIVE PALMITOYLOME")
-#st.sidebar.header("RAT COMPARATIVE PALMITOYLOME")
-#st.sidebar.header("EXTRAS")
-#if st.sidebar.checkbox("SHOW Heatmap PDF"):
-#    st.title("Enrichment Heatmap")
-#    try:
-#        with open("Enrichment_heatmap_HeatmapSelectedGO.pdf", "rb") as pdf_file:
-#            pdf_data = pdf_file.read()
-#        st.download_button(label="Download Heatmap PDF", data=pdf_data, file_name="Enrichment_heatmap_HeatmapSelectedGO.pdf", mime="application/pdf")
- #       st.markdown("""
-  #      <iframe src="Enrichment_heatmap_HeatmapSelectedGO.pdf" width="100%" height="600px">
-   #     </iframe>
-    #    """, unsafe_allow_html=True)
-  #  except FileNotFoundError:
-   #     st.error("Heatmap PDF file not found. Ensure it has been uploaded.")
