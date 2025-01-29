@@ -54,31 +54,23 @@ elif page == "PROJECT DESCRIPTION":
 #DATASETS DESCRIPTION
 # 📊 Sekcja: Wyświetlanie danych z Excela
 elif page == "ALL PROTEINS MERGED-TABLE":
-    st.title("Excel Data: All Merged")
-    filtered_df = st.data_editor(df, use_container_width=True, num_rows="dynamic")  # Enables filtering
+    #st.title("Excel Data: All Merged")
+    #filtered_df = st.data_editor(df, use_container_width=True, num_rows="dynamic")  # Enables filtering
 
-    
-    if os.path.exists(file_path):
-        try:
-            # ✅ Sprawdzenie rozmiaru pliku
-            if os.path.getsize(file_path) == 0:
-                st.error("❌ Excel file is empty.")
-            else:
-                # ✅ Wczytanie pliku Excel
-                df = pd.read_excel(file_path, engine="openpyxl")
+    df = pd.read_excel(file_path, engine="openpyxl")
+    st.title("Filter Excel Data")
+    # Select a column to filter
+    filter_column = st.selectbox("Select column to filter:", df.columns)
+    # Get unique values in that column
+    unique_values = df[filter_column].dropna().unique()
+    # Create a filter selection
+    selected_values = st.multiselect(f"Filter {filter_column}:", unique_values)
+    # Apply filtering
+    if selected_values:
+        df = df[df[filter_column].isin(selected_values)]
+    # Display the filtered table
+    st.dataframe(df, use_container_width=True)
 
-                # ✅ Sprawdzenie, czy dane nie są puste
-                if df.empty:
-                    st.warning("⚠️ The file was loaded but contains no data.")
-                else:
-                    # ✅ Wyświetlenie tabeli
-                    st.dataframe(df, use_container_width=True)
-                    st.write(f"📊 Data contains {df.shape[0]} rows and {df.shape[1]} columns.")
-        
-        except Exception as e:
-            st.error(f"❌ Error loading Excel file: {e}")
-    else:
-        st.error(f"❌ File not found: {file_path}. Please upload the correct file.")
 
 # Sekcja: STRING Network
 elif page == "STRING Network":
