@@ -2,21 +2,14 @@ import streamlit as st
 from streamlit_image_zoom import image_zoom
 from PIL import Image  # Importujemy bibliotekę PIL
 import pandas as pd
+import os
 
-
-# Wczytaj plik Excel (zmień nazwę pliku na własną)
+# Ścieżka do pliku Excel
 file_path = "All_merged.xlsx"
-
-# Wczytanie arkusza do DataFrame
-df = pd.read_excel(file_path, engine="openpyxl")
-
-# Wyświetlenie tabeli w Streamlit
-st.title("All data merged")
-st.dataframe(df)  # Możesz użyć st.table(df) dla statycznej tabeli
 
 # Menu boczne (sidebar)
 st.sidebar.title("Menu")
-page = st.sidebar.selectbox("Choose", ["MAIN", "Project description", "Datasets description"])
+page = st.sidebar.selectbox("Choose", ["MAIN", "Project description", "Datasets description", "View Excel Data"])
 # Strona główna
 if page == "MAIN":
     st.title("RAT AND MOUSE COMPARATIVE") 
@@ -32,6 +25,21 @@ if page == "MAIN":
 
 
 # Sekcja: STRING Network
+elif page == "View Excel Data":
+    st.title("Excel Data: All Merged")
+    
+    if os.path.exists(file_path):
+        # Wczytanie pliku Excel do DataFrame
+        df = pd.read_excel(file_path, engine="openpyxl")
+        
+        # Wyświetlenie tabeli w Streamlit
+        st.dataframe(df)  # Możesz użyć st.table(df) dla statycznej tabeli
+        
+        # Informacja o liczbie wierszy i kolumn
+        st.write(f"📊 Data contains {df.shape[0]} rows and {df.shape[1]} columns.")
+    else:
+        st.error(f"❌ File not found: {file_path}. Please upload the correct file.")
+        
 elif page == "STRING Network":
     st.title("STRING Network")
     try:
