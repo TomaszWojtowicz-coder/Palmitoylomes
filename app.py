@@ -58,18 +58,26 @@ elif page == "ALL PROTEINS MERGED-TABLE":
     #filtered_df = st.data_editor(df, use_container_width=True, num_rows="dynamic")  # Enables filtering
 
     df = pd.read_excel(file_path, engine="openpyxl")
-    st.title("Filter Excel Data")
-    # Select a column to filter
-    filter_column = st.selectbox("Select column to filter:", df.columns)
-    # Get unique values in that column
-    unique_values = df[filter_column].dropna().unique()
-    # Create a filter selection
-    selected_values = st.multiselect(f"Filter {filter_column}:", unique_values)
-    # Apply filtering
-    if selected_values:
-        df = df[df[filter_column].isin(selected_values)]
+    st.title("Multi-Filter Excel Data")
+    # Select multiple columns to filter
+    filter_columns = st.multiselect("Select columns to filter:", df.columns, default=df.columns[:8])  # Limit to 8
+    # Dictionary to store selected filters
+    filters = {}
+    # Create multiselect filters for each selected column
+    for column in filter_columns:
+        unique_values = df[column].dropna().unique()  # Get unique values
+        selected_values = st.multiselect(f"Filter {column}:", unique_values)  # Allow selection
+        if selected_values:
+            filters[column] = selected_values  # Store selections
+
+    # Apply multiple filters dynamically
+    for column, selected_values in filters.items():
+        df = df[df[column].isin(selected_values)]
+
     # Display the filtered table
     st.dataframe(df, use_container_width=True)
+    
+    
 
 
 # Sekcja: STRING Network
