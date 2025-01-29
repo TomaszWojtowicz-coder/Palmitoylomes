@@ -8,18 +8,16 @@ import os
 st.set_page_config(layout="wide")
 
 # CSS for dark theme
-
-
 st.markdown("""
     <style>
-        /* Zmiana całego tła */
+        /* Tło strony */
         body, .stApp {
             background-color: #000000;
             color: white;
             font-family: 'Arial', sans-serif;
         }
 
-        /* Górny pasek nawigacyjny */
+        /* Zmiana koloru paska nawigacyjnego */
         header {
             background-color: #1F1A3D !important;
         }
@@ -32,7 +30,7 @@ st.markdown("""
             box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
         }
 
-        /* Zmiana koloru czcionek nagłówków */
+        /* Kolor nagłówków */
         h1, h2, h3, h4, h5, h6 {
             color: #EAB8E4 !important;
         }
@@ -58,18 +56,18 @@ st.markdown("""
             color: white !important;
         }
 
-        /* Sidebar napisy */
-        .css-1d391kg a, .css-1d391kg .stSidebarItem {
+        /* Sidebar: kolory tekstów i nagłówków */
+        .css-1d391kg .stSidebarItem, .css-1d391kg .stSidebarMenu {
             color: white !important;
             font-weight: bold;
         }
 
-        /* Linki */
+        /* Linki w aplikacji */
         a {
             color: #EAB8E4 !important;
         }
 
-        /* Zmiana koloru czcionki w zakładce Multi-Filter Excel Data */
+        /* Zmiana kolorów napisów w "Multi-Filter Excel Data" */
         .stText {
             color: white !important;
         }
