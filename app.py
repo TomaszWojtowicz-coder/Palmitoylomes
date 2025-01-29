@@ -4,6 +4,9 @@ from PIL import Image  # Importujemy bibliotekę PIL
 import pandas as pd
 import os
 
+# Ustawienie strony na pełną szerokość
+st.set_page_config(layout="wide")
+
 # Ścieżka do pliku Excel
 file_path = "All_merged.xlsx"
 
@@ -29,17 +32,20 @@ elif page == "View Excel Data":
     st.title("Excel Data: All Merged")
     
     if os.path.exists(file_path):
-        # Wczytanie pliku Excel do DataFrame
-        df = pd.read_excel(file_path, engine="openpyxl")
+        try:
+            # ✅ Wczytanie pliku Excel
+            df = pd.read_excel(file_path, engine="openpyxl")
+            
+            # ✅ Wyświetlenie tabeli na całą szerokość ekranu
+            st.dataframe(df, use_container_width=True)
+            
+            # 📌 Informacja o liczbie wierszy i kolumn
+            st.write(f"📊 Data contains {df.shape[0]} rows and {df.shape[1]} columns.")
         
-        # Wyświetlenie tabeli w Streamlit
-        st.dataframe(df)  # Możesz użyć st.table(df) dla statycznej tabeli
-        
-        # Informacja o liczbie wierszy i kolumn
-        st.write(f"📊 Data contains {df.shape[0]} rows and {df.shape[1]} columns.")
+        except Exception as e:
+            st.error(f"❌ Error loading Excel file: {e}")
     else:
         st.error(f"❌ File not found: {file_path}. Please upload the correct file.")
-        
 elif page == "STRING Network":
     st.title("STRING Network")
     try:
