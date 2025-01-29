@@ -103,7 +103,7 @@ if page == "MAIN":
     st.title("RAT AND MOUSE COMPARATIVE") 
     st.title("BRAIN TISSUE PALMITOYLOMES")
     logo_path = "Logo2.png"  # Update the path if needed
-    st.image(logo_path, use_container_width=True)
+    st.image(logo_path, use_container_width=False)
 
 # PROJECT DESCRIPTION
 elif page == "PROJECT DESCRIPTION":
