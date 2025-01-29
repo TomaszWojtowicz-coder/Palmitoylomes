@@ -30,22 +30,24 @@ if page == "MAIN":
 elif page == "PROJECT DESCRIPTION":
     st.title("Project Description")
     st.write("""
-    The aim of this project is to review existing mass spectrometry studies reporting on palmitate-enriched proteins in brain tissues of rat and mouse 
-    to understand the pattern of protein palmitoylation. Since results from many studies vary significantly, we present those proteins which were most
-    frequently reported to be palmitoylated. We hope this will help better nunderstand which protein families are regulated by this specific 
-    posttranslational modification. In addition, the presented database may be interesting for researchers searching for a target protein to study.
-    
-    **Key Objectives:**
-    - Merge published palmitoylomes obtained with mass spectrometry in one searchable database 
-      and provide a helpful tool
-    - Find proteins repetitively reported to be detected in palmitoylated form
-    - Describe protein families undergoing palmitoylation 
-    
-    **Methods:**
-    - Results of published proteomic analysis of brain tissue samples were downloaded, merged 
-    - GeneIDs coding palmitoylated proteins were assigned protein names and key characteristics in UniProt database. 
-    - Cytoscape, Metascape were used for visualization of enriched pathways.
+   **Project Overview**
 
+    The aim of this project is to review existing mass spectrometry studies reporting on palmitate-enriched proteins in rat and mouse brain tissues to better understand 
+    the patterns of protein palmitoylation. Since results from different studies vary significantly, we highlight proteins that have been most frequently reported as palmitoylated.
+    By compiling these findings, we hope to improve the understanding of which protein families are regulated by this specific post-translational modification. Additionally, 
+    the presented database may serve as a valuable resource for researchers looking for target proteins to study. 
+    
+    **Key Objectives**
+
+    - Integrate published palmitoylomes obtained via mass spectrometry into a searchable database as a useful research tool.
+    - Identify proteins that are consistently reported in their palmitoylated form.
+    - Characterize protein families that undergo palmitoylation.
+
+    **Methods**
+
+    - Data Collection: Proteomic analysis results from published studies on brain tissue samples were gathered and merged.
+    - Protein Identification: Gene IDs corresponding to palmitoylated proteins were mapped to protein names and key characteristics using the UniProt database.
+    - Data Visualization: Tools like Cytoscape and Metascape were used to visualize enriched pathways and analyze protein interactions.
     """)
 
 
