@@ -4,6 +4,24 @@ from PIL import Image  # Importujemy bibliotekę PIL
 import pandas as pd
 import os
 
+# CSS for dark theme
+st.markdown("""
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+        .stApp {
+            background-color: black;
+        }
+        .stDataFrame, .stTable {
+            background-color: #1e1e1e; /* Ciemniejszy kolor dla tabel */
+            color: white;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+
 # Ustawienie strony na pełną szerokość
 st.set_page_config(layout="wide")
 
