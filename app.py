@@ -8,8 +8,7 @@ import os
 # Ustawienie strony na pełną szerokość
 st.set_page_config(layout="wide")
 
-# CSS for dark theme
-
+# CSS for dark theme with updates to smaller text (white or gold)
 st.markdown("""
     <style>
         /* Zmiana ogólnych ustawień tła aplikacji */
@@ -66,10 +65,18 @@ st.markdown("""
         a {
             color: #EAB8E4 !important;
         }
+
+        /* Target smaller font text, set to white or gold */
+        .stMarkdown p, .stText {
+            color: white !important;  /* White text */
+            font-size: 14px;  /* Optional: adjust font size for better readability */
+        }
+
+        .stMarkdown p {
+            color: #EAB8E4 !important;  /* Optional: Change to gold */
+        }
     </style>
 """, unsafe_allow_html=True)
-
-
 
 # Ścieżka do pliku Excel
 file_path = "All_merged.xlsx"
