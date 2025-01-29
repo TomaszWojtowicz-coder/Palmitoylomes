@@ -54,13 +54,13 @@ elif page == "PROJECT DESCRIPTION":
 #DATASETS DESCRIPTION
 # 📊 Sekcja: Wyświetlanie danych z Excela
 elif page == "ALL PROTEINS MERGED-TABLE":
-    #st.title("All reported palmitoylated proteins merged in single database. Use multifilter to filter data")
+    #st.title("a")
     #filtered_df = st.data_editor(df, use_container_width=True, num_rows="dynamic")  # Enables filtering
 
     df = pd.read_excel(file_path, engine="openpyxl")
     st.title("Multi-Filter Excel Data")
     # Select multiple columns to filter
-    filter_columns = st.multiselect("Select columns to filter:", df.columns, default=df.columns[:8])  # Limit to 8
+    filter_columns = st.multiselect("All reported palmitoylated proteins merged in single database. Use multifilter to filter data:", df.columns, default=df.columns[:8])  # Limit to 8
     # Dictionary to store selected filters
     filters = {}
     # Create multiselect filters for each selected column
