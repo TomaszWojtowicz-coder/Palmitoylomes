@@ -4,98 +4,72 @@ from PIL import Image  # Importujemy bibliotekę PIL
 import pandas as pd
 import os
 
+
 # Ustawienie strony na pełną szerokość
 st.set_page_config(layout="wide")
 
 # CSS for dark theme
 
-
 st.markdown("""
     <style>
-        /* Tło całej aplikacji */
+        /* Zmiana ogólnych ustawień tła aplikacji */
         body, .stApp {
-            background-color: #000000;
-            color: white;
-            font-family: 'Arial', sans-serif;
+            background-color: #000000;  /* Tło całej strony na czarne */
+            color: white;  /* Kolor czcionki na biały */
         }
 
-        /* Zmiana koloru paska nawigacyjnego (górny pasek) */
+        /* Zmiana wyglądu górnego paska */
         header {
-            background-color: #1F1A3D !important;
+            background-color: #1F1A3D !important;  /* Kolor tła paska nawigacyjnego */
         }
 
-        /* Zmiana tła dla całej aplikacji */
-        .block-container {
-            background-color: #1F1A3D;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
-        }
-
-        /* Sidebar - zmiana tła i tekstów */
-        .css-1d391kg {
-            background-color: #6A0DAD !important; /* Kolor tła menu bocznego */
-        }
-
-        /* Zmiana koloru tekstu w sidebarze */
-        .css-1d391kg, .css-1d391kg .stSidebarItem, .css-1d391kg .stSidebarMenu, .css-1d391kg .stSidebarHeader {
-            color: white !important;
-            font-weight: bold;
-        }
-
-        /* Zmiana koloru ikon w sidebarze */
-        .css-1d391kg svg {
-            fill: white !important;
-        }
-
-        /* Tło dla selektorów, przycisków i inputów */
-        .stSelectbox, .stButton, .stTextInput, .stSlider, .stRadio {
-            background-color: #6A0DAD;
-            color: white !important;
-        }
-
-        /* Kolor tekstów nagłówków */
+        /* Zmiana stylu nagłówków */
         h1, h2, h3, h4, h5, h6 {
-            color: #EAB8E4 !important;
+            color: #EAB8E4 !important;  /* Kolor nagłówków na różowy */
         }
 
-        /* Stylowanie tabeli */
-        .stDataFrame, .stTable {
-            background-color: #6A0DAD;
-            color: white;
-            border-radius: 5px;
+        /* Sidebar (menu z lewej strony) */
+        .stSidebar {
+            background-color: #6A0DAD !important;  /* Kolor tła bocznego menu */
+            color: white !important;  /* Kolor czcionki na biały */
         }
 
-        /* Stylowanie przycisków */
-        .stButton > button {
-            background-color: #EAB8E4;
-            color: black;
-            font-weight: bold;
-            border-radius: 5px;
+        /* Ikony w sidebarze */
+        .stSidebar svg {
+            fill: white !important;  /* Kolor ikon w menu na biały */
         }
 
-        /* Zmiana kolorów linków */
-        a {
-            color: #EAB8E4 !important;
-        }
-
-        /* Zmiana wyglądu formularzy */
-        .stTextInput input, .stTextInput textarea {
-            background-color: #6A0DAD;
-            color: white !important;
-        }
-
-        /* Dostosowanie tła dla menu bocznego */
+        /* Styl dla elementów w sidebarze */
         .stSidebarContent {
             background-color: #6A0DAD !important;
         }
 
-        /* Zmiana tła i tekstu w głównych blokach */
-        .stText {
-            color: white !important;
+        /* Zmiana tła dla przycisków */
+        .stButton > button {
+            background-color: #EAB8E4;  /* Kolor tła przycisków na różowy */
+            color: black;  /* Kolor czcionki przycisków na czarny */
+        }
+
+        /* Stylowanie tła dla formularzy i inputów */
+        .stTextInput input, .stTextInput textarea {
+            background-color: #6A0DAD;  /* Kolor tła inputów na fioletowy */
+            color: white !important;  /* Kolor czcionki w inputach na biały */
+        }
+
+        /* Tabela - zmiana koloru tła i tekstu */
+        .stDataFrame, .stTable {
+            background-color: #6A0DAD;
+            color: white;
+        }
+
+        /* Kolory dla linków */
+        a {
+            color: #EAB8E4 !important;
         }
     </style>
 """, unsafe_allow_html=True)
+
+
 
 # Ścieżka do pliku Excel
 file_path = "All_merged.xlsx"
