@@ -12,7 +12,7 @@ file_path = "All_merged.xlsx"
 
 # Menu boczne (sidebar)
 st.sidebar.title("Menu")
-page = st.sidebar.selectbox("Choose", ["MAIN", "Project description", "Datasets description", "View Excel Data"])
+page = st.sidebar.selectbox("GENERAL INFORMATION", ["MAIN", "PROJECT DESCRIPTION", "DATASETS DESCRIPTION", "ALL PROTEINS MERGED-TABLE"])
 # Strona główna
 if page == "MAIN":
     st.title("RAT AND MOUSE COMPARATIVE") 
@@ -26,10 +26,32 @@ if page == "MAIN":
 #logo_path = "logo3.webp"  # Update the path if needed
  #   st.image(logo_path, use_column_width=True)
 
+#PROJECT DESCRIPTION
+elif page == "PROJECT DESCRIPTION":
+    st.title("Project Description")
+    st.write("""
+    The aim of this project is to review existing mass spectrometry studies reporting on palmitate-enriched proteins in brain tissues of rat and mouse 
+    to understand the pattern of protein palmitoylation. Since results from many studies vary significantly, we present those proteins which were most
+    frequently reported to be palmitoylated. We hope this will help better nunderstand which protein families are regulated by this specific 
+    posttranslational modification. In addition, the presented database may be interesting for researchers searching for a target protein to study.
+    
+    **Key Objectives:**
+    - Merge published palmitoylomes obtained with mass spectrometry in one searchable database 
+      and provide a helpful tool
+    - Find proteins repetitively reported to be detected in palmitoylated form
+    - Describe protein families undergoing palmitoylation 
+    
+    **Methods:**
+    - Results of published proteomic analysis of brain tissue samples were downloaded, merged 
+    - GeneIDs coding palmitoylated proteins were assigned protein names and key characteristics in UniProt database. 
+    - Cytoscape, Metascape were used for visualization of enriched pathways.
+
+    """)
 
 
+#DATASETS DESCRIPTION
 # 📊 Sekcja: Wyświetlanie danych z Excela
-elif page == "View Excel Data":
+elif page == "ALL PROTEINS MERGED-TABLE":
     st.title("Excel Data: All Merged")
 
     if os.path.exists(file_path):
@@ -98,18 +120,18 @@ elif page == "Metascape":
     )
 
 # Sekcja: Enrichment Heatmap
-st.sidebar.header("MOUSE COMPARATIVE PALMITOYLOME")
-st.sidebar.header("RAT COMPARATIVE PALMITOYLOME")
-st.sidebar.header("EXTRAS")
-if st.sidebar.checkbox("SHOW Heatmap PDF"):
-    st.title("Enrichment Heatmap")
-    try:
-        with open("Enrichment_heatmap_HeatmapSelectedGO.pdf", "rb") as pdf_file:
-            pdf_data = pdf_file.read()
-        st.download_button(label="Download Heatmap PDF", data=pdf_data, file_name="Enrichment_heatmap_HeatmapSelectedGO.pdf", mime="application/pdf")
-        st.markdown("""
-        <iframe src="Enrichment_heatmap_HeatmapSelectedGO.pdf" width="100%" height="600px">
-        </iframe>
-        """, unsafe_allow_html=True)
-    except FileNotFoundError:
-        st.error("Heatmap PDF file not found. Ensure it has been uploaded.")
+#st.sidebar.header("MOUSE COMPARATIVE PALMITOYLOME")
+#st.sidebar.header("RAT COMPARATIVE PALMITOYLOME")
+#st.sidebar.header("EXTRAS")
+#if st.sidebar.checkbox("SHOW Heatmap PDF"):
+#    st.title("Enrichment Heatmap")
+#    try:
+#        with open("Enrichment_heatmap_HeatmapSelectedGO.pdf", "rb") as pdf_file:
+#            pdf_data = pdf_file.read()
+#        st.download_button(label="Download Heatmap PDF", data=pdf_data, file_name="Enrichment_heatmap_HeatmapSelectedGO.pdf", mime="application/pdf")
+ #       st.markdown("""
+  #      <iframe src="Enrichment_heatmap_HeatmapSelectedGO.pdf" width="100%" height="600px">
+   #     </iframe>
+    #    """, unsafe_allow_html=True)
+  #  except FileNotFoundError:
+   #     st.error("Heatmap PDF file not found. Ensure it has been uploaded.")
