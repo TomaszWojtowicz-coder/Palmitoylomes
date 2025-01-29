@@ -1,8 +1,18 @@
 import streamlit as st
 from streamlit_image_zoom import image_zoom
 from PIL import Image  # Importujemy bibliotekę PIL
+import pandas as pd
 
 
+# Wczytaj plik Excel (zmień nazwę pliku na własną)
+file_path = "All_merged.xlsx"
+
+# Wczytanie arkusza do DataFrame
+df = pd.read_excel(file_path, engine="openpyxl")
+
+# Wyświetlenie tabeli w Streamlit
+st.title("All data merged")
+st.dataframe(df)  # Możesz użyć st.table(df) dla statycznej tabeli
 
 # Menu boczne (sidebar)
 st.sidebar.title("Menu")
@@ -19,6 +29,7 @@ if page == "MAIN":
     st.image(logo_path, use_container_width=True)
 #logo_path = "logo3.webp"  # Update the path if needed
  #   st.image(logo_path, use_column_width=True)
+
 
 # Sekcja: STRING Network
 elif page == "STRING Network":
