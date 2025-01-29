@@ -8,6 +8,8 @@ import os
 st.set_page_config(layout="wide")
 
 # CSS for dark theme
+
+
 st.markdown("""
     <style>
         /* Zmiana całego tła */
@@ -56,13 +58,35 @@ st.markdown("""
             color: white !important;
         }
 
+        /* Sidebar napisy */
+        .css-1d391kg a, .css-1d391kg .stSidebarItem {
+            color: white !important;
+            font-weight: bold;
+        }
+
         /* Linki */
         a {
             color: #EAB8E4 !important;
         }
+
+        /* Zmiana koloru czcionki w zakładce Multi-Filter Excel Data */
+        .stText {
+            color: white !important;
+        }
+
+        /* Tło dla nagłówków w zakładce Excel */
+        .stTextInput, .stSelectbox, .stMultiselect, .stSlider, .stButton {
+            background-color: #6A0DAD;
+            color: white !important;
+        }
+
+        /* Poprawienie widoczności napisów w tabeli (Excel) */
+        .stDataFrame thead th, .stTable thead th {
+            color: white !important;
+            font-weight: bold;
+        }
     </style>
 """, unsafe_allow_html=True)
-
 
 
 # Ścieżka do pliku Excel
