@@ -9,41 +9,64 @@ st.set_page_config(layout="wide")
 
 # CSS for dark theme
 
+
 st.markdown("""
     <style>
-        /* Zmiana tła całej aplikacji */
+        /* Tło całej aplikacji */
         body, .stApp {
             background-color: #000000;
             color: white;
             font-family: 'Arial', sans-serif;
         }
 
-        /* Zmiana koloru paska nawigacyjnego */
+        /* Zmiana koloru paska nawigacyjnego (górny pasek) */
         header {
             background-color: #1F1A3D !important;
         }
 
-        /* Główna zawartość strony */
+        /* Zmiana tła dla całej aplikacji */
         .block-container {
+            background-color: #1F1A3D;
             padding: 2rem;
             border-radius: 10px;
-            background-color: #1F1A3D;
             box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
         }
 
-        /* Kolor nagłówków */
+        /* Sidebar - zmiana tła i tekstów */
+        .css-1d391kg {
+            background-color: #6A0DAD !important; /* Kolor tła menu bocznego */
+        }
+
+        /* Zmiana koloru tekstu w sidebarze */
+        .css-1d391kg, .css-1d391kg .stSidebarItem, .css-1d391kg .stSidebarMenu, .css-1d391kg .stSidebarHeader {
+            color: white !important;
+            font-weight: bold;
+        }
+
+        /* Zmiana koloru ikon w sidebarze */
+        .css-1d391kg svg {
+            fill: white !important;
+        }
+
+        /* Tło dla selektorów, przycisków i inputów */
+        .stSelectbox, .stButton, .stTextInput, .stSlider, .stRadio {
+            background-color: #6A0DAD;
+            color: white !important;
+        }
+
+        /* Kolor tekstów nagłówków */
         h1, h2, h3, h4, h5, h6 {
             color: #EAB8E4 !important;
         }
 
-        /* Tabele */
+        /* Stylowanie tabeli */
         .stDataFrame, .stTable {
             background-color: #6A0DAD;
             color: white;
             border-radius: 5px;
         }
 
-        /* Przyciski */
+        /* Stylowanie przycisków */
         .stButton > button {
             background-color: #EAB8E4;
             color: black;
@@ -51,48 +74,28 @@ st.markdown("""
             border-radius: 5px;
         }
 
-        /* Sidebar (menu boczne) */
-        /* Tło menu bocznego */
-        .css-1d391kg {
-            background-color: #6A0DAD !important;
-        }
-
-        /* Tekst w menu bocznym */
-        .css-1d391kg .stSidebarItem, .css-1d391kg .stSidebarMenu, .css-1d391kg .stSidebarHeader {
-            color: white !important;
-            font-weight: bold;
-        }
-
-        /* Stylowanie ikony w menu bocznym */
-        .css-1d391kg svg {
-            fill: white !important;
-        }
-
-        /* Linki w aplikacji */
+        /* Zmiana kolorów linków */
         a {
             color: #EAB8E4 !important;
         }
 
-        /* Zmiana kolorów napisów w "Multi-Filter Excel Data" */
-        .stText {
-            color: white !important;
-        }
-
-        /* Tło dla nagłówków w zakładce Excel */
-        .stTextInput, .stSelectbox, .stMultiselect, .stSlider, .stButton {
+        /* Zmiana wyglądu formularzy */
+        .stTextInput input, .stTextInput textarea {
             background-color: #6A0DAD;
             color: white !important;
         }
 
-        /* Poprawienie widoczności napisów w tabeli (Excel) */
-        .stDataFrame thead th, .stTable thead th {
+        /* Dostosowanie tła dla menu bocznego */
+        .stSidebarContent {
+            background-color: #6A0DAD !important;
+        }
+
+        /* Zmiana tła i tekstu w głównych blokach */
+        .stText {
             color: white !important;
-            font-weight: bold;
         }
     </style>
 """, unsafe_allow_html=True)
-
-
 
 # Ścieżka do pliku Excel
 file_path = "All_merged.xlsx"
