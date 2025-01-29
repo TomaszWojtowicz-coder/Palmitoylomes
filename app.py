@@ -27,25 +27,34 @@ if page == "MAIN":
  #   st.image(logo_path, use_column_width=True)
 
 
-# Sekcja: STRING Network
+
+# 📊 Sekcja: Wyświetlanie danych z Excela
 elif page == "View Excel Data":
     st.title("Excel Data: All Merged")
-    
+
     if os.path.exists(file_path):
         try:
-            # ✅ Wczytanie pliku Excel
-            df = pd.read_excel(file_path, engine="openpyxl")
-            
-            # ✅ Wyświetlenie tabeli na całą szerokość ekranu
-            st.dataframe(df, use_container_width=True)
-            
-            # 📌 Informacja o liczbie wierszy i kolumn
-            st.write(f"📊 Data contains {df.shape[0]} rows and {df.shape[1]} columns.")
+            # ✅ Sprawdzenie rozmiaru pliku
+            if os.path.getsize(file_path) == 0:
+                st.error("❌ Excel file is empty.")
+            else:
+                # ✅ Wczytanie pliku Excel
+                df = pd.read_excel(file_path, engine="openpyxl")
+
+                # ✅ Sprawdzenie, czy dane nie są puste
+                if df.empty:
+                    st.warning("⚠️ The file was loaded but contains no data.")
+                else:
+                    # ✅ Wyświetlenie tabeli
+                    st.dataframe(df, use_container_width=True)
+                    st.write(f"📊 Data contains {df.shape[0]} rows and {df.shape[1]} columns.")
         
         except Exception as e:
             st.error(f"❌ Error loading Excel file: {e}")
     else:
         st.error(f"❌ File not found: {file_path}. Please upload the correct file.")
+
+# Sekcja: STRING Network
 elif page == "STRING Network":
     st.title("STRING Network")
     try:
