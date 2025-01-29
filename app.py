@@ -4,6 +4,8 @@ from PIL import Image  # Importujemy bibliotekę PIL
 import pandas as pd
 import os
 
+# Ustawienie strony na pełną szerokość
+st.set_page_config(layout="wide")
 # CSS for dark theme
 st.markdown("""
     <style>
@@ -21,9 +23,6 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-
-# Ustawienie strony na pełną szerokość
-st.set_page_config(layout="wide")
 
 # Ścieżka do pliku Excel
 file_path = "All_merged.xlsx"
