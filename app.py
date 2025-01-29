@@ -8,9 +8,10 @@ import os
 st.set_page_config(layout="wide")
 
 # CSS for dark theme
+
 st.markdown("""
     <style>
-        /* Tło strony */
+        /* Zmiana tła całej aplikacji */
         body, .stApp {
             background-color: #000000;
             color: white;
@@ -51,15 +52,20 @@ st.markdown("""
         }
 
         /* Sidebar (menu boczne) */
+        /* Tło menu bocznego */
         .css-1d391kg {
             background-color: #6A0DAD !important;
-            color: white !important;
         }
 
-        /* Sidebar: kolory tekstów i nagłówków */
-        .css-1d391kg .stSidebarItem, .css-1d391kg .stSidebarMenu {
+        /* Tekst w menu bocznym */
+        .css-1d391kg .stSidebarItem, .css-1d391kg .stSidebarMenu, .css-1d391kg .stSidebarHeader {
             color: white !important;
             font-weight: bold;
+        }
+
+        /* Stylowanie ikony w menu bocznym */
+        .css-1d391kg svg {
+            fill: white !important;
         }
 
         /* Linki w aplikacji */
@@ -85,6 +91,7 @@ st.markdown("""
         }
     </style>
 """, unsafe_allow_html=True)
+
 
 
 # Ścieżka do pliku Excel
