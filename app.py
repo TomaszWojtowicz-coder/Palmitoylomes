@@ -10,38 +10,59 @@ st.set_page_config(layout="wide")
 # CSS for dark theme
 st.markdown("""
     <style>
-        body {
-            background-color: #0b132b; /* Granatowe tło */
-            color: white; /* Biały tekst */
+        /* Zmiana całego tła */
+        body, .stApp {
+            background-color: #000000;
+            color: white;
             font-family: 'Arial', sans-serif;
         }
-        .stApp {
-            background-color: #0b132b;
+
+        /* Górny pasek nawigacyjny */
+        header {
+            background-color: #1F1A3D !important;
         }
+
+        /* Główna zawartość strony */
         .block-container {
             padding: 2rem;
             border-radius: 10px;
-            background-color: #1a1a40; /* Ciemnofioletowy pasek wokół aplikacji */
+            background-color: #1F1A3D;
             box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
         }
+
+        /* Zmiana koloru czcionek nagłówków */
         h1, h2, h3, h4, h5, h6 {
-            color: #ffcc00; /* Złote nagłówki */
+            color: #EAB8E4 !important;
         }
+
+        /* Tabele */
         .stDataFrame, .stTable {
-            background-color: #1c2541; /* Ciemnogranatowe tabele */
+            background-color: #6A0DAD;
             color: white;
+            border-radius: 5px;
         }
+
+        /* Przyciski */
         .stButton > button {
-            background-color: #ffcc00; /* Złote przyciski */
+            background-color: #EAB8E4;
             color: black;
             font-weight: bold;
             border-radius: 5px;
         }
-        .sidebar .sidebar-content {
-            background-color: #1a1a40; /* Ciemnofioletowy sidebar */
+
+        /* Sidebar (menu boczne) */
+        .css-1d391kg {
+            background-color: #6A0DAD !important;
+            color: white !important;
+        }
+
+        /* Linki */
+        a {
+            color: #EAB8E4 !important;
         }
     </style>
 """, unsafe_allow_html=True)
+
 
 
 # Ścieżka do pliku Excel
