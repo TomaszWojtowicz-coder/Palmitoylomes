@@ -134,7 +134,7 @@ elif page == "PROJECT DESCRIPTION":
 elif page == "ALL PROTEINS MERGED-TABLE":
     df = pd.read_excel(file_path, engine="openpyxl")
     st.title("Multi-Filter Excel Data")
-    filter_columns = st.multiselect("All reported palmitoylated proteins merged in single database. Use multifilter to filter data:", df.columns, default=df.columns[:8])  # Limit to 8
+    filter_columns = st.multiselect("All reported palmitoylated proteins merged in single database. Use multifilter to filter data:", df.columns, default=df.columns[:2])  # Limit to 8
     filters = {}
     for column in filter_columns:
         unique_values = df[column].dropna().unique()  # Get unique values
