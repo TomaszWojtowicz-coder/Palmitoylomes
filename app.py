@@ -72,6 +72,22 @@ st.markdown("""
             font-size: 18px !important;  /* Increase font size */
         }
 
+        /* Ensure all text on pages is white or pink, including in sections */
+        .stMarkdown, .stText, .stDataFrame, .stTable, .stWrite, .stSelectbox, .stMultiselect, .stButton, .stTextInput, .stTextArea, .stRadio {
+            color: #EAB8E4 !important;  /* Ensure text is pink */
+            font-size: 18px !important;  /* Uniform font size */
+        }
+
+        /* Customize multiselect box */
+        .stMultiSelect label, .stMultiSelect div {
+            color: #EAB8E4 !important;  /* Multiselect text color */
+            font-size: 18px !important;  /* Font size */
+        }
+
+        /* Ensure that placeholder text in input fields is the correct color */
+        .stTextInput input::placeholder, .stTextArea textarea::placeholder {
+            color: #EAB8E4 !important;
+        }
     </style>
 """, unsafe_allow_html=True)
 
