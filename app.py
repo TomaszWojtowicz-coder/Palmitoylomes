@@ -55,7 +55,9 @@ elif page == "PROJECT DESCRIPTION":
 # 📊 Sekcja: Wyświetlanie danych z Excela
 elif page == "ALL PROTEINS MERGED-TABLE":
     st.title("Excel Data: All Merged")
+    filtered_df = st.data_editor(df, use_container_width=True, num_rows="dynamic")  # Enables filtering
 
+    
     if os.path.exists(file_path):
         try:
             # ✅ Sprawdzenie rozmiaru pliku
