@@ -102,7 +102,7 @@ page = st.sidebar.selectbox("GENERAL INFORMATION", ["MAIN", "PROJECT DESCRIPTION
 if page == "MAIN":
     st.title("RAT AND MOUSE COMPARATIVE") 
     st.title("BRAIN TISSUE PALMITOYLOMES")
-    logo_path = "Logo.webp"  # Update the path if needed
+    logo_path = "logo2.png"  # Update the path if needed
     st.image(logo_path, use_container_width=True)
 
 # PROJECT DESCRIPTION
