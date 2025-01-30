@@ -23,85 +23,134 @@ file_path = "All_merged.xlsx"
 # === SIDEBAR MENU ===
 st.sidebar.title("Menu")
 
-# Dropdown for data-related sections
+# Dropdown for navigation
 page = st.sidebar.selectbox("Choose a section", [
-    "MAIN", "Data Summary", "Metascape Protein Overlap Analysis",
-    "Metascape Enriched Ontology Clusters", "Metascape Protein-Protein Interaction Network", "Interpretation"
+    "MAIN", 
+    "PROJECT DESCRIPTION", 
+    "ALL PROTEINS MERGED-TABLE", 
+    "MOUSE DATA", 
+    "RAT DATA"
 ])
 
-# === MAIN PAGE (DEFAULT) ===
+# === MAIN PAGE ===
 if page == "MAIN":
     st.title("RAT AND MOUSE COMPARATIVE") 
     st.title("BRAIN TISSUE PALMITOYLOMES")
     logo_path = "Logo2.png"  # Update the path if needed
     st.image(logo_path, use_container_width=False)
 
-# === DATA SUMMARY ===
-elif page == "Data Summary":
-    st.title("Data Summary")
-    st.write("Summary of the palmitoylome data collected for rat and mouse brain tissue...")
+# === PROJECT DESCRIPTION ===
+elif page == "PROJECT DESCRIPTION":
+    st.title("Project Description")
+    st.write("""
+       **Project Overview**
 
-# === METASCAPE PROTEIN OVERLAP ANALYSIS ===
-elif page == "Metascape Protein Overlap Analysis":
-    st.title("Metascape Protein Overlap Analysis")
-    st.write("Analysis of overlapping proteins using Metascape...")
+        The aim of this project is to review existing mass spectrometry studies reporting on palmitate-enriched proteins in rat and mouse brain tissues to better understand 
+        the patterns of protein palmitoylation. Since results from different studies vary significantly, we highlight proteins that have been most frequently reported as palmitoylated.
+        By compiling these findings, we hope to improve the understanding of which protein families are regulated by this specific post-translational modification. Additionally, 
+        the presented database may serve as a valuable resource for researchers looking for target proteins to study. 
+        
+        **Key Objectives**
 
-# === METASCAPE ENRICHED ONTOLOGY CLUSTERS ===
-elif page == "Metascape Enriched Ontology Clusters":
-    st.title("Metascape Enriched Ontology Clusters")
-    st.write("Functional ontology clusters enriched in palmitoylome dataset...")
+        - Integrate published palmitoylomes obtained via mass spectrometry into a searchable database as a useful research tool.
+        - Identify proteins that are consistently reported in their palmitoylated form.
+        - Characterize protein families that undergo palmitoylation.
 
-# === METASCAPE PROTEIN-PROTEIN INTERACTION NETWORK ===
-elif page == "Metascape Protein-Protein Interaction Network":
-    st.title("Metascape Protein-Protein Interaction Network")
-    st.write("Network analysis of palmitoylated proteins...")
-    try:
-        img = Image.open("interaction_network.png")
-        zoomed_img = image_zoom(img)
-        if zoomed_img:
-            st.image(zoomed_img, caption="Protein-Protein Interaction Network", use_container_width=True)
-    except FileNotFoundError:
-        st.error("Image file not found.")
+        **Methods**
 
-# === INTERPRETATION ===
-elif page == "Interpretation":
-    st.title("Interpretation")
-    st.write("Interpretation of the palmitoylome data in the context of brain function and disease...")
+        - Data Collection: Proteomic analysis results from published studies on brain tissue samples were gathered and merged.
+        - Protein Identification: Gene IDs corresponding to palmitoylated proteins were mapped to protein names and key characteristics using the UniProt database.
+        - Data Visualization: Tools like Cytoscape and Metascape were used to visualize enriched pathways and analyze protein interactions.
+    """)
 
-# === ADDITIONAL SECTIONS ===
-# STRING Network
-if st.sidebar.button("STRING Network"):
-    st.title("STRING Network")
-    try:
-        img_path = "STRING network - 2--clustered.png"
-        img = Image.open(img_path)
-        zoomed_img = image_zoom(img)
-        if zoomed_img:
-            st.image(zoomed_img, caption="STRING Network Visualization (Zoomed)", use_container_width=True)
-    except FileNotFoundError:
-        st.error(f"File not found: {img_path}. Ensure the file exists.")
+# === ALL PROTEINS MERGED-TABLE ===
+elif page == "ALL PROTEINS MERGED-TABLE":
+    df = pd.read_excel(file_path, engine="openpyxl")
+    st.title("Multi-Filter Excel Data")
+    filter_columns = st.multiselect("All reported palmitoylated proteins merged in single database. Use multifilter to filter data:", df.columns)  # Limit to 8
+    filters = {}
+    for column in filter_columns:
+        unique_values = df[column].dropna().unique()  # Get unique values
+        selected_values = st.multiselect(f"Filter {column}:", unique_values)  # Allow selection
+        if selected_values:
+            filters[column] = selected_values  # Store selections
 
-# Cytoscape
-if st.sidebar.button("Cytoscape"):
-    st.title("Cytoscape Network")
-    st.write("Download the .cys file for visualization in Cytoscape:")
-    try:
-        with open("Enrichment_GO_GONetwork.cys", "rb") as cys_file:
-            st.download_button(label="Download Cytoscape File (.cys)",
-                               data=cys_file,
-                               file_name="Enrichment_GO_GONetwork.cys",
-                               mime="application/octet-stream")
-    except FileNotFoundError:
-        st.error("Cytoscape file not found. Make sure it has been uploaded.")
+    for column, selected_values in filters.items():
+        df = df[df[column].isin(selected_values)]
 
-# Metascape
-if st.sidebar.button("Metascape"):
-    st.title("Metascape Visualization")
-    st.markdown("[OPEN Metascape Visualization](https://metascape.org/gp/Content/CyJS/index.html?session_id=thqv3v8hs&Network=GONetwork&Style=ColorByCluster#/)")
-    st.write("Or view a preview here:")
-    st.components.v1.iframe(
-        "https://metascape.org/gp/Content/CyJS/index.html?session_id=thqv3v8hs&Network=GONetwork&Style=ColorByCluster#/",
-        height=800,
-        width="100%",
-        scrolling=True
-    )
+    st.dataframe(df, use_container_width=True)
+
+# === MOUSE DATA ===
+elif page == "MOUSE DATA":
+    mouse_section = st.sidebar.selectbox("Choose Mouse Data Section", [
+        "Data Summary",
+        "Metascape Protein Overlap Analysis",
+        "Metascape Enriched Ontology Clusters",
+        "Metascape Protein-Protein Interaction Network",
+        "Interpretation"
+    ])
+
+    if mouse_section == "Data Summary":
+        st.title("Mouse Data Summary")
+        st.write("Summary of the palmitoylome data collected for mouse brain tissue...")
+    
+    elif mouse_section == "Metascape Protein Overlap Analysis":
+        st.title("Mouse Metascape Protein Overlap Analysis")
+        st.write("Analysis of overlapping proteins in mouse data using Metascape...")
+    
+    elif mouse_section == "Metascape Enriched Ontology Clusters":
+        st.title("Mouse Metascape Enriched Ontology Clusters")
+        st.write("Functional ontology clusters enriched in mouse palmitoylome dataset...")
+    
+    elif mouse_section == "Metascape Protein-Protein Interaction Network":
+        st.title("Mouse Metascape Protein-Protein Interaction Network")
+        st.write("Protein interaction network in mouse data...")
+        try:
+            img = Image.open("interaction_network_mouse.png")
+            zoomed_img = image_zoom(img)
+            if zoomed_img:
+                st.image(zoomed_img, caption="Protein-Protein Interaction Network (Mouse)", use_container_width=True)
+        except FileNotFoundError:
+            st.error("Image file not found.")
+    
+    elif mouse_section == "Interpretation":
+        st.title("Mouse Data Interpretation")
+        st.write("Interpretation of the mouse palmitoylome data...")
+
+# === RAT DATA ===
+elif page == "RAT DATA":
+    rat_section = st.sidebar.selectbox("Choose Rat Data Section", [
+        "Data Summary",
+        "Metascape Protein Overlap Analysis",
+        "Metascape Enriched Ontology Clusters",
+        "Metascape Protein-Protein Interaction Network",
+        "Interpretation"
+    ])
+
+    if rat_section == "Data Summary":
+        st.title("Rat Data Summary")
+        st.write("Summary of the palmitoylome data collected for rat brain tissue...")
+    
+    elif rat_section == "Metascape Protein Overlap Analysis":
+        st.title("Rat Metascape Protein Overlap Analysis")
+        st.write("Analysis of overlapping proteins in rat data using Metascape...")
+    
+    elif rat_section == "Metascape Enriched Ontology Clusters":
+        st.title("Rat Metascape Enriched Ontology Clusters")
+        st.write("Functional ontology clusters enriched in rat palmitoylome dataset...")
+    
+    elif rat_section == "Metascape Protein-Protein Interaction Network":
+        st.title("Rat Metascape Protein-Protein Interaction Network")
+        st.write("Protein interaction network in rat data...")
+        try:
+            img = Image.open("interaction_network_rat.png")
+            zoomed_img = image_zoom(img)
+            if zoomed_img:
+                st.image(zoomed_img, caption="Protein-Protein Interaction Network (Rat)", use_container_width=True)
+        except FileNotFoundError:
+            st.error("Image file not found.")
+    
+    elif rat_section == "Interpretation":
+        st.title("Rat Data Interpretation")
+        st.write("Interpretation of the rat palmitoylome data...")
+
