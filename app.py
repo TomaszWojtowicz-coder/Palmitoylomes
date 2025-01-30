@@ -19,7 +19,7 @@ st.markdown("""
 
         /* Zmiana wyglądu górnego paska */
         header {
-            background-color: #1F1A3D !important;  /* Kolor tła paska nawigacyjnego */
+            background-color: #000000 !important;  /* Kolor tła paska nawigacyjnego */
         }
 
         /* Zmiana stylu nagłówków */
