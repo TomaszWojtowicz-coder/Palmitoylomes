@@ -1,4 +1,4 @@
-import streamlit as st
+`import streamlit as st
 from streamlit_image_zoom import image_zoom
 from PIL import Image
 import pandas as pd
@@ -19,6 +19,8 @@ st.markdown("""
 
 # File path for dataset
 file_path = "All_merged.xlsx"
+# File path for dataset
+file_path2 = "Mouse_summary.xlsx"
 
 # === SIDEBAR MENU ===
 #st.sidebar.title("Menu")
