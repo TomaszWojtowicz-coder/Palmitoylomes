@@ -24,7 +24,7 @@ st.markdown("""
 
         /* Zmiana stylu nagłówków */
         h1, h2, h3, h4, h5, h6 {
-            text-indent: 30px
+            text-indent: 30px;
             background-color: #bfbad9 !important;
             color: #3f3f4d !important;  /* Kolor nagłówków na złoty (gold) */
         }
