@@ -86,7 +86,7 @@ st.markdown("""
 
         /* Ensure that placeholder text in input fields is the correct color */
         .stTextInput input::placeholder, .stTextArea textarea::placeholder {
-            color: #EAB8E4 !important;
+            color: #342340 !important;
         }
     </style>
 """, unsafe_allow_html=True)
