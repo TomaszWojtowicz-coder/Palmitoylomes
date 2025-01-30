@@ -24,7 +24,6 @@ st.markdown("""
 
         /* Zmiana stylu nagłówków */
         h1, h2, h3, h4, h5, h6 {
-            background-color: #966edb;
             color: #3f3f4d !important;  /* Kolor nagłówków na złoty (gold) */
         }
 
@@ -75,14 +74,14 @@ st.markdown("""
 
         /* Ensure all text on pages is white or pink, including in sections */
         .stMarkdown, .stText, .stDataFrame, .stTable, .stWrite, .stSelectbox, .stMultiselect, .stButton, .stTextInput, .stTextArea, .stRadio {
-            color: #EAB8E4 !important;  /* Ensure text is pink */
-            font-size: 18px !important;  /* Uniform font size */
+            color: #342340 !important;  /* Ensure text is pink */
+            font-size: 20px !important;  /* Uniform font size */
         }
 
         /* Customize multiselect box */
         .stMultiSelect label, .stMultiSelect div {
-            color: #EAB8E4 !important;  /* Multiselect text color */
-            font-size: 18px !important;  /* Font size */
+            color: #342340 !important;  /* Multiselect text color */
+            font-size: 20px !important;  /* Font size */
         }
 
         /* Ensure that placeholder text in input fields is the correct color */
