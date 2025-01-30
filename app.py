@@ -2,95 +2,135 @@ import streamlit as st
 from streamlit_image_zoom import image_zoom
 from PIL import Image  
 import pandas as pd
+import os
 
-# Set page layout
+# Set the page layout
 st.set_page_config(layout="wide")
+
+# CSS Styling
+st.markdown("""
+    <style>
+        body, .stApp {
+            background-color: #ffffff;
+            color: #3f3f4d;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            text-indent: 30px;
+            margin-bottom: 60px;
+            background-color: #e9e6fc;
+            color: #3f3f4d;
+        }
+        .stSidebar {
+            background-color: #bfbad9 !important;
+            color: white !important;
+        }
+        .stButton > button {
+            background-color: #966edb;
+            color: #1F1A3D;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+# File path for dataset
+file_path = "All_merged.xlsx"
 
 # Sidebar menu
 st.sidebar.title("Menu")
-page = st.sidebar.selectbox(
-    "GENERAL INFORMATION",
-    [
-        "MAIN", 
-        "PROJECT DESCRIPTION", 
-        "ALL PROTEINS MERGED-TABLE", 
-        "Mouse Data", 
-        "Rat Data"
-    ]
-)
+page = st.sidebar.selectbox("GENERAL INFORMATION", [
+    "MAIN", "PROJECT DESCRIPTION", "ALL PROTEINS MERGED-TABLE",
+    "MOUSE DATA", "RAT DATA"
+])
 
-# Main Page
+# === MAIN PAGE ===
 if page == "MAIN":
-    st.title("RAT AND MOUSE COMPARATIVE BRAIN TISSUE PALMITOYLOMES")
+    st.title("RAT AND MOUSE COMPARATIVE")
+    st.title("BRAIN TISSUE PALMITOYLOMES")
     logo_path = "Logo2.png"
     st.image(logo_path, use_container_width=False)
 
-# Project Description
+# === PROJECT DESCRIPTION ===
 elif page == "PROJECT DESCRIPTION":
     st.title("Project Description")
     st.write("""
-    **Project Overview**
-    
-    This project reviews mass spectrometry studies on palmitate-enriched proteins in rat and mouse brain tissues. 
-    The goal is to identify protein families regulated by palmitoylation and compile a useful database for researchers.
+   **Project Overview**
+   The aim of this project is to review existing mass spectrometry studies reporting on palmitate-enriched proteins in rat and mouse brain tissues...
     """)
 
-# Datasets Description
+# === DATASETS DESCRIPTION ===
 elif page == "ALL PROTEINS MERGED-TABLE":
-    file_path = "All_merged.xlsx"
     df = pd.read_excel(file_path, engine="openpyxl")
-    st.title("All Reported Palmitoylated Proteins")
-    filter_columns = st.multiselect("Filter Data:", df.columns)
-    
-    filters = {col: st.multiselect(f"Select values for {col}:", df[col].dropna().unique()) for col in filter_columns}
+    st.title("Multi-Filter Excel Data")
+    filter_columns = st.multiselect("All reported palmitoylated proteins merged in a single database:", df.columns)
+    filters = {col: st.multiselect(f"Filter {col}:", df[col].dropna().unique()) for col in filter_columns}
     for col, values in filters.items():
         if values:
             df = df[df[col].isin(values)]
-
     st.dataframe(df, use_container_width=True)
 
-# Mouse Data
-elif page == "Mouse Data":
-    st.title("Mouse Data")
-
-    mouse_section = st.radio("Select Analysis:", [
-        "Data Summary",
-        "Metascape Protein Overlap Analysis",
-        "Metascape Enriched Ontology Clusters",
-        "Metascape Protein-protein Interaction Network",
-        "Interpretation"
+# === MOUSE DATA MENU ===
+elif page == "MOUSE DATA":
+    subpage = st.sidebar.radio("Select Subsection", [
+        "Data Summary", "Metascape Protein Overlap Analysis",
+        "Metascape Enriched Ontology Clusters", "Metascape Protein-Protein Interaction Network", "Interpretation"
     ])
+    
+    if subpage == "Data Summary":
+        st.title("Mouse Data - Summary")
+        st.write("Summary of the palmitoylome data collected for mouse brain tissue...")
 
-    if mouse_section == "Data Summary":
-        st.write("Summary of palmitoylated proteins found in mouse brain tissue.")
-    elif mouse_section == "Metascape Protein Overlap Analysis":
-        st.write("Analysis of overlapping proteins in mouse data.")
-    elif mouse_section == "Metascape Enriched Ontology Clusters":
-        st.write("Functional clusters enriched in mouse proteins.")
-    elif mouse_section == "Metascape Protein-protein Interaction Network":
-        st.write("Network analysis of protein-protein interactions in mouse data.")
-    elif mouse_section == "Interpretation":
-        st.write("Biological interpretation of mouse palmitoylome findings.")
+    elif subpage == "Metascape Protein Overlap Analysis":
+        st.title("Mouse Data - Metascape Protein Overlap Analysis")
+        st.write("Analysis of overlapping proteins using Metascape...")
 
-# Rat Data
-elif page == "Rat Data":
-    st.title("Rat Data")
+    elif subpage == "Metascape Enriched Ontology Clusters":
+        st.title("Mouse Data - Metascape Enriched Ontology Clusters")
+        st.write("Functional ontology clusters enriched in mouse palmitoylome dataset...")
 
-    rat_section = st.radio("Select Analysis:", [
-        "Data Summary",
-        "Metascape Protein Overlap Analysis",
-        "Metascape Enriched Ontology Clusters",
-        "Metascape Protein-protein Interaction Network",
-        "Interpretation"
+    elif subpage == "Metascape Protein-Protein Interaction Network":
+        st.title("Mouse Data - Protein-Protein Interaction Network")
+        st.write("Network analysis of palmitoylated proteins in mouse brain tissue...")
+        try:
+            img = Image.open("mouse_interaction_network.png")
+            zoomed_img = image_zoom(img)
+            if zoomed_img:
+                st.image(zoomed_img, caption="Mouse Protein-Protein Interaction Network", use_container_width=True)
+        except FileNotFoundError:
+            st.error("Image file not found.")
+
+    elif subpage == "Interpretation":
+        st.title("Mouse Data - Interpretation")
+        st.write("Interpretation of mouse palmitoylome data in the context of brain function and disease...")
+
+# === RAT DATA MENU ===
+elif page == "RAT DATA":
+    subpage = st.sidebar.radio("Select Subsection", [
+        "Data Summary", "Metascape Protein Overlap Analysis",
+        "Metascape Enriched Ontology Clusters", "Metascape Protein-Protein Interaction Network", "Interpretation"
     ])
+    
+    if subpage == "Data Summary":
+        st.title("Rat Data - Summary")
+        st.write("Summary of the palmitoylome data collected for rat brain tissue...")
 
-    if rat_section == "Data Summary":
-        st.write("Summary of palmitoylated proteins found in rat brain tissue.")
-    elif rat_section == "Metascape Protein Overlap Analysis":
-        st.write("Analysis of overlapping proteins in rat data.")
-    elif rat_section == "Metascape Enriched Ontology Clusters":
-        st.write("Functional clusters enriched in rat proteins.")
-    elif rat_section == "Metascape Protein-protein Interaction Network":
-        st.write("Network analysis of protein-protein interactions in rat data.")
-    elif rat_section == "Interpretation":
-        st.write("Biological interpretation of rat palmitoylome findings.")
+    elif subpage == "Metascape Protein Overlap Analysis":
+        st.title("Rat Data - Metascape Protein Overlap Analysis")
+        st.write("Analysis of overlapping proteins using Metascape...")
+
+    elif subpage == "Metascape Enriched Ontology Clusters":
+        st.title("Rat Data - Metascape Enriched Ontology Clusters")
+        st.write("Functional ontology clusters enriched in rat palmitoylome dataset...")
+
+    elif subpage == "Metascape Protein-Protein Interaction Network":
+        st.title("Rat Data - Protein-Protein Interaction Network")
+        st.write("Network analysis of palmitoylated proteins in rat brain tissue...")
+        try:
+            img = Image.open("rat_interaction_network.png")
+            zoomed_img = image_zoom(img)
+            if zoomed_img:
+                st.image(zoomed_img, caption="Rat Protein-Protein Interaction Network", use_container_width=True)
+        except FileNotFoundError:
+            st.error("Image file not found.")
+
+    elif subpage == "Interpretation":
+        st.title("Rat Data - Interpretation")
+        st.write("Interpretation of rat palmitoylome data in the context of brain function and disease...")
