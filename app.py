@@ -19,17 +19,17 @@ st.markdown("""
 
         /* Zmiana wyglądu górnego paska */
         header {
-            background-color: #000000 !important;  /* Kolor tła paska nawigacyjnego */
+            background-color: #aba5cc !important;  /* Kolor tła paska nawigacyjnego */
         }
 
         /* Zmiana stylu nagłówków */
         h1, h2, h3, h4, h5, h6 {
-            color: #EAB8E4 !important;  /* Kolor nagłówków na złoty (gold) */
+            color: #3f3f4d !important;  /* Kolor nagłówków na złoty (gold) */
         }
 
         /* Sidebar (menu z lewej strony) */
         .stSidebar {
-            background-color: #1F1A3D !important;  /* Kolor tła bocznego menu - teraz taki sam jak górny pasek */
+            background-color: #bfbad9 !important;  /* Kolor tła bocznego menu - teraz taki sam jak górny pasek */
             color: white !important;  /* Kolor czcionki na biały */
         }
 
