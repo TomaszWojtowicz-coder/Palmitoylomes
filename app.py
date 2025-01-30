@@ -94,7 +94,9 @@ elif page == "MOUSE DATA":
 
     if mouse_section == "Data Summary":
         st.title("Mouse Data Summary")
-        st.write("List of original publications reporting palmitoylated proteins in mouse considered in this database")
+        st.write("
+        List of original publications reporting palmitoylated proteins in mouse compared in this study: 
+        ")
         df_mouse = pd.read_excel(file_path2, engine="openpyxl")
         st.dataframe(df_mouse, use_container_width=True)
 
