@@ -24,6 +24,7 @@ st.markdown("""
 
         /* Zmiana stylu nagłówków */
         h1, h2, h3, h4, h5, h6 {
+            background-color: #966edb;
             color: #3f3f4d !important;  /* Kolor nagłówków na złoty (gold) */
         }
 
@@ -46,7 +47,7 @@ st.markdown("""
         /* Zmiana tła dla przycisków */
         .stButton > button {
             background-color: #966edb;  /* Kolor tła przycisków na złoty */
-            color: black;  /* Kolor czcionki przycisków na czarny */
+            color: #1F1A3D;  /* Kolor czcionki przycisków na czarny */
         }
 
         /* Stylowanie tła dla formularzy i inputów */
