@@ -94,8 +94,10 @@ elif page == "MOUSE DATA":
 
     if mouse_section == "Data Summary":
         st.title("Mouse Data Summary")
-        st.write("Summary of the palmitoylome data collected for mouse brain tissue...")
-    
+        st.write("List of original publications reporting palmitoylated proteins in mouse considered in this database")
+        df_mouse = pd.read_excel(file_path2, engine="openpyxl")
+        st.dataframe(df_mouse, use_container_width=True)
+
     elif mouse_section == "Metascape Protein Overlap Analysis":
         st.title("Mouse Metascape Protein Overlap Analysis")
         st.write("Analysis of overlapping proteins in mouse data using Metascape...")
