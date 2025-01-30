@@ -24,6 +24,10 @@ st.markdown("""
 
         /* Zmiana stylu nagłówków */
         h1, h2, h3, h4, h5, h6 {
+        padding-top: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 30px;
             color: #3f3f4d !important;  /* Kolor nagłówków na złoty (gold) */
         }
 
