@@ -13,7 +13,7 @@ st.markdown("""
     <style>
         /* Zmiana ogólnych ustawień tła aplikacji */
         body, .stApp {
-            background-color: #000000;  /* Tło całej strony na czarne */
+            background-color: #ffffff;  /* Tło całej strony na czarne */
             color: white;  /* Kolor czcionki na biały */
         }
 
