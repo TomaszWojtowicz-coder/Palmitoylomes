@@ -14,7 +14,7 @@ st.markdown("""
         /* Zmiana ogólnych ustawień tła aplikacji */
         body, .stApp {
             background-color: #ffffff;  /* Tło całej strony na czarne */
-            color: white;  /* Kolor czcionki na biały */
+            color: #3f3f4d;  /* Kolor czcionki na biały */
         }
 
         /* Zmiana wyglądu górnego paska */
