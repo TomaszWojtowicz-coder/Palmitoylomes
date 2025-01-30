@@ -21,7 +21,7 @@ st.markdown("""
 file_path = "All_merged.xlsx"
 
 # === SIDEBAR MENU ===
-st.sidebar.title("Menu")
+#st.sidebar.title("Menu")
 
 # Dropdown for navigation
 page = st.sidebar.selectbox("Choose a section", [
