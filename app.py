@@ -19,7 +19,7 @@ st.markdown("""
 
         /* Zmiana wyglądu górnego paska */
         header {
-            background-color: #aba5cc !important;  /* Kolor tła paska nawigacyjnego */
+            background-color: #bfbad9 !important;  /* Kolor tła paska nawigacyjnego */
         }
 
         /* Zmiana stylu nagłówków */
@@ -35,7 +35,7 @@ st.markdown("""
 
         /* Ikony w sidebarze */
         .stSidebar svg {
-            fill: white !important;  /* Kolor ikon w menu na biały */
+            fill: #3f3f4d !important;  /* Kolor ikon w menu na biały */
         }
 
         /* Styl dla elementów w sidebarze */
@@ -45,13 +45,13 @@ st.markdown("""
 
         /* Zmiana tła dla przycisków */
         .stButton > button {
-            background-color: #EAB8E4;  /* Kolor tła przycisków na złoty */
+            background-color: #966edb;  /* Kolor tła przycisków na złoty */
             color: black;  /* Kolor czcionki przycisków na czarny */
         }
 
         /* Stylowanie tła dla formularzy i inputów */
         .stTextInput input, .stTextInput textarea {
-            background-color: #6A0DAD;  /* Kolor tła inputów na fioletowy */
+            background-color: #b4a4bf;  /* Kolor tła inputów na fioletowy */
             color: white !important;  /* Kolor czcionki w inputach na biały */
         }
 
