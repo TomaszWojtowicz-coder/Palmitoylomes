@@ -68,7 +68,7 @@ st.markdown("""
 
         /* Target smaller font text, set to gold and increase font size */
         .stMarkdown p, .stText {
-            color: #EAB8E4 !important;  /* Gold text */
+            color: #3f3f4d !important;  /* Gold text */
             font-size: 18px !important;  /* Increase font size */
         }
 
