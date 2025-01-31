@@ -118,6 +118,7 @@ elif page == "MOUSE DATA":
         df_mouse = pd.read_excel(file_path2, engine="openpyxl")
         st.dataframe(df_mouse, use_container_width=True)
         
+
         
         # Title of the Streamlit app
         st.title("Gene Occurrence Analysis")
@@ -140,34 +141,43 @@ elif page == "MOUSE DATA":
                 return [f"background-color: {color}"] * len(df.columns)  # Apply color to all columns in the row
             return [""] * len(df.columns)
         
-        # Apply styling to rotate column names and apply color to rows
-        styled_df = df.style.apply(lambda row: row_color(row['Occurrences']), axis=1)
-        
-        # Rotate column headers using CSS with Pandas Styler object
-        styled_df.set_table_styles(
-            [{
-                'selector': 'th',
-                'props': [('writing-mode', 'vertical-rl'),
-                          ('transform', 'rotate(180deg)'),
-                          ('text-align', 'center'),
-                          ('padding', '10px'),
-                          ('font-size', '14px')]  # Adjust size to fit better
-            }]
-        )
-        
-        # Add filter widget to filter by "Gene_ID"
+        # Filter by Gene ID
         gene_filter = st.text_input("Filter by Gene ID (partial match)")
         
-        # Filter the dataframe based on the input Gene ID filter
+        # Apply filter
         if gene_filter:
             filtered_df = df[df["Gene_ID"].str.contains(gene_filter, case=False, na=False)]
-            st.write(f"Filtered results for '{gene_filter}':")
-            st.dataframe(filtered_df.style.apply(lambda row: row_color(row['Occurrences']), axis=1), use_container_width=True)
         else:
-            st.write("Displaying full data:")
-            st.dataframe(styled_df, use_container_width=True)
+            filtered_df = df
         
-            
+        # Apply the color scheme to the dataframe
+        styled_df = filtered_df.style.apply(lambda row: row_color(row['Occurrences']), axis=1)
+        
+        # Convert the dataframe to an HTML table with rotated column names
+        html_table = filtered_df.to_html(classes='dataframe', index=False)
+        
+        # Apply custom CSS to rotate column headers 90 degrees
+        st.markdown("""
+            <style>
+                .dataframe th {
+                    writing-mode: vertical-rl;
+                    transform: rotate(180deg);
+                    padding: 10px;
+                    text-align: center;
+                    font-size: 14px;  /* Adjust size to fit better */
+                }
+                .dataframe td {
+                    padding: 8px;
+                }
+                .stDataFrame > div {
+                    overflow-x: auto;
+                }
+            </style>
+        """, unsafe_allow_html=True)
+        
+        # Display the customized HTML table
+        st.markdown(html_table, unsafe_allow_html=True)
+                    
 
 
     
