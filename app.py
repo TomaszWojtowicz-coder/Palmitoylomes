@@ -11,8 +11,10 @@ st.set_page_config(layout="wide")
 st.markdown("""
     <style>
         body, .stApp { background-color: #ffffff; color: #3f3f4d; }
-        h1 { text-indent: 10px; margin-bottom: 10px; background-color: #e9e6fc; color: #3f3f4d; }
-        h2, h3, h4, h5, h6 { text-indent: 30px; margin-bottom: 60px; background-color: #e9e6fc; color: #3f3f4d; }
+        h1 { font-size: 30px !important; }  /* Zmień wielkość H1 */
+        h2 { font-size: 25px !important; }  /* Opcjonalnie zmień H2 */
+        h3 { font-size: 22px !important; }
+        h1, h2, h3, h4, h5, h6 { text-indent: 30px; margin-bottom: 60px; background-color: #e9e6fc; color: #3f3f4d; }
         .stSidebar { background-color: #bfbad9 !important; color: white !important; }
         .stButton > button { background-color: #966edb; color: #1F1A3D; }
     </style>
