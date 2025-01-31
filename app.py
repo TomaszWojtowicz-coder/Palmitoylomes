@@ -109,6 +109,42 @@ elif page == "MOUSE DATA":
         df_mouse = pd.read_excel(file_path2, engine="openpyxl")
         st.dataframe(df_mouse, use_container_width=True)
 
+        # Title of the Streamlit app
+        st.title("Gene Occurrence Heatmap Analysis")
+        uploaded_file="gene_occurrences_analysis_mouse.xlsx"
+        df = pd.read_excel(uploaded_file)
+
+        # Display the dataframe to check if it's loaded correctly
+        st.write("Data preview:")
+        st.dataframe(df.head())
+
+        # Apply heatmap-style coloring
+        def color_cells(val):
+            """Apply background color based on the occurrence value."""
+            color = f"rgba(255, 0, 0, {val/8})" if val > 0 else "white"
+            return f"background-color: {color}; color: black"
+
+        # Apply the color function to all columns except the "Gene_ID" and "Occurrences"
+        styled_df = df.style.applymap(color_cells, subset=df.columns[1:-1])
+
+        # Add filter widget to filter by "Gene_ID"
+        gene_filter = st.text_input("Filter by Gene ID (partial match)")
+
+        # Filter the dataframe based on the input Gene ID filter
+        if gene_filter:
+            filtered_df = df[df["Gene_ID"].str.contains(gene_filter, case=False, na=False)]
+            st.write(f"Filtered results for '{gene_filter}':")
+            st.dataframe(filtered_df.style.applymap(color_cells, subset=filtered_df.columns[1:-1]))
+        else:
+            st.write("Displaying full data:")
+            st.dataframe(styled_df)
+
+
+
+    
+
+
+    
     elif mouse_section == "Metascape Protein Overlap Analysis":
         st.title("Mouse Metascape Protein Overlap Analysis")
         st.write("Analysis of overlapping proteins in mouse data using Metascape...")
@@ -145,6 +181,7 @@ elif page == "RAT DATA":
     if rat_section == "Data Summary":
         st.title("Rat Data Summary")
         st.write("Summary of the palmitoylome data collected for rat brain tissue...")
+
     
     elif rat_section == "Metascape Protein Overlap Analysis":
         st.title("Rat Metascape Protein Overlap Analysis")
