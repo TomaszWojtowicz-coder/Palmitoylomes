@@ -119,49 +119,53 @@ elif page == "MOUSE DATA":
         st.dataframe(df_mouse, use_container_width=True)
         
 
-        
         # Title of the Streamlit app
         st.title("Gene Occurrence Analysis")
         
-        # Add the "LOADING" blinking icon at the top
-        st.markdown("""
-            <style>
-                /* Create the blinking effect */
-                @keyframes blink {
-                    0% { color: red; }
-                    50% { color: transparent; }
-                    100% { color: red; }
-                }
+        # Show "RUNNING" blinking icon while loading
+        with st.status("Loading data...", expanded=True) as status:
+            st.markdown("""
+                <style>
+                    @keyframes blink {
+                        0% { color: red; }
+                        50% { color: transparent; }
+                        100% { color: red; }
+                    }
+                    
+                    .blinking-text {
+                        font-size: 24px;
+                        font-weight: bold;
+                        color: red;
+                        animation: blink 1s infinite;
+                    }
+                    
+                    .blinking-text-wrapper {
+                        text-align: center;
+                        margin-top: 10px;
+                    }
+                </style>
                 
-                .blinking-text {
-                    font-size: 24px;
-                    font-weight: bold;
-                    color: red;
-                    animation: blink 1s infinite;
-                }
-                
-                .blinking-text-wrapper {
-                    text-align: center;
-                    margin-top: 10px;
-                }
-            </style>
+                <div class="blinking-text-wrapper">
+                    <span class="blinking-text">RUNNING</span>
+                </div>
+            """, unsafe_allow_html=True)
+        
+            # Simulate loading delay (for testing purposes)
+            time.sleep(3)
+        
+            # Cache function to load the data efficiently
+            @st.cache_data
+            def load_data(uploaded_file):
+                return pd.read_excel(uploaded_file)
             
-            <div class="blinking-text-wrapper">
-                <span class="blinking-text">RUNNING</span>
-            </div>
-        """, unsafe_allow_html=True)
-
+            # Path to the uploaded file
+            uploaded_file = "gene_occurrences_analysis_mouse.xlsx"
+            
+            # Load the data
+            df = load_data(uploaded_file)
         
-        # Cache function to load the data efficiently
-        @st.cache_data
-        def load_data(uploaded_file):
-            return pd.read_excel(uploaded_file)
-        
-        # Path to the uploaded file
-        uploaded_file = "gene_occurrences_analysis_mouse.xlsx"
-        
-        # Load the data (using cached version)
-        df = load_data(uploaded_file)
+            # Mark as loaded (removes the blinking "RUNNING" text)
+            status.update(label="Data Loaded!", state="complete", expanded=False)
         
         # Apply FIRE color scheme: We will use a scale from yellow to red
         def row_color(val):
@@ -213,8 +217,8 @@ elif page == "MOUSE DATA":
         
         # Display the customized HTML table
         st.markdown(html_table, unsafe_allow_html=True)
-        
-                            
+
+
 
 
     
