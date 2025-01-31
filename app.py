@@ -123,9 +123,16 @@ elif page == "MOUSE DATA":
         # Title of the Streamlit app
         st.title("Gene Occurrence Analysis")
         
-        # Upload the Excel file (adjust path as necessary)
+        # Cache function to load the data efficiently
+        @st.cache_data
+        def load_data(file_path):
+            return pd.read_excel(file_path)
+        
+        # Path to the uploaded file
         uploaded_file = "gene_occurrences_analysis_mouse.xlsx"
-        df = pd.read_excel(uploaded_file)
+        
+        # Load the data (using cached version)
+        df = load_data(uploaded_file)
         
         # Apply FIRE color scheme: We will use a scale from yellow to red
         def row_color(val):
@@ -177,6 +184,7 @@ elif page == "MOUSE DATA":
         
         # Display the customized HTML table
         st.markdown(html_table, unsafe_allow_html=True)
+
                     
 
 
