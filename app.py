@@ -122,8 +122,7 @@ elif page == "MOUSE DATA":
         
         # Title of the Streamlit app
         st.title("Gene Occurrence Analysis")
-        
-               
+           
         # Cache function to load the data efficiently
         @st.cache_data
         def load_data(file_path):
@@ -134,6 +133,9 @@ elif page == "MOUSE DATA":
         
         # Load the data (using cached version)
         df = load_data(uploaded_file)
+        
+        # Debugging step: check column names
+        st.write("Columns in the DataFrame:", df.columns)
         
         # Apply FIRE color scheme: We will use a scale from yellow to red
         def row_color(val):
@@ -158,37 +160,42 @@ elif page == "MOUSE DATA":
         else:
             filtered_df = df
         
-        # Apply the color scheme to the dataframe for the 'Occurrences' column
-        styled_df = filtered_df.style.apply(lambda row: row_color(row['Occurrences']), axis=1)
+        # Check if 'Protein Name' exists in the DataFrame
+        if 'Protein Name' in df.columns:
+            # Apply the color scheme to the dataframe for the 'Occurrences' column
+            styled_df = filtered_df.style.apply(lambda row: row_color(row['Occurrences']), axis=1)
         
-        # Display the dataframe with both 'Gene_ID' and 'Protein Name' columns
-        st.write("Displaying the updated dataframe with Gene ID and Protein Name:")
-        st.dataframe(filtered_df[['Gene_ID', 'Protein Name']])
+            # Display the dataframe with both 'Gene_ID' and 'Protein Name' columns
+            st.write("Displaying the updated dataframe with Gene ID and Protein Name:")
+            st.dataframe(filtered_df[['Gene_ID', 'Protein Name']])
         
-        # Convert the dataframe to an HTML table with rotated column names
-        html_table = filtered_df.to_html(classes='dataframe', index=False)
+            # Convert the dataframe to an HTML table with rotated column names
+            html_table = filtered_df.to_html(classes='dataframe', index=False)
         
-        # Apply custom CSS to rotate column headers 90 degrees
-        st.markdown("""
-            <style>
-                .dataframe th {
-                    writing-mode: vertical-rl;
-                    transform: rotate(180deg);
-                    padding: 10px;
-                    text-align: center;
-                    font-size: 14px;  /* Adjust size to fit better */
-                }
-                .dataframe td {
-                    padding: 8px;
-                }
-                .stDataFrame > div {
-                    overflow-x: auto;
-                }
-            </style>
-        """, unsafe_allow_html=True)
+            # Apply custom CSS to rotate column headers 90 degrees
+            st.markdown("""
+                <style>
+                    .dataframe th {
+                        writing-mode: vertical-rl;
+                        transform: rotate(180deg);
+                        padding: 10px;
+                        text-align: center;
+                        font-size: 14px;  /* Adjust size to fit better */
+                    }
+                    .dataframe td {
+                        padding: 8px;
+                    }
+                    .stDataFrame > div {
+                        overflow-x: auto;
+                    }
+                </style>
+            """, unsafe_allow_html=True)
         
-        # Display the customized HTML table
-        st.markdown(html_table, unsafe_allow_html=True)
+            # Display the customized HTML table
+            st.markdown(html_table, unsafe_allow_html=True)
+        else:
+            st.write("Column 'Protein Name' not found in the DataFrame.")
+
 
         
                             
