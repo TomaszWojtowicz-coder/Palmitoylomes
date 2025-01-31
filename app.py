@@ -135,12 +135,13 @@ elif page == "MOUSE DATA":
         uploaded_file = "gene_occurrences_analysis_mouse.xlsx"
         df = pd.read_excel(uploaded_file)
         
-        # Apply coloring based on number of occurrences in the "Occurrences" column (1-8)
         def row_color(val):
-            """Color the rows based on the number of occurrences."""
+        """Color the rows based on the number of occurrences."""
             if isinstance(val, (int, float)) and 1 <= val <= 8:
+                # Create color intensity based on the occurrence value
                 color_intensity = val / 8  # Scale the color intensity from 1 to 8
-                color = f"rgba(255, {255 - int(color_intensity * 255)}, {255 - int(color_intensity * 255)}, 1)"
+                # Create a color gradient from light to dark red
+                color = f"rgba({255 - int(color_intensity * 200)}, {int(color_intensity * 255)}, {int(color_intensity * 255)}, 1)"
                 return [f"background-color: {color}"] * len(df.columns)  # Apply color to all columns in the row
             return [""] * len(df.columns)
         
@@ -155,10 +156,9 @@ elif page == "MOUSE DATA":
         else:
             st.write("Displaying full data:")
             st.dataframe(df.style.apply(lambda row: row_color(row['Occurrences']), axis=1), use_container_width=True)
-
-
-
-
+        
+    
+    
 
     
     
