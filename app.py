@@ -108,6 +108,10 @@ elif page == "MOUSE DATA":
         """)
         df_mouse = pd.read_excel(file_path2, engine="openpyxl")
         st.dataframe(df_mouse, use_container_width=True)
+
+
+
+
         
         
         st.markdown("""
@@ -117,6 +121,10 @@ elif page == "MOUSE DATA":
                 }
             </style>
         """, unsafe_allow_html=True)
+
+
+
+
         
         
         
@@ -127,17 +135,14 @@ elif page == "MOUSE DATA":
         uploaded_file = "gene_occurrences_analysis_mouse.xlsx"
         df = pd.read_excel(uploaded_file)
         
-        # Apply proportional row coloring based on occurrences
-        def color_cells(val):
-            """Apply background color based on the occurrence value (proportional)."""
-            max_val = df.iloc[:, 1:-1].max().max()  # Maximum number of occurrences for scaling
-            color_intensity = val / max_val if max_val > 0 else 0  # Scale the color intensity
-            # Use a color scale (from white to red)
-            color = f"rgba(255, {255 - int(color_intensity * 255)}, {255 - int(color_intensity * 255)}, 1)"
-            return f"background-color: {color};"
-        
-        # Apply the color function to all columns except the "Gene_ID" and "Occurrences"
-        styled_df = df.style.applymap(color_cells, subset=df.columns[1:-1])
+        # Apply coloring based on number of occurrences in the "Occurrences" column (1-8)
+        def row_color(val):
+            """Color the rows based on the number of occurrences."""
+            if isinstance(val, (int, float)) and 1 <= val <= 8:
+                color_intensity = val / 8  # Scale the color intensity from 1 to 8
+                color = f"rgba(255, {255 - int(color_intensity * 255)}, {255 - int(color_intensity * 255)}, 1)"
+                return [f"background-color: {color}"] * len(df.columns)  # Apply color to all columns in the row
+            return [""] * len(df.columns)
         
         # Add filter widget to filter by "Gene_ID"
         gene_filter = st.text_input("Filter by Gene ID (partial match)")
@@ -146,10 +151,11 @@ elif page == "MOUSE DATA":
         if gene_filter:
             filtered_df = df[df["Gene_ID"].str.contains(gene_filter, case=False, na=False)]
             st.write(f"Filtered results for '{gene_filter}':")
-            st.dataframe(filtered_df.style.applymap(color_cells, subset=filtered_df.columns[1:-1]), use_container_width=True)
+            st.dataframe(filtered_df.style.apply(lambda row: row_color(row['Occurrences']), axis=1), use_container_width=True)
         else:
             st.write("Displaying full data:")
-            st.dataframe(styled_df, use_container_width=True)
+            st.dataframe(df.style.apply(lambda row: row_color(row['Occurrences']), axis=1), use_container_width=True)
+
 
 
 
