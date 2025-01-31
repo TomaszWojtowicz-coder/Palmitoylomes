@@ -115,7 +115,7 @@ elif page == "MOUSE DATA":
                 /* Rotate column headers to be vertical */
                 .dataframe th {
                     writing-mode: vertical-rl;
-                    transform: rotate(180deg);
+                    transform: rotate(90deg);
                     padding: 10px;
                     text-align: center;
                 }
