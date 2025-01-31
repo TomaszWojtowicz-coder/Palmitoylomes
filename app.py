@@ -66,6 +66,10 @@ elif page == "PROJECT DESCRIPTION":
                 - Data Collection: Proteomic analysis results from published studies on brain tissue samples were gathered and merged.
                 - Protein Identification: Gene IDs corresponding to palmitoylated proteins were mapped to protein names and key characteristics using the UniProt database.
                 - Data Visualization: Tools like Cytoscape and Metascape were used to visualize enriched pathways and analyze protein interactions.
+
+                 **HOW TO USE**
+
+                 - Use left dropdown menu to search for protein of interest or results of analysis
     """)
 
 # === ALL PROTEINS MERGED-TABLE ===
