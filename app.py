@@ -134,9 +134,10 @@ elif page == "MOUSE DATA":
         # Upload the Excel file (adjust path as necessary)
         uploaded_file = "gene_occurrences_analysis_mouse.xlsx"
         df = pd.read_excel(uploaded_file)
-        
+
+        # Apply coloring based on the number of occurrences in the "Occurrences" column (1-8)
         def row_color(val):
-        """Color the rows based on the number of occurrences."""
+            """Color the rows based on the number of occurrences."""
             if isinstance(val, (int, float)) and 1 <= val <= 8:
                 # Create color intensity based on the occurrence value
                 color_intensity = val / 8  # Scale the color intensity from 1 to 8
