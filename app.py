@@ -22,7 +22,7 @@ st.markdown("""
             transform: rotate(180deg);
             padding: 10px;
             text-align: center;
-            font-size: 14px; /* Adjust size to fit better */
+            font-size: 20px; /* Adjust size to fit better */
         }
         .dataframe td {
             padding: 8px;
@@ -157,8 +157,12 @@ elif page == "MOUSE DATA":
         else:
             filtered_df = df
         
-        # Apply the color scheme to the dataframe
+        # Apply the color scheme to the dataframe for the 'Occurrences' column
         styled_df = filtered_df.style.apply(lambda row: row_color(row['Occurrences']), axis=1)
+        
+        # Display the dataframe with both 'Gene_ID' and 'Protein Name' columns
+        st.write("Displaying the updated dataframe with Gene ID and Protein Name:")
+        st.dataframe(filtered_df[['Gene_ID', 'Protein Name']])
         
         # Convert the dataframe to an HTML table with rotated column names
         html_table = filtered_df.to_html(classes='dataframe', index=False)
@@ -185,13 +189,7 @@ elif page == "MOUSE DATA":
         # Display the customized HTML table
         st.markdown(html_table, unsafe_allow_html=True)
         
-        # Additional column processing if needed
-        if 'Protein Name' in df.columns:
-            # Display the Protein Name column as well
-            st.write("Displaying the updated dataframe with Gene ID and Protein Name:")
-            st.dataframe(filtered_df[['Gene_ID', 'Protein Name']])
-
-                    
+                            
 
 
     
