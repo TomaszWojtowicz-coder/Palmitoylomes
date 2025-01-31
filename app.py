@@ -109,7 +109,52 @@ elif page == "MOUSE DATA":
         df_mouse = pd.read_excel(file_path2, engine="openpyxl")
         st.dataframe(df_mouse, use_container_width=True)
 
-
+        # Apply FIRE color scheme: We will use a scale from yellow to red
+        def row_color(val):
+            """Color the rows based on the number of occurrences (Fire heatmap)."""
+            if isinstance(val, (int, float)) and 1 <= val <= 8:
+                # Create color intensity based on the occurrence value
+                color_intensity = val / 8  # Scale the color intensity from 1 to 8
+                # Fire-like color gradient from yellow to red (R->G->B)
+                r = int(255 - color_intensity * 255)
+                g = int(255 - color_intensity * 255)
+                b = 255
+                color = f"rgb({r}, {g}, {b})"
+                return [f"background-color: {color}"] * len(df.columns)  # Apply color to all columns in the row
+            return [""] * len(df.columns)
+        
+        # Rotate column names using HTML
+        st.markdown("""
+            <style>
+                /* Rotate column headers to be vertical */
+                .dataframe th {
+                    writing-mode: vertical-rl;
+                    transform: rotate(180deg);
+                    padding: 10px;
+                    text-align: center;
+                    font-size: 14px; /* Adjust size to fit better */
+                }
+                .dataframe td {
+                    padding: 8px;
+                }
+                .stDataFrame > div {
+                    overflow-x: auto;
+                }
+            </style>
+        """, unsafe_allow_html=True)
+        
+        # Add filter widget to filter by "Gene_ID"
+        gene_filter = st.text_input("Filter by Gene ID (partial match)")
+        
+        # Filter the dataframe based on the input Gene ID filter
+        if gene_filter:
+            filtered_df = df[df["Gene_ID"].str.contains(gene_filter, case=False, na=False)]
+            st.write(f"Filtered results for '{gene_filter}':")
+            st.dataframe(filtered_df.style.apply(lambda row: row_color(row['Occurrences']), axis=1), use_container_width=True)
+        else:
+            st.write("Displaying full data:")
+            st.dataframe(df.style.apply(lambda row: row_color(row['Occurrences']), axis=1), use_container_width=True)
+            
     
 
 
