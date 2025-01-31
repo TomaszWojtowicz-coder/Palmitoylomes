@@ -20,7 +20,7 @@ st.markdown("""
         .dataframe th {
             writing-mode: vertical-rl;
             transform: rotate(180deg);
-            padding: 10px;
+            padding: 20px;
             text-align: center;
             font-size: 20px; /* Adjust size to fit better */
         }
@@ -123,6 +123,7 @@ elif page == "MOUSE DATA":
         # Title of the Streamlit app
         st.title("Gene Occurrence Analysis")
         
+               
         # Cache function to load the data efficiently
         @st.cache_data
         def load_data(file_path):
@@ -188,6 +189,7 @@ elif page == "MOUSE DATA":
         
         # Display the customized HTML table
         st.markdown(html_table, unsafe_allow_html=True)
+
         
                             
 
