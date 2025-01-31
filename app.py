@@ -17,18 +17,27 @@ st.markdown("""
         h1, h2, h3, h4, h5, h6 { text-indent: 30px; margin-bottom: 60px; background-color: #e9e6fc; color: #3f3f4d; }
         .stSidebar { background-color: #bfbad9 !important; color: white !important; }
         .stButton > button { background-color: #966edb; color: #1F1A3D; }
+        .dataframe th {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            padding: 10px;
+            text-align: center;
+            font-size: 14px; /* Adjust size to fit better */
+        }
+        .dataframe td {
+            padding: 8px;
+        }
+        .stDataFrame > div {
+            overflow-x: auto;
+        }
     </style>
 """, unsafe_allow_html=True)
 
 # File path for dataset
 file_path = "All_merged.xlsx"
-# File path for dataset
 file_path2 = "Mouse_summary.xlsx"
 
 # === SIDEBAR MENU ===
-#st.sidebar.title("Menu")
-
-# Dropdown for navigation
 page = st.sidebar.selectbox("Choose a section", [
     "MAIN", 
     "PROJECT DESCRIPTION", 
@@ -120,28 +129,8 @@ elif page == "MOUSE DATA":
                 g = int(255 - color_intensity * 255)
                 b = 255
                 color = f"rgb({r}, {g}, {b})"
-                return [f"background-color: {color}"] * len(df.columns)  # Apply color to all columns in the row
+                return [f"background-color: {color}"] * len(df_mouse.columns)  # Apply color to all columns in the row
             return [""] * len(df_mouse.columns)
-        
-        # Rotate column names using HTML
-        st.markdown("""
-            <style>
-                /* Rotate column headers to be vertical */
-                .dataframe th {
-                    writing-mode: vertical-rl;
-                    transform: rotate(180deg);
-                    padding: 10px;
-                    text-align: center;
-                    font-size: 14px; /* Adjust size to fit better */
-                }
-                .dataframe td {
-                    padding: 8px;
-                }
-                .stDataFrame > div {
-                    overflow-x: auto;
-                }
-            </style>
-        """, unsafe_allow_html=True)
         
         # Add filter widget to filter by "Gene_ID"
         gene_filter = st.text_input("Filter by Gene ID (partial match)")
@@ -155,10 +144,6 @@ elif page == "MOUSE DATA":
             st.write("Displaying full data:")
             st.dataframe(df_mouse.style.apply(lambda row: row_color(row['Occurrences']), axis=1), use_container_width=True)
             
-    
-
-
-    
     elif mouse_section == "Metascape Protein Overlap Analysis":
         st.title("Mouse Metascape Protein Overlap Analysis")
         st.write("Analysis of overlapping proteins in mouse data using Metascape...")
@@ -219,4 +204,3 @@ elif page == "RAT DATA":
     elif rat_section == "Interpretation":
         st.title("Rat Data Interpretation")
         st.write("Interpretation of the rat palmitoylome data...")
-
