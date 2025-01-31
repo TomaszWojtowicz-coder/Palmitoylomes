@@ -110,20 +110,6 @@ elif page == "MOUSE DATA":
         st.dataframe(df_mouse, use_container_width=True)
 
 
-
-
-        
-        
-        st.markdown("""
-            <style>
-                .dataframe tbody tr th, .dataframe tbody tr td {
-                    font-size: 14px;  /* Adjust font size */
-                }
-            </style>
-        """, unsafe_allow_html=True)
-
-        
-
         st.markdown("""
             <style>
                 /* Rotate column headers to be vertical */
@@ -131,6 +117,7 @@ elif page == "MOUSE DATA":
                     writing-mode: vertical-rl;
                     transform: rotate(180deg);
                     padding: 10px;
+                    text-align: center;
                 }
                 .dataframe td {
                     padding: 10px;
@@ -138,23 +125,16 @@ elif page == "MOUSE DATA":
             </style>
         """, unsafe_allow_html=True)
         
-        
-        # Title of the Streamlit app
-        st.title("Gene Occurrence Analysis")
-        
-        # Upload the Excel file (adjust path as necessary)
-        uploaded_file = "gene_occurrences_analysis_mouse.xlsx"
-        df = pd.read_excel(uploaded_file)
-
-        
-        # Apply coloring based on the number of occurrences in the "Occurrences" column (1-8)
         def row_color(val):
             """Color the rows based on the number of occurrences (Fire heatmap)."""
             if isinstance(val, (int, float)) and 1 <= val <= 8:
                 # Create color intensity based on the occurrence value
                 color_intensity = val / 8  # Scale the color intensity from 1 to 8
                 # Fire-like color gradient from yellow to red (R->G->B)
-                color = f"rgba({255}, {int(255 - color_intensity * 255)}, {int(255 - color_intensity * 100)}, 1)"
+                r = 255
+                g = int(255 - color_intensity * 255)
+                b = int(0 + color_intensity * 255)
+                color = f"rgb({r}, {g}, {b})"
                 return [f"background-color: {color}"] * len(df.columns)  # Apply color to all columns in the row
             return [""] * len(df.columns)
         
@@ -169,10 +149,8 @@ elif page == "MOUSE DATA":
         else:
             st.write("Displaying full data:")
             st.dataframe(df.style.apply(lambda row: row_color(row['Occurrences']), axis=1), use_container_width=True)
-        
-
-  
-    
+          
+            
 
 
     
