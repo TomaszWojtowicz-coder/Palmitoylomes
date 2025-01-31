@@ -122,6 +122,34 @@ elif page == "MOUSE DATA":
         
         # Title of the Streamlit app
         st.title("Gene Occurrence Analysis")
+        
+        # Add the "RUNNING" blinking icon at the top
+        st.markdown("""
+            <style>
+                /* Create the blinking effect */
+                @keyframes blink {
+                    0% { color: red; }
+                    50% { color: transparent; }
+                    100% { color: red; }
+                }
+                
+                .blinking-text {
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: red;
+                    animation: blink 1s infinite;
+                }
+                
+                .blinking-text-wrapper {
+                    text-align: center;
+                    margin-top: 10px;
+                }
+            </style>
+            
+            <div class="blinking-text-wrapper">
+                <span class="blinking-text">RUNNING</span>
+            </div>
+        """, unsafe_allow_html=True)
 
         
         # Cache function to load the data efficiently
