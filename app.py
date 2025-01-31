@@ -108,39 +108,53 @@ elif page == "MOUSE DATA":
         """)
         df_mouse = pd.read_excel(file_path2, engine="openpyxl")
         st.dataframe(df_mouse, use_container_width=True)
-
+        
+        
+        st.markdown("""
+            <style>
+                .dataframe tbody tr th, .dataframe tbody tr td {
+                    font-size: 14px;  /* Adjust font size */
+                }
+            </style>
+        """, unsafe_allow_html=True)
+        
+        
+        
         # Title of the Streamlit app
-        st.title("Gene Occurrence Heatmap Analysis")
-        uploaded_file="gene_occurrences_analysis_mouse.xlsx"
+        st.title("Gene Occurrence Analysis")
+        
+        # Upload the Excel file (adjust path as necessary)
+        uploaded_file = "gene_occurrences_analysis_mouse.xlsx"
         df = pd.read_excel(uploaded_file)
-
-        # Display the dataframe to check if it's loaded correctly
-        st.write("Data preview:")
-        st.dataframe(df.head())
-
-        # Apply heatmap-style coloring
+        
+        # Apply proportional row coloring based on occurrences
         def color_cells(val):
-            """Apply background color based on the occurrence value."""
-            color = f"rgba(255, 0, 0, {val/8})" if val > 0 else "white"
-            return f"background-color: {color}; color: black"
-
+            """Apply background color based on the occurrence value (proportional)."""
+            max_val = df.iloc[:, 1:-1].max().max()  # Maximum number of occurrences for scaling
+            color_intensity = val / max_val if max_val > 0 else 0  # Scale the color intensity
+            # Use a color scale (from white to red)
+            color = f"rgba(255, {255 - int(color_intensity * 255)}, {255 - int(color_intensity * 255)}, 1)"
+            return f"background-color: {color};"
+        
         # Apply the color function to all columns except the "Gene_ID" and "Occurrences"
         styled_df = df.style.applymap(color_cells, subset=df.columns[1:-1])
-
+        
         # Add filter widget to filter by "Gene_ID"
         gene_filter = st.text_input("Filter by Gene ID (partial match)")
-
+        
         # Filter the dataframe based on the input Gene ID filter
         if gene_filter:
             filtered_df = df[df["Gene_ID"].str.contains(gene_filter, case=False, na=False)]
             st.write(f"Filtered results for '{gene_filter}':")
-            st.dataframe(filtered_df.style.applymap(color_cells, subset=filtered_df.columns[1:-1]))
+            st.dataframe(filtered_df.style.applymap(color_cells, subset=filtered_df.columns[1:-1]), use_container_width=True)
         else:
             st.write("Displaying full data:")
-            st.dataframe(styled_df)
+            st.dataframe(styled_df, use_container_width=True)
 
 
 
+
+    
     
 
 
