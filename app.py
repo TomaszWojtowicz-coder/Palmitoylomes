@@ -121,7 +121,7 @@ elif page == "MOUSE DATA":
                 b = 255
                 color = f"rgb({r}, {g}, {b})"
                 return [f"background-color: {color}"] * len(df.columns)  # Apply color to all columns in the row
-            return [""] * len(df.columns)
+            return [""] * len(df_mouse.columns)
         
         # Rotate column names using HTML
         st.markdown("""
@@ -148,12 +148,12 @@ elif page == "MOUSE DATA":
         
         # Filter the dataframe based on the input Gene ID filter
         if gene_filter:
-            filtered_df = df[df["Gene_ID"].str.contains(gene_filter, case=False, na=False)]
+            filtered_df = df_mouse[df_mouse["Gene_ID"].str.contains(gene_filter, case=False, na=False)]
             st.write(f"Filtered results for '{gene_filter}':")
             st.dataframe(filtered_df.style.apply(lambda row: row_color(row['Occurrences']), axis=1), use_container_width=True)
         else:
             st.write("Displaying full data:")
-            st.dataframe(df.style.apply(lambda row: row_color(row['Occurrences']), axis=1), use_container_width=True)
+            st.dataframe(df_mouse.style.apply(lambda row: row_color(row['Occurrences']), axis=1), use_container_width=True)
             
     
 
