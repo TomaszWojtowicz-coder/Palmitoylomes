@@ -172,6 +172,8 @@ elif page == "MOUSE DATA":
             st.dataframe(df.style.apply(lambda row: row_color(row['Occurrences']), axis=1), use_container_width=True)
         
 
+    
+
 
     
             
