@@ -123,7 +123,7 @@ elif page == "MOUSE DATA":
         # Title of the Streamlit app
         st.title("Gene Occurrence Analysis")
         
-        # Add the "RUNNING" blinking icon at the top
+        # Add the "LOADING" blinking icon at the top
         st.markdown("""
             <style>
                 /* Create the blinking effect */
