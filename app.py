@@ -184,6 +184,12 @@ elif page == "MOUSE DATA":
         
         # Display the customized HTML table
         st.markdown(html_table, unsafe_allow_html=True)
+        
+        # Additional column processing if needed
+        if 'Protein Name' in df.columns:
+            # Display the Protein Name column as well
+            st.write("Displaying the updated dataframe with Gene ID and Protein Name:")
+            st.dataframe(filtered_df[['Gene_ID', 'Protein Name']])
 
                     
 
