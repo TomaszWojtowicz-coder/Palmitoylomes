@@ -126,8 +126,8 @@ elif page == "MOUSE DATA":
         
         # Cache function to load the data efficiently
         @st.cache_data
-        def load_data(file_path):
-            return pd.read_excel(file_path)
+        def load_data(uploaded_file):
+            return pd.read_excel(uploaded_file)
         
         # Path to the uploaded file
         uploaded_file = "gene_occurrences_analysis_mouse.xlsx"
