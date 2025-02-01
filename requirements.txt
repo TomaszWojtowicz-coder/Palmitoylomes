@@ -3,3 +3,5 @@ streamlit-image-zoom==0.0.4
 Pillow==10.2.0
 pandas
 openpyxl
+matplotlib.pyplot
+numpy
