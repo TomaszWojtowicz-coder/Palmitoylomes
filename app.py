@@ -167,14 +167,16 @@ elif page == "MOUSE DATA":
             
             # Ensure Protein Name stays horizontal
             df_styled = df.style.set_table_styles(
-                [{'selector': 'th',
-                  'props': [('writing-mode', 'vertical-rl'), ('transform', 'rotate(180deg)'), ('text-align', 'center'), ('padding', '10px')]},
-                 {'selector': 'th:nth-child(2)',  # Make second column "Protein Name" horizontal
-                  'props': [('writing-mode', 'horizontal-tb'), ('transform', 'none')]}]
+                [
+                    {'selector': 'th',
+                     'props': [('writing-mode', 'vertical-rl'), ('transform', 'rotate(180deg)'), ('text-align', 'center'), ('padding', '10px')]},
+                    {'selector': 'th:nth-child(2)',  # Second column (Protein name)
+                     'props': [('writing-mode', 'horizontal-tb'), ('transform', 'none'), ('text-align', 'center')]}
+                ]
             )
             
             st.dataframe(df_styled, use_container_width=True)
-        
+
 
             # Mark as loaded (removes the blinking "RUNNING" text)
             status.update(label="Data will be shown in a moment!", state="complete", expanded=False)
