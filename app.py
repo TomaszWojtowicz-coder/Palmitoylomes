@@ -167,7 +167,7 @@ elif page == "MOUSE DATA":
             df = load_data(uploaded_file)
             time.sleep(10)
             # Mark as loaded (removes the blinking "RUNNING" text)
-            status.update(label="Data Loaded!", state="complete", expanded=False)
+            status.update(label="Data will be shown in a moment!", state="complete", expanded=False)
             
         # Apply FIRE color scheme: We will use a scale from yellow to red
         def row_color(val):
