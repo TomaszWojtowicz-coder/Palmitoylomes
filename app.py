@@ -173,15 +173,26 @@ elif page == "MOUSE DATA":
             custom_css = """
                 <style>
                     .styled-table th {
-                        writing-mode: vertical-rl;
+                        writing-mode: vertical-rl;  /* Vertical text */
                         transform: rotate(180deg);
                         text-align: center;
                         padding: 10px;
                     }
                     .styled-table th:nth-child(2) {
-                        writing-mode: horizontal-tb;
+                        writing-mode: horizontal-tb;  /* Keep second column horizontal */
                         transform: none;
                         text-align: center;
+                    }
+                    .styled-table td {
+                        padding: 8px;
+                    }
+                    .styled-table {
+                        border-collapse: collapse;
+                        width: 100%;
+                        border: 1px solid black;
+                    }
+                    .styled-table th, .styled-table td {
+                        border: 1px solid black;
                     }
                 </style>
             """
