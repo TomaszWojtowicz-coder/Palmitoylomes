@@ -153,7 +153,7 @@ elif page == "MOUSE DATA":
             """, unsafe_allow_html=True)
         
             # Simulate loading delay (for testing purposes)
-            time.sleep(10)
+           # time.sleep(10)
         
             # Cache function to load the data efficiently
             @st.cache_data
@@ -165,10 +165,10 @@ elif page == "MOUSE DATA":
             
             # Load the data
             df = load_data(uploaded_file)
-        
+            time.sleep(10)
             # Mark as loaded (removes the blinking "RUNNING" text)
             status.update(label="Data Loaded!", state="complete", expanded=False)
-        
+            
         # Apply FIRE color scheme: We will use a scale from yellow to red
         def row_color(val):
             """Color the rows based on the number of occurrences (Fire heatmap)."""
