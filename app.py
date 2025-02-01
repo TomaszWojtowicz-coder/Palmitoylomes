@@ -124,7 +124,7 @@ elif page == "MOUSE DATA":
         st.title("Gene Occurrence Analysis")
 
 
-        # Show "RUNNING" blinking icon while loading
+        # Show "LOADING" blinking icon while loading
         with st.status("Loading data...", expanded=True) as status:
             st.markdown("""
                 <style>
@@ -148,12 +148,12 @@ elif page == "MOUSE DATA":
                 </style>
                 
                 <div class="blinking-text-wrapper">
-                    <span class="blinking-text">RUNNING</span>
+                    <span class="blinking-text">LOADING</span>
                 </div>
             """, unsafe_allow_html=True)
         
             # Simulate loading delay (for testing purposes)
-            time.sleep(3)
+            time.sleep(10)
         
             # Cache function to load the data efficiently
             @st.cache_data
