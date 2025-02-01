@@ -171,7 +171,7 @@ elif page == "MOUSE DATA":
             
         # Apply FIRE color scheme: We will use a scale from yellow to red
         def row_color(val):
-            """Color the rows based on the number of occurrences (Fire heatmap)."""
+            """Color the rows based on the number of reports (Fire heatmap)."""
             if isinstance(val, (int, float)) and 1 <= val <= 8:
                 # Create color intensity based on the occurrence value
                 color_intensity = val / 8  # Scale the color intensity from 1 to 8
@@ -193,7 +193,7 @@ elif page == "MOUSE DATA":
             filtered_df = df
         
         # Apply the color scheme to the dataframe
-        styled_df = filtered_df.style.apply(lambda row: row_color(row['Occurrences']), axis=1)
+        styled_df = filtered_df.style.apply(lambda row: row_color(row['Sum Reports']), axis=1)
         
         # Convert the dataframe to an HTML table with rotated column names
         html_table = filtered_df.to_html(classes='dataframe', index=False)
