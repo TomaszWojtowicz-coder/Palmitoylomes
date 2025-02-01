@@ -5,6 +5,12 @@ import pandas as pd
 import os
 import time  
 
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+
 # Set page layout
 st.set_page_config(layout="wide")
 
@@ -302,3 +308,71 @@ elif page == "RAT DATA":
     elif rat_section == "Interpretation":
         st.title("Rat Data Interpretation")
         st.write("Interpretation of the rat palmitoylome data...")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Streamlit Title
+st.title("📊 Mortgage Cost Calculator")
+
+# User Inputs
+loan_amount = st.number_input("Enter Loan Amount ($)", min_value=1000, value=100000, step=5000)
+interest_rate = st.slider("Annual Interest Rate (%)", 0.1, 10.0, 3.5, 0.1)
+loan_term = st.slider("Loan Term (Years)", 1, 30, 15)
+
+# Convert to monthly interest rate
+monthly_rate = (interest_rate / 100) / 12
+total_months = loan_term * 12
+
+# Calculate Monthly Payment (PMT Formula)
+if monthly_rate > 0:
+    monthly_payment = (loan_amount * monthly_rate) / (1 - (1 + monthly_rate) ** -total_months)
+else:
+    monthly_payment = loan_amount / total_months  # Interest-free case
+
+# Total Interest Paid
+total_payment = monthly_payment * total_months
+total_interest = total_payment - loan_amount
+
+# Display Calculations
+st.subheader("📌 Payment Summary")
+st.write(f"💰 **Monthly Payment:** ${monthly_payment:,.2f}")
+st.write(f"📈 **Total Interest Paid:** ${total_interest:,.2f}")
+st.write(f"💸 **Total Payment Over {loan_term} Years:** ${total_payment:,.2f}")
+
+# Generate data for graph
+months = np.arange(1, total_months + 1)
+remaining_balance = []
+balance = loan_amount
+
+for _ in months:
+    interest_payment = balance * monthly_rate
+    principal_payment = monthly_payment - interest_payment
+    balance -= principal_payment
+    remaining_balance.append(balance if balance > 0 else 0)
+
+# Plot Remaining Loan Balance Over Time
+fig, ax = plt.subplots(figsize=(8, 4))
+ax.plot(months, remaining_balance, label="Remaining Balance", color='red')
+ax.fill_between(months, remaining_balance, color='red', alpha=0.3)
+ax.set_xlabel("Months")
+ax.set_ylabel("Remaining Balance ($)")
+ax.set_title("Loan Balance Over Time")
+ax.legend()
+ax.grid()
+
+st.pyplot(fig)
