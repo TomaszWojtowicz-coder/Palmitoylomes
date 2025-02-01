@@ -155,59 +155,33 @@ elif page == "MOUSE DATA":
             # Simulate loading delay (for testing purposes)
            # time.sleep(10)
 
+            # Function to load data
             @st.cache_data
             def load_data(uploaded_file):
                 df = pd.read_excel(uploaded_file, engine="openpyxl", header=0)
                 df.columns = df.columns.str.strip()  # Remove leading/trailing spaces
                 return df
             
-            # Load the data
+            # Load the dataset
             uploaded_file = "gene_occurrences_analysis_mouse.xlsx"
             df = load_data(uploaded_file)
-
-               
-
-
-
-
-
-
             
-                # Convert DataFrame to HTML
-            html_table = df.to_html(classes="styled-table", index=False)
+            # Check if DataFrame is empty
+            if df.empty:
+                st.error("The dataset is empty or not loaded correctly.")
+            else:
+                st.title("Gene Occurrence Analysis")
             
-            # Custom CSS: Rotate all headers except the second column
-            custom_css = """
-                <style>
-                    .styled-table th {
-                        writing-mode: vertical-rl;  /* Vertical text */
-                        transform: rotate(180deg);
-                        text-align: center;
-                        padding: 10px;
-                    }
-                    .styled-table th:nth-child(2) {
-                        writing-mode: horizontal-tb;  /* Keep second column horizontal */
-                        transform: none;
-                        text-align: center;
-                    }
-                    .styled-table td {
-                        padding: 8px;
-                    }
-                    .styled-table {
-                        border-collapse: collapse;
-                        width: 100%;
-                        border: 1px solid black;
-                    }
-                    .styled-table th, .styled-table td {
-                        border: 1px solid black;
-                    }
-                </style>
-            """
+                # Apply styling to rotate headers
+                styled_df = df.style.set_properties(**{
+                    'text-align': 'center'
+                }).set_table_styles([
+                    {'selector': 'th', 'props': [('writing-mode', 'vertical-rl'), ('transform', 'rotate(180deg)'), ('text-align', 'center')]},
+                    {'selector': 'th:nth-child(2)', 'props': [('writing-mode', 'horizontal-tb'), ('transform', 'none'), ('text-align', 'center')]}
+                ])
             
-            # Display the table with styles
-            st.markdown(custom_css + html_table, unsafe_allow_html=True)
-
-
+                # Display styled DataFrame
+                st.dataframe(styled_df)            
 
 
 
