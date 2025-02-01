@@ -164,77 +164,53 @@ elif page == "MOUSE DATA":
             # Load the data
             uploaded_file = "gene_occurrences_analysis_mouse.xlsx"
             df = load_data(uploaded_file)
+
+               
+            # Convert DataFrame to HTML
+            html_table = df.to_html(classes="styled-table", index=False)
             
-            # Ensure Protein Name stays horizontal
-            df_styled = df.style.set_table_styles(
-                [
-                    {'selector': 'th',
-                     'props': [('writing-mode', 'vertical-rl'), ('transform', 'rotate(180deg)'), ('text-align', 'center'), ('padding', '10px')]},
-                    {'selector': 'th:nth-child(2)',  # Second column (Protein name)
-                     'props': [('writing-mode', 'horizontal-tb'), ('transform', 'none'), ('text-align', 'center')]}
-                ]
-            )
+            # Custom CSS: Rotate all headers except the second column
+            custom_css = """
+                <style>
+                    .styled-table th {
+                        writing-mode: vertical-rl;
+                        transform: rotate(180deg);
+                        text-align: center;
+                        padding: 10px;
+                    }
+                    .styled-table th:nth-child(2) {
+                        writing-mode: horizontal-tb;
+                        transform: none;
+                        text-align: center;
+                    }
+                </style>
+            """
             
-            st.dataframe(df_styled, use_container_width=True)
+            # Display the table with styles
+            st.markdown(custom_css + html_table, unsafe_allow_html=True)
 
 
-            # Mark as loaded (removes the blinking "RUNNING" text)
-            status.update(label="Data will be shown in a moment!", state="complete", expanded=False)
-            
-        # Apply FIRE color scheme: We will use a scale from yellow to red
-        def row_color(val):
-            """Color the rows based on the number of reports (Fire heatmap)."""
-            if isinstance(val, (int, float)) and 1 <= val <= 8:
-                # Create color intensity based on the occurrence value
-                color_intensity = val / 8  # Scale the color intensity from 1 to 8
-                # Fire-like color gradient from yellow to red (R->G->B)
-                r = int(255 - color_intensity * 255)
-                g = int(255 - color_intensity * 255)
-                b = 255
-                color = f"rgb({r}, {g}, {b})"
-                return [f"background-color: {color}"] * len(df.columns)  # Apply color to all columns in the row
-            return [""] * len(df.columns)
-
-        
 
 
-        # Filter by Gene ID
-        gene_filter = st.text_input("Filter by Gene ID (partial match)")
-        
-        # Apply filter
-        if gene_filter:
-            filtered_df = df[df["Gene_ID"].str.contains(gene_filter, case=False, na=False)]
-        else:
-            filtered_df = df
-        
-        # Apply the color scheme to the dataframe
-        styled_df = filtered_df.style.apply(lambda row: row_color(row['Sum Reports']), axis=1)
-        
-        # Convert the dataframe to an HTML table with rotated column names
-        html_table = filtered_df.to_html(classes='dataframe', index=False)
-        
-        # Apply custom CSS to rotate column headers 90 degrees
-        st.markdown("""
-            <style>
-                .dataframe th {
-                    writing-mode: vertical-rl;
-                    transform: rotate(180deg);
-                    padding: 10px;
-                    text-align: center;
-                    font-size: 14px;  /* Adjust size to fit better */
-                }
-                .dataframe td {
-                    padding: 8px;
-                }
-                .stDataFrame > div {
-                    overflow-x: auto;
-                }
-            </style>
-        """, unsafe_allow_html=True)
-        
-        # Display the customized HTML table
-        st.markdown(html_table, unsafe_allow_html=True)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
 
 
