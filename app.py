@@ -154,18 +154,28 @@ elif page == "MOUSE DATA":
         
             # Simulate loading delay (for testing purposes)
            # time.sleep(10)
-        
-            # Cache function to load the data efficiently
+
             @st.cache_data
             def load_data(uploaded_file):
-                return pd.read_excel(uploaded_file)
-            
-            # Path to the uploaded file
-            uploaded_file = "gene_occurrences_analysis_mouse.xlsx"
+                df = pd.read_excel(uploaded_file, engine="openpyxl", header=0)
+                df.columns = df.columns.str.strip()  # Remove leading/trailing spaces
+                return df
             
             # Load the data
+            uploaded_file = "gene_occurrences_analysis_mouse.xlsx"
             df = load_data(uploaded_file)
-            time.sleep(10)
+            
+            # Ensure Protein Name stays horizontal
+            df_styled = df.style.set_table_styles(
+                [{'selector': 'th',
+                  'props': [('writing-mode', 'vertical-rl'), ('transform', 'rotate(180deg)'), ('text-align', 'center'), ('padding', '10px')]},
+                 {'selector': 'th:nth-child(2)',  # Make second column "Protein Name" horizontal
+                  'props': [('writing-mode', 'horizontal-tb'), ('transform', 'none')]}]
+            )
+            
+            st.dataframe(df_styled, use_container_width=True)
+        
+
             # Mark as loaded (removes the blinking "RUNNING" text)
             status.update(label="Data will be shown in a moment!", state="complete", expanded=False)
             
@@ -182,7 +192,10 @@ elif page == "MOUSE DATA":
                 color = f"rgb({r}, {g}, {b})"
                 return [f"background-color: {color}"] * len(df.columns)  # Apply color to all columns in the row
             return [""] * len(df.columns)
+
         
+
+
         # Filter by Gene ID
         gene_filter = st.text_input("Filter by Gene ID (partial match)")
         
