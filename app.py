@@ -166,7 +166,14 @@ elif page == "MOUSE DATA":
             df = load_data(uploaded_file)
 
                
-            # Convert DataFrame to HTML
+
+
+
+
+
+
+            
+                # Convert DataFrame to HTML
             html_table = df.to_html(classes="styled-table", index=False)
             
             # Custom CSS: Rotate all headers except the second column
@@ -199,6 +206,7 @@ elif page == "MOUSE DATA":
             
             # Display the table with styles
             st.markdown(custom_css + html_table, unsafe_allow_html=True)
+
 
 
 
