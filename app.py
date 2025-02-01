@@ -122,7 +122,8 @@ elif page == "MOUSE DATA":
 
         # Title of the Streamlit app
         st.title("Gene Occurrence Analysis")
-        
+
+
         # Show "RUNNING" blinking icon while loading
         with st.status("Loading data...", expanded=True) as status:
             st.markdown("""
@@ -218,6 +219,8 @@ elif page == "MOUSE DATA":
         
         # Display the customized HTML table
         st.markdown(html_table, unsafe_allow_html=True)
+
+
 
 
 
