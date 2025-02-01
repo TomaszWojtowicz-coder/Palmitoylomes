@@ -5,8 +5,8 @@ import pandas as pd
 import os
 import time  
 import numpy as np
-import matplotlib as plt
-
+import matplotlib
+import matplotlib.pyplot as plt  # Importing pyplot from matplotlib
 
 # Set page layout
 st.set_page_config(layout="wide")
@@ -372,4 +372,5 @@ ax.set_title("Loan Balance Over Time")
 ax.legend()
 ax.grid()
 
+# Display Plot
 st.pyplot(fig)
