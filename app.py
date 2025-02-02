@@ -8,10 +8,6 @@ import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt  # Importing pyplot from matplotlib
 
-with st.spinner("Ładowanie..."):
-    time.sleep(3)
-st.success("Gotowe!")
-
 # Set page layout
 st.set_page_config(layout="wide")
 
