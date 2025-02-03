@@ -37,6 +37,26 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+
+
+
+# Add CSS to style the input box
+st.markdown(
+    """
+    <style>
+        div[data-baseweb="input"] {
+            background-color: #f0f8ff;  /* Light blue background */
+            border: 2px solid #3498db;  /* Blue border */
+            border-radius: 10px;        /* Rounded corners */
+            padding: 5px;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
+
 # File path for dataset
 file_path = "All_merged.xlsx"
 file_path2 = "Mouse_summary.xlsx"
@@ -230,6 +250,24 @@ elif page == "MOUSE DATA":
         
         # Convert the dataframe to an HTML table with rotated column names
         html_table = filtered_df.to_html(classes='dataframe', index=False)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
         # Apply custom CSS to rotate column headers 90 degrees
         st.markdown("""
