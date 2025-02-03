@@ -57,6 +57,56 @@ st.markdown(
 
 
 
+
+
+
+
+
+
+# Apply CSS for styling the dropdown (selectbox)
+st.markdown(
+    """
+    <style>
+        /* Style the dropdown menu */
+        div[data-baseweb="select"] {
+            background-color: #f0f8ff;  /* Light blue background */
+            border: 2px solid #3498db;  /* Blue border */
+            border-radius: 10px;        /* Rounded corners */
+            padding: 5px;
+        }
+        
+        /* Style the wrapper around the dropdown to create an "envelope" effect */
+        .dropdown-container {
+            background-color: #e3f2fd;  /* Light blue box */
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #90caf9;
+            margin-bottom: 10px;
+        }
+
+        /* Style the dropdown label */
+        .dropdown-label {
+            color: #1565c0;  /* Blue text */
+            font-weight: bold;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # File path for dataset
 file_path = "All_merged.xlsx"
 file_path2 = "Mouse_summary.xlsx"
