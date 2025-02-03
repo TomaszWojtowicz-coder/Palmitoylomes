@@ -56,6 +56,7 @@ if page == "MAIN":
     st.title("BRAIN TISSUE PALMITOYLOMES")
     logo_path = "Logo.jpg"  # Update the path if needed
     st.image(logo_path, use_container_width=False)
+    st.title("Comments and suggestions on how to improve database should be sent: t.wojtowicz AT nencki.edu.pl") 
 
 # === PROJECT DESCRIPTION ===
 elif page == "PROJECT DESCRIPTION":
