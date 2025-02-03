@@ -304,7 +304,7 @@ elif page == "MOUSE DATA":
         # Display the customized HTML table
         st.markdown(html_table, unsafe_allow_html=True)
 
-       elif mouse_section == "Metascape - enriched terms":
+    elif mouse_section == "Metascape - enriched terms":
         st.title("Metascape - Enriched Terms")
         
         # Description for the PDF
@@ -325,15 +325,6 @@ elif page == "MOUSE DATA":
         else:
             st.error("PDF file not found!")
 
-    elif mouse_section == "Data Summary":
-        st.title("Mouse Data Summary")
-        st.write("""
-        List of original publications reporting palmitoylated proteins in mice compared in this study:
-        """)
-        df_mouse = pd.read_excel(file_path2, engine="openpyxl")
-        st.dataframe(df_mouse, use_container_width=True)
-        
-        # Other content continues...
 
 
 
