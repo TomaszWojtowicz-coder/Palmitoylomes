@@ -263,7 +263,7 @@ elif page == "MOUSE DATA":
                 ]
             )
             
-            st.dataframe(df_styled, use_container_width=True)
+           # st.dataframe(df_styled, use_container_width=True)
 
 
             # Mark as loaded (removes the blinking "RUNNING" text)
