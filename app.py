@@ -7,6 +7,8 @@ import time
 import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt  # Importing pyplot from matplotlib
+from streamlit.components.v1 import html
+from streamlit_pdf import st_pdf
 
 # Set page layout
 st.set_page_config(layout="wide")
@@ -56,13 +58,6 @@ st.markdown(
 )
 
 
-
-
-
-
-
-
-
 # Apply CSS for styling the dropdown (selectbox)
 st.markdown(
     """
@@ -93,19 +88,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # File path for dataset
 file_path = "All_merged.xlsx"
@@ -188,12 +170,12 @@ elif page == "ALL PROTEINS MERGED-TABLE":
     st.dataframe(df, use_container_width=True)
 
 # === MOUSE DATA ===
+
+
 elif page == "MOUSE DATA":
     mouse_section = st.sidebar.selectbox("Choose Mouse Data Section", [
         "Data Summary",
-        "Metascape Protein Overlap Analysis",
-        "Metascape Enriched Ontology Clusters",
-        "Metascape Protein-Protein Interaction Network",
+        "Metascape - Enriched Terms",
         "Interpretation"
     ])
 
@@ -283,9 +265,6 @@ elif page == "MOUSE DATA":
                 return [f"background-color: {color}"] * len(df.columns)  # Apply color to all columns in the row
             return [""] * len(df.columns)
 
-        
-
-
         # Filter by Gene ID
         gene_filter = st.text_input("Filter by Gene ID (partial match)")
         
@@ -302,23 +281,7 @@ elif page == "MOUSE DATA":
         html_table = filtered_df.to_html(classes='dataframe', index=False)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
+      
         # Apply custom CSS to rotate column headers 90 degrees
         st.markdown("""
             <style>
@@ -341,35 +304,45 @@ elif page == "MOUSE DATA":
         # Display the customized HTML table
         st.markdown(html_table, unsafe_allow_html=True)
 
+       elif mouse_section == "Metascape - enriched terms":
+        st.title("Metascape - Enriched Terms")
+        
+        # Description for the PDF
+        st.write("""
+        **Description:**  
+        Bar graph of enriched terms across input gene lists, colored by p-values.  
+        183 mouse palmitoylated proteins found in 6 out of 8 studies.
+        """)
+
+        # Display PDF with zooming feature (interactive)
+        pdf_file_path = "1. Enrichment_heatmap_HeatmapSelectedGO.pdf"  # Path to the PDF file
+        
+        # Check if the file exists before displaying
+        if os.path.exists(pdf_file_path):
+            st.write("**Zoomable PDF View**")
+            with open(pdf_file_path, "rb") as pdf_file:
+                st_pdf(pdf_file)  # Function to display PDF with zoom features
+        else:
+            st.error("PDF file not found!")
+
+    elif mouse_section == "Data Summary":
+        st.title("Mouse Data Summary")
+        st.write("""
+        List of original publications reporting palmitoylated proteins in mice compared in this study:
+        """)
+        df_mouse = pd.read_excel(file_path2, engine="openpyxl")
+        st.dataframe(df_mouse, use_container_width=True)
+        
+        # Other content continues...
 
 
 
 
 
-    
-            
-    elif mouse_section == "Metascape Protein Overlap Analysis":
-        st.title("Mouse Metascape Protein Overlap Analysis")
-        st.write("Analysis of overlapping proteins in mouse data using Metascape...")
-    
-    elif mouse_section == "Metascape Enriched Ontology Clusters":
-        st.title("Mouse Metascape Enriched Ontology Clusters")
-        st.write("Functional ontology clusters enriched in mouse palmitoylome dataset...")
-    
-    elif mouse_section == "Metascape Protein-Protein Interaction Network":
-        st.title("Mouse Metascape Protein-Protein Interaction Network")
-        st.write("Protein interaction network in mouse data...")
-        try:
-            img = Image.open("interaction_network_mouse.png")
-            zoomed_img = image_zoom(img)
-            if zoomed_img:
-                st.image(zoomed_img, caption="Protein-Protein Interaction Network (Mouse)", use_container_width=True)
-        except FileNotFoundError:
-            st.error("Image file not found.")
-    
-    elif mouse_section == "Interpretation":
-        st.title("Mouse Data Interpretation")
-        st.write("Interpretation of the mouse palmitoylome data...")
+
+
+
+
 
 # === RAT DATA ===
 elif page == "RAT DATA":
