@@ -8,7 +8,6 @@ import matplotlib.pyplot as plt
 from streamlit.components.v1 import html
 import json
 import requests
-import cytoscape
 import xml.etree.ElementTree as ET
 
         
