@@ -57,7 +57,11 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# File path for datasets
+
+
+
+
+# File path for dataset
 file_path = "All_merged.xlsx"
 file_path2 = "Mouse_summary.xlsx"
 
@@ -74,34 +78,48 @@ page = st.sidebar.selectbox("Choose a section", [
 if page == "MAIN":
     st.title("COMPARATIVE DATABASE OF RAT AND MOUSE") 
     st.title("BRAIN TISSUE PALMITOYLOMES")
-    logo_path = "Logo.jpg"
-    image = Image.open(logo_path)
-    
-    orig_width, orig_height = image.size
-    new_width = orig_width // 2
-    st.image(image, width=new_width)
-    st.write("Comments and suggestions on how to improve database (t.wojtowicz AT nencki.edu.pl)") 
+    logo_path = "Logo2.png"  # Update the path if needed
+    st.image(logo_path, use_container_width=False)
 
 # === PROJECT DESCRIPTION ===
 elif page == "PROJECT DESCRIPTION":
     st.title("Project Description")
     st.write("""
                **Project Overview**
-               The aim of this project is to review existing mass spectrometry studies reporting on palmitate-enriched proteins in rat and mouse brain tissues to better understand 
-               the patterns of protein palmitoylation. 
+
+                The aim of this project is to review existing mass spectrometry studies reporting on palmitate-enriched proteins in rat and mouse brain tissues to better understand 
+                the patterns of protein palmitoylation. Since results from different studies vary significantly, we highlight proteins that have been most frequently reported as palmitoylated.
+                By compiling these findings, we hope to improve the understanding of which protein families are regulated by this specific post-translational modification. Additionally, 
+                the presented database may serve as a valuable resource for researchers looking for target proteins to study. 
+        
+                **Key Objectives**
+
+                - Integrate published palmitoylomes obtained via mass spectrometry into a searchable database as a useful research tool.
+                - Identify proteins that are consistently reported in their palmitoylated form.
+                - Characterize protein families that undergo palmitoylation.
+
+                **Methods**
+
+                - Data Collection: Proteomic analysis results from published studies on brain tissue samples were gathered and merged.
+                - Protein Identification: Gene IDs corresponding to palmitoylated proteins were mapped to protein names and key characteristics using the UniProt database.
+                - Data Visualization: Tools like Cytoscape and Metascape were used to visualize enriched pathways and analyze protein interactions.
+
+                 **HOW TO USE**
+
+                 - Use left dropdown menu to search for protein of interest or results of analysis
     """)
 
 # === ALL PROTEINS MERGED-TABLE ===
 elif page == "ALL PROTEINS MERGED-TABLE":
     df = pd.read_excel(file_path, engine="openpyxl")
     st.title("Multi-Filter Excel Data")
-    filter_columns = st.multiselect("Reports of mass-spectrometry palmitoylated proteins are merged in a single database", df.columns)
+    filter_columns = st.multiselect("Reports of mass-spectrometry palmitoylated proteins are merged in single database (mouse data n=8 studies, rat data n=3 studies). Multifilter of data can be applied:", df.columns)  # Limit to 8
     filters = {}
     for column in filter_columns:
-        unique_values = df[column].dropna().unique()
-        selected_values = st.multiselect(f"Filter {column}:", unique_values)
+        unique_values = df[column].dropna().unique()  # Get unique values
+        selected_values = st.multiselect(f"Filter {column}:", unique_values)  # Allow selection
         if selected_values:
-            filters[column] = selected_values
+            filters[column] = selected_values  # Store selections
 
     for column, selected_values in filters.items():
         df = df[df[column].isin(selected_values)]
@@ -112,37 +130,167 @@ elif page == "ALL PROTEINS MERGED-TABLE":
 elif page == "MOUSE DATA":
     mouse_section = st.sidebar.selectbox("Choose Mouse Data Section", [
         "Data Summary",
-        "Metascape - Enriched Terms",
+        "Metascape Protein Overlap Analysis",
+        "Metascape Enriched Ontology Clusters",
+        "Metascape Protein-Protein Interaction Network",
         "Interpretation"
     ])
 
     if mouse_section == "Data Summary":
         st.title("Mouse Data Summary")
         st.write("""
+        
         List of original publications reporting palmitoylated proteins in mice compared in this study:
+        
         """)
         df_mouse = pd.read_excel(file_path2, engine="openpyxl")
         st.dataframe(df_mouse, use_container_width=True)
-
-    elif mouse_section == "Metascape - enriched terms":
-        st.title("Metascape - Enriched Terms")
-        st.write("""
-        **Description:**  
-        Bar graph of enriched terms across input gene lists, colored by p-values.  
-        183 mouse palmitoylated proteins found in 6 out of 8 studies.
-        """)
-
-        # Display PDF (Alternative method using HTML iframe)
-        pdf_file_path = "1. Enrichment_heatmap_HeatmapSelectedGO.pdf"
         
-        if os.path.exists(pdf_file_path):
-            st.write("**Zoomable PDF View**")
-            pdf_embed_code = f"""
-            <iframe src="{pdf_file_path}" width="100%" height="600px"></iframe>
-            """
-            html(pdf_embed_code, height=600)
+
+        # Title of the Streamlit app
+        st.title("Gene Occurrence Analysis")
+
+
+        # Show "LOADING" blinking icon while loading
+        with st.status("Loading data...", expanded=True) as status:
+            st.markdown("""
+                <style>
+                    @keyframes blink {
+                        0% { color: red; }
+                        50% { color: transparent; }
+                        100% { color: red; }
+                    }
+                    
+                    .blinking-text {
+                        font-size: 24px;
+                        font-weight: bold;
+                        color: red;
+                        animation: blink 1s infinite;
+                    }
+                    
+                    .blinking-text-wrapper {
+                        text-align: center;
+                        margin-top: 10px;
+                    }
+                </style>
+                
+                <div class="blinking-text-wrapper">
+                    <span class="blinking-text">LOADING</span>
+                </div>
+            """, unsafe_allow_html=True)
+        
+            # Simulate loading delay (for testing purposes)
+           # time.sleep(10)
+
+            @st.cache_data
+            def load_data(uploaded_file):
+                df = pd.read_excel(uploaded_file, engine="openpyxl", header=0)
+                df.columns = df.columns.str.strip()  # Remove leading/trailing spaces
+                return df
+            
+            # Load the data
+            uploaded_file = "gene_occurrences_analysis_mouse.xlsx"
+            df = load_data(uploaded_file)
+            
+            # Ensure Protein Name stays horizontal
+            df_styled = df.style.set_table_styles(
+                [
+                    {'selector': 'th',
+                     'props': [('writing-mode', 'vertical-rl'), ('transform', 'rotate(180deg)'), ('text-align', 'center'), ('padding', '10px')]},
+                    {'selector': 'th:nth-child(2)',  # Second column (Protein name)
+                     'props': [('writing-mode', 'horizontal-tb'), ('transform', 'none'), ('text-align', 'center')]}
+                ]
+            )
+            
+            st.dataframe(df_styled, use_container_width=True)
+
+
+            # Mark as loaded (removes the blinking "RUNNING" text)
+            status.update(label="Data will be shown in a moment!", state="complete", expanded=False)
+            
+        # Apply FIRE color scheme: We will use a scale from yellow to red
+        def row_color(val):
+            """Color the rows based on the number of reports (Fire heatmap)."""
+            if isinstance(val, (int, float)) and 1 <= val <= 8:
+                # Create color intensity based on the occurrence value
+                color_intensity = val / 8  # Scale the color intensity from 1 to 8
+                # Fire-like color gradient from yellow to red (R->G->B)
+                r = int(255 - color_intensity * 255)
+                g = int(255 - color_intensity * 255)
+                b = 255
+                color = f"rgb({r}, {g}, {b})"
+                return [f"background-color: {color}"] * len(df.columns)  # Apply color to all columns in the row
+            return [""] * len(df.columns)
+
+        
+
+
+        # Filter by Gene ID
+        gene_filter = st.text_input("Filter by Gene ID (partial match)")
+        
+        # Apply filter
+        if gene_filter:
+            filtered_df = df[df["Gene_ID"].str.contains(gene_filter, case=False, na=False)]
         else:
-            st.error("PDF file not found!")
+            filtered_df = df
+        
+        # Apply the color scheme to the dataframe
+        styled_df = filtered_df.style.apply(lambda row: row_color(row['Sum Reports']), axis=1)
+        
+        # Convert the dataframe to an HTML table with rotated column names
+        html_table = filtered_df.to_html(classes='dataframe', index=False)
+        
+        # Apply custom CSS to rotate column headers 90 degrees
+        st.markdown("""
+            <style>
+                .dataframe th {
+                    writing-mode: vertical-rl;
+                    transform: rotate(180deg);
+                    padding: 10px;
+                    text-align: center;
+                    font-size: 14px;  /* Adjust size to fit better */
+                }
+                .dataframe td {
+                    padding: 8px;
+                }
+                .stDataFrame > div {
+                    overflow-x: auto;
+                }
+            </style>
+        """, unsafe_allow_html=True)
+        
+        # Display the customized HTML table
+        st.markdown(html_table, unsafe_allow_html=True)
+
+
+
+
+
+
+    
+            
+    elif mouse_section == "Metascape Protein Overlap Analysis":
+        st.title("Mouse Metascape Protein Overlap Analysis")
+        st.write("Analysis of overlapping proteins in mouse data using Metascape...")
+    
+    elif mouse_section == "Metascape Enriched Ontology Clusters":
+        st.title("Mouse Metascape Enriched Ontology Clusters")
+        st.write("Functional ontology clusters enriched in mouse palmitoylome dataset...")
+    
+    elif mouse_section == "Metascape Protein-Protein Interaction Network":
+        st.title("Mouse Metascape Protein-Protein Interaction Network")
+        st.write("Protein interaction network in mouse data...")
+        try:
+            img = Image.open("interaction_network_mouse.png")
+            zoomed_img = image_zoom(img)
+            if zoomed_img:
+                st.image(zoomed_img, caption="Protein-Protein Interaction Network (Mouse)", use_container_width=True)
+        except FileNotFoundError:
+            st.error("Image file not found.")
+    
+    elif mouse_section == "Interpretation":
+        st.title("Mouse Data Interpretation")
+        st.write("Interpretation of the mouse palmitoylome data...")
 
 # === RAT DATA ===
 elif page == "RAT DATA":
@@ -157,10 +305,15 @@ elif page == "RAT DATA":
     if rat_section == "Data Summary":
         st.title("Rat Data Summary")
         st.write("Summary of the palmitoylome data collected for rat brain tissue...")
+
     
     elif rat_section == "Metascape Protein Overlap Analysis":
         st.title("Rat Metascape Protein Overlap Analysis")
         st.write("Analysis of overlapping proteins in rat data using Metascape...")
+    
+    elif rat_section == "Metascape Enriched Ontology Clusters":
+        st.title("Rat Metascape Enriched Ontology Clusters")
+        st.write("Functional ontology clusters enriched in rat palmitoylome dataset...")
     
     elif rat_section == "Metascape Protein-Protein Interaction Network":
         st.title("Rat Metascape Protein-Protein Interaction Network")
@@ -168,10 +321,11 @@ elif page == "RAT DATA":
         try:
             img = Image.open("interaction_network_rat.png")
             zoomed_img = image_zoom(img)
-            st.image(zoomed_img, caption="Protein-Protein Interaction Network (Rat)", use_container_width=True)
+            if zoomed_img:
+                st.image(zoomed_img, caption="Protein-Protein Interaction Network (Rat)", use_container_width=True)
         except FileNotFoundError:
             st.error("Image file not found.")
-
+    
     elif rat_section == "Interpretation":
         st.title("Rat Data Interpretation")
         st.write("Interpretation of the rat palmitoylome data...")
