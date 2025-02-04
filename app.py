@@ -374,7 +374,8 @@ elif page == "MOUSE DATA":
         
         # Load CYJS Data from GitHub URL
         github_url = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/1.cyjs"
-        
+
+
         try:
             response = requests.get(github_url)
             response.raise_for_status()  # Ensure the request was successful
