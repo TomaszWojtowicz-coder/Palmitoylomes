@@ -9,8 +9,6 @@ from streamlit.components.v1 import HTML
 import json
 import requests
 
-
-
 # Ensure correct image zoom library is imported
 from streamlit_image_zoom import image_zoom  # Ensure you have the 'streamlit_image_zoom' package installed
 
@@ -61,10 +59,6 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-
-
-
-
 # File path for dataset
 file_path = "All_merged.xlsx"
 file_path2 = "Mouse_summary.xlsx"
@@ -89,8 +83,6 @@ if page == "MAIN":
     new_width = orig_width // 2
     st.image(image, width=new_width)
     st.write("Comments and suggestions on how to improve database (t.wojtowicz AT nencki.edu.pl)") 
-
-
 
 # === PROJECT DESCRIPTION ===
 elif page == "PROJECT DESCRIPTION":
@@ -273,13 +265,6 @@ elif page == "MOUSE DATA":
         # Display the customized HTML table
         st.markdown(html_table, unsafe_allow_html=True)
 
-
-
-
-
-
-    
-            
     elif mouse_section == "Metascape Protein Overlap Analysis":
         st.title("Mouse Metascape Protein Overlap Analysis")
         st.write("Analysis of overlapping proteins in mouse data using Metascape...")
@@ -288,15 +273,10 @@ elif page == "MOUSE DATA":
         st.title("Mouse Metascape Enriched Ontology Clusters")
         st.write("Functional ontology clusters enriched in mouse palmitoylome dataset...")
     
-
-
-
     elif mouse_section == "Metascape Protein-Protein Interaction Network":
         st.title("Mouse Metascape Protein-Protein Interaction Network")
         st.write("Protein interaction network in mouse data...")
     
- 
-        
         # === Function to Load and Display Cytoscape.js Network ===
         def display_cytoscape_network(cyjs_data):
             st.components.v1.html(f"""
@@ -350,94 +330,15 @@ elif page == "MOUSE DATA":
         # === Streamlit App ===
         st.title("Interactive Cytoscape.js Network")
         
-        # === Option A: Load from GitHub (Recommended) ===
-        github_url = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/edit/main/1.cyjs"
+        # === Try to load the data and display the network ===
+        github_url = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/1.cyjs"
+        
         try:
             response = requests.get(github_url)
+            response.raise_for_status()  # Check if request was successful
             cyjs_data = response.json()
             display_cytoscape_network(cyjs_data)
-        except:
-            st.error("Failed to load Cytoscape.js file from GitHub. Check the URL.")
-        
-        # === Option B: Load Locally (Alternative) ===
-        uploaded_file = st.file_uploader("Upload CYJS File", type=["cyjs"])
-        if uploaded_file:
-            cyjs_data = json.load(uploaded_file)
-            display_cytoscape_network(cyjs_data)
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-    elif mouse_section == "Interpretation":
-        st.title("Mouse Data Interpretation")
-        st.write("Interpretation of the mouse palmitoylome data...")
-
-# === RAT DATA ===
-elif page == "RAT DATA":
-    rat_section = st.sidebar.selectbox("Choose Rat Data Section", [
-        "Data Summary",
-        "Metascape Protein Overlap Analysis",
-        "Metascape Enriched Ontology Clusters",
-        "Metascape Protein-Protein Interaction Network",
-        "Interpretation"
-    ])
-
-    if rat_section == "Data Summary":
-        st.title("Rat Data Summary")
-        st.write("Summary of the palmitoylome data collected for rat brain tissue...")
-
-    
-    elif rat_section == "Metascape Protein Overlap Analysis":
-        st.title("Rat Metascape Protein Overlap Analysis")
-        st.write("Analysis of overlapping proteins in rat data using Metascape...")
-    
-    elif rat_section == "Metascape Enriched Ontology Clusters":
-        st.title("Rat Metascape Enriched Ontology Clusters")
-        st.write("Functional ontology clusters enriched in rat palmitoylome dataset...")
-    
-    elif rat_section == "Metascape Protein-Protein Interaction Network":
-        st.title("Rat Metascape Protein-Protein Interaction Network")
-        st.write("Protein interaction network in rat data...")
-        try:
-            img = Image.open("interaction_network_rat.png")
-            zoomed_img = image_zoom(img)
-            if zoomed_img:
-                st.image(zoomed_img, caption="Protein-Protein Interaction Network (Rat)", use_container_width=True)
-        except FileNotFoundError:
-            st.error("Image file not found.")
-    
-    elif rat_section == "Interpretation":
-        st.title("Rat Data Interpretation")
-        st.write("Interpretation of the rat palmitoylome data...")
+        except requests.exceptions.RequestException as e:
+            st.error(f"Error loading CYJS file: {e}")
+        except json.JSONDecodeError:
+            st.error("Failed to decode JSON. Ensure your CYJS file is correctly formatted.")
