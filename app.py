@@ -8,6 +8,10 @@ import matplotlib.pyplot as plt
 from streamlit.components.v1 import html
 import json
 import requests
+import cytoscape
+        
+
+
 
 # Ensure correct image zoom library is imported
 from streamlit_image_zoom import image_zoom  # Ensure you have the 'streamlit_image_zoom' package installed
@@ -278,27 +282,42 @@ elif page == "MOUSE DATA":
         st.write("Protein interaction network in mouse data...")
                 
           
-        # Function to Load and Display Cytoscape.js Network
-        def display_cytoscape_network(cyjs_data):
-            # Debugging step: Print the entire structure of cyjs_data
-            st.write("Full data from cyjs file:")
-            st.json(cyjs_data)  # Display the full data to inspect its structure
-            
-            # Check if 'elements' exists in the data
-            if 'elements' not in cyjs_data:
-                st.error("'elements' key not found in the CYJS data.")
-                return
-            
-            # Check if there are any elements
-            if len(cyjs_data['elements']) == 0:
-                st.error("No elements found in the CYJS data.")
-                return
-            
-            # If everything looks good, display the first element
-            st.write("First element in the elements array:")
-            st.json(cyjs_data['elements'][0])  # Display the first element for inspection
+
+
+
+
+
+
         
-            # Proceed with Cytoscape visualization
+        # Function to convert SIF data to Cytoscape elements
+        def sif_to_elements(sif_file):
+            elements = []
+            with open(sif_file, 'r') as f:
+                lines = f.readlines()
+                for line in lines:
+                    node1, interaction, node2 = line.strip().split('\t')
+                    elements.append({'data': {'source': node1, 'target': node2, 'interaction': interaction}})
+            return elements
+        
+        # Streamlit app to upload and visualize the network
+        st.title("Upload SIF File for Cytoscape Network")
+        
+        # File uploader for SIF file
+        uploaded_file = st.file_uploader("Choose a SIF file", type=['sif'])
+        
+        if uploaded_file is not None:
+            # Save the uploaded file to a temporary location
+            with open("uploaded_file.sif", "wb") as f:
+                f.write(uploaded_file.getbuffer())
+        
+            # Convert the uploaded SIF file to Cytoscape elements
+            cy_elements = sif_to_elements("uploaded_file.sif")
+            
+            # Display the elements (for debugging purposes)
+            st.write("Converted elements from SIF file:")
+            st.json(cy_elements)
+        
+            # Display Cytoscape network
             st.components.v1.html(f"""
                 <html>
                 <head>
@@ -316,7 +335,7 @@ elif page == "MOUSE DATA":
                     <script>
                         var cy = cytoscape({{
                             container: document.getElementById('cy'),
-                            elements: {json.dumps(cyjs_data['elements'])},  // Use the elements from the loaded data
+                            elements: {json.dumps(cy_elements)},  // Cytoscape elements
                             style: [
                                 {{
                                     selector: 'node',
@@ -346,19 +365,3 @@ elif page == "MOUSE DATA":
                 </body>
                 </html>
             """, height=650)
-        
-        # Streamlit App to display Cytoscape.js network
-        st.title("Interactive Cytoscape.js Network")
-        
-        # GitHub URL to load the 1.cyjs file
-        github_url = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/1.cyjs"
-        
-        try:
-            response = requests.get(github_url)
-            response.raise_for_status()  # Ensure the request was successful
-            cyjs_data = response.json()  # Parse the JSON from the URL
-            display_cytoscape_network(cyjs_data)  # Display Cytoscape network
-        except requests.exceptions.RequestException as e:
-            st.error(f"Error loading CYJS file: {e}")
-        except json.JSONDecodeError:
-            st.error("Failed to decode JSON. Ensure the CYJS file is correctly formatted.")
