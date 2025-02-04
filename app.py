@@ -276,7 +276,7 @@ elif page == "MOUSE DATA":
     elif mouse_section == "Metascape Protein-Protein Interaction Network":
         st.title("Mouse Metascape Protein-Protein Interaction Network")
         st.write("Protein interaction network in mouse data...")
-    
+
         
         # Function to display Cytoscape Network with Legends and Node Colors
         def display_cytoscape_network(cyjs_data):
