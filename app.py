@@ -277,18 +277,28 @@ elif page == "MOUSE DATA":
         st.title("Mouse Metascape Protein-Protein Interaction Network")
         st.write("Protein interaction network in mouse data...")
                 
-        
+          
         # Function to Load and Display Cytoscape.js Network
         def display_cytoscape_network(cyjs_data):
-            # Check if the cyjs_data has elements
-            if 'elements' not in cyjs_data or len(cyjs_data['elements']) == 0:
-                st.error("The CYJS data doesn't contain valid elements.")
+            # Debugging step: Print the entire structure of cyjs_data
+            st.write("Full data from cyjs file:")
+            st.json(cyjs_data)  # Display the full data to inspect its structure
+            
+            # Check if 'elements' exists in the data
+            if 'elements' not in cyjs_data:
+                st.error("'elements' key not found in the CYJS data.")
                 return
             
-            # Display the data for debugging purposes
+            # Check if there are any elements
+            if len(cyjs_data['elements']) == 0:
+                st.error("No elements found in the CYJS data.")
+                return
+            
+            # If everything looks good, display the first element
+            st.write("First element in the elements array:")
             st.json(cyjs_data['elements'][0])  # Display the first element for inspection
         
-            # HTML and JS code for Cytoscape
+            # Proceed with Cytoscape visualization
             st.components.v1.html(f"""
                 <html>
                 <head>
