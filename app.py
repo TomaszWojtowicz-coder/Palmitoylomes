@@ -9,8 +9,12 @@ from streamlit.components.v1 import html
 import json
 import requests
 import cytoscape
-        
+import xml.etree.ElementTree as ET
 
+        
+        
+        
+        
 
 
 # Ensure correct image zoom library is imported
@@ -283,41 +287,62 @@ elif page == "MOUSE DATA":
                 
           
 
-
-
-
-
-
         
-        # Function to convert SIF data to Cytoscape elements
-        def sif_to_elements(sif_file):
+        
+        
+        # GitHub Raw URL for the file
+        GITHUB_URL = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/1.xgmml"
+        
+        # Function to fetch the .xgmml file from GitHub
+        def fetch_xgmml_file(url):
+            response = requests.get(url)
+            if response.status_code == 200:
+                return response.text
+            else:
+                st.error("Failed to fetch the XGMML file. Check the file URL or repository permissions.")
+                return None
+        
+        # Function to parse XGMML and extract Cytoscape-compatible elements
+        def parse_xgmml(xgmml_data):
             elements = []
-            with open(sif_file, 'r') as f:
-                lines = f.readlines()
-                for line in lines:
-                    node1, interaction, node2 = line.strip().split('\t')
-                    elements.append({'data': {'source': node1, 'target': node2, 'interaction': interaction}})
+            root = ET.fromstring(xgmml_data)
+        
+            # Parse nodes
+            for node in root.findall(".//{http://www.cs.rpi.edu/XGMML}node"):
+                node_id = node.get("id")
+                node_label = node.get("label", node_id)  # Default to ID if no label
+                elements.append({
+                    "data": {"id": node_id, "label": node_label}
+                })
+        
+            # Parse edges
+            for edge in root.findall(".//{http://www.cs.rpi.edu/XGMML}edge"):
+                source = edge.get("source")
+                target = edge.get("target")
+                elements.append({
+                    "data": {"source": source, "target": target}
+                })
+        
             return elements
         
-        # Streamlit app to upload and visualize the network
-        st.title("Upload SIF File for Cytoscape Network")
+        # Streamlit app layout
+        st.title("Cytoscape Network Viewer (XGMML Format)")
         
-        # File uploader for SIF file
-        uploaded_file = st.file_uploader("Choose a SIF file", type=['sif'])
+        # Load the XGMML file from GitHub
+        st.write("Fetching network data from repository...")
+        xgmml_data = fetch_xgmml_file(GITHUB_URL)
         
-        if uploaded_file is not None:
-            # Save the uploaded file to a temporary location
-            with open("uploaded_file.sif", "wb") as f:
-                f.write(uploaded_file.getbuffer())
+        if xgmml_data:
+            st.success("Successfully loaded XGMML file.")
         
-            # Convert the uploaded SIF file to Cytoscape elements
-            cy_elements = sif_to_elements("uploaded_file.sif")
-            
-            # Display the elements (for debugging purposes)
-            st.write("Converted elements from SIF file:")
+            # Convert XGMML to Cytoscape-compatible JSON
+            cy_elements = parse_xgmml(xgmml_data)
+        
+            # Debugging: Show parsed elements
+            st.subheader("Extracted Network Data")
             st.json(cy_elements)
         
-            # Display Cytoscape network
+            # Display Cytoscape.js visualization
             st.components.v1.html(f"""
                 <html>
                 <head>
@@ -335,30 +360,33 @@ elif page == "MOUSE DATA":
                     <script>
                         var cy = cytoscape({{
                             container: document.getElementById('cy'),
-                            elements: {json.dumps(cy_elements)},  // Cytoscape elements
+                            elements: {json.dumps(cy_elements)},
                             style: [
                                 {{
                                     selector: 'node',
                                     style: {{
-                                        'background-color': '#6fa3ef',
-                                        'label': 'data(name)',
-                                        'font-size': '12px',
+                                        'label': 'data(label)',
+                                        'background-color': '#007acc',
+                                        'width': 20,
+                                        'height': 20,
                                         'text-valign': 'center',
-                                        'text-halign': 'center'
+                                        'text-halign': 'center',
+                                        'color': 'white',
+                                        'font-size': 12
                                     }}
                                 }},
                                 {{
                                     selector: 'edge',
                                     style: {{
                                         'width': 2,
-                                        'line-color': '#ddd',
-                                        'target-arrow-color': '#ddd',
+                                        'line-color': '#ccc',
                                         'target-arrow-shape': 'triangle'
                                     }}
                                 }}
                             ],
                             layout: {{
-                                name: 'cose'  // Adjust layout: 'cose', 'circle', 'grid', 'breadthfirst'
+                                name: 'cose',
+                                animate: true
                             }}
                         }});
                     </script>
