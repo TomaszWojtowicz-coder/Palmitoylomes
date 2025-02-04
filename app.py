@@ -277,6 +277,8 @@ elif page == "MOUSE DATA":
         st.title("Mouse Metascape Protein-Protein Interaction Network")
         st.write("Protein interaction network in mouse data...")
     
+
+
         # === Function to Load and Display Cytoscape.js Network ===
         def display_cytoscape_network(cyjs_data):
             st.components.v1.html(f"""
@@ -336,8 +338,8 @@ elif page == "MOUSE DATA":
         try:
             response = requests.get(github_url)
             response.raise_for_status()  # Check if request was successful
-            cyjs_data = response.json()
-            display_cytoscape_network(cyjs_data)
+            cyjs_data = response.json()  # Parse the JSON data from GitHub URL
+            display_cytoscape_network(cyjs_data)  # Call the function to display the network
         except requests.exceptions.RequestException as e:
             st.error(f"Error loading CYJS file: {e}")
         except json.JSONDecodeError:
