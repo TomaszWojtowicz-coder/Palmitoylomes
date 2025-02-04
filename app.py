@@ -274,46 +274,46 @@ elif page == "MOUSE DATA":
 
 
 
-
-
-elif mouse_section == "Metascape Protein Overlap Analysis":
-    st.title("Mouse Metascape Protein Overlap Analysis")
-    st.write("Analysis of overlapping proteins in mouse data using Metascape...")
-
-    # GitHub raw URL to your GraphML file
-    graphml_url = "https://github.com/TomaszWojtowicz-coder/Palmitoylomes/edit/main/1.graphml"
-
-    try:
-        # Download the GraphML file
-        response = requests.get(graphml_url)
-        response.raise_for_status()  # Raise an error if the request fails
-
-        # Save the downloaded file temporarily
-        graphml_temp_path = "temp_graph.graphml"
-        with open(graphml_temp_path, "wb") as f:
-            f.write(response.content)
-
-        # Load the graph
-        G = nx.read_graphml(graphml_temp_path)
-
-        # Convert NetworkX graph to PyVis
-        net = Network(notebook=True, height="600px", width="100%", bgcolor="#ffffff", font_color="black")
-        net.from_nx(G)
-
-        # Save graph as an HTML file
-        graph_html_path = "graph_visualization.html"
-        net.save_graph(graph_html_path)
-
-        # Embed the HTML in Streamlit
-        with open(graph_html_path, "r", encoding="utf-8") as f:
-            components.html(f.read(), height=700)
-
-        st.success("Graph visualization loaded successfully from GitHub!")
-
-    except requests.exceptions.RequestException as e:
-        st.error(f"Failed to load graph from GitHub: {e}")
-
-
+        
+        
+        elif mouse_section == "Metascape Protein Overlap Analysis":
+            st.title("Mouse Metascape Protein Overlap Analysis")
+            st.write("Analysis of overlapping proteins in mouse data using Metascape...")
+        
+            # GitHub raw URL to your GraphML file
+            graphml_url = "https://github.com/TomaszWojtowicz-coder/Palmitoylomes/edit/main/1.graphml"
+        
+            try:
+                # Download the GraphML file
+                response = requests.get(graphml_url)
+                response.raise_for_status()  # Raise an error if the request fails
+        
+                # Save the downloaded file temporarily
+                graphml_temp_path = "temp_graph.graphml"
+                with open(graphml_temp_path, "wb") as f:
+                    f.write(response.content)
+        
+                # Load the graph
+                G = nx.read_graphml(graphml_temp_path)
+        
+                # Convert NetworkX graph to PyVis
+                net = Network(notebook=True, height="600px", width="100%", bgcolor="#ffffff", font_color="black")
+                net.from_nx(G)
+        
+                # Save graph as an HTML file
+                graph_html_path = "graph_visualization.html"
+                net.save_graph(graph_html_path)
+        
+                # Embed the HTML in Streamlit
+                with open(graph_html_path, "r", encoding="utf-8") as f:
+                    components.html(f.read(), height=700)
+        
+                st.success("Graph visualization loaded successfully from GitHub!")
+        
+            except requests.exceptions.RequestException as e:
+                st.error(f"Failed to load graph from GitHub: {e}")
+        
+        
 
 
 
