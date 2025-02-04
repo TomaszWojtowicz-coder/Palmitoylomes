@@ -126,7 +126,7 @@ elif page == "MOUSE DATA":
         st.write("Visualizing the protein interaction network for mouse data...")
         
         # Load graph from GitHub (REPLACE with actual URL)
-        graphml_url = "https://github.com/TomaszWojtowicz-coder/Palmitoylomes/blob/main/1.graphml"
+        graphml_url = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/1.graphml"
         load_graph(graphml_url)
 
     elif mouse_section == "Interpretation":
@@ -156,8 +156,8 @@ elif page == "RAT DATA":
         st.write("Visualizing the protein interaction network for rat data...")
 
         # Load graph from GitHub (REPLACE with actual URL)
-        graphml_url = "https://github.com/YOUR-REPO/rat_graph.graphml"
-        load_graph(graphml_url)
+       # graphml_url = "https://github.com/YOUR-REPO/rat_graph.graphml"
+      #  load_graph(graphml_url)
 
     elif rat_section == "Interpretation":
         st.title("Rat Data Interpretation")
