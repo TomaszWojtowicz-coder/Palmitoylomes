@@ -278,6 +278,7 @@ elif page == "MOUSE DATA":
         st.write("Protein interaction network in mouse data...")
 
         
+        
         # Function to display Cytoscape Network with Legends and Node Colors
         def display_cytoscape_network(cyjs_data):
             if 'elements' not in cyjs_data or len(cyjs_data['elements']) == 0:
@@ -326,7 +327,7 @@ elif page == "MOUSE DATA":
                         <div><span style="color: #32CD32;">&#11044;</span> Category 3</div>
                     </div>
                     <script>
-                        var cy = cytoscape({
+                        var cy = cytoscape({{
                             container: document.getElementById('cy'),
                             elements: {json.dumps(cyjs_data['elements'])},
                             style: [
