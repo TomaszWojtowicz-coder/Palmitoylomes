@@ -5,7 +5,7 @@ import os
 import time
 import numpy as np
 import matplotlib.pyplot as plt
-from streamlit.components.v1 import HTML
+from streamlit.components.v1 import html
 import json
 import requests
 
