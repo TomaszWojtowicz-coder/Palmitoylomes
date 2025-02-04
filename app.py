@@ -276,8 +276,8 @@ elif page == "MOUSE DATA":
     elif mouse_section == "Metascape Protein-Protein Interaction Network":
         st.title("Mouse Metascape Protein-Protein Interaction Network")
         st.write("Protein interaction network in mouse data...")
-
         
+                
         
         # Function to display Cytoscape Network with Legends and Node Colors
         def display_cytoscape_network(cyjs_data):
@@ -285,6 +285,9 @@ elif page == "MOUSE DATA":
                 st.error("The CYJS data doesn't contain valid elements.")
                 return
             
+            # Debug: print out the structure of the first node to understand its format
+            st.write(cyjs_data['elements'][0])
+        
             # Generate unique color categories based on a node attribute, e.g., 'category' (adjust based on actual data structure)
             node_colors = {
                 'Category 1': '#FF6347',  # Example color for Category 1
@@ -295,11 +298,15 @@ elif page == "MOUSE DATA":
             # Iterate through nodes and apply colors based on a node attribute (adjust 'data(category)' if needed)
             for node in cyjs_data['elements']:
                 # Check if the 'category' field exists in the node data, and if so, apply the color
-                category = node['data'].get('category', None)
-                if category in node_colors:
-                    node['data']['color'] = node_colors[category]
+                if 'data' in node:
+                    category = node['data'].get('category', None)
+                    if category in node_colors:
+                        node['data']['color'] = node_colors[category]
+                    else:
+                        node['data']['color'] = '#808080'  # Default gray color if 'category' is not found
                 else:
-                    node['data']['color'] = '#808080'  # Default gray color if 'category' is not found
+                    node['data'] = {}
+                    node['data']['color'] = '#808080'  # Default gray color if 'data' field is missing
         
             # Cytoscape.js styling: Customize node colors dynamically based on attributes
             st.components.v1.html(f"""
