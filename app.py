@@ -294,10 +294,12 @@ elif page == "MOUSE DATA":
         
             # Iterate through nodes and apply colors based on a node attribute (adjust 'data(category)' if needed)
             for node in cyjs_data['elements']:
-                if node['data']['category'] in node_colors:
-                    node['data']['color'] = node_colors[node['data']['category']]
+                # Check if the 'category' field exists in the node data, and if so, apply the color
+                category = node['data'].get('category', None)
+                if category in node_colors:
+                    node['data']['color'] = node_colors[category]
                 else:
-                    node['data']['color'] = '#808080'  # Default gray color
+                    node['data']['color'] = '#808080'  # Default gray color if 'category' is not found
         
             # Cytoscape.js styling: Customize node colors dynamically based on attributes
             st.components.v1.html(f"""
