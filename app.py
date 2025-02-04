@@ -281,7 +281,7 @@ elif page == "MOUSE DATA":
             st.write("Analysis of overlapping proteins in mouse data using Metascape...")
         
             # GitHub raw URL to your GraphML file
-            graphml_url = "https://github.com/TomaszWojtowicz-coder/Palmitoylomes/edit/main/1.graphml"
+            graphml_url = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/1.graphml"
         
             try:
                 # Download the GraphML file
