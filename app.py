@@ -12,10 +12,6 @@ import requests
 import streamlit.components.v1 as components
 
 
-
-# Ensure correct image zoom library is imported
-from streamlit_image_zoom import image_zoom  # Ensure you have the 'streamlit_image_zoom' package installed
-
 # Set page layout
 st.set_page_config(layout="wide")
 
@@ -285,7 +281,7 @@ elif mouse_section == "Metascape Protein Overlap Analysis":
     st.write("Analysis of overlapping proteins in mouse data using Metascape...")
 
     # GitHub raw URL to your GraphML file
-    graphml_url = "https://raw.githubusercontent.com/your-username/your-repo/main/your-file.graphml"
+    graphml_url = "https://github.com/TomaszWojtowicz-coder/Palmitoylomes/edit/main/1.graphml"
 
     try:
         # Download the GraphML file
