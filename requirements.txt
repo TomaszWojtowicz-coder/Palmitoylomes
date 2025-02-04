@@ -6,3 +6,5 @@ openpyxl
 matplotlib
 numpy
 networkx
+requests
+
