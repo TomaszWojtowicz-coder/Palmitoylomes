@@ -298,16 +298,48 @@ elif page == "MOUSE DATA":
             with open(svg_path, "r") as f:
                 svg_data = f.read()
     
-            # Display SVG using HTML to ensure proper rendering
+            # Display SVG with interactive zoom using JavaScript (panzoom library)
             st.components.v1.html(f"""
-                <div style="text-align: center;">
-                    {svg_data}
-                </div>
-            """, height=600)  # Adjust height if necessary
+                <html>
+                <head>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/svg-pan-zoom/3.6.1/svg-pan-zoom.min.js"></script>
+                    <style>
+                        #svg-container {{
+                            width: 100%;
+                            height: 600px;
+                            overflow: hidden;
+                            border: 1px solid #ddd;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: white;
+                        }}
+                    </style>
+                </head>
+                <body>
+                    <div id="svg-container">
+                        {svg_data}  <!-- Embed the actual SVG -->
+                    </div>
+    
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {{
+                            var svgElement = document.querySelector("#svg-container svg");
+                            if (svgElement) {{
+                                svgPanZoom(svgElement, {{
+                                    zoomEnabled: true,
+                                    controlIconsEnabled: true,
+                                    fit: true,
+                                    center: true
+                                }});
+                            }}
+                        }});
+                    </script>
+                </body>
+                </html>
+            """, height=650)  # Adjust height as needed
     
         else:
             st.error("SVG file '1.svg' not found. Please check the file path.")
-
 
 
 
