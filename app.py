@@ -276,39 +276,19 @@ elif page == "MOUSE DATA":
     elif mouse_section == "Metascape Protein-Protein Interaction Network":
         st.title("Mouse Metascape Protein-Protein Interaction Network")
         st.write("Protein interaction network in mouse data...")
+                
         
-                        
-        # Function to display Cytoscape Network with Legends and Node Colors
+        # Function to Load and Display Cytoscape.js Network
         def display_cytoscape_network(cyjs_data):
-            # Check if 'elements' exists and is not empty
-            if 'elements' not in cyjs_data or not cyjs_data['elements']:
-                st.error("No elements found in the CYJS data. Please check the structure of the data.")
-                st.write(cyjs_data)  # Debugging: print the full data for inspection
+            # Check if the cyjs_data has elements
+            if 'elements' not in cyjs_data or len(cyjs_data['elements']) == 0:
+                st.error("The CYJS data doesn't contain valid elements.")
                 return
+            
+            # Display the data for debugging purposes
+            st.json(cyjs_data['elements'][0])  # Display the first element for inspection
         
-            # Debug: print out the structure of the first node to understand its format
-            st.write("First element structure:", cyjs_data['elements'][0])
-        
-            # Generate unique color categories based on a node attribute, e.g., 'category' (adjust based on actual data structure)
-            node_colors = {
-                'Category 1': '#FF6347',  # Example color for Category 1
-                'Category 2': '#1E90FF',  # Example color for Category 2
-                'Category 3': '#32CD32',  # Example color for Category 3
-            }
-        
-            # Iterate through nodes and apply colors based on a node attribute (adjust 'data(category)' if needed)
-            for node in cyjs_data['elements']:
-                if 'data' in node:
-                    category = node['data'].get('category', None)
-                    if category in node_colors:
-                        node['data']['color'] = node_colors[category]
-                    else:
-                        node['data']['color'] = '#808080'  # Default gray color if 'category' is not found
-                else:
-                    node['data'] = {}
-                    node['data']['color'] = '#808080'  # Default gray color if 'data' field is missing
-        
-            # Cytoscape.js styling: Customize node colors dynamically based on attributes
+            # HTML and JS code for Cytoscape
             st.components.v1.html(f"""
                 <html>
                 <head>
@@ -319,31 +299,19 @@ elif page == "MOUSE DATA":
                             height: 600px;
                             border: 1px solid black;
                         }}
-                        .legend {{
-                            font-size: 14px;
-                            margin-top: 20px;
-                        }}
-                        .legend div {{
-                            margin-bottom: 5px;
-                        }}
                     </style>
                 </head>
                 <body>
                     <div id="cy"></div>
-                    <div class="legend">
-                        <div><span style="color: #FF6347;">&#11044;</span> Category 1</div>
-                        <div><span style="color: #1E90FF;">&#11044;</span> Category 2</div>
-                        <div><span style="color: #32CD32;">&#11044;</span> Category 3</div>
-                    </div>
                     <script>
                         var cy = cytoscape({{
                             container: document.getElementById('cy'),
-                            elements: {json.dumps(cyjs_data['elements'])},
+                            elements: {json.dumps(cyjs_data['elements'])},  // Use the elements from the loaded data
                             style: [
                                 {{
                                     selector: 'node',
                                     style: {{
-                                        'background-color': 'data(color)',
+                                        'background-color': '#6fa3ef',
                                         'label': 'data(name)',
                                         'font-size': '12px',
                                         'text-valign': 'center',
@@ -369,13 +337,12 @@ elif page == "MOUSE DATA":
                 </html>
             """, height=650)
         
-        # Streamlit App
-        st.title("Interactive Cytoscape.js Network with Node Coloring and Legends")
+        # Streamlit App to display Cytoscape.js network
+        st.title("Interactive Cytoscape.js Network")
         
-        # Load CYJS Data from GitHub URL
+        # GitHub URL to load the 1.cyjs file
         github_url = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/1.cyjs"
-
-
+        
         try:
             response = requests.get(github_url)
             response.raise_for_status()  # Ensure the request was successful
