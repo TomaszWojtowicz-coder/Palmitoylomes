@@ -277,18 +277,28 @@ elif page == "MOUSE DATA":
         st.title("Mouse Metascape Protein-Protein Interaction Network")
         st.write("Protein interaction network in mouse data...")
     
-                
-        # Function to Load and Display Cytoscape.js Network
-        def display_cytoscape_network(cyjs_data):
-            # Print the data to Streamlit for debugging
-            st.json(cyjs_data)  # Display the content of cyjs_data for verification
         
-            # Check if cyjs_data has elements
+        # Function to display Cytoscape Network with Legends and Node Colors
+        def display_cytoscape_network(cyjs_data):
             if 'elements' not in cyjs_data or len(cyjs_data['elements']) == 0:
                 st.error("The CYJS data doesn't contain valid elements.")
                 return
+            
+            # Generate unique color categories based on a node attribute, e.g., 'category' (adjust based on actual data structure)
+            node_colors = {
+                'Category 1': '#FF6347',  # Example color for Category 1
+                'Category 2': '#1E90FF',  # Example color for Category 2
+                'Category 3': '#32CD32',  # Example color for Category 3
+            }
         
-            # Pass the correct elements data into the Cytoscape instance
+            # Iterate through nodes and apply colors based on a node attribute (adjust 'data(category)' if needed)
+            for node in cyjs_data['elements']:
+                if node['data']['category'] in node_colors:
+                    node['data']['color'] = node_colors[node['data']['category']]
+                else:
+                    node['data']['color'] = '#808080'  # Default gray color
+        
+            # Cytoscape.js styling: Customize node colors dynamically based on attributes
             st.components.v1.html(f"""
                 <html>
                 <head>
@@ -299,19 +309,31 @@ elif page == "MOUSE DATA":
                             height: 600px;
                             border: 1px solid black;
                         }}
+                        .legend {{
+                            font-size: 14px;
+                            margin-top: 20px;
+                        }}
+                        .legend div {{
+                            margin-bottom: 5px;
+                        }}
                     </style>
                 </head>
                 <body>
                     <div id="cy"></div>
+                    <div class="legend">
+                        <div><span style="color: #FF6347;">&#11044;</span> Category 1</div>
+                        <div><span style="color: #1E90FF;">&#11044;</span> Category 2</div>
+                        <div><span style="color: #32CD32;">&#11044;</span> Category 3</div>
+                    </div>
                     <script>
-                        var cy = cytoscape({{
+                        var cy = cytoscape({
                             container: document.getElementById('cy'),
-                            elements: {json.dumps(cyjs_data['elements'])},  // Use the elements from the loaded data
+                            elements: {json.dumps(cyjs_data['elements'])},
                             style: [
                                 {{
                                     selector: 'node',
                                     style: {{
-                                        'background-color': '#6fa3ef',
+                                        'background-color': 'data(color)',
                                         'label': 'data(name)',
                                         'font-size': '12px',
                                         'text-valign': 'center',
@@ -337,10 +359,11 @@ elif page == "MOUSE DATA":
                 </html>
             """, height=650)
         
-        # Streamlit App
-        st.title("Interactive Cytoscape.js Network")
         
-        # Load and display data from the GitHub URL
+        # Streamlit App
+        st.title("Interactive Cytoscape.js Network with Node Coloring and Legends")
+        
+        # Load CYJS Data from GitHub URL
         github_url = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/1.cyjs"
         
         try:
