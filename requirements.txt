@@ -7,4 +7,6 @@ matplotlib
 numpy
 networkx
 requests
+pyvis
+
 
