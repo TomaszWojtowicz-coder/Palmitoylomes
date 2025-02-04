@@ -5,7 +5,11 @@ import os
 import time
 import numpy as np
 import matplotlib.pyplot as plt
-from streamlit.components.v1 import html
+from streamlit.components.v1 import HTML
+import json
+import requests
+
+
 
 # Ensure correct image zoom library is imported
 from streamlit_image_zoom import image_zoom  # Ensure you have the 'streamlit_image_zoom' package installed
@@ -291,56 +295,81 @@ elif page == "MOUSE DATA":
         st.title("Mouse Metascape Protein-Protein Interaction Network")
         st.write("Protein interaction network in mouse data...")
     
-        svg_path = "1.svg"  # Ensure this file exists in the working directory
-    
-        # Check if file exists before trying to load
-        if os.path.exists(svg_path):
-            with open(svg_path, "r") as f:
-                svg_data = f.read()
-    
-            # Display SVG with interactive zoom using JavaScript (panzoom library)
+ 
+        
+        # === Function to Load and Display Cytoscape.js Network ===
+        def display_cytoscape_network(cyjs_data):
             st.components.v1.html(f"""
                 <html>
                 <head>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/svg-pan-zoom/3.6.1/svg-pan-zoom.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.21.0/cytoscape.min.js"></script>
                     <style>
-                        #svg-container {{
+                        #cy {{
                             width: 100%;
                             height: 600px;
-                            overflow: hidden;
-                            border: 1px solid #ddd;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            background-color: white;
+                            border: 1px solid black;
                         }}
                     </style>
                 </head>
                 <body>
-                    <div id="svg-container">
-                        {svg_data}  <!-- Embed the actual SVG -->
-                    </div>
-    
+                    <div id="cy"></div>
                     <script>
-                        document.addEventListener("DOMContentLoaded", function() {{
-                            var svgElement = document.querySelector("#svg-container svg");
-                            if (svgElement) {{
-                                svgPanZoom(svgElement, {{
-                                    zoomEnabled: true,
-                                    controlIconsEnabled: true,
-                                    fit: true,
-                                    center: true
-                                }});
+                        var cy = cytoscape({{
+                            container: document.getElementById('cy'),
+                            elements: {json.dumps(cyjs_data)},
+                            style: [
+                                {{
+                                    selector: 'node',
+                                    style: {{
+                                        'background-color': '#6fa3ef',
+                                        'label': 'data(name)',
+                                        'font-size': '12px',
+                                        'text-valign': 'center',
+                                        'text-halign': 'center'
+                                    }}
+                                }},
+                                {{
+                                    selector: 'edge',
+                                    style: {{
+                                        'width': 2,
+                                        'line-color': '#ddd',
+                                        'target-arrow-color': '#ddd',
+                                        'target-arrow-shape': 'triangle'
+                                    }}
+                                }}
+                            ],
+                            layout: {{
+                                name: 'cose'  // Adjust layout: 'cose', 'circle', 'grid', 'breadthfirst'
                             }}
                         }});
                     </script>
                 </body>
                 </html>
-            """, height=650)  # Adjust height as needed
-    
-        else:
-            st.error("SVG file '1.svg' not found. Please check the file path.")
+            """, height=650)
+        
+        # === Streamlit App ===
+        st.title("Interactive Cytoscape.js Network")
+        
+        # === Option A: Load from GitHub (Recommended) ===
+        github_url = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/edit/main/1.cyjs"
+        try:
+            response = requests.get(github_url)
+            cyjs_data = response.json()
+            display_cytoscape_network(cyjs_data)
+        except:
+            st.error("Failed to load Cytoscape.js file from GitHub. Check the URL.")
+        
+        # === Option B: Load Locally (Alternative) ===
+        uploaded_file = st.file_uploader("Upload CYJS File", type=["cyjs"])
+        if uploaded_file:
+            cyjs_data = json.load(uploaded_file)
+            display_cytoscape_network(cyjs_data)
 
+
+
+
+
+    
 
 
 
