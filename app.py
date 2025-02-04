@@ -126,7 +126,7 @@ elif page == "MOUSE DATA":
         st.write("Visualizing the protein interaction network for mouse data...")
         
         # Load graph from GitHub (REPLACE with actual URL)
-        graphml_url = "https://github.com/YOUR-REPO/mouse_graph.graphml"
+        graphml_url = "https://github.com/TomaszWojtowicz-coder/Palmitoylomes/blob/main/1.graphml"
         load_graph(graphml_url)
 
     elif mouse_section == "Interpretation":
