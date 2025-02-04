@@ -277,10 +277,18 @@ elif page == "MOUSE DATA":
         st.title("Mouse Metascape Protein-Protein Interaction Network")
         st.write("Protein interaction network in mouse data...")
     
-
-
-        # === Function to Load and Display Cytoscape.js Network ===
+                
+        # Function to Load and Display Cytoscape.js Network
         def display_cytoscape_network(cyjs_data):
+            # Print the data to Streamlit for debugging
+            st.json(cyjs_data)  # Display the content of cyjs_data for verification
+        
+            # Check if cyjs_data has elements
+            if 'elements' not in cyjs_data or len(cyjs_data['elements']) == 0:
+                st.error("The CYJS data doesn't contain valid elements.")
+                return
+        
+            # Pass the correct elements data into the Cytoscape instance
             st.components.v1.html(f"""
                 <html>
                 <head>
@@ -298,7 +306,7 @@ elif page == "MOUSE DATA":
                     <script>
                         var cy = cytoscape({{
                             container: document.getElementById('cy'),
-                            elements: {json.dumps(cyjs_data)},
+                            elements: {json.dumps(cyjs_data['elements'])},  // Use the elements from the loaded data
                             style: [
                                 {{
                                     selector: 'node',
@@ -329,18 +337,18 @@ elif page == "MOUSE DATA":
                 </html>
             """, height=650)
         
-        # === Streamlit App ===
+        # Streamlit App
         st.title("Interactive Cytoscape.js Network")
         
-        # === Try to load the data and display the network ===
+        # Load and display data from the GitHub URL
         github_url = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/1.cyjs"
         
         try:
             response = requests.get(github_url)
-            response.raise_for_status()  # Check if request was successful
-            cyjs_data = response.json()  # Parse the JSON data from GitHub URL
-            display_cytoscape_network(cyjs_data)  # Call the function to display the network
+            response.raise_for_status()  # Ensure the request was successful
+            cyjs_data = response.json()  # Parse the JSON from the URL
+            display_cytoscape_network(cyjs_data)  # Display Cytoscape network
         except requests.exceptions.RequestException as e:
             st.error(f"Error loading CYJS file: {e}")
         except json.JSONDecodeError:
-            st.error("Failed to decode JSON. Ensure your CYJS file is correctly formatted.")
+            st.error("Failed to decode JSON. Ensure the CYJS file is correctly formatted.")
