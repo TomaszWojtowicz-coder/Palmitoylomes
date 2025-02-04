@@ -277,16 +277,17 @@ elif page == "MOUSE DATA":
         st.title("Mouse Metascape Protein-Protein Interaction Network")
         st.write("Protein interaction network in mouse data...")
         
-                
-        
+                        
         # Function to display Cytoscape Network with Legends and Node Colors
         def display_cytoscape_network(cyjs_data):
-            if 'elements' not in cyjs_data or len(cyjs_data['elements']) == 0:
-                st.error("The CYJS data doesn't contain valid elements.")
+            # Check if 'elements' exists and is not empty
+            if 'elements' not in cyjs_data or not cyjs_data['elements']:
+                st.error("No elements found in the CYJS data. Please check the structure of the data.")
+                st.write(cyjs_data)  # Debugging: print the full data for inspection
                 return
-            
+        
             # Debug: print out the structure of the first node to understand its format
-            st.write(cyjs_data['elements'][0])
+            st.write("First element structure:", cyjs_data['elements'][0])
         
             # Generate unique color categories based on a node attribute, e.g., 'category' (adjust based on actual data structure)
             node_colors = {
@@ -297,7 +298,6 @@ elif page == "MOUSE DATA":
         
             # Iterate through nodes and apply colors based on a node attribute (adjust 'data(category)' if needed)
             for node in cyjs_data['elements']:
-                # Check if the 'category' field exists in the node data, and if so, apply the color
                 if 'data' in node:
                     category = node['data'].get('category', None)
                     if category in node_colors:
@@ -368,7 +368,6 @@ elif page == "MOUSE DATA":
                 </body>
                 </html>
             """, height=650)
-        
         
         # Streamlit App
         st.title("Interactive Cytoscape.js Network with Node Coloring and Legends")
