@@ -345,10 +345,10 @@ elif page == "MOUSE DATA":
         image = Image.open(BytesIO(response.content))
     
         # 🔍 Fix resolution: Increase DPI & enhance quality
-        high_res_image = image.resize((image.width * 2, image.height * 2), Image.LANCZOS)  # 2x scaling
+        #high_res_image = image.resize((image.width * 2, image.height * 2), Image.LANCZOS)  # 2x scaling
         
         # 📌 Display only the high-resolution image (NO ZOOM)
-        st.image(high_res_image, use_container_width=True)  # ✅ Updated parameter
+    #    st.image(high_res_image, use_container_width=True)  # ✅ Updated parameter
     
     except requests.exceptions.RequestException as e:
         st.error(f"❌ Error loading image: {e}")
