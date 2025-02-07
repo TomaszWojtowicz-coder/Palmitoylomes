@@ -81,18 +81,26 @@ def get_base64(image_path):
 # Load the image and convert to Base64
 sidebar_bg_image = get_base64("x2.png")  # Ensure the correct file path
 
-# Apply CSS with inline Base64 image
-sidebar_style = f"""
+
+
+
+
+
+st.markdown("""
     <style>
-        [data-testid="stSidebar"] {{
+        [data-testid="stSidebar"] {
             background-image: url("data:image/png;base64,{sidebar_bg_image}");
             background-size: cover;
             background-position: center;
-        }}
+            color: white !important; /* Ensures all text in the sidebar is white */
+        }
+        [data-testid="stSidebar"] * {
+            color: white !important; /* Applies white color to all elements inside the sidebar */
+        }
     </style>
-"""
-
+""".format(sidebar_bg_image=sidebar_bg_image), unsafe_allow_html=True)
 st.markdown(sidebar_style, unsafe_allow_html=True)
+
 
 
 
