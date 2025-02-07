@@ -89,7 +89,15 @@ if page == "MAIN":
     orig_width, orig_height = image.size
     new_width = orig_width // 2
     st.image(image, width=new_width)
-    st.write("Comments and suggestions on how to improve database (t.wojtowicz AT nencki.edu.pl)") 
+    st.write("""
+    
+    
+    
+    
+    
+    
+    Comments and suggestions on how to improve database (t.wojtowicz AT nencki.edu.pl)""") 
+        
 
 # === PROJECT DESCRIPTION ===
 elif page == "PROJECT DESCRIPTION":
