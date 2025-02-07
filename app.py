@@ -306,7 +306,8 @@ elif page == "MOUSE DATA":
             
           
     # 📌 Display Title
-    st.title("Cytoscape Mouse GO Network Clusters of Palmitoylated Proteins Enrichment")
+    st.title("Results of analysis of term enrichment in 6 out to 8 publications on mouse palmitoylomes")
+    st.write("1. Cytoscape Mouse GO Network Clusters of Palmitoylated Proteins Enrichment")
             
     
     # ✅ Fetch and Display High-Resolution Image
@@ -328,16 +329,11 @@ elif page == "MOUSE DATA":
 
 
   # 📌 Display Title
-    st.title("Metascape - Bar graph of enriched terms across input gene lists, colored by p-values.")
+    st.write("2. Metascape - Bar graph of enriched terms across input gene lists, colored by p-values.")
   
     # 📌 GitHub Raw PDF URL
     GITHUB_PDF_URL2 = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/2_Enrichment_heatmap_HeatmapSelectedGO.pdf"  # Replace with your actual URL
     
-    # 🌟 Page Title
-    st.title("📄 PDF Viewer & Downloader")
-    
-    # 📌 Description
-    st.write("This app allows you to view and download a PDF document directly from GitHub.")
     
     # ✅ Try to fetch the PDF file
     try:
