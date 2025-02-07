@@ -79,7 +79,7 @@ def get_base64(image_path):
         return base64.b64encode(file.read()).decode()
 
 # Load the image and convert to Base64
-sidebar_bg_image = get_base64("x.png")  # Ensure the correct file path
+sidebar_bg_image = get_base64("x2.png")  # Ensure the correct file path
 
 # Apply CSS with inline Base64 image
 sidebar_style = f"""
