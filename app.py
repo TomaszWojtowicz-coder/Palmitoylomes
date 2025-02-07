@@ -306,18 +306,21 @@ elif page == "MOUSE DATA":
         try:
             # Fetch image from GitHub
             response = requests.get(GITHUB_IMAGE_URL)
-            response.raise_for_status()  # Check for errors
+            response.raise_for_status()  # Check for HTTP errors
     
             # Open image and enable zoom functionality
             image = Image.open(BytesIO(response.content))
-            zoomed_image = image_zoom(image)
             
-            # Display image with zoom
-            st.image(zoomed_image, use_column_width=True)
+            # Use streamlit_image_zoom if available, otherwise display normally
+            if 'image_zoom' in globals():
+                zoomed_image = image_zoom(image)
+                st.image(zoomed_image, use_column_width=True)
+            else:
+                st.image(image, use_column_width=True)
     
         except requests.exceptions.RequestException as e:
             st.error(f"Error loading image: {e}")
-    
+        
 
 
 
