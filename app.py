@@ -10,6 +10,8 @@ import json
 import requests
 import xml.etree.ElementTree as ET
 import base64
+from io import BytesIO
+
 
 # Ensure correct image zoom library is imported
 from streamlit_image_zoom import image_zoom  # Ensure you have the 'streamlit_image_zoom' package installed
@@ -156,10 +158,11 @@ elif page == "ALL PROTEINS MERGED-TABLE":
 elif page == "MOUSE DATA":
     mouse_section = st.sidebar.selectbox("Choose Mouse Data Section", [
         "Data Summary",
+        "Metascape MOUSE GO Network"
         "Metascape Protein Overlap Analysis",
         "Metascape Enriched Ontology Clusters",
         "Metascape Protein-Protein Interaction Network",
-        "Interpretation"
+
     ])
 
     if mouse_section == "Data Summary":
@@ -287,6 +290,38 @@ elif page == "MOUSE DATA":
         
         # Display the customized HTML table
         st.markdown(html_table, unsafe_allow_html=True)
+
+
+
+    
+################################################################################################################################################################################################################
+    
+    # GitHub Raw URL of your image
+    GITHUB_IMAGE_URL = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/1_MOUSE_Go_Network.png"
+    
+  
+    if mouse_section == "Metascape MOUSE GO Network":
+        st.title("Cytoscape Mouse GO Network Clusters of Palmitoylated Proteins Enrichment")
+    
+        try:
+            # Fetch image from GitHub
+            response = requests.get(GITHUB_IMAGE_URL)
+            response.raise_for_status()  # Check for errors
+    
+            # Open image and enable zoom functionality
+            image = Image.open(BytesIO(response.content))
+            zoomed_image = image_zoom(image)
+            
+            # Display image with zoom
+            st.image(zoomed_image, use_column_width=True)
+    
+        except requests.exceptions.RequestException as e:
+            st.error(f"Error loading image: {e}")
+    
+
+
+
+
 
 # === RAT DATA ===
 elif page == "RAT DATA":
