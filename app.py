@@ -366,6 +366,19 @@ elif page == "MOUSE DATA":
     
     except requests.exceptions.RequestException as e:
         st.error(f"❌ Error loading image: {e}")
+    GITHUB_4 = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/3_legend_table.png"  # Replace with your actual URL
+    try:
+        response = requests.get(GITHUB_4, timeout=10)  # Prevent long waits
+        response.raise_for_status()  # Check if URL is valid (200 OK)
+    
+        # Open the image
+        image = Image.open(BytesIO(response.content))
+    
+        image = image.convert("RGBA")  # Keep original quality
+        st.image(image, use_container_width=True)  # Display without modification
+    
+    except requests.exceptions.RequestException as e:
+        st.error(f"❌ Error loading image: {e}")
           
 ################################################################################################################################################################################################################
     
