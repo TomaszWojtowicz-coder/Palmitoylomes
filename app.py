@@ -127,7 +127,7 @@ elif page == "PROJECT DESCRIPTION":
 
                  **HOW TO USE**
 
-                 - Use left dropdown menu for aggregated data or individual protein data 
+                 - Use left dropdown menu for aggregated data or individual protein data. Tables and graphics in most cases are interactive.
     """)
 
 # === ALL PROTEINS MERGED-TABLE ===
