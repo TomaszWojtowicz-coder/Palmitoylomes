@@ -297,7 +297,7 @@ elif page == "MOUSE DATA":
 ################################################################################################################################################################################################################
     
     # GitHub Raw URL of your image
-    GITHUB_IMAGE_URL = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/blob/main/1_MOUSE_Go_Network.png"
+    GITHUB_IMAGE_URL = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/1_MOUSE_Go_Network.png"
     
   
     if mouse_section == "Metascape MOUSE GO Network":
