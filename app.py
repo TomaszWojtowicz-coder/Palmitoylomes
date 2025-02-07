@@ -87,6 +87,7 @@ st.markdown("""
     </style>
 """.format(sidebar_bg_image=sidebar_bg_image), unsafe_allow_html=True)
 
+
 # === SIDEBAR MENU ===
 page = st.sidebar.selectbox("Choose a section", [
     "MAIN", 
