@@ -335,19 +335,19 @@ elif page == "MOUSE DATA":
     GITHUB_PDF_URL2 = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/2_Enrichment_heatmap_HeatmapSelectedGO.pdf"  # Replace with your actual URL
     
     
-    # ✅ Try to fetch the PDF file
+    # ✅ Embed PDF using HTML iframe
+    st.subheader("📑 PDF Preview:")
+    
+    pdf_viewer = f"""
+        <iframe src="{GITHUB_PDF_URL2}" width="700" height="500"></iframe>
+    """
+    st.markdown(pdf_viewer, unsafe_allow_html=True)
+    
+    # 📥 Provide a download button
     try:
-        response = requests.get(GITHUB_PDF_URL2, timeout=10)  # Prevent long waits
-        response.raise_for_status()  # Ensure URL is valid
+        response = requests.get(GITHUB_PDF_URL, timeout=10)
+        response.raise_for_status()
     
-        # Convert PDF content to BytesIO (for displaying and downloading)
-        pdf_file = BytesIO(response.content)
-    
-        # 📄 Display PDF in Streamlit (Embed Viewer)
-        st.subheader("📑 PDF Preview:")
-        st.pdf(pdf_file)  # Streamlit's built-in PDF viewer
-    
-        # 📥 Provide a download button
         st.download_button(
             label="📥 Download PDF",
             data=response.content,
