@@ -109,10 +109,9 @@ elif page == "PROJECT DESCRIPTION":
     st.write("""
                **Project Overview**
 
-                The aim of this project is to review existing mass spectrometry studies reporting on palmitate-enriched proteins in rat and mouse brain tissues to better understand 
-                the patterns of protein palmitoylation. Since results from different studies vary significantly, we highlight proteins that have been most frequently reported as palmitoylated.
-                By compiling these findings, we hope to improve the understanding of which protein families are regulated by this specific post-translational modification. Additionally, 
-                the presented database may serve as a valuable resource for researchers looking for target proteins to study. 
+                The aim of this project is to review existing mass spectrometry studies reporting  palmitate-enriched proteins in rat and mouse brain tissues to better understand 
+                the groups of proteins regulated by this post-translational modification. Since results from different studies vary significantly, we highlight proteins that have been most frequently reported as palmitoylated.
+                Additionally, the presented database may serve as a valuable resource for researchers looking for target proteins to study. 
         
                 **Key Objectives**
 
@@ -128,7 +127,7 @@ elif page == "PROJECT DESCRIPTION":
 
                  **HOW TO USE**
 
-                 - Use left dropdown menu to search for protein of interest or results of analysis
+                 - Use left dropdown menu for aggregated data or individual protein data 
     """)
 
 # === ALL PROTEINS MERGED-TABLE ===
