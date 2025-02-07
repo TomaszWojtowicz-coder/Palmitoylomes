@@ -302,8 +302,7 @@ elif page == "MOUSE DATA":
           
     # 📌 Display Title
     st.title("Cytoscape Mouse GO Network Clusters of Palmitoylated Proteins Enrichment")
-    
-    # ✅ Try to fetch and display the image
+        
     try:
         response = requests.get(GITHUB_IMAGE_URL, timeout=10)  # Prevent long waits
         response.raise_for_status()  # Check if URL is valid (200 OK)
@@ -314,13 +313,13 @@ elif page == "MOUSE DATA":
         # 🔍 Fix resolution: Increase DPI & enhance quality
         high_res_image = image.resize((image.width * 2, image.height * 2), Image.LANCZOS)  # 2x scaling
         
-        # 📌 Use Zoom if Installed
+        # ✅ Apply Zoom (if package is available)
         try:
             from streamlit_image_zoom import image_zoom
             zoomed_image = image_zoom(high_res_image)  # Apply zoom
-            
-            if isinstance(zoomed_image, Image.Image):  # Ensure correct format
-                st.image(zoomed_image, use_column_width=True)
+    
+            if isinstance(zoomed_image, Image.Image):  
+                st.image(zoomed_image, use_column_width=True)  # Display only zoomed high-resolution image
             else:
                 st.warning("Zoom feature did not return a valid image. Showing high-resolution image instead.")
                 st.image(high_res_image, use_column_width=True)
@@ -331,8 +330,6 @@ elif page == "MOUSE DATA":
     
     except requests.exceptions.RequestException as e:
         st.error(f"❌ Error loading image: {e}")
-
-
 
 
 # === RAT DATA ===
