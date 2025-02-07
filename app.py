@@ -342,14 +342,9 @@ elif page == "MOUSE DATA":
         response.raise_for_status()  # Check if URL is valid (200 OK)
     
         # Open the image
-        image = Image.open(BytesIO(response.content))
-    
-        # 🔍 Fix resolution: Increase DPI & enhance quality
-        high_res_image = image.resize((image.width, image.height), Image.LANCZOS)  # 2x scaling
-        
-        # 📌 Display only the high-resolution image (NO ZOOM)
-        st.image(high_res_image, use_container_width=True)  # ✅ Updated parameter
-    
+        image = image.convert("RGBA")  # Keep original quality
+        st.image(image, use_container_width=True)  # Display without modification
+      
     except requests.exceptions.RequestException as e:
         st.error(f"❌ Error loading image: {e}")
           
