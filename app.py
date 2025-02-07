@@ -302,26 +302,26 @@ elif page == "MOUSE DATA":
       
     st.title("Cytoscape Mouse GO Network Clusters of Palmitoylated Proteins Enrichment")
     
+    # ✅ Try to fetch and display the image
     try:
-        # Fetch image from GitHub
-        response = requests.get(GITHUB_IMAGE_URL, timeout=10)  # Add timeout to avoid hanging
-        response.raise_for_status()  # Raise error for bad responses (e.g., 404, 403)
-    
-        # Open image and display
+        response = requests.get(GITHUB_IMAGE_URL, timeout=10)  # Add timeout to prevent hanging
+        response.raise_for_status()  # Check if URL is valid (200 OK)
+        
+        # Open the image
         image = Image.open(BytesIO(response.content))
     
-        # 🔍 If streamlit_image_zoom is installed, use zoom feature
+        # 🔍 Try using Zoom Feature (Optional)
         try:
             from streamlit_image_zoom import image_zoom
             zoomed_image = image_zoom(image)
             st.image(zoomed_image, use_column_width=True)
         except ImportError:
+            st.warning("Zoom feature not available. Showing image without zoom.")
             st.image(image, use_column_width=True)
     
     except requests.exceptions.RequestException as e:
         st.error(f"❌ Error loading image: {e}")
-            
-
+    
 
 
 
