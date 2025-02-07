@@ -99,7 +99,7 @@ if page == "MAIN":
     
     
     
-    Comments and suggestions on how to improve database (t.wojtowicz AT nencki.edu.pl)
+    Comments and suggestions (t.wojtowicz AT nencki.edu.pl)
     """) 
         
 
