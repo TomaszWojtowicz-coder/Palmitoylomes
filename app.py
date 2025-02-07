@@ -9,7 +9,7 @@ from streamlit.components.v1 import html
 import json
 import requests
 import xml.etree.ElementTree as ET
-
+import base64
         
         
         
@@ -73,17 +73,19 @@ file_path2 = "Mouse_summary.xlsx"
 
 
 
+# Function to convert an image to Base64
+def get_base64(image_path):
+    with open(image_path, "rb") as file:
+        return base64.b64encode(file.read()).decode()
 
+# Load the image and convert to Base64
+sidebar_bg_image = get_base64("x.png")  # Ensure the correct file path
 
-
-
-# Background image for the sidebar using CSS
-sidebar_bg_image = "x.png"  # Replace with your image URL
-
+# Apply CSS with inline Base64 image
 sidebar_style = f"""
     <style>
         [data-testid="stSidebar"] {{
-            background-image: url("{sidebar_bg_image}");
+            background-image: url("data:image/png;base64,{sidebar_bg_image}");
             background-size: cover;
             background-position: center;
         }}
@@ -91,6 +93,10 @@ sidebar_style = f"""
 """
 
 st.markdown(sidebar_style, unsafe_allow_html=True)
+
+# Sidebar content
+st.sidebar.header("Sidebar with Background Image")
+st.sidebar.write("This sidebar has a custom background!")
 
 
 
