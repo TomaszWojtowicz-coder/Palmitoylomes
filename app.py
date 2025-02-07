@@ -332,31 +332,24 @@ elif page == "MOUSE DATA":
     st.write("2. Metascape - Bar graph of enriched terms across input gene lists, colored by p-values.")
   
     # 📌 GitHub Raw PDF URL
-    GITHUB_PDF_URL2 = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/2_Enrichment_heatmap_HeatmapSelectedGO.pdf"  # Replace with your actual URL
-    
-    
-    # ✅ Embed PDF using HTML iframe
-    st.subheader("📑 PDF Preview:")
-    
-    pdf_viewer = f"""
-        <iframe src="{GITHUB_PDF_URL2}" width="700" height="500"></iframe>
-    """
-    st.markdown(pdf_viewer, unsafe_allow_html=True)
-    
-    # 📥 Provide a download button
+    GITHUB_PDF_URL2 = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/2_Enrichment_heatmap_HeatmapSelectedGO.png"  # Replace with your actual URL
+               
+    # ✅ Fetch and Display High-Resolution Image
     try:
-        response = requests.get(GITHUB_PDF_URL, timeout=10)
-        response.raise_for_status()
+        response = requests.get(GITHUB_IMAGE_URL2, timeout=10)  # Prevent long waits
+        response.raise_for_status()  # Check if URL is valid (200 OK)
     
-        st.download_button(
-            label="📥 Download PDF",
-            data=response.content,
-            file_name="sample.pdf",
-            mime="application/pdf",
-        )
+        # Open the image
+        image = Image.open(BytesIO(response.content))
+    
+        # 🔍 Fix resolution: Increase DPI & enhance quality
+        high_res_image = image.resize((image.width * 2, image.height * 2), Image.LANCZOS)  # 2x scaling
+        
+        # 📌 Display only the high-resolution image (NO ZOOM)
+        st.image(high_res_image, use_container_width=True)  # ✅ Updated parameter
     
     except requests.exceptions.RequestException as e:
-        st.error(f"❌ Error fetching PDF: {e}")
+        st.error(f"❌ Error loading image: {e}")
           
 ################################################################################################################################################################################################################
     
