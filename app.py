@@ -336,7 +336,7 @@ elif page == "MOUSE DATA":
                
     # ✅ Fetch and Display High-Resolution Image
     try:
-        response = requests.get(GITHUB_IMAGE_URL2, timeout=10)  # Prevent long waits
+        response = requests.get(GITHUB_PDF_URL2, timeout=10)  # Prevent long waits
         response.raise_for_status()  # Check if URL is valid (200 OK)
     
         # Open the image
