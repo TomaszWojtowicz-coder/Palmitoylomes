@@ -81,8 +81,8 @@ page = st.sidebar.selectbox("Choose a section", [
 
 # === MAIN PAGE ===
 if page == "MAIN":
-    st.title("COMPARATIVE DATABASE OF RAT AND MOUSE") 
-    st.title("BRAIN TISSUE PALMITOYLOMES")
+   # st.title("COMPARATIVE DATABASE OF RAT AND MOUSE") 
+   # st.title("BRAIN TISSUE PALMITOYLOMES")
     logo_path = "logo database.png"
     image = Image.open(logo_path)
     
