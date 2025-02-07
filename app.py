@@ -92,13 +92,6 @@ sidebar_style = f"""
 
 st.markdown(sidebar_style, unsafe_allow_html=True)
 
-# Sidebar content
-st.sidebar.header("Sidebar with Background Image")
-st.sidebar.write("This sidebar has a custom background!")
-
-# Main content
-st.title("Main Content Area")
-st.write("The sidebar now has a background image!")
 
 
 
