@@ -91,7 +91,10 @@ if page == "MAIN":
     st.image(image, width=new_width)
     st.write("""
     
-    
+    ** **
+
+
+    ** **
     
     
     
