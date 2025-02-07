@@ -306,7 +306,7 @@ elif page == "MOUSE DATA":
             
           
     # 📌 Display Title
-    st.title("Results of analysis of term enrichment in 6 out to 8 publications on mouse palmitoylomes")
+    st.title("Results of analysis of term enrichment in mouse palmitoylomes listed in Data Summary")
     st.write("1. Cytoscape Mouse GO Network Clusters of Palmitoylated Proteins Enrichment")
             
     
