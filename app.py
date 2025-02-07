@@ -326,6 +326,45 @@ elif page == "MOUSE DATA":
     except requests.exceptions.RequestException as e:
         st.error(f"❌ Error loading image: {e}")
 
+
+  # 📌 Display Title
+    st.title("Metascape - Bar graph of enriched terms across input gene lists, colored by p-values.")
+  
+    # 📌 GitHub Raw PDF URL
+    GITHUB_PDF_URL = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/2_Enrichment_heatmap_HeatmapSelectedGO.pdf"  # Replace with your actual URL
+    
+    # 🌟 Page Title
+    st.title("📄 PDF Viewer & Downloader")
+    
+    # 📌 Description
+    st.write("This app allows you to view and download a PDF document directly from GitHub.")
+    
+    # ✅ Try to fetch the PDF file
+    try:
+        response = requests.get(GITHUB_PDF_URL, timeout=10)  # Prevent long waits
+        response.raise_for_status()  # Ensure URL is valid
+    
+        # Convert PDF content to BytesIO (for displaying and downloading)
+        pdf_file = BytesIO(response.content)
+    
+        # 📄 Display PDF in Streamlit (Embed Viewer)
+        st.subheader("📑 PDF Preview:")
+        st.pdf(pdf_file)  # Streamlit's built-in PDF viewer
+    
+        # 📥 Provide a download button
+        st.download_button(
+            label="📥 Download PDF",
+            data=response.content,
+            file_name="sample.pdf",
+            mime="application/pdf",
+        )
+    
+    except requests.exceptions.RequestException as e:
+        st.error(f"❌ Error fetching PDF: {e}")
+          
+################################################################################################################################################################################################################
+    
+
 # === RAT DATA ===
 elif page == "RAT DATA":
     st.title("Rat Data")
