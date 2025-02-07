@@ -307,7 +307,9 @@ elif page == "MOUSE DATA":
           
     # 📌 Display Title
     st.title("Results of analysis of term enrichment in mouse palmitoylomes listed in Data Summary")
-    st.write("1. Metascape - Network of enriched terms colored by cluster, where nodes that share the same cluster are typically close to each other")
+    st.write("""1. Metascape - Network of enriched terms colored by cluster, where nodes that share the same cluster are typically close to each other.
+                    Size of the node is proportional to the number of clustered proteins. 
+        """)
             
     
     # ✅ Fetch and Display High-Resolution Image
