@@ -298,29 +298,29 @@ elif page == "MOUSE DATA":
     
     # GitHub Raw URL of your image
     GITHUB_IMAGE_URL = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/1_MOUSE_Go_Network.png"
-    
-  
-    if mouse_section == "Metascape MOUSE GO Network":
-        st.title("Cytoscape Mouse GO Network Clusters of Palmitoylated Proteins Enrichment")
-    
-        try:
-            # Fetch image from GitHub
-            response = requests.get(GITHUB_IMAGE_URL)
-            response.raise_for_status()  # Check for HTTP errors
-    
-            # Open image and enable zoom functionality
-            image = Image.open(BytesIO(response.content))
-            
-            # Use streamlit_image_zoom if available, otherwise display normally
-            if 'image_zoom' in globals():
-                zoomed_image = image_zoom(image)
-                st.image(zoomed_image, use_column_width=True)
-            else:
-                st.image(image, use_column_width=True)
-    
-        except requests.exceptions.RequestException as e:
-            st.error(f"Error loading image: {e}")
         
+      
+    st.title("Cytoscape Mouse GO Network Clusters of Palmitoylated Proteins Enrichment")
+    
+    try:
+        # Fetch image from GitHub
+        response = requests.get(GITHUB_IMAGE_URL, timeout=10)  # Add timeout to avoid hanging
+        response.raise_for_status()  # Raise error for bad responses (e.g., 404, 403)
+    
+        # Open image and display
+        image = Image.open(BytesIO(response.content))
+    
+        # 🔍 If streamlit_image_zoom is installed, use zoom feature
+        try:
+            from streamlit_image_zoom import image_zoom
+            zoomed_image = image_zoom(image)
+            st.image(zoomed_image, use_column_width=True)
+        except ImportError:
+            st.image(image, use_column_width=True)
+    
+    except requests.exceptions.RequestException as e:
+        st.error(f"❌ Error loading image: {e}")
+            
 
 
 
