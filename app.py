@@ -298,30 +298,39 @@ elif page == "MOUSE DATA":
     
     # GitHub Raw URL of your image
     GITHUB_IMAGE_URL = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/1_MOUSE_Go_Network.png"
-        
-      
+            
+          
+    # 📌 Display Title
     st.title("Cytoscape Mouse GO Network Clusters of Palmitoylated Proteins Enrichment")
     
     # ✅ Try to fetch and display the image
     try:
-        response = requests.get(GITHUB_IMAGE_URL, timeout=10)  # Add timeout to prevent hanging
+        response = requests.get(GITHUB_IMAGE_URL, timeout=10)  # Prevent long waits
         response.raise_for_status()  # Check if URL is valid (200 OK)
-        
+    
         # Open the image
         image = Image.open(BytesIO(response.content))
     
-        # 🔍 Try using Zoom Feature (Optional)
+        # 🔍 Fix resolution: Increase DPI & enhance quality
+        high_res_image = image.resize((image.width * 2, image.height * 2), Image.LANCZOS)  # 2x scaling
+        
+        # 📌 Use Zoom if Installed
         try:
             from streamlit_image_zoom import image_zoom
-            zoomed_image = image_zoom(image)
-            st.image(zoomed_image, use_column_width=True)
+            zoomed_image = image_zoom(high_res_image)  # Apply zoom
+            
+            if isinstance(zoomed_image, Image.Image):  # Ensure correct format
+                st.image(zoomed_image, use_column_width=True)
+            else:
+                st.warning("Zoom feature did not return a valid image. Showing high-resolution image instead.")
+                st.image(high_res_image, use_column_width=True)
+    
         except ImportError:
-            st.warning("Zoom feature not available. Showing image without zoom.")
-            st.image(image, use_column_width=True)
+            st.warning("Zoom feature not available. Showing high-resolution image instead.")
+            st.image(high_res_image, use_column_width=True)
     
     except requests.exceptions.RequestException as e:
         st.error(f"❌ Error loading image: {e}")
-    
 
 
 
