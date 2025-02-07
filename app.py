@@ -70,6 +70,50 @@ st.markdown("""
 file_path = "All_merged.xlsx"
 file_path2 = "Mouse_summary.xlsx"
 
+
+
+
+
+
+
+
+# Background image for the sidebar using CSS
+sidebar_bg_image = "x.png"  # Replace with your image URL
+
+sidebar_style = f"""
+    <style>
+        [data-testid="stSidebar"] {{
+            background-image: url("{sidebar_bg_image}");
+            background-size: cover;
+            background-position: center;
+        }}
+    </style>
+"""
+
+st.markdown(sidebar_style, unsafe_allow_html=True)
+
+# Sidebar content
+st.sidebar.header("Sidebar with Background Image")
+st.sidebar.write("This sidebar has a custom background!")
+
+# Main content
+st.title("Main Content Area")
+st.write("The sidebar now has a background image!")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # === SIDEBAR MENU ===
 page = st.sidebar.selectbox("Choose a section", [
     "MAIN", 
