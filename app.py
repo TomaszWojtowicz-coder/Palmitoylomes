@@ -336,14 +336,13 @@ elif page == "MOUSE DATA":
     # 📌 GitHub Raw PDF URL
     GITHUB_PDF_URL2 = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/2_Enrichment_heatmap_HeatmapSelectedGO.png"  # Replace with your actual URL
                
-    # ✅ Fetch and Display High-Resolution Image
+        # ✅ Fetch and Display High-Resolution Image
     try:
-        response = requests.get(GITHUB_PDF_URL2, timeout=10)  # Prevent long waits
-        response.raise_for_status()  # Check if URL is valid (200 OK)
-    
-        # Open the image
-        image = image.convert("RGBA")  # Keep original quality
-        st.image(image, use_container_width=True)  # Display without modification
+        response = requests.get(GITHUB_IMAGE_URL, timeout=10)
+        response.raise_for_status()  
+        image = Image.open(BytesIO(response.content))
+    except requests.exceptions.RequestException as e:
+        print(f"❌ Error loading image: {e}")
       
     except requests.exceptions.RequestException as e:
         st.error(f"❌ Error loading image: {e}")
