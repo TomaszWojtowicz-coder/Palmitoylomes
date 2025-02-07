@@ -89,19 +89,7 @@ if page == "MAIN":
     orig_width, orig_height = image.size
     new_width = orig_width // 2
     st.image(image, width=new_width)
-    st.write("""
     
-    ** **
-
-
-    ** **
-    
-    
-    
-    
-    Comments and suggestions (t.wojtowicz AT nencki.edu.pl)
-    """) 
-        
 
 # === PROJECT DESCRIPTION ===
 elif page == "PROJECT DESCRIPTION":
@@ -129,6 +117,18 @@ elif page == "PROJECT DESCRIPTION":
 
                  - Use left dropdown menu for aggregated data or individual protein data. Tables and graphics in most cases are interactive.
     """)
+    st.write("""
+    
+    ** **
+
+
+    ** **
+     
+    
+    
+    Comments and suggestions (t.wojtowicz AT nencki.edu.pl)
+    """) 
+        
 
 # === ALL PROTEINS MERGED-TABLE ===
 elif page == "ALL PROTEINS MERGED-TABLE":
