@@ -220,13 +220,11 @@ elif page == "MOUSE DATA":
 
 
 
-        # Cache function (move it outside any function scope)
         @st.cache_data
         def load_data(uploaded_file):
             df = pd.read_excel(uploaded_file, engine="openpyxl", header=0)
             df.columns = df.columns.str.strip()  # Remove leading/trailing spaces
-                return df
-                
+            return df
         # Show "LOADING" blinking icon while loading
         with st.status("Loading data...", expanded=True) as status:
             st.markdown("""
