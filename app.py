@@ -416,12 +416,14 @@ elif page == "MOUSE DATA":
 ################################################################################################################################################################################################################
     if mouse_section == "ShinyGO Mouse palmitoylome":        
       # 📌 Display Title
-        st.write("3. Metascape - Protein-protein interaction network according to Molecular Complex Detection (MCODE). Algorithm identified densely connected network components.")
+        st.title("Mouse palmitoylome - proteins common across multiple publications analyzed with ShinyGo (https://bioinformatics.sdstate.edu/go/)")
+        st.write(" " )
+        st.write("1. Enrichment in Gene Ontology terms")
       
         # 📌 GitHub Raw PDF URL
-        GITHUB_3 = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/3_MCODE.png"  # Replace with your actual URL
+        Gene_Ontology_Mouse_1 = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/Gene_Ontology_Mouse_1.png"  # Replace with your actual URL
         try:
-            response = requests.get(GITHUB_3, timeout=10)  # Prevent long waits
+            response = requests.get(Gene_Ontology_Mouse_1, timeout=10)  # Prevent long waits
             response.raise_for_status()  # Check if URL is valid (200 OK)
         
             # Open the image
@@ -432,7 +434,24 @@ elif page == "MOUSE DATA":
         
         except requests.exceptions.RequestException as e:
             st.error(f"❌ Error loading image: {e}")
-  
+          st.write("1. Enrichment in Gene Ontology terms")
+      
+        # 📌 GitHub Raw PDF URL
+        st.write("2. A hierarchical clustering tree summarizes the correlation among significant pathways listed in the Enrichment tab. Pathways with many shared protein ID are clustered together. Bigger dots indicate more significant P-values.")
+      
+        Gene_Ontology_Mouse_2 = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/Gene_Ontology_Mouse_2.png"  # Replace with your actual URL
+        try:
+            response = requests.get(Gene_Ontology_Mouse_2, timeout=10)  # Prevent long waits
+            response.raise_for_status()  # Check if URL is valid (200 OK)
+        
+            # Open the image
+            image = Image.open(BytesIO(response.content))
+        
+            image = image.convert("RGBA")  # Keep original quality
+            st.image(image, use_container_width=True)  # Display without modification
+        
+        except requests.exceptions.RequestException as e:
+            st.error(f"❌ Error loading image: {e}")
   
 # === RAT DATA ===
 elif page == "RAT DATA":
