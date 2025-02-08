@@ -163,10 +163,10 @@ elif page == "ALL PROTEINS MERGED-TABLE":
 elif page == "MOUSE DATA":
     mouse_section = st.sidebar.selectbox("Choose Mouse Data Section", [
         "Data Summary",
-        "Metascape MOUSE GO Network"
-        "Metascape Protein Overlap Analysis",
-        "Metascape Enriched Ontology Clusters",
-        "Metascape Protein-Protein Interaction Network",
+        "Mouse common protein table", 
+        "Metascape Mouse palmitoylome",
+        "ShinyGO Mouse palmitoylome",
+       
 
     ])
 
@@ -179,8 +179,9 @@ elif page == "MOUSE DATA":
         """)
         df_mouse = pd.read_excel(file_path2, engine="openpyxl")
         st.dataframe(df_mouse, use_container_width=True)
-        
+    
 
+    if mouse_section == "Mouse common protein table":
         # Title of the Streamlit app
         st.title("Gene Occurrence Analysis")
 
@@ -256,9 +257,6 @@ elif page == "MOUSE DATA":
                 return [f"background-color: {color}"] * len(df.columns)  # Apply color to all columns in the row
             return [""] * len(df.columns)
 
-        
-
-
         # Filter by Gene ID
         gene_filter = st.text_input("Filter by Gene ID (partial match)")
         
@@ -298,10 +296,14 @@ elif page == "MOUSE DATA":
 
 
 
+
+
+
     
 ################################################################################################################################################################################################################
     
-    # GitHub Raw URL of your image
+    if mouse_section == "Metascape Mouse palmitoylome":
+        # GitHub Raw URL of your image
     GITHUB_IMAGE_URL = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/1_MOUSE_Go_Network.png"
             
           
@@ -387,7 +389,7 @@ elif page == "MOUSE DATA":
         st.error(f"❌ Error loading legend table image: {e}")
           
 ################################################################################################################################################################################################################
-    
+    if mouse_section == "ShinyGO Mouse palmitoylome":        
 
 # === RAT DATA ===
 elif page == "RAT DATA":
