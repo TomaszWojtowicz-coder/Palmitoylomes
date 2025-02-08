@@ -346,8 +346,18 @@ elif page == "MOUSE DATA":
     try:
         response = requests.get(GITHUB_IMAGE_URL, timeout=10)
         response.raise_for_status()  # Ensures the request was successful
+    
+        # Open the image
+        image = Image.open(BytesIO(response.content))
+    
+        # 🔍 Fix resolution: Increase DPI & enhance quality
+        high_res_image = image.resize((image.width * 2, image.height * 2), Image.LANCZOS)  # 2x scaling
+        
+        # 📌 Display only the high-resolution image (NO ZOOM)
+        st.image(high_res_image, use_container_width=True)  # ✅ Updated parameter
+    
     except requests.exceptions.RequestException as e:
-        st.error(f"Error loading image: {e}")
+        st.error(f"❌ Error loading image: {e}")
 
   # 📌 Display Title
     st.write("2. Metascape - Bar graph of enriched terms across input gene lists, colored by p-values.")
