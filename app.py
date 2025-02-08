@@ -328,8 +328,6 @@ elif page == "MOUSE DATA":
 ################################################################################################################################################################################################################
     
     if mouse_section == "Metascape Mouse palmitoylome":
-        # GitHub Raw URL of your image
-        GITHUB_IMAGE_URL = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/1_MOUSE_Go_Network.png"
                 
               
         # 📌 Display Title
@@ -341,7 +339,9 @@ elif page == "MOUSE DATA":
                         Size of the node is proportional to the number of proteins associated with biological term / pathway. 
             """)
             
-    
+    # GitHub Raw URL of your image
+        GITHUB_IMAGE_URL = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/1_MOUSE_Go_Network.png"
+        
     # ✅ Fetch and Display High-Resolution Image
     try:
         response = requests.get(GITHUB_IMAGE_URL, timeout=10)
