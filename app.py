@@ -217,32 +217,59 @@ elif page == "MOUSE DATA":
             # Simulate loading delay (for testing purposes)
            # time.sleep(10)
 
-            @st.cache_data
-            def load_data(uploaded_file):
-                df = pd.read_excel(uploaded_file, engine="openpyxl", header=0)
-                df.columns = df.columns.str.strip()  # Remove leading/trailing spaces
+
+
+
+        # Cache function (move it outside any function scope)
+        @st.cache_data
+        def load_data(uploaded_file):
+            df = pd.read_excel(uploaded_file, engine="openpyxl", header=0)
+            df.columns = df.columns.str.strip()  # Remove leading/trailing spaces
                 return df
+                
+        # Show "LOADING" blinking icon while loading
+        with st.status("Loading data...", expanded=True) as status:
+            st.markdown("""
+                <style>
+                    @keyframes blink {
+                        0% { color: red; }
+                        50% { color: transparent; }
+                        100% { color: red; }
+                    }
+                    
+                    .blinking-text {
+                        font-size: 24px;
+                        font-weight: bold;
+                        color: red;
+                        animation: blink 1s infinite;
+                    }
+                    
+                    .blinking-text-wrapper {
+                        text-align: center;
+                        margin-top: 10px;
+                    }
+                </style>
+                
+                <div class="blinking-text-wrapper">
+                    <span class="blinking-text">LOADING</span>
+                </div>
+            """, unsafe_allow_html=True)
             
-            # Load the data
+            # Simulate loading delay (for testing purposes)
+            # time.sleep(10)
+        
+            # Load the data (call the function)
             uploaded_file = "gene_occurrences_analysis_mouse.xlsx"
             df = load_data(uploaded_file)
-            
-            # Ensure Protein Name stays horizontal
-            df_styled = df.style.set_table_styles(
-                [
-                    {'selector': 'th',
-                     'props': [('writing-mode', 'vertical-rl'), ('transform', 'rotate(180deg)'), ('text-align', 'center'), ('padding', '10px')]},
-                    {'selector': 'th:nth-child(2)',  # Second column (Protein name)
-                     'props': [('writing-mode', 'horizontal-tb'), ('transform', 'none'), ('text-align', 'center')]}
-                ]
-            )
-            
-            st.dataframe(df_styled, use_container_width=True)
-
-
-            # Mark as loaded (removes the blinking "RUNNING" text)
+        
+            # Mark as loaded
             status.update(label="Data will be shown in a moment!", state="complete", expanded=False)
-            
+
+
+
+
+
+        
         # Apply FIRE color scheme: We will use a scale from yellow to red
         def row_color(val):
             """Color the rows based on the number of reports (Fire heatmap)."""
