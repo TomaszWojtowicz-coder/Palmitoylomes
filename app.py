@@ -307,7 +307,8 @@ elif page == "MOUSE DATA":
           
     # 📌 Display Title
     st.title("Results of analysis of term enrichment in mouse palmitoylomes listed in Data Summary.")
-    st.write("""184 proteins reported in at least 6/8 (75%) of publications""")
+    st.write("" "")
+    st.write("""184 proteins reported in at least 6/8 (75%) of publications listed in Data Summary""")
     st.write("" "")
     st.write("""1. Metascape - Network of enriched terms colored by cluster, where nodes that share the same cluster are typically close to each other.
                     Size of the node is proportional to the number of proteins associated with biological term / pathway. 
