@@ -329,17 +329,17 @@ elif page == "MOUSE DATA":
     
     if mouse_section == "Metascape Mouse palmitoylome":
         # GitHub Raw URL of your image
-    GITHUB_IMAGE_URL = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/1_MOUSE_Go_Network.png"
-            
-          
-    # 📌 Display Title
-    st.title("Mouse palmitoylome - proteins common across multiple publications.")
-    st.write("" "")
-    st.write("""   Analysis of 184 palmitoylated proteins common in at least 6 out of 8 (75%) publications (see Data Summary for reference).""")
-    st.write("" "")
-    st.write("""1. Metascape - Network of enriched terms colored by cluster, where nodes that share the same cluster are typically close to each other.
-                    Size of the node is proportional to the number of proteins associated with biological term / pathway. 
-        """)
+        GITHUB_IMAGE_URL = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/1_MOUSE_Go_Network.png"
+                
+              
+        # 📌 Display Title
+        st.title("Mouse palmitoylome - proteins common across multiple publications.")
+        st.write("" "")
+        st.write("""   Analysis of 184 palmitoylated proteins common in at least 6 out of 8 (75%) publications (see Data Summary for reference).""")
+        st.write("" "")
+        st.write("""1. Metascape - Network of enriched terms colored by cluster, where nodes that share the same cluster are typically close to each other.
+                        Size of the node is proportional to the number of proteins associated with biological term / pathway. 
+            """)
             
     
     # ✅ Fetch and Display High-Resolution Image
