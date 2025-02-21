@@ -90,8 +90,7 @@ st.markdown(f"""
             background-image: url("data:image/png;base64,{sidebar_bg_image}");
             background-size: cover;
             background-position: center;
-            font-size: 30px !important; /* Zmień na dowolny rozmiar */
-
+           
         }}
 
         /* Ensure only the "Choose a section" text is white */
@@ -100,9 +99,6 @@ st.markdown(f"""
         }}
     </style>
 """, unsafe_allow_html=True)
-
-
-
 
 
 
