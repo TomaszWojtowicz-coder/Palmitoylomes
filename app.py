@@ -92,14 +92,13 @@ st.markdown(f"""
             background-position: center;
         }}
 
-        /* Powiększenie czcionki tylko dla tekstu "Choose a section" */
-        div[data-testid="stSelectboxLabel"] label {{
+        /* Ensure only the "Choose a section" text is white */
+        section[data-testid="stSidebar"] label {{
             color: white !important;
-            font-size: 30px !important;  /* Powiększenie czcionki */
-            font-weight: bold !important; /* Pogrubienie */
         }}
     </style>
 """, unsafe_allow_html=True)
+
 
 
 # === SIDEBAR MENU ===
