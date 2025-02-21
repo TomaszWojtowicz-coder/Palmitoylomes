@@ -436,7 +436,7 @@ elif page == "MOUSE DATA":
     
 ################################################################################################################################################################################################################
     
-    elif mouse_section == "Metascape Mouse palmitoylome":
+    if mouse_section == "Metascape Mouse palmitoylome":
                 
               
         # 📌 Display Title
@@ -447,18 +447,11 @@ elif page == "MOUSE DATA":
         st.write("""1. Metascape - Network of enriched terms colored by cluster, where nodes that share the same cluster are typically close to each other.
                         Size of the node is proportional to the number of proteins associated with biological term / pathway. 
             """)
+        imagex = Image.open("1_MOUSE_Go_Network.png")  # Replace with an actual file
+        st.image(imagex, use_container_width=True)
 
 
-
-
-    imagex = Image.open("1_MOUSE_Go_Network.png")  # Replace with an actual file
-    st.image(imagex, use_container_width=True)
-
-
-
-
-
-    
+  
 
 
 
