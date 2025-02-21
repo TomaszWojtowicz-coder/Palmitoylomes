@@ -275,7 +275,7 @@ elif page == "ALL PROTEINS MERGED-TABLE":
 # === MOUSE DATA ===
 elif page == "MOUSE DATA":
     mouse_section = st.sidebar.selectbox("Choose Mouse Data Section", [
-        "Data Summary",
+        "Publications list",
         "Mouse common protein table", 
         "Metascape Mouse palmitoylome",
         "ShinyGO Mouse palmitoylome",
@@ -283,7 +283,7 @@ elif page == "MOUSE DATA":
 
     ])
 
-    if mouse_section == "Data Summary":
+    if mouse_section == "Publications list":
         st.title("List of original publications reporting palmitoylated proteins in mice compared in this study")
        
         df_mouse = pd.read_excel(file_path2, engine="openpyxl")
