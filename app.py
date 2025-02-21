@@ -164,8 +164,7 @@ elif page == "PROJECT DESCRIPTION":
             </style>
     
             <div class="text-container">
-                <p>
-                
+                <p>                
                 Protein lipidation is a widely occurring post-translational modification that significantly impacts human physiology and disease processes. 
                 One specific type, S-palmitoylation, involves attaching a 16-carbon fatty acid (palmitate) to proteins. This dynamic and reversible modification 
                 influences protein stability and trafficking within the membrane. 
