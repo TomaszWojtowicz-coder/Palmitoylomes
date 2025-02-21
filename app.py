@@ -66,11 +66,6 @@ st.markdown("""
 
 
 
-
-
-
-
-
 # File path for dataset
 file_path = "All_merged.xlsx"
 file_path2 = "Mouse_summary.xlsx"
@@ -120,6 +115,25 @@ if page == "MAIN":
     orig_width, orig_height = image.size
     new_width = orig_width // 2
     st.image(image, width=new_width)
+
+    
+    logo_path2 = "NCN.png"
+    image2 = Image.open(logo_path2)
+    
+    # Create two columns: one for the logo, one for the text
+    col1, col2 = st.columns([1, 3])  # Adjust ratio as needed
+    
+    with col1:
+        # Display the logo
+        st.image(image2)
+    
+    with col2:
+        # Display the text next to the logo
+        st.markdown(
+            """
+            **Project financed by Polish National Science Centre grant 2019/34/E/NZ4/00387**
+            """
+        )
 
 # === PROJECT DESCRIPTION ===
 elif page == "PROJECT DESCRIPTION":
