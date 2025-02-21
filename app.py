@@ -88,7 +88,7 @@ st.markdown(f"""
         /* Ustawienie białego koloru dla etykiety */
         section[data-testid="stSidebar"] label {{
             color: white !important;
-            font-size: 18px !important;  /* Powiększenie czcionki */
+            font-size: 24px !important;  /* Powiększenie czcionki */
             font-weight: bold; /* Opcjonalnie: pogrubienie */
         }}
     </style>
