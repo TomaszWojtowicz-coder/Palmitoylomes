@@ -79,15 +79,19 @@ sidebar_bg_image = get_base64("x2.png")  # Ensure the correct file path
 # Apply CSS with inline Base64 image and set text color to white
 st.markdown(f"""
     <style>
-        /* Change only the label text (outside the dropdown) to white */
-        div[data-testid="stSelectboxLabel"] > label {{
+        [data-testid="stSidebar"] {{
+            background-image: url("data:image/png;base64,{sidebar_bg_image}");
+            background-size: cover;
+            background-position: center;
+            color: white !important; /* Ensures all text in the sidebar is white */
+        }}
+        [data-testid="stSidebar"] * {{
+            color: black !important; /* Sets all text inside the sidebar to black */
+        }}
+        /* Targeting the select box placeholder */
+        .stSelectbox div[data-testid="stMarkdownContainer"] p {
             color: white !important;
-        }}
-
-        /* Ensure dropdown menu options remain black */
-        div[data-testid="stSelectbox"] div[role="listbox"] * {{
-            color: black !important;
-        }}
+        }
     </style>
 """, unsafe_allow_html=True)
 
