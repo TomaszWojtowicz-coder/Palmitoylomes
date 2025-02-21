@@ -217,17 +217,26 @@ elif page == "PROJECT DESCRIPTION":
                  **HOW TO USE**
 
                  - Use left dropdown menu for aggregated data or individual protein data. Tables and graphics in most cases are interactive.
-
-
-     
-    """)
-    st.write("""
-            ** ** 
-            Comments, suggestions 
-            """)
-    st.write("T. Wojtowicz, Nencki Institute of Experimental Biology, Polish Academy of Sciences  (t.wojtowicz AT nencki.edu.pl)")
-    st.write("A. Pytys, Nencki Institute of Experimental Biology, Polish Academy of Sciences  (a.pytys AT nencki.edu.pl)")
+   
+        """)
+    st.write("")
+    st.write("**Comments, suggestions:**")  # Bold header for clarity
     
+    # Load and display the logo in a column
+    logo_path4 = "Nencki.svg"
+    image4 = Image.open(logo_path4)
+    
+    # Create two columns: one for the logo, one for the text
+    col1, col2 = st.columns([1, 3])  # Adjust ratio as needed
+    
+    with col1:
+        st.image(image4)  # Display logo once
+    
+    with col2:
+        st.write("T. Wojtowicz, Nencki Institute of Experimental Biology, Polish Academy of Sciences  (t.wojtowicz AT nencki.edu.pl)")
+        st.write("A. Pytys, Nencki Institute of Experimental Biology, Polish Academy of Sciences  (a.pytys AT nencki.edu.pl)")
+
+
 # === ALL PROTEINS MERGED-TABLE ===
 elif page == "ALL PROTEINS MERGED-TABLE":
     st.title("List of original publications reporting palmitoylated proteins compared in this study")
