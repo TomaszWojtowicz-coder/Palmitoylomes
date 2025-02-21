@@ -154,10 +154,10 @@ elif page == "PROJECT DESCRIPTION":
     """)
 # === ALL PROTEINS MERGED-TABLE ===
 elif page == "ALL PROTEINS MERGED-TABLE":
-    st.title("List of original publications reporting palmitoylated proteins in mice compared in this study")
+    st.title("List of original publications reporting palmitoylated proteins compared in this study")
     st.write("""
     
-        Mouse:
+        Mouse studies:
 
     """)
     
@@ -166,7 +166,7 @@ elif page == "ALL PROTEINS MERGED-TABLE":
 
     st.write("""
         
-        Rat:
+        Rat studies:
         
     """)
     
