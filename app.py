@@ -85,12 +85,13 @@ st.markdown(f"""
             background-position: center;
         }}
 
-        /* Make only the "Choose a section" text white */
-        div[data-testid="stSelectboxLabel"] > label {{
-            color: yellow !important;
+        /* Ensure only the "Choose a section" text is white */
+        section[data-testid="stSidebar"] label {{
+            color: white !important;
         }}
     </style>
 """, unsafe_allow_html=True)
+
 
 
 # === SIDEBAR MENU ===
