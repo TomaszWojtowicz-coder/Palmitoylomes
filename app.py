@@ -219,12 +219,15 @@ elif page == "PROJECT DESCRIPTION":
                  - Use left dropdown menu for aggregated data or individual protein data. Tables and graphics in most cases are interactive.
 
 
-                 ** **
-                 ** **
-                 Comments, suggestions 
-                 T.Wojtowicz, Nencki Institute of Experimental Biology, Polish Academy of Sciences  (t.wojtowicz AT nencki.edu.pl)
-                 A.Pytys, Nencki Institute of Experimental Biology, Polish Academy of Sciences  (a.pytys AT nencki.edu.pl)
+     
     """)
+    st.write("""
+            ** ** 
+            Comments, suggestions 
+            """)
+    st.write("T.Wojtowicz, Nencki Institute of Experimental Biology, Polish Academy of Sciences  (t.wojtowicz AT nencki.edu.pl)")
+    st.write("A.Pytys, Nencki Institute of Experimental Biology, Polish Academy of Sciences  (a.pytys AT nencki.edu.pl)")
+    
 # === ALL PROTEINS MERGED-TABLE ===
 elif page == "ALL PROTEINS MERGED-TABLE":
     st.title("List of original publications reporting palmitoylated proteins compared in this study")
