@@ -83,7 +83,7 @@ st.markdown(f"""
             background-image: url("data:image/png;base64,{sidebar_bg_image}");
             background-size: cover;
             background-position: center;
-            color: white !important; /* Ensures all text in the sidebar is white */
+            color: black !important; /* Ensures all text in the sidebar is white */
         }}
         [data-testid="stSidebar"] * {{
             color: white !important; /* Applies white color to all elements inside the sidebar */
