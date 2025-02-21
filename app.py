@@ -152,16 +152,32 @@ elif page == "PROJECT DESCRIPTION":
         # Display the text next to the logo
         st.markdown(
             """
-            <div style="text-align: justify; font-size: 14px;">
+            <style>
+            .text-container {
+                max-width: 600px;  /* Adjust width as needed */
+                text-align: justify;
+                font-size: 14px;
+                margin: auto;  /* Centers the text */
+                padding: 10px; /* Adds slight spacing */
+                word-wrap: break-word; /* Ensures long words wrap properly */
+            }
+            </style>
+    
+            <div class="text-container">
                 <p>
-
-                
-                Protein lipidation is a widely occurring post-translational modification that significantly impacts human physiology and disease processes. One specific type, S-palmitoylation, involves attaching a 16-carbon fatty acid (palmitate) to proteins. This dynamic and reversible modification influences protein stability and trafficking within the membrane. Recent experimental studies suggest that S-palmitoylation acts as a precise molecular switch, rapidly modulating protein functions and subcellular localization over minutes to hours. Neural tissue, in particular, contains a high concentration of proteins regulated by this modification. Advances in high-resolution detection techniques have greatly enhanced our understanding of the role of protein palmitoylation in brain function and dysfunction.
+                Protein lipidation is a widely occurring post-translational modification that significantly impacts human physiology and disease processes. 
+                One specific type, S-palmitoylation, involves attaching a 16-carbon fatty acid (palmitate) to proteins. This dynamic and reversible modification 
+                influences protein stability and trafficking within the membrane. 
+                Recent experimental studies suggest that S-palmitoylation acts as a precise molecular switch, rapidly modulating protein functions and 
+                subcellular localization over minutes to hours. 
+                Neural tissue, in particular, contains a high concentration of proteins regulated by this modification. 
+                Advances in high-resolution detection techniques have greatly enhanced our understanding of the role of protein palmitoylation in brain function and dysfunction.
                 </p>
             </div>
             """,
             unsafe_allow_html=True
         )
+
 
 
     
