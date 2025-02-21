@@ -225,8 +225,8 @@ elif page == "PROJECT DESCRIPTION":
             ** ** 
             Comments, suggestions 
             """)
-    st.write("T.Wojtowicz, Nencki Institute of Experimental Biology, Polish Academy of Sciences  (t.wojtowicz AT nencki.edu.pl)")
-    st.write("A.Pytys, Nencki Institute of Experimental Biology, Polish Academy of Sciences  (a.pytys AT nencki.edu.pl)")
+    st.write("T. Wojtowicz, Nencki Institute of Experimental Biology, Polish Academy of Sciences  (t.wojtowicz AT nencki.edu.pl)")
+    st.write("A. Pytys, Nencki Institute of Experimental Biology, Polish Academy of Sciences  (a.pytys AT nencki.edu.pl)")
     
 # === ALL PROTEINS MERGED-TABLE ===
 elif page == "ALL PROTEINS MERGED-TABLE":
