@@ -156,8 +156,11 @@ elif page == "ALL PROTEINS MERGED-TABLE":
     st.write("""
         
         List of original publications reporting palmitoylated proteins in mice compared in this study:
-        Mouse
-        
+                
+    """)
+    st.write("""
+        Mouse:
+
     """)
     
     df_mouse = pd.read_excel(file_path2, engine="openpyxl")
