@@ -86,7 +86,7 @@ st.markdown(f"""
             color: black !important; /* Ensures all text in the sidebar is white */
         }}
         [data-testid="stSidebar"] * {{
-            color: white !important; /* Applies white color to all elements inside the sidebar */
+            color: black !important; /* Applies white color to all elements inside the sidebar */
         }}
     </style>
 """, unsafe_allow_html=True)
