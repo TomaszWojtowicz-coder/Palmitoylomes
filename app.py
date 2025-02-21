@@ -186,6 +186,9 @@ elif page == "PROJECT DESCRIPTION":
                 subcellular localization over minutes to hours. 
                 Neural tissue, in particular, contains a high concentration of proteins regulated by this modification. 
                 Advances in high-resolution detection techniques have greatly enhanced our understanding of the role of protein palmitoylation in brain function and dysfunction.
+
+                The zinc finger DHHC (ZDHHC) domain-containing protein family is the main group of enzymes responsible for catalyzing protein S-palmitoylation, and 23 members have been identified in mammalian cells.
+                Deacylation is catalyzed by palmitoyl-protein thioesterases (PPTs) such as palmitoyl-protein thioesterase 1 and 2 (PPT1/2), acyl-protein thioesterases APT1/2 and alpha/beta hydrolase domain-containing proteins 10 and 19 (ABHDs).
                 </p>
             </div>
             """,
