@@ -83,10 +83,17 @@ st.markdown(f"""
             background-image: url("data:image/png;base64,{sidebar_bg_image}");
             background-size: cover;
             background-position: center;
-            color: white !important; /* Ensures all text in the sidebar is white */
+            color: white !important; /* Ensures the label text is white */
         }}
-        [data-testid="stSidebar"] * {{
-            color: black !important; /* Applies white color to all elements inside the sidebar */
+
+        /* Make only the "Choose a section" text white */
+        div[data-testid="stSelectboxLabel"] > label {{
+            color: white !important;
+        }}
+
+        /* Ensure dropdown menu items stay black */
+        div[data-testid="stSelectbox"] div[role="listbox"] * {{
+            color: black !important;
         }}
     </style>
 """, unsafe_allow_html=True)
