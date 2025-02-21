@@ -152,13 +152,23 @@ elif page == "PROJECT DESCRIPTION":
         # Display the text next to the logo
         st.markdown(
             """
-            **  **
-            **  **
-            Protein lipidation is a widely occurring post-translational modification that significantly impacts human physiology and disease processes. One specific type, S-palmitoylation, involves attaching a 16-carbon fatty acid (palmitate) to proteins. This dynamic and reversible modification influences protein stability and trafficking within membranes. Recent experimental studies suggest that S-palmitoylation acts as a precise molecular switch, rapidly modulating protein functions and subcellular localization over minutes to hours. Neural tissue, in particular, contains a high concentration of proteins regulated by this modification. Advances in high-resolution detection techniques have greatly enhanced our understanding of the role of protein palmitoylation in brain function and dysfunction.
-            **  **
-            **  **          
-            """
+            <div style="text-align: justify; font-size: 16px;">
+                <p>
+                Protein lipidation is a widely occurring post-translational modification that significantly impacts human physiology and disease processes. 
+                One specific type, S-palmitoylation, involves attaching a 16-carbon fatty acid (palmitate) to proteins. This dynamic and reversible modification 
+                influences protein stability and trafficking within membranes. 
+                <br><br>
+                Recent experimental studies suggest that S-palmitoylation acts as a precise molecular switch, rapidly modulating protein functions and 
+                subcellular localization over minutes to hours. Neural tissue, in particular, contains a high concentration of proteins regulated by this modification. 
+                Advances in high-resolution detection techniques have greatly enhanced our understanding of the role of protein palmitoylation in brain function and dysfunction.
+                </p>
+            </div>
+            """,
+            unsafe_allow_html=True
         )
+          unsafe_allow_html=True
+                )
+
     
     st.write("""
                **Project Overview**
