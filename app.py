@@ -85,12 +85,15 @@ st.markdown(f"""
             background-position: center;
         }}
 
-        /* Ensure only the "Choose a section" text is white */
+        /* Ustawienie białego koloru dla etykiety */
         section[data-testid="stSidebar"] label {{
             color: white !important;
+            font-size: 18px !important;  /* Powiększenie czcionki */
+            font-weight: bold; /* Opcjonalnie: pogrubienie */
         }}
     </style>
 """, unsafe_allow_html=True)
+
 
 
 
