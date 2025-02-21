@@ -74,6 +74,7 @@ st.markdown("""
 # File path for dataset
 file_path = "All_merged.xlsx"
 file_path2 = "Mouse_summary.xlsx"
+file_path21 = "Rat_summary.xlsx"
 
 # Function to convert an image to Base64
 def get_base64(image_path):
@@ -172,7 +173,7 @@ elif page == "ALL PROTEINS MERGED-TABLE":
         
     """)
     
-    df_rat = pd.read_excel(file_path2, engine="openpyxl")
+    df_rat = pd.read_excel(file_path21, engine="openpyxl")
     st.dataframe(df_rat, use_container_width=True)
 
     df = pd.read_excel(file_path, engine="openpyxl")
