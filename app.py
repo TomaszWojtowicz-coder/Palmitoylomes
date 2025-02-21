@@ -436,7 +436,7 @@ elif page == "MOUSE DATA":
     
 ################################################################################################################################################################################################################
     
-    if mouse_section == "Metascape Mouse palmitoylome":
+    elif mouse_section == "Metascape Mouse palmitoylome":
                 
               
         # 📌 Display Title
