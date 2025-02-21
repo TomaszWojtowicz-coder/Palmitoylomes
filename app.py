@@ -289,7 +289,6 @@ elif page == "MOUSE DATA":
         df_mouse = pd.read_excel(file_path2, engine="openpyxl")
         st.dataframe(df_mouse, use_container_width=True)
     
-
     if mouse_section == "Mouse common protein table":
         # Title of the Streamlit app
         st.title("Gene Occurrence Analysis")
@@ -455,59 +454,59 @@ elif page == "MOUSE DATA":
 
 
 
-  # 📌 Display Title
-    st.write("2. Metascape - Bar graph of enriched terms across input gene lists, colored by p-values.")
-  
-    # 📌 GitHub Raw PDF URL
-    GITHUB_PDF_URL2 = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/2_Enrichment_heatmap_HeatmapSelectedGO.png"  # Replace with your actual URL
-    try:
-        response = requests.get(GITHUB_PDF_URL2, timeout=10)  # Prevent long waits
-        response.raise_for_status()  # Check if URL is valid (200 OK)
+      # 📌 Display Title
+        st.write("2. Metascape - Bar graph of enriched terms across input gene lists, colored by p-values.")
+      
+        # 📌 GitHub Raw PDF URL
+        GITHUB_PDF_URL2 = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/2_Enrichment_heatmap_HeatmapSelectedGO.png"  # Replace with your actual URL
+        try:
+            response = requests.get(GITHUB_PDF_URL2, timeout=10)  # Prevent long waits
+            response.raise_for_status()  # Check if URL is valid (200 OK)
+        
+            # Open the image
+            image = Image.open(BytesIO(response.content))
+        
+            image = image.convert("RGBA")  # Keep original quality
+            st.image(image, use_container_width=True)  # Display without modification
+        
+        except requests.exceptions.RequestException as e:
+            st.error(f"❌ Error loading image: {e}")
     
-        # Open the image
-        image = Image.open(BytesIO(response.content))
     
-        image = image.convert("RGBA")  # Keep original quality
-        st.image(image, use_container_width=True)  # Display without modification
-    
-    except requests.exceptions.RequestException as e:
-        st.error(f"❌ Error loading image: {e}")
-
-
-  # 📌 Display Title
-    st.write("3. Metascape - Protein-protein interaction network according to Molecular Complex Detection (MCODE). Algorithm identified densely connected network components.")
-  
-    # 📌 GitHub Raw PDF URL
-    GITHUB_3 = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/3_MCODE.png"  # Replace with your actual URL
-    try:
-        response = requests.get(GITHUB_3, timeout=10)  # Prevent long waits
-        response.raise_for_status()  # Check if URL is valid (200 OK)
-    
-        # Open the image
-        image = Image.open(BytesIO(response.content))
-    
-        image = image.convert("RGBA")  # Keep original quality
-        st.image(image, use_container_width=True)  # Display without modification
-    
-    except requests.exceptions.RequestException as e:
-        st.error(f"❌ Error loading image: {e}")
-  
-  
-    
-    # 📌 GitHub Raw Image URL for legend table
-    GITHUB_4 = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/3_legend_table.png"
-    
-    try:
-        response = requests.get(GITHUB_4, timeout=10)
-        response.raise_for_status()
-    
-        # Open and convert the image
-        legend_table = Image.open(BytesIO(response.content)).convert("RGBA")  
-        st.image(legend_table, use_container_width=True)
-    
-    except requests.exceptions.RequestException as e:
-        st.error(f"❌ Error loading legend table image: {e}")
-          
+      # 📌 Display Title
+        st.write("3. Metascape - Protein-protein interaction network according to Molecular Complex Detection (MCODE). Algorithm identified densely connected network components.")
+      
+        # 📌 GitHub Raw PDF URL
+        GITHUB_3 = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/3_MCODE.png"  # Replace with your actual URL
+        try:
+            response = requests.get(GITHUB_3, timeout=10)  # Prevent long waits
+            response.raise_for_status()  # Check if URL is valid (200 OK)
+        
+            # Open the image
+            image = Image.open(BytesIO(response.content))
+        
+            image = image.convert("RGBA")  # Keep original quality
+            st.image(image, use_container_width=True)  # Display without modification
+        
+        except requests.exceptions.RequestException as e:
+            st.error(f"❌ Error loading image: {e}")
+      
+      
+        
+        # 📌 GitHub Raw Image URL for legend table
+        GITHUB_4 = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/3_legend_table.png"
+        
+        try:
+            response = requests.get(GITHUB_4, timeout=10)
+            response.raise_for_status()
+        
+            # Open and convert the image
+            legend_table = Image.open(BytesIO(response.content)).convert("RGBA")  
+            st.image(legend_table, use_container_width=True)
+        
+        except requests.exceptions.RequestException as e:
+            st.error(f"❌ Error loading legend table image: {e}")
+              
 ################################################################################################################################################################################################################
     if mouse_section == "ShinyGO Mouse palmitoylome":        
         # 📌 Display Title
