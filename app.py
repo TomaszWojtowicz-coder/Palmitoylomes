@@ -87,7 +87,7 @@ st.markdown(f"""
 
         /* Make only the "Choose a section" text white */
         div[data-testid="stSelectboxLabel"] > label {{
-            color: white !important;
+            color: yellow !important;
         }}
     </style>
 """, unsafe_allow_html=True)
