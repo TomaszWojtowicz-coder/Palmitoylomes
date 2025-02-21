@@ -230,6 +230,7 @@ elif page == "PROJECT DESCRIPTION":
         st.image(image4)  # Display logo once
     
     with col2:
+        st.write("")
         st.write("T. Wojtowicz, Nencki Institute of Experimental Biology, Polish Academy of Sciences  (t.wojtowicz AT nencki.edu.pl)")
         st.write("A. Pytys, Nencki Institute of Experimental Biology, Polish Academy of Sciences  (a.pytys AT nencki.edu.pl)")
 
