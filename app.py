@@ -64,6 +64,13 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+
+
+
+
+
+
+
 # File path for dataset
 file_path = "All_merged.xlsx"
 file_path2 = "Mouse_summary.xlsx"
@@ -85,16 +92,14 @@ st.markdown(f"""
             background-position: center;
         }}
 
-        /* Ustawienie białego koloru dla etykiety */
-        section[data-testid="stSidebar"] label {{
+        /* Powiększenie czcionki tylko dla tekstu "Choose a section" */
+        div[data-testid="stSelectboxLabel"] label {{
             color: white !important;
             font-size: 30px !important;  /* Powiększenie czcionki */
-            font-weight: bold; /* Opcjonalnie: pogrubienie */
+            font-weight: bold !important; /* Pogrubienie */
         }}
     </style>
 """, unsafe_allow_html=True)
-
-
 
 
 # === SIDEBAR MENU ===
