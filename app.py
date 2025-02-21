@@ -154,6 +154,24 @@ elif page == "PROJECT DESCRIPTION":
 
 # === ALL PROTEINS MERGED-TABLE ===
 elif page == "ALL PROTEINS MERGED-TABLE":
+st.write("""
+        
+        List of original publications reporting palmitoylated proteins in mice compared in this study:
+        Mouse
+        
+        """)
+        df_mouse = pd.read_excel(file_path2, engine="openpyxl")
+        st.dataframe(df_mouse, use_container_width=True)
+
+st.write("""
+        
+        Rat:
+        
+        """)
+        df_mouse = pd.read_excel(file_path2, engine="openpyxl")
+        st.dataframe(df_mouse, use_container_width=True)
+
+    
     df = pd.read_excel(file_path, engine="openpyxl")
     st.title("Multi-Filter Excel Data")
     filter_columns = st.multiselect("Reports of mass-spectrometry palmitoylated proteins are merged in single database. Use filter to search protein of interest.", df.columns)
