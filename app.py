@@ -138,6 +138,24 @@ if page == "MAIN":
 # === PROJECT DESCRIPTION ===
 elif page == "PROJECT DESCRIPTION":
     st.title("Project Description")
+    logo_path3 = "Palm.png"
+    image3 = Image.open(logo_path3)
+    
+    # Create two columns: one for the logo, one for the text
+    col1, col2 = st.columns([1, 3])  # Adjust ratio as needed
+    
+    with col1:
+        # Display the logo
+        st.image(image3)
+    
+    with col2:
+        # Display the text next to the logo
+        st.markdown(
+            """
+            **Protein lipidation is a common post-translational modification of proteins that plays an important role in human physiology and pathology. One form of protein lipidation, S-palmitoylation, involves the addition of a 16-carbon fatty acid (palmitate) onto proteins. This reversible modification may affect the regulation of protein trafficking and stability in membranes. From multiple recent experimental studies, a picture emerges whereby protein S-palmitoylation is a ubiquitous yet discrete molecular switch enabling the expansion of protein functions and subcellular localization in minutes to hours. Neural tissue is particularly rich in proteins that are regulated by S-palmitoylation. A surge of novel methods of detection of protein lipidation at high resolution allowed us to get better insights into the roles of protein palmitoylation in brain physiology and pathophysiology.**
+            """
+        )
+    
     st.write("""
                **Project Overview**
 
