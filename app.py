@@ -155,9 +155,9 @@ elif page == "PROJECT DESCRIPTION":
             <style>
             .text-container {
                 width: 100%;  /* Makes the width dynamic */
-                max-width: 90%;  /* Ensures text is not too wide */
+                max-width: 10%;  /* Ensures text is not too wide */
                 text-align: justify;
-                font-size: 14px;
+                font-size: 16px;
                 margin: auto;  /* Centers the text */
                 padding: 10px; /* Adds slight spacing */
                 word-wrap: break-word; /* Ensures long words wrap properly */
@@ -166,13 +166,13 @@ elif page == "PROJECT DESCRIPTION":
     
             @media (min-width: 768px) {
                 .text-container {
-                    max-width: 70%;  /* More narrow on larger screens */
+                    max-width: 100%;  /* More narrow on larger screens */
                 }
             }
     
             @media (min-width: 1024px) {
                 .text-container {
-                    max-width: 60%;  /* Even more narrow for big screens */
+                    max-width: 100%;  /* Even more narrow for big screens */
                 }
             }
             </style>
