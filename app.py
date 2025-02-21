@@ -16,6 +16,37 @@ from io import BytesIO
 # Ensure correct image zoom library is imported
 from streamlit_image_zoom import image_zoom  # Ensure you have the 'streamlit_image_zoom' package installed
 
+
+
+
+
+
+st.markdown("""
+    <style>
+        .hover-effect:hover {
+            background-color: lightblue;
+            cursor: pointer;
+        }
+    </style>
+    <div class="hover-effect" style="padding:10px; text-align:center;">
+        🔥 Najedź na mnie!
+    </div>
+""", unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Set page layout
 st.set_page_config(layout="wide")
 
