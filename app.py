@@ -220,7 +220,7 @@ elif page == "PROJECT DESCRIPTION":
     st.write("**Comments, suggestions:**")  # Bold header for clarity
     
     # Load and display the logo in a column
-    logo_path4 = "Nencki.svg"
+    logo_path4 = "Nencki.jpg"
     image4 = Image.open(logo_path4)
     
     # Create two columns: one for the logo, one for the text
