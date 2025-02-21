@@ -152,9 +152,8 @@ elif page == "PROJECT DESCRIPTION":
         # Display the text next to the logo
         st.markdown(
             """
-            <div style="text-align: justify; font-size: 16px;">
+            <div style="text-align: justify; font-size: 14px;">
                 <p>
-
 
                 
                 Protein lipidation is a widely occurring post-translational modification that significantly impacts human physiology and disease processes. 
@@ -164,8 +163,6 @@ elif page == "PROJECT DESCRIPTION":
                 Recent experimental studies suggest that S-palmitoylation acts as a precise molecular switch, rapidly modulating protein functions and 
                 subcellular localization over minutes to hours. Neural tissue, in particular, contains a high concentration of proteins regulated by this modification. 
                 Advances in high-resolution detection techniques have greatly enhanced our understanding of the role of protein palmitoylation in brain function and dysfunction.
-
-                
                 </p>
             </div>
             """,
