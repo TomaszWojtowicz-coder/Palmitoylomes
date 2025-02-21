@@ -155,7 +155,8 @@ elif page == "PROJECT DESCRIPTION":
             **  **
             **  **
             Protein lipidation is a common post-translational modification of proteins that plays an important role in human physiology and pathology. One form of protein lipidation, S-palmitoylation, involves the addition of a 16-carbon fatty acid (palmitate) onto proteins. This reversible modification may affect the regulation of protein trafficking and stability in membranes. From multiple recent experimental studies, a picture emerges whereby protein S-palmitoylation is a ubiquitous yet discrete molecular switch enabling the expansion of protein functions and subcellular localization in minutes to hours. Neural tissue is particularly rich in proteins that are regulated by S-palmitoylation. A surge of novel methods of detection of protein lipidation at high resolution allowed us to get better insights into the roles of protein palmitoylation in brain physiology and pathophysiology.
-            
+            **  **
+            **  **          
             """
         )
     
