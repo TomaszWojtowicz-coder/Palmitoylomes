@@ -468,6 +468,8 @@ elif page == "MOUSE DATA":
     except requests.exceptions.RequestException as e:
         st.error(f"❌ Error loading image: {e}")
 
+
+
   # 📌 Display Title
     st.write("2. Metascape - Bar graph of enriched terms across input gene lists, colored by p-values.")
   
