@@ -221,7 +221,9 @@ elif page == "PROJECT DESCRIPTION":
 
                  ** **
                  ** **
-                 Comments, suggestions, should be sent to (t.wojtowicz AT nencki.edu.pl)
+                 Comments, suggestions 
+                 T.Wojtowicz, Nencki Institute of Experimental Biology, Polish Academy of Sciences  (t.wojtowicz AT nencki.edu.pl)
+                 A.Pytys, Nencki Institute of Experimental Biology, Polish Academy of Sciences  (a.pytys AT nencki.edu.pl)
     """)
 # === ALL PROTEINS MERGED-TABLE ===
 elif page == "ALL PROTEINS MERGED-TABLE":
