@@ -86,12 +86,8 @@ st.markdown(f"""
             color: white !important; /* Ensures all text in the sidebar is white */
         }}
         [data-testid="stSidebar"] * {{
-            color: black !important; /* Sets all text inside the sidebar to black */
+            color: black !important; /* Applies white color to all elements inside the sidebar */
         }}
-        /* Targeting the select box placeholder */
-        .stSelectbox div[data-testid="stMarkdownContainer"] p {
-            color: white !important;
-        }
     </style>
 """, unsafe_allow_html=True)
 
