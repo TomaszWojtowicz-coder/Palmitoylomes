@@ -447,26 +447,18 @@ elif page == "MOUSE DATA":
         st.write("""1. Metascape - Network of enriched terms colored by cluster, where nodes that share the same cluster are typically close to each other.
                         Size of the node is proportional to the number of proteins associated with biological term / pathway. 
             """)
-            
-    # GitHub Raw URL of your image
-        GITHUB_IMAGE_URL = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/1_MOUSE_Go_Network.png"
-        
-    # ✅ Fetch and Display High-Resolution Image
-    try:
-        response = requests.get(GITHUB_IMAGE_URL, timeout=10)
-        response.raise_for_status()  # Ensures the request was successful
+
+
+
+
+    imagex = Image.open("1_MOUSE_Go_Network.png")  # Replace with an actual file
+    st.image(imagex, use_container_width=True)
+
+
+
+
+
     
-        # Open the image
-        image = Image.open(BytesIO(response.content))
-    
-        # 🔍 Fix resolution: Increase DPI & enhance quality
-        high_res_image = image.resize((image.width * 2, image.height * 2), Image.LANCZOS)  # 2x scaling
-        
-        # 📌 Display only the high-resolution image (NO ZOOM)
-        st.image(high_res_image, use_container_width=True)  # ✅ Updated parameter
-    
-    except requests.exceptions.RequestException as e:
-        st.error(f"❌ Error loading image: {e}")
 
 
 
