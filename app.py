@@ -84,8 +84,6 @@ def get_base64(image_path):
 sidebar_bg_image = get_base64("x2.png")  # Ensure the correct file path
 
 # Apply CSS with inline Base64 image and set text color to white
-
-
 st.markdown(f"""
     <style>
         [data-testid="stSidebar"] {{
@@ -94,15 +92,12 @@ st.markdown(f"""
             background-position: center;
         }}
 
-        /* Zmieniamy tylko kolor i rozmiar czcionki dla "Choose a section" */
+        /* Ensure only the "Choose a section" text is white */
         section[data-testid="stSidebar"] label {{
             color: white !important;
-            font-size: 30px !important; /* Powiększona czcionka */
-            font-weight: bold !important; /* Pogrubienie (opcjonalnie) */
         }}
     </style>
 """, unsafe_allow_html=True)
-
 
 # === SIDEBAR MENU ===
 page = st.sidebar.selectbox("Choose a section", [
