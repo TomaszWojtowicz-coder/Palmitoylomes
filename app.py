@@ -244,8 +244,8 @@ elif page == "ALL PROTEINS MERGED-TABLE":
 
     """)
     
-    df_mouse = pd.read_excel(file_path2, engine="openpyxl")
-    st.dataframe(df_mouse, use_container_width=True)
+    df_mouse2 = pd.read_excel(file_path2, engine="openpyxl")
+    st.dataframe(df_mouse2, use_container_width=True)
 
     st.write("""
         
