@@ -431,7 +431,7 @@ elif page == "MOUSE DATA":
         # 📌 Display Title
         st.title("Mouse palmitoylome analyzed with ShinyGo")
         st.write("" "")
-        st.write(""150 proteins common across 6 out of 8 reports have been analyzed"").
+        st.write("150 proteins common across 6 out of 8 reports have been analyzed").
         st.write("" "")
         st.write("1. Enrichment in Gene Ontology terms")
       
