@@ -278,7 +278,7 @@ elif page == "ALL PROTEINS MERGED-TABLE":
 elif page == "MOUSE DATA":
     mouse_section = st.sidebar.selectbox("Choose Mouse Data Section", [
         "Publications list",
-        "Mouse common protein table", 
+        "Mouse common palmitoyl protein table", 
         "Metascape Analysis",
         "ShinyGO Analysis",
        
@@ -293,9 +293,7 @@ elif page == "MOUSE DATA":
     
     if mouse_section == "Mouse common protein table":
         # Title of the Streamlit app
-        st.title("Gene Occurrence Analysis (wait for data to be loaded..)")
-
-
+        st.title("Mouse common palmitoyl protein table (wait for data to be loaded..)")
  
 
         @st.cache_data
