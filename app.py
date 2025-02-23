@@ -429,7 +429,9 @@ elif page == "MOUSE DATA":
 ################################################################################################################################################################################################################
     if mouse_section == "ShinyGO Analysis":        
         # 📌 Display Title
-        st.title("Mouse palmitoylome - proteins common across multiple publications analyzed with ShinyGo (https://bioinformatics.sdstate.edu/go/)")
+        st.title("Mouse palmitoylome analyzed with ShinyGo")
+        st.write(" " )
+        st.write("150 proteins common across 6 out of 8 reports have been analyzed").
         st.write(" " )
         st.write("1. Enrichment in Gene Ontology terms")
       
