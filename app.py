@@ -304,9 +304,9 @@ elif page == "MOUSE DATA":
             df.columns = df.columns.str.strip()  # Remove leading/trailing spaces
             return df
 
-            # Load the data (call the function)
-            uploaded_file = "gene_occurrences_analysis_mouse.xlsx"
-            df = load_data(uploaded_file)
+        # Load the data (call the function)
+        uploaded_file = "gene_occurrences_analysis_mouse.xlsx"
+        df = load_data(uploaded_file)
         
        
   
