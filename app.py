@@ -293,7 +293,7 @@ elif page == "MOUSE DATA":
     
     if mouse_section == "Mouse common protein table":
         # Title of the Streamlit app
-        st.title("Gene Occurrence Analysis")
+        st.title("Gene Occurrence Analysis (wait for data to be loaded..)")
 
 
  
