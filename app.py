@@ -296,102 +296,20 @@ elif page == "MOUSE DATA":
         st.title("Gene Occurrence Analysis")
 
 
-        # Show "LOADING" blinking icon while loading
-        with st.status("Loading data...", expanded=True) as status:
-            st.markdown("""
-                <style>
-                    @keyframes blink {
-                        0% { color: red; }
-                        50% { color: transparent; }
-                        100% { color: red; }
-                    }
-                    
-                    .blinking-text {
-                        font-size: 24px;
-                        font-weight: bold;
-                        color: red;
-                        animation: blink 1s infinite;
-                    }
-                    
-                    .blinking-text-wrapper {
-                        text-align: center;
-                        margin-top: 10px;
-                    }
-                </style>
-                
-                <div class="blinking-text-wrapper">
-                    <span class="blinking-text">LOADING</span>
-                </div>
-            """, unsafe_allow_html=True)
-        
-            # Simulate loading delay (for testing purposes)
-           # time.sleep(10)
-
-
-
+ 
 
         @st.cache_data
         def load_data(uploaded_file):
             df = pd.read_excel(uploaded_file, engine="openpyxl", header=0)
             df.columns = df.columns.str.strip()  # Remove leading/trailing spaces
             return df
-        # Show "LOADING" blinking icon while loading
-        with st.status("Loading data...", expanded=True) as status:
-            st.markdown("""
-                <style>
-                    @keyframes blink {
-                        0% { color: red; }
-                        50% { color: transparent; }
-                        100% { color: red; }
-                    }
-                    
-                    .blinking-text {
-                        font-size: 24px;
-                        font-weight: bold;
-                        color: red;
-                        animation: blink 1s infinite;
-                    }
-                    
-                    .blinking-text-wrapper {
-                        text-align: center;
-                        margin-top: 10px;
-                    }
-                </style>
-                
-                <div class="blinking-text-wrapper">
-                    <span class="blinking-text">LOADING</span>
-                </div>
-            """, unsafe_allow_html=True)
-            
-            # Simulate loading delay (for testing purposes)
-            # time.sleep(10)
-        
+
             # Load the data (call the function)
             uploaded_file = "gene_occurrences_analysis_mouse.xlsx"
             df = load_data(uploaded_file)
         
-            # Mark as loaded
-            status.update(label="Data will be shown in a moment!", state="complete", expanded=False)
-
-
-
-
-
-        
-        # Apply FIRE color scheme: We will use a scale from yellow to red
-        def row_color(val):
-            """Color the rows based on the number of reports (Fire heatmap)."""
-            if isinstance(val, (int, float)) and 1 <= val <= 8:
-                # Create color intensity based on the occurrence value
-                color_intensity = val / 8  # Scale the color intensity from 1 to 8
-                # Fire-like color gradient from yellow to red (R->G->B)
-                r = int(255 - color_intensity * 255)
-                g = int(255 - color_intensity * 255)
-                b = 255
-                color = f"rgb({r}, {g}, {b})"
-                return [f"background-color: {color}"] * len(df.columns)  # Apply color to all columns in the row
-            return [""] * len(df.columns)
-
+       
+  
         # Filter by Gene ID
         gene_filter = st.text_input("Filter by Gene ID (partial match)")
         
