@@ -279,8 +279,8 @@ elif page == "MOUSE DATA":
     mouse_section = st.sidebar.selectbox("Choose Mouse Data Section", [
         "Publications list",
         "Mouse common protein table", 
-        "Metascape Mouse palmitoylome",
-        "ShinyGO Mouse palmitoylome",
+        "Metascape Analysis",
+        "ShinyGO Analysis",
        
 
     ])
@@ -355,7 +355,7 @@ elif page == "MOUSE DATA":
     
 ################################################################################################################################################################################################################
     
-    if mouse_section == "Metascape Mouse palmitoylome":
+    if mouse_section == "Metascape Analysis":
                 
               
         # 📌 Display Title
@@ -428,7 +428,7 @@ elif page == "MOUSE DATA":
             st.error(f"❌ Error loading legend table image: {e}")
               
 ################################################################################################################################################################################################################
-    if mouse_section == "ShinyGO Mouse palmitoylome":        
+    if mouse_section == "ShinyGO Analysis":        
         # 📌 Display Title
         st.title("Mouse palmitoylome - proteins common across multiple publications analyzed with ShinyGo (https://bioinformatics.sdstate.edu/go/)")
         st.write(" " )
