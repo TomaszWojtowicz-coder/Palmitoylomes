@@ -278,7 +278,7 @@ elif page == "ALL PROTEINS MERGED-TABLE":
 elif page == "MOUSE DATA":
     mouse_section = st.sidebar.selectbox("Choose Mouse Data Section", [
         "Publications list",
-        "Mouse common palmitoyl protein table", 
+        "Mouse  palmitoyl proteins", 
         "Metascape Analysis",
         "ShinyGO Analysis",
        
@@ -291,9 +291,11 @@ elif page == "MOUSE DATA":
         df_mouse = pd.read_excel(file_path2, engine="openpyxl")
         st.dataframe(df_mouse, use_container_width=True)
     
-    if mouse_section == "Mouse common protein table":
+    if mouse_section == "Mouse  palmitoyl proteins":
         # Title of the Streamlit app
-        st.title("Mouse common palmitoyl protein table (wait for data to be loaded..)")
+        st.title("Mouse common palmitoyl protein table ")
+        st.write("" "")
+        st.write("The table shows the occurrence of palmitoyl proteins across reports. Use the search menu to find the protein of interest.")
  
 
         @st.cache_data
