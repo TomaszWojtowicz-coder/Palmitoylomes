@@ -103,7 +103,7 @@ st.markdown(f"""
 page = st.sidebar.selectbox("Choose a section", [
     "MAIN", 
     "PROJECT DESCRIPTION", 
-    "ALL PROTEINS MERGED-TABLE", 
+    "ALL PALMITOYL PROTEINS -TABLES", 
     "MOUSE DATA", 
     "RAT DATA"
 ])
@@ -237,8 +237,8 @@ elif page == "PROJECT DESCRIPTION":
 
 
 # === ALL PROTEINS MERGED-TABLE ===
-elif page == "ALL PROTEINS MERGED-TABLE":
-    st.title("List of original publications reporting palmitoylated proteins compared in this study")
+elif page == "ALL PALMITOYL PROTEINS -TABLES":
+    st.title("List of original publications reporting palmitoylated proteins compared in this database")
     st.write("""
     
         Mouse studies:
@@ -259,8 +259,9 @@ elif page == "ALL PROTEINS MERGED-TABLE":
     st.dataframe(df_rat, use_container_width=True)
 
     df = pd.read_excel(file_path, engine="openpyxl")
-    st.title("Multi-Filter Excel Data")
-    filter_columns = st.multiselect("Reports of mass-spectrometry palmitoylated proteins are merged in single database. Use filter to search protein of interest.", df.columns)
+    st.title("Rat and Mouse palmitoyl proteins - multi-filter table")
+    st.write("" "")
+    filter_columns = st.multiselect("Palmitoyl proteins reported with mass spectrometry were merged in single database. Use filter to search term of interest. Multiple filters can be applied.", df.columns)
     
     filters = {}
     for column in filter_columns:
