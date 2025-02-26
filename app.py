@@ -370,6 +370,18 @@ elif page == "MOUSE DATA":
         st.image(imagex, use_container_width=True)
 
 
+        st.title("Mouse palmitoylome - Metascape Analysis")
+        st.write("Analysis of 184 palmitoylated proteins common in at least 6 out of 8 publications.")
+
+        # Embed the GONetwork.html file
+        html_file_path = "GONetwork.html"
+        try:
+            with open(html_file_path, "r", encoding="utf-8") as f:
+                html_content = f.read()
+                html(html_content, height=800, scrolling=True)
+        except FileNotFoundError:
+            st.error(f"File {html_file_path} not found. Please make sure it is in the correct directory.")
+
   
 
 
