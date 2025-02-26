@@ -364,16 +364,20 @@ elif page == "MOUSE DATA":
         st.write("""   Analysis of 184 palmitoylated proteins common in at least 6 out of 8 (75%) publications (see Data Summary for reference).""")
         st.write("" "")
         st.write("""1. Metascape - Network of enriched terms colored by cluster, where nodes that share the same cluster are typically close to each other.
-                        Size of the node is proportional to the number of proteins associated with biological term / pathway. 
+                       In the GONetwork (Gene Ontology Network), nodes (representing biological terms, pathways, or functions) are colored by cluster. If multiple nodes share the same color, it means they belong to the same 
+                       functional cluster—they are grouped based on shared genes.
+                       
+                       •  Nodes with the same color = Functionally related terms.
+                       •  Highly connected nodes = More essential GO terms.
+                       •  Edges between clusters = Some functional overlap between biological processes.
+
             """)
         imagex = Image.open("1_MOUSE_Go_Network.png")  # Replace with an actual file
         st.image(imagex, use_container_width=True)
 
 
-        st.title("Mouse palmitoylome - Metascape Analysis")
-        st.write("Analysis of 184 palmitoylated proteins common in at least 6 out of 8 publications.")
-
-        
+        st.write(" Interactive version of static figure shown above. Double click node to read description.")       
+        st.write("" "")
         # Embed the hosted HTML file in Streamlit
         st.markdown(
             '<iframe src="http://localhost:8000/GoNetwork_Mouse/Enrichment_GO/GONetwork.html#/" width="100%" height="800"></iframe>',
