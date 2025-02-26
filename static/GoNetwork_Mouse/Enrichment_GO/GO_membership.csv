@@ -1,0 +1,407 @@
+_MEMBER_MyList,_LogP_MyList,GO,Description,_PATTERN_,_RANK_,GiniIndex
+1,-4.2,GO:0030100,regulation of endocytosis,M1,1,0
+1,-4.1,GO:0098655,monoatomic cation transmembrane transport,M1,1,0
+1,-3.4,GO:0032024,positive regulation of insulin secretion,M1,1,0
+1,-4.2,GO:0007212,G protein-coupled dopamine receptor signaling pathway,M1,1,0
+1,-2.2,GO:0007596,blood coagulation,M1,1,0
+1,-5.9,mmu01200,Carbon metabolism - Mus musculus (house mouse),M1,1,0
+1,-3.1,GO:0009191,ribonucleoside diphosphate catabolic process,M1,1,0
+1,-2.3,R-MMU-1632852,Macroautophagy,M1,1,0
+1,-2.6,GO:0044057,regulation of system process,M1,1,0
+1,-3.8,mmu04145,Phagosome - Mus musculus (house mouse),M1,1,0
+1,-3.5,GO:0031346,positive regulation of cell projection organization,M1,1,0
+1,-3.1,GO:0009137,purine nucleoside diphosphate catabolic process,M1,1,0
+1,-4.6,GO:1903829,positive regulation of protein localization,M1,1,0
+1,-5.7,GO:0031344,regulation of cell projection organization,M1,1,0
+1,-2.5,GO:0006906,vesicle fusion,M1,1,0
+1,-2.6,R-MMU-416476,G alpha (q) signalling events,M1,1,0
+1,-3.1,mmu04270,Vascular smooth muscle contraction - Mus musculus (house mouse),M1,1,0
+1,-2.4,GO:0017157,regulation of exocytosis,M1,1,0
+1,-3.4,GO:0035640,exploration behavior,M1,1,0
+1,-2.9,GO:0007626,locomotory behavior,M1,1,0
+1,-2.2,R-MMU-913531,Interferon Signaling,M1,1,0
+1,-5,R-MMU-1266738,Developmental Biology,M1,1,0
+1,-3.2,GO:1904951,positive regulation of establishment of protein localization,M1,1,0
+1,-2.9,WP5298,Dravet syndrome Scn1a A1783V point mutation model,M1,1,0
+1,-2.8,GO:0051129,negative regulation of cellular component organization,M1,1,0
+1,-2.9,R-MMU-372790,Signaling by GPCR,M1,1,0
+1,-9.7,GO:0099003,vesicle-mediated transport in synapse,M1,1,0
+1,-2.9,GO:0007009,plasma membrane organization,M1,1,0
+1,-3.2,GO:0046902,regulation of mitochondrial membrane permeability,M1,1,0
+1,-2.6,GO:0034655,nucleobase-containing compound catabolic process,M1,1,0
+1,-2.7,GO:0009132,nucleoside diphosphate metabolic process,M1,1,0
+1,-2.3,R-MMU-8856688,Golgi-to-ER retrograde transport,M1,1,0
+1,-8.6,GO:0050804,modulation of chemical synaptic transmission,M1,1,0
+1,-4.1,GO:0016358,dendrite development,M1,1,0
+1,-4.4,R-MMU-428930,Thromboxane signalling through TP receptor,M1,1,0
+1,-4.8,GO:0007006,mitochondrial membrane organization,M1,1,0
+1,-2.2,GO:0060249,anatomical structure homeostasis,M1,1,0
+1,-3,R-MMU-388396,GPCR downstream signalling,M1,1,0
+1,-4.4,GO:0050821,protein stabilization,M1,1,0
+1,-3.2,GO:0046032,ADP catabolic process,M1,1,0
+1,-2.8,GO:0005975,carbohydrate metabolic process,M1,1,0
+1,-2.8,mmu04360,Axon guidance - Mus musculus (house mouse),M1,1,0
+1,-5.5,GO:0048259,regulation of receptor-mediated endocytosis,M1,1,0
+1,-2.8,GO:0032787,monocarboxylic acid metabolic process,M1,1,0
+1,-3.9,GO:0050807,regulation of synapse organization,M1,1,0
+1,-8.3,mmu04911,Insulin secretion - Mus musculus (house mouse),M1,1,0
+1,-3.3,GO:0008217,regulation of blood pressure,M1,1,0
+1,-3.7,GO:0098660,inorganic ion transmembrane transport,M1,1,0
+1,-2.9,R-MMU-5683057,MAPK family signaling cascades,M1,1,0
+1,-3.1,GO:0048260,positive regulation of receptor-mediated endocytosis,M1,1,0
+1,-6.8,GO:1990806,ligand-gated ion channel signaling pathway,M1,1,0
+1,-4.3,GO:0016050,vesicle organization,M1,1,0
+1,-12,mmu04721,Synaptic vesicle cycle - Mus musculus (house mouse),M1,1,0
+1,-3.5,mmu04972,Pancreatic secretion - Mus musculus (house mouse),M1,1,0
+1,-3.2,mmu04910,Insulin signaling pathway - Mus musculus (house mouse),M1,1,0
+1,-9.3,GO:0120039,plasma membrane bounded cell projection morphogenesis,M1,1,0
+1,-4,GO:0042391,regulation of membrane potential,M1,1,0
+1,-2.5,mmu05165,Human papillomavirus infection - Mus musculus (house mouse),M1,1,0
+1,-2.8,GO:0010959,regulation of metal ion transport,M1,1,0
+1,-2.1,GO:0098876,vesicle-mediated transport to the plasma membrane,M1,1,0
+1,-4.3,GO:1901292,nucleoside phosphate catabolic process,M1,1,0
+1,-2.3,mmu04611,Platelet activation - Mus musculus (house mouse),M1,1,0
+1,-2.2,GO:0021761,limbic system development,M1,1,0
+1,-2.6,GO:0005996,monosaccharide metabolic process,M1,1,0
+1,-3.4,GO:0060491,regulation of cell projection assembly,M1,1,0
+1,-10,GO:0048858,cell projection morphogenesis,M1,1,0
+1,-3.1,GO:0140238,presynaptic endocytosis,M1,1,0
+1,-5.3,mmu04540,Gap junction - Mus musculus (house mouse),M1,1,0
+1,-2.4,GO:0006163,purine nucleotide metabolic process,M1,1,0
+1,-2.5,GO:0051963,regulation of synapse assembly,M1,1,0
+1,-4.1,GO:0006090,pyruvate metabolic process,M1,1,0
+1,-2.3,mmu04722,Neurotrophin signaling pathway - Mus musculus (house mouse),M1,1,0
+1,-5.9,GO:1990778,protein localization to cell periphery,M1,1,0
+1,-4.4,GO:0050806,positive regulation of synaptic transmission,M1,1,0
+1,-3.8,mmu04217,Necroptosis - Mus musculus (house mouse),M1,1,0
+1,-2.9,GO:0090087,regulation of peptide transport,M1,1,0
+1,-3.4,GO:0071869,response to catecholamine,M1,1,0
+1,-2.9,GO:0140029,exocytic process,M1,1,0
+1,-9.9,R-MMU-399719,Trafficking of AMPA receptors,M1,1,0
+1,-2.1,GO:0051928,positive regulation of calcium ion transport,M1,1,0
+1,-2.9,GO:0002793,positive regulation of peptide secretion,M1,1,0
+1,-8.2,GO:0061564,axon development,M1,1,0
+1,-4.1,GO:0006897,endocytosis,M1,1,0
+1,-3.3,mmu04750,Inflammatory mediator regulation of TRP channels - Mus musculus (house mouse),M1,1,0
+1,-2.4,GO:0048640,negative regulation of developmental growth,M1,1,0
+1,-4.7,mmu04724,Glutamatergic synapse - Mus musculus (house mouse),M1,1,0
+1,-3,R-MMU-397014,Muscle contraction,M1,1,0
+1,-4.8,R-MMU-936837,Ion transport by P-type ATPases,M1,1,0
+1,-2.1,mmu04371,Apelin signaling pathway - Mus musculus (house mouse),M1,1,0
+1,-2.5,GO:0048814,regulation of dendrite morphogenesis,M1,1,0
+1,-2.7,GO:1904888,cranial skeletal system development,M1,1,0
+1,-4.4,GO:0036465,synaptic vesicle recycling,M1,1,0
+1,-2.7,GO:0042063,gliogenesis,M1,1,0
+1,-2.1,mmu05017,Spinocerebellar ataxia - Mus musculus (house mouse),M1,1,0
+1,-2.3,GO:0043270,positive regulation of monoatomic ion transport,M1,1,0
+1,-5.5,GO:0048168,regulation of neuronal synaptic plasticity,M1,1,0
+1,-2.1,GO:0051656,establishment of organelle localization,M1,1,0
+1,-3,GO:0016079,synaptic vesicle exocytosis,M1,1,0
+1,-9.9,R-MMU-399721,"Glutamate binding, activation of AMPA receptors and synaptic plasticity",M1,1,0
+1,-2.7,GO:1901888,regulation of cell junction assembly,M1,1,0
+1,-2.5,GO:0006195,purine nucleotide catabolic process,M1,1,0
+1,-3,GO:0048678,response to axon injury,M1,1,0
+1,-3.3,GO:0050796,regulation of insulin secretion,M1,1,0
+1,-2.8,GO:0015980,energy derivation by oxidation of organic compounds,M1,1,0
+1,-2.9,GO:0090276,regulation of peptide hormone secretion,M1,1,0
+1,-4,mmu00020,Citrate cycle (TCA cycle) - Mus musculus (house mouse),M1,1,0
+1,-6.5,R-MMU-422475,Axon guidance,M1,1,0
+1,-3,GO:0022029,telencephalon cell migration,M1,1,0
+1,-2.9,GO:0090559,regulation of membrane permeability,M1,1,0
+1,-3.9,GO:0006099,tricarboxylic acid cycle,M1,1,0
+1,-3.1,R-MMU-9855142,Cellular responses to mechanical stimuli,M1,1,0
+1,-2.6,GO:0035383,thioester metabolic process,M1,1,0
+1,-3.6,GO:0031503,protein-containing complex localization,M1,1,0
+1,-2.2,GO:0010001,glial cell differentiation,M1,1,0
+1,-3.9,GO:0006942,regulation of striated muscle contraction,M1,1,0
+1,-6.2,GO:0007267,cell-cell signaling,M1,1,0
+1,-4.6,GO:0060997,dendritic spine morphogenesis,M1,1,0
+1,-3.9,GO:0046034,ATP metabolic process,M1,1,0
+1,-5.1,R-MMU-416993,Trafficking of GluR2-containing AMPA receptors,M1,1,0
+1,-6.9,GO:0061024,membrane organization,M1,1,0
+1,-7.2,GO:0099536,synaptic signaling,M1,1,0
+1,-3.9,GO:0098657,import into cell,M1,1,0
+1,-4.2,R-MMU-9837999,Mitochondrial protein degradation,M1,1,0
+1,-4.6,R-MMU-2132295,MHC class II antigen presentation,M1,1,0
+1,-3.7,GO:0010975,regulation of neuron projection development,M1,1,0
+1,-3.1,GO:0009181,purine ribonucleoside diphosphate catabolic process,M1,1,0
+1,-4.8,GO:0050803,regulation of synapse structure or activity,M1,1,0
+1,-3.7,GO:0086004,regulation of cardiac muscle cell contraction,M1,1,0
+1,-3,R-MMU-166520,Signaling by NTRKs,M1,1,0
+1,-3.2,GO:0099173,postsynapse organization,M1,1,0
+1,-2.4,GO:0046928,regulation of neurotransmitter secretion,M1,1,0
+1,-2.1,R-MMU-199977,ER to Golgi Anterograde Transport,M1,1,0
+1,-5.8,GO:0120035,regulation of plasma membrane bounded cell projection organization,M1,1,0
+1,-2.3,R-MMU-5673001,RAF/MAP kinase cascade,M1,1,0
+1,-4.2,GO:0030900,forebrain development,M1,1,0
+1,-2.9,GO:0072655,establishment of protein localization to mitochondrion,M1,1,0
+1,-6.7,mmu04912,GnRH signaling pathway - Mus musculus (house mouse),M1,1,0
+1,-4.1,R-MMU-109582,Hemostasis,M1,1,0
+1,-3.8,mmu05200,Pathways in cancer - Mus musculus (house mouse),M1,1,0
+1,-4.2,GO:0098662,inorganic cation transmembrane transport,M1,1,0
+1,-3.5,GO:0006873,intracellular monoatomic ion homeostasis,M1,1,0
+1,-5.6,mmu04971,Gastric acid secretion - Mus musculus (house mouse),M1,1,0
+1,-3.6,GO:0009144,purine nucleoside triphosphate metabolic process,M1,1,0
+1,-3.6,GO:0046434,organophosphate catabolic process,M1,1,0
+1,-5.7,GO:0099537,trans-synaptic signaling,M1,1,0
+1,-2.4,WP539,Wnt signaling pathway,M1,1,0
+1,-3.4,R-MMU-2262752,Cellular responses to stress,M1,1,0
+1,-5.3,GO:0060996,dendritic spine development,M1,1,0
+1,-2.1,mmu04144,Endocytosis - Mus musculus (house mouse),M1,1,0
+1,-2.2,mmu04726,Serotonergic synapse - Mus musculus (house mouse),M1,1,0
+1,-2.1,GO:0033365,protein localization to organelle,M1,1,0
+1,-3.2,GO:0048488,synaptic vesicle endocytosis,M1,1,0
+1,-2.5,GO:0060291,long-term synaptic potentiation,M1,1,0
+1,-7.8,R-MMU-112316,Neuronal System,M1,1,0
+1,-2.5,GO:0050708,regulation of protein secretion,M1,1,0
+1,-4.4,mmu05230,Central carbon metabolism in cancer - Mus musculus (house mouse),M1,1,0
+1,-2.1,GO:0048284,organelle fusion,M1,1,0
+1,-3.3,GO:0006096,glycolytic process,M1,1,0
+1,-2.3,R-MMU-9612973,Autophagy,M1,1,0
+1,-6.8,WP553,Calcium regulation in cardiac cells,M1,1,0
+1,-3,GO:0009179,purine ribonucleoside diphosphate metabolic process,M1,1,0
+1,-2.2,GO:0050817,coagulation,M1,1,0
+1,-2.7,GO:0050767,regulation of neurogenesis,M1,1,0
+1,-3.1,mmu04929,GnRH secretion - Mus musculus (house mouse),M1,1,0
+1,-8.8,GO:0048667,cell morphogenesis involved in neuron differentiation,M1,1,0
+1,-2.7,GO:0009611,response to wounding,M1,1,0
+1,-3.2,R-MMU-187037,Signaling by NTRK1 (TRKA),M1,1,0
+1,-3.2,R-MMU-422356,Regulation of insulin secretion,M1,1,0
+1,-4.9,GO:0051046,regulation of secretion,M1,1,0
+1,-5.6,R-MMU-8953897,Cellular responses to stimuli,M1,1,0
+1,-4.9,GO:0006091,generation of precursor metabolites and energy,M1,1,0
+1,-2.9,mmu04918,Thyroid hormone synthesis - Mus musculus (house mouse),M1,1,0
+1,-4.5,R-MMU-3371571,HSF1-dependent transactivation,M1,1,0
+1,-5.1,R-MMU-983712,Ion channel transport,M1,1,0
+1,-2.5,R-MMU-6798695,Neutrophil degranulation,M1,1,0
+1,-3,GO:0009134,nucleoside diphosphate catabolic process,M1,1,0
+1,-4.6,GO:0007612,learning,M1,1,0
+1,-5.1,mmu04020,Calcium signaling pathway - Mus musculus (house mouse),M1,1,0
+1,-2.8,GO:0022406,membrane docking,M1,1,0
+1,-2.4,R-MMU-71291,Metabolism of amino acids and derivatives,M1,1,0
+1,-3.4,mmu05415,Diabetic cardiomyopathy - Mus musculus (house mouse),M1,1,0
+1,-5.5,GO:0006836,neurotransmitter transport,M1,1,0
+1,-3.3,GO:0008306,associative learning,M1,1,0
+1,-5,mmu04022,cGMP-PKG signaling pathway - Mus musculus (house mouse),M1,1,0
+1,-5.9,GO:0072657,protein localization to membrane,M1,1,0
+1,-3.4,GO:0009141,nucleoside triphosphate metabolic process,M1,1,0
+1,-4.2,GO:0055117,regulation of cardiac muscle contraction,M1,1,0
+1,-2.3,GO:0097485,neuron projection guidance,M1,1,0
+1,-2.7,GO:0070201,regulation of establishment of protein localization,M1,1,0
+1,-6.7,R-MMU-382551,Transport of small molecules,M1,1,0
+1,-2.2,GO:0001894,tissue homeostasis,M1,1,0
+1,-9.4,GO:0048812,neuron projection morphogenesis,M1,1,0
+1,-6.4,R-MMU-9675108,Nervous system development,M1,1,0
+1,-4.2,GO:0007611,learning or memory,M1,1,0
+1,-2.5,GO:0043269,regulation of monoatomic ion transport,M1,1,0
+1,-2.3,GO:0010720,positive regulation of cell development,M1,1,0
+1,-2.4,GO:1905475,regulation of protein localization to membrane,M1,1,0
+1,-2.1,GO:0007005,mitochondrion organization,M1,1,0
+1,-3.4,GO:0009166,nucleotide catabolic process,M1,1,0
+1,-7.8,mmu04922,Glucagon signaling pathway - Mus musculus (house mouse),M1,1,0
+1,-3.5,GO:0071868,cellular response to monoamine stimulus,M1,1,0
+1,-3.6,mmu05016,Huntington disease - Mus musculus (house mouse),M1,1,0
+1,-3.9,R-MMU-442755,Activation of NMDA receptors and postsynaptic events,M1,1,0
+1,-2.1,GO:0032984,protein-containing complex disassembly,M1,1,0
+1,-3.8,GO:0044089,positive regulation of cellular component biogenesis,M1,1,0
+1,-3,GO:0009135,purine nucleoside diphosphate metabolic process,M1,1,0
+1,-5.3,mmu04261,Adrenergic signaling in cardiomyocytes - Mus musculus (house mouse),M1,1,0
+1,-6.7,GO:0007409,axonogenesis,M1,1,0
+1,-5.7,GO:0006812,monoatomic cation transport,M1,1,0
+1,-2.1,GO:0022604,regulation of cell morphogenesis,M1,1,0
+1,-2.2,R-MMU-5684996,MAPK1/MAPK3 signaling,M1,1,0
+1,-5.5,GO:1902600,proton transmembrane transport,M1,1,0
+1,-2.1,GO:0006006,glucose metabolic process,M1,1,0
+1,-4.2,GO:0034220,monoatomic ion transmembrane transport,M1,1,0
+1,-7.8,mmu04925,Aldosterone synthesis and secretion - Mus musculus (house mouse),M1,1,0
+1,-2.9,GO:0050885,neuromuscular process controlling balance,M1,1,0
+1,-2.6,GO:0050714,positive regulation of protein secretion,M1,1,0
+1,-4,R-MMU-71403,Citric acid cycle (TCA cycle),M1,1,0
+1,-2.1,GO:0050773,regulation of dendrite development,M1,1,0
+1,-2.2,R-MMU-446203,Asparagine N-linked glycosylation,M1,1,0
+1,-6.7,WP232,G protein signaling pathways,M1,1,0
+1,-3.3,GO:0030001,metal ion transport,M1,1,0
+1,-2.1,GO:0072524,pyridine-containing compound metabolic process,M1,1,0
+1,-3.4,mmu04919,Thyroid hormone signaling pathway - Mus musculus (house mouse),M1,1,0
+1,-5.1,mmu05022,Pathways of neurodegeneration - multiple diseases - Mus musculus (house mouse),M1,1,0
+1,-4.1,GO:0035235,ionotropic glutamate receptor signaling pathway,M1,1,0
+1,-4,R-MMU-437239,Recycling pathway of L1,M1,1,0
+1,-3.4,GO:0072523,purine-containing compound catabolic process,M1,1,0
+1,-4,WP434,TCA cycle,M1,1,0
+1,-3,mmu04723,Retrograde endocannabinoid signaling - Mus musculus (house mouse),M1,1,0
+1,-2.9,GO:0006937,regulation of muscle contraction,M1,1,0
+1,-4.8,mmu04725,Cholinergic synapse - Mus musculus (house mouse),M1,1,0
+1,-2.2,GO:0019362,pyridine nucleotide metabolic process,M1,1,0
+1,-4.4,GO:0016082,synaptic vesicle priming,M1,1,0
+1,-3.9,GO:0006886,intracellular protein transport,M1,1,0
+1,-6.1,GO:0019725,cellular homeostasis,M1,1,0
+1,-3,R-MMU-194315,Signaling by Rho GTPases,M1,1,0
+1,-3.2,GO:0019674,NAD metabolic process,M1,1,0
+1,-3,WP65,Insulin signaling,M1,1,0
+1,-5.3,GO:0051668,localization within membrane,M1,1,0
+1,-4.9,GO:0006839,mitochondrial transport,M1,1,0
+1,-3.7,GO:0097061,dendritic spine organization,M1,1,0
+1,-2.7,GO:0070585,protein localization to mitochondrion,M1,1,0
+1,-2.5,GO:0003013,circulatory system process,M1,1,0
+1,-2.6,WP662,Amino acid metabolism,M1,1,0
+1,-2.5,GO:0031345,negative regulation of cell projection organization,M1,1,0
+1,-4.1,GO:0048813,dendrite morphogenesis,M1,1,0
+1,-3.3,GO:0001508,action potential,M1,1,0
+1,-2.8,GO:0009185,ribonucleoside diphosphate metabolic process,M1,1,0
+1,-6.3,GO:0099072,regulation of postsynaptic membrane neurotransmitter receptor levels,M1,1,0
+1,-3.6,mmu04962,Vasopressin-regulated water reabsorption - Mus musculus (house mouse),M1,1,0
+1,-2.3,GO:0051640,organelle localization,M1,1,0
+1,-4.8,GO:0050890,cognition,M1,1,0
+1,-5,GO:0060627,regulation of vesicle-mediated transport,M1,1,0
+1,-3,mmu05031,Amphetamine addiction - Mus musculus (house mouse),M1,1,0
+1,-2.9,mmu04927,Cortisol synthesis and secretion - Mus musculus (house mouse),M1,1,0
+1,-5,GO:0098916,anterograde trans-synaptic signaling,M1,1,0
+1,-3.1,GO:0046031,ADP metabolic process,M1,1,0
+1,-2.9,GO:0022411,cellular component disassembly,M1,1,0
+1,-3.7,mmu04713,Circadian entrainment - Mus musculus (house mouse),M1,1,0
+1,-3.4,mmu05417,Lipid and atherosclerosis - Mus musculus (house mouse),M1,1,0
+1,-2.5,mmu05142,Chagas disease - Mus musculus (house mouse),M1,1,0
+1,-2.4,R-MMU-1428517,Aerobic respiration and respiratory electron transport,M1,1,0
+1,-2.1,GO:1903522,regulation of blood circulation,M1,1,0
+1,-3.9,GO:1903532,positive regulation of secretion by cell,M1,1,0
+1,-3.2,GO:0072521,purine-containing compound metabolic process,M1,1,0
+1,-2.7,GO:0008015,blood circulation,M1,1,0
+1,-2.7,R-MMU-1280218,Adaptive Immune System,M1,1,0
+1,-7.8,GO:0016188,synaptic vesicle maturation,M1,1,0
+1,-2.6,GO:0045807,positive regulation of endocytosis,M1,1,0
+1,-2.9,R-MMU-9716542,"Signaling by Rho GTPases, Miro GTPases and RHOBTB3",M1,1,0
+1,-2.8,GO:0006813,potassium ion transport,M1,1,0
+1,-3.5,R-MMU-373755,Semaphorin interactions,M1,1,0
+1,-3.4,R-MMU-3371497,HSP90 chaperone cycle for steroid hormone receptors (SHR) in the presence of ligand,M1,1,0
+1,-2.1,GO:0090257,regulation of muscle system process,M1,1,0
+1,-2.1,mmu04072,Phospholipase D signaling pathway - Mus musculus (house mouse),M1,1,0
+1,-2.3,GO:0051223,regulation of protein transport,M1,1,0
+1,-3.5,R-MMU-112310,Neurotransmitter release cycle,M1,1,0
+1,-2.5,GO:0046883,regulation of hormone secretion,M1,1,0
+1,-3.5,GO:0050905,neuromuscular process,M1,1,0
+1,-3,GO:0050808,synapse organization,M1,1,0
+1,-3.8,GO:0006734,NADH metabolic process,M1,1,0
+1,-4.6,GO:0097401,synaptic vesicle lumen acidification,M1,1,0
+1,-3.5,mmu04935,"Growth hormone synthesis, secretion and action - Mus musculus (house mouse)",M1,1,0
+1,-3.5,mmu04928,"Parathyroid hormone synthesis, secretion and action - Mus musculus (house mouse)",M1,1,0
+1,-3.1,GO:0030168,platelet activation,M1,1,0
+1,-5.4,GO:1903530,regulation of secretion by cell,M1,1,0
+1,-8.6,GO:0099177,regulation of trans-synaptic signaling,M1,1,0
+1,-2.8,GO:0030003,intracellular monoatomic cation homeostasis,M1,1,0
+1,-2.9,GO:0021885,forebrain cell migration,M1,1,0
+1,-2.6,GO:0007269,neurotransmitter secretion,M1,1,0
+1,-10,GO:0099504,synaptic vesicle cycle,M1,1,0
+1,-3.3,GO:0071867,response to monoamine,M1,1,0
+1,-2.4,GO:0090407,organophosphate biosynthetic process,M1,1,0
+1,-4.5,R-MMU-438066,"Unblocking of NMDA receptors, glutamate binding and activation",M1,1,0
+1,-7.7,mmu04730,Long-term depression - Mus musculus (house mouse),M1,1,0
+1,-3.1,mmu05132,Salmonella infection - Mus musculus (house mouse),M1,1,0
+1,-3.2,mmu04728,Dopaminergic synapse - Mus musculus (house mouse),M1,1,0
+1,-3.4,GO:0120032,regulation of plasma membrane bounded cell projection assembly,M1,1,0
+1,-3,GO:0050801,monoatomic ion homeostasis,M1,1,0
+1,-3.2,GO:0031647,regulation of protein stability,M1,1,0
+1,-3.2,GO:0007188,adenylate cyclase-modulating G protein-coupled receptor signaling pathway,M1,1,0
+1,-2.5,GO:0009261,ribonucleotide catabolic process,M1,1,0
+1,-3.6,GO:0051047,positive regulation of secretion,M1,1,0
+1,-3.4,GO:0016052,carbohydrate catabolic process,M1,1,0
+1,-5,mmu04916,Melanogenesis - Mus musculus (house mouse),M1,1,0
+1,-2.6,GO:0009154,purine ribonucleotide catabolic process,M1,1,0
+1,-3.4,mmu04024,cAMP signaling pathway - Mus musculus (house mouse),M1,1,0
+1,-2.1,GO:1901293,nucleoside phosphate biosynthetic process,M1,1,0
+1,-3.4,GO:1903115,regulation of actin filament-based movement,M1,1,0
+1,-2.1,GO:0006816,calcium ion transport,M1,1,0
+1,-4,mmu04934,Cushing syndrome - Mus musculus (house mouse),M1,1,0
+1,-3.9,R-MMU-5673000,RAF activation,M1,1,0
+1,-2.2,GO:0051960,regulation of nervous system development,M1,1,0
+1,-3.6,GO:0055086,nucleobase-containing small molecule metabolic process,M1,1,0
+1,-2.8,R-MMU-3371556,Cellular response to heat stress,M1,1,0
+1,-2.5,GO:0090174,organelle membrane fusion,M1,1,0
+1,-8.4,R-MMU-112315,Transmission across Chemical Synapses,M1,1,0
+1,-2.1,GO:0007599,hemostasis,M1,1,0
+1,-3.1,mmu05163,Human cytomegalovirus infection - Mus musculus (house mouse),M1,1,0
+1,-5,GO:0007268,chemical synaptic transmission,M1,1,0
+1,-4.8,R-MMU-5578775,Ion homeostasis,M1,1,0
+1,-3.6,GO:0009199,ribonucleoside triphosphate metabolic process,M1,1,0
+1,-3.3,GO:0021700,developmental maturation,M1,1,0
+1,-4.2,WP385,Myometrial relaxation and contraction pathways,M1,1,0
+1,-3.4,GO:0120034,positive regulation of plasma membrane bounded cell projection assembly,M1,1,0
+1,-2.9,mmu04148,Efferocytosis - Mus musculus (house mouse),M1,1,0
+1,-3.7,GO:0006753,nucleoside phosphate metabolic process,M1,1,0
+1,-2.1,GO:0034330,cell junction organization,M1,1,0
+1,-2.7,mmu04970,Salivary secretion - Mus musculus (house mouse),M1,1,0
+1,-2,GO:0008037,cell recognition,M1,1,0
+1,-3.4,WP157,Glycolysis and gluconeogenesis,M1,1,0
+1,-3.5,GO:0021537,telencephalon development,M1,1,0
+1,-3.9,mmu05012,Parkinson disease - Mus musculus (house mouse),M1,1,0
+1,-3.6,GO:1903351,cellular response to dopamine,M1,1,0
+1,-3.5,R-MMU-9856530,High laminar flow shear stress activates signaling by PIEZO1 and PECAM1:CDH5:KDR in endothelial cells,M1,1,0
+1,-2.9,GO:0009150,purine ribonucleotide metabolic process,M1,1,0
+1,-2.8,mmu05152,Tuberculosis - Mus musculus (house mouse),M1,1,0
+1,-7.8,GO:0048167,regulation of synaptic plasticity,M1,1,0
+1,-3,R-MMU-9006934,Signaling by Receptor Tyrosine Kinases,M1,1,0
+1,-2.3,GO:0007411,axon guidance,M1,1,0
+1,-2.7,GO:0051222,positive regulation of protein transport,M1,1,0
+1,-3.6,mmu05146,Amoebiasis - Mus musculus (house mouse),M1,1,0
+1,-3.8,R-MMU-5576891,Cardiac conduction,M1,1,0
+1,-5.3,mmu04921,Oxytocin signaling pathway - Mus musculus (house mouse),M1,1,0
+1,-3,R-MMU-163685,Integration of energy metabolism,M1,1,0
+1,-2.4,R-MMU-3858494,Beta-catenin independent WNT signaling,M1,1,0
+1,-5.7,R-MMU-112314,Neurotransmitter receptors and postsynaptic signal transmission,M1,1,0
+1,-4.7,GO:0106027,neuron projection organization,M1,1,0
+1,-2.4,R-MMU-199991,Membrane Trafficking,M1,1,0
+1,-3.3,GO:0051588,regulation of neurotransmitter transport,M1,1,0
+1,-4.9,GO:0007215,glutamate receptor signaling pathway,M1,1,0
+1,-2.8,mmu04012,ErbB signaling pathway - Mus musculus (house mouse),M1,1,0
+1,-3.2,GO:0051489,regulation of filopodium assembly,M1,1,0
+1,-2.7,GO:0051648,vesicle localization,M1,1,0
+1,-2.6,GO:0046887,positive regulation of hormone secretion,M1,1,0
+1,-4.4,mmu04720,Long-term potentiation - Mus musculus (house mouse),M1,1,0
+1,-3.1,GO:0072526,pyridine-containing compound catabolic process,M1,1,0
+1,-2.1,GO:0051924,regulation of calcium ion transport,M1,1,0
+1,-2.9,GO:0002791,regulation of peptide secretion,M1,1,0
+1,-3.7,GO:0048169,regulation of long-term neuronal synaptic plasticity,M1,1,0
+1,-4.5,GO:0035641,locomotory exploration behavior,M1,1,0
+1,-2.8,GO:0051650,establishment of vesicle localization,M1,1,0
+1,-3.1,GO:0019364,pyridine nucleotide catabolic process,M1,1,0
+1,-5.4,GO:0070050,neuron cellular homeostasis,M1,1,0
+1,-6.1,mmu04961,Endocrine and other factor-regulated calcium reabsorption - Mus musculus (house mouse),M1,1,0
+1,-2.7,GO:0019693,ribose phosphate metabolic process,M1,1,0
+1,-3.1,R-MMU-9860931,Response of endothelial cells to shear stress,M1,1,0
+1,-3,GO:0090277,positive regulation of peptide hormone secretion,M1,1,0
+1,-2.7,GO:0009259,ribonucleotide metabolic process,M1,1,0
+1,-5.1,GO:0002090,regulation of receptor internalization,M1,1,0
+1,-2.6,mmu05205,Proteoglycans in cancer - Mus musculus (house mouse),M1,1,0
+1,-3.9,mmu01210,2-Oxocarboxylic acid metabolism - Mus musculus (house mouse),M1,1,0
+1,-2.9,R-MMU-9663891,Selective autophagy,M1,1,0
+1,-2.3,mmu04071,Sphingolipid signaling pathway - Mus musculus (house mouse),M1,1,0
+1,-3.6,GO:1903350,response to dopamine,M1,1,0
+1,-3.4,GO:0090150,establishment of protein localization to membrane,M1,1,0
+1,-2.8,WP572,EGFR1 signaling pathway,M1,1,0
+1,-3.9,GO:0010256,endomembrane system organization,M1,1,0
+1,-2.7,R-MMU-6807878,COPI-mediated anterograde transport,M1,1,0
+1,-2.9,GO:0009117,nucleotide metabolic process,M1,1,0
+1,-4.4,GO:0072659,protein localization to plasma membrane,M1,1,0
+1,-2.6,GO:0006637,acyl-CoA metabolic process,M1,1,0
+1,-3.9,mmu05010,Alzheimer disease - Mus musculus (house mouse),M1,1,0
+1,-3.7,GO:0009205,purine ribonucleoside triphosphate metabolic process,M1,1,0
+1,-2.1,GO:0051402,neuron apoptotic process,M1,1,0
+1,-2.6,GO:0008016,regulation of heart contraction,M1,1,0
+1,-2.9,mmu05214,Glioma - Mus musculus (house mouse),M1,1,0
+1,-2.3,R-MMU-5653656,Vesicle-mediated transport,M1,1,0
+1,-4,R-MMU-392518,Signal amplification,M1,1,0
+1,-4.6,R-MMU-373760,L1CAM interactions,M1,1,0
+1,-3.5,GO:0007420,brain development,M1,1,0
+1,-3.2,mmu04915,Estrogen signaling pathway - Mus musculus (house mouse),M1,1,0
+1,-2.7,R-MMU-380320,Recruitment of NuMA to mitotic centrosomes,M1,1,0
+1,-2.6,GO:0099643,signal release from synapse,M1,1,0
+1,-4.7,mmu04066,HIF-1 signaling pathway - Mus musculus (house mouse),M1,1,0
+1,-2.2,GO:0046496,nicotinamide nucleotide metabolic process,M1,1,0
+1,-3,mmu00010,Glycolysis / Gluconeogenesis - Mus musculus (house mouse),M1,1,0
+1,-2.7,GO:0098771,inorganic ion homeostasis,M1,1,0
+1,-2.3,R-MMU-76002,"Platelet activation, signaling and aggregation",M1,1,0
+1,-2,GO:0061025,membrane fusion,M1,1,0
+1,-3.5,GO:0071870,cellular response to catecholamine stimulus,M1,1,0
+1,-4,R-MMU-456926,Thrombin signalling through proteinase activated receptors (PARs),M1,1,0
+1,-4.2,GO:0055082,intracellular chemical homeostasis,M1,1,0
+1,-2.4,GO:0055080,monoatomic cation homeostasis,M1,1,0
+1,-2,GO:0045055,regulated exocytosis,M1,1,0

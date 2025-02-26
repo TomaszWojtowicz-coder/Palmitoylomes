@@ -1,0 +1,752 @@
+Name,Category,CategoryID,GO,Description,PARENT_GO,LogP,Enrichment,Z-score,#TotalGeneInLibrary,#GeneInGO,#GeneInHitList,#GeneInGOAndHitList,%InGO,STDV %InGO,GeneID,Hits,Log(q-value)
+MyList,KEGG Pathway,24,mmu04721,Synaptic vesicle cycle - Mus musculus (house mouse),,-13,54,22,21160,77,46,9,20,5.8,11771|11772|11964|18195|20614|20910|22348|72961|108664,Ap2a1|Ap2a2|Atp6v1a|Nsf|Snap25|Stxbp1|Slc32a1|Slc17a7|Atp6v1h,-9.7
+MyList,GO Biological Processes,19,GO:0099504,synaptic vesicle cycle,19_GO:0051179 localization,-12,27,16,21160,171,46,10,22,6.1,11771|11772|11964|19349|20614|20910|22348|72961|104015|108664,Ap2a1|Ap2a2|Atp6v1a|Rab7|Snap25|Stxbp1|Slc32a1|Slc17a7|Synj1|Atp6v1h,-8.1
+MyList,GO Biological Processes,19,GO:0099003,vesicle-mediated transport in synapse,19_GO:0051179 localization,-11,23,15,21160,196,46,10,22,6.1,11771|11772|11964|19349|20614|20910|22348|72961|104015|108664,Ap2a1|Ap2a2|Atp6v1a|Rab7|Snap25|Stxbp1|Slc32a1|Slc17a7|Synj1|Atp6v1h,-7.7
+MyList,Reactome Gene Sets,6,R-MMU-399719,Trafficking of AMPA receptors,,-11,1e+02,25,21160,27,46,6,13,5,11771|11772|12322|12323|13385|18195,Ap2a1|Ap2a2|Camk2a|Camk2b|Dlg4|Nsf,-7.5
+MyList,Reactome Gene Sets,6,R-MMU-399721,"Glutamate binding, activation of AMPA receptors and synaptic plasticity",,-11,1e+02,25,21160,27,46,6,13,5,11771|11772|12322|12323|13385|18195,Ap2a1|Ap2a2|Camk2a|Camk2b|Dlg4|Nsf,-7.5
+MyList,Reactome Gene Sets,6,R-MMU-112315,Transmission across Chemical Synapses,,-9.5,21,13,21160,196,46,9,20,5.8,11771|11772|12322|12323|13385|18195|20910|22348|72961,Ap2a1|Ap2a2|Camk2a|Camk2b|Dlg4|Nsf|Stxbp1|Slc32a1|Slc17a7,-6.6
+MyList,KEGG Pathway,24,mmu04911,Insulin secretion - Mus musculus (house mouse),,-9.2,37,16,21160,86,46,7,15,5.3,12322|12323|14672|14682|14683|20614|98660,Camk2a|Camk2b|Gna11|Gnaq|Gnas|Snap25|Atp1a2,-6.3
+MyList,Reactome Gene Sets,6,R-MMU-112316,Neuronal System,,-8.9,15,11,21160,314,46,10,22,6.1,11771|11772|12322|12323|13385|18195|20168|20910|22348|72961,Ap2a1|Ap2a2|Camk2a|Camk2b|Dlg4|Nsf|Rtn3|Stxbp1|Slc32a1|Slc17a7,-6.1
+MyList,KEGG Pathway,24,mmu04925,Aldosterone synthesis and secretion - Mus musculus (house mouse),,-8.6,31,14,21160,103,46,7,15,5.3,12322|12323|14672|14682|14683|98660|269060,Camk2a|Camk2b|Gna11|Gnaq|Gnas|Atp1a2|Dagla,-5.8
+MyList,KEGG Pathway,24,mmu04730,Long-term depression - Mus musculus (house mouse),,-8.5,46,16,21160,60,46,6,13,5,14672|14674|14682|14683|14687|15461,Gna11|Gna13|Gnaq|Gnas|Gnaz|Hras,-5.7
+MyList,GO Biological Processes,19,GO:0016188,synaptic vesicle maturation,19_GO:0032502 developmental process,-8.4,79,20,21160,29,46,5,11,4.6,11964|13385|20910|72961|108664,Atp6v1a|Dlg4|Stxbp1|Slc17a7|Atp6v1h,-5.6
+MyList,WikiPathways,27,WP553,Calcium regulation in cardiac cells,,-7.6,22,12,21160,145,46,7,15,5.3,11938|12322|12323|14672|14682|14683|14687,Atp2a2|Camk2a|Camk2b|Gna11|Gnaq|Gnas|Gnaz,-5
+MyList,WikiPathways,27,WP232,G protein signaling pathways,,-7.4,31,13,21160,90,46,6,13,5,14672|14674|14682|14683|14687|15461,Gna11|Gna13|Gnaq|Gnas|Gnaz|Hras,-4.8
+MyList,KEGG Pathway,24,mmu04912,GnRH signaling pathway - Mus musculus (house mouse),,-7.4,31,13,21160,90,46,6,13,5,12322|12323|14672|14682|14683|15461,Camk2a|Camk2b|Gna11|Gnaq|Gnas|Hras,-4.8
+MyList,GO Biological Processes,19,GO:0099536,synaptic signaling,19_GO:0050789 regulation of biological process,-7.4,10,9.1,21160,461,46,10,22,6.1,13385|14672|14682|20614|20910|50997|72961|104015|235380|269060,Dlg4|Gna11|Gnaq|Snap25|Stxbp1|Mpp2|Slc17a7|Synj1|Dmxl2|Dagla,-4.8
+MyList,GO Biological Processes,19,GO:1990806,ligand-gated ion channel signaling pathway,19_GO:0050896 response to stimulus,-7.4,51,16,21160,45,46,5,11,4.6,12322|13385|14672|14682|18823,Camk2a|Dlg4|Gna11|Gnaq|Plp1,-4.8
+MyList,Reactome Gene Sets,6,R-MMU-382551,Transport of small molecules,,-7.1,7.9,8.3,21160,638,46,11,24,6.3,11771|11772|11938|11964|12322|12323|14683|22348|72961|98660|108664,Ap2a1|Ap2a2|Atp2a2|Atp6v1a|Camk2a|Camk2b|Gnas|Slc32a1|Slc17a7|Atp1a2|Atp6v1h,-4.6
+MyList,KEGG Pathway,24,mmu04922,Glucagon signaling pathway - Mus musculus (house mouse),,-7,27,12,21160,104,46,6,13,5,12322|12323|14682|14683|18597|56421,Camk2a|Camk2b|Gnaq|Gnas|Pdha1|Pfkp,-4.6
+MyList,GO Biological Processes,19,GO:0048167,regulation of synaptic plasticity,19_GO:0050789 regulation of biological process,-6.8,10,8.8,21160,402,46,9,20,5.8,12322|12323|13385|15461|17754|20614|20910|26562|50997,Camk2a|Camk2b|Dlg4|Hras|Map1a|Snap25|Stxbp1|Ncdn|Mpp2,-4.4
+MyList,Reactome Gene Sets,6,R-MMU-8953897,Cellular responses to stimuli,,-6.7,8.5,8.2,21160,543,46,10,22,6.1,11964|12322|12323|13424|14672|14682|14683|15519|22152|108664,Atp6v1a|Camk2a|Camk2b|Dync1h1|Gna11|Gnaq|Gnas|Hsp90aa1|Tubb3|Atp6v1h,-4.3
+MyList,KEGG Pathway,24,mmu04961,Endocrine and other factor-regulated calcium reabsorption - Mus musculus (house mouse),,-6.7,38,13,21160,61,46,5,11,4.6,11771|11772|14682|14683|98660,Ap2a1|Ap2a2|Gnaq|Gnas|Atp1a2,-4.3
+MyList,GO Biological Processes,19,GO:1903530,regulation of secretion by cell,19_GO:0051179 localization,-6.6,7.1,7.7,21160,711,46,11,24,6.3,11938|12322|14672|14682|14683|14687|18195|19349|20614|20910|68585,Atp2a2|Camk2a|Gna11|Gnaq|Gnas|Gnaz|Nsf|Rab7|Snap25|Stxbp1|Rtn4,-4.3
+MyList,GO Biological Processes,19,GO:0048858,cell projection morphogenesis,19_GO:0032502 developmental process,-6.5,8,7.9,21160,575,46,10,22,6.1,12322|12323|12799|13385|17754|20614|20910|22152|65254|234267,Camk2a|Camk2b|Cnp|Dlg4|Map1a|Snap25|Stxbp1|Tubb3|Dpysl5|Gpm6a,-4.2
+MyList,GO Biological Processes,19,GO:0061024,membrane organization,19_GO:0009987 cellular process,-6.4,6.8,7.5,21160,748,46,11,24,6.3,11938|12322|12799|13385|15519|15525|19349|20614|20910|22334|68585,Atp2a2|Camk2a|Cnp|Dlg4|Hsp90aa1|Hspa4|Rab7|Snap25|Stxbp1|Vdac2|Rtn4,-4.1
+MyList,Reactome Gene Sets,6,R-MMU-112314,Neurotransmitter receptors and postsynaptic signal transmission,,-6.4,21,11,21160,134,46,6,13,5,11771|11772|12322|12323|13385|18195,Ap2a1|Ap2a2|Camk2a|Camk2b|Dlg4|Nsf,-4.1
+MyList,GO Biological Processes,19,GO:0050804,modulation of chemical synaptic transmission,19_GO:0050789 regulation of biological process,-6.2,6.6,7.3,21160,772,46,11,24,6.3,11938|12322|12323|13385|15461|17754|20614|20910|26562|50997|68585,Atp2a2|Camk2a|Camk2b|Dlg4|Hras|Map1a|Snap25|Stxbp1|Ncdn|Mpp2|Rtn4,-4
+MyList,GO Biological Processes,19,GO:0099177,regulation of trans-synaptic signaling,19_GO:0050789 regulation of biological process,-6.2,6.5,7.3,21160,773,46,11,24,6.3,11938|12322|12323|13385|15461|17754|20614|20910|26562|50997|68585,Atp2a2|Camk2a|Camk2b|Dlg4|Hras|Map1a|Snap25|Stxbp1|Ncdn|Mpp2|Rtn4,-4
+MyList,KEGG Pathway,24,mmu04971,Gastric acid secretion - Mus musculus (house mouse),,-6.2,31,12,21160,75,46,5,11,4.6,12322|12323|14682|14683|98660,Camk2a|Camk2b|Gnaq|Gnas|Atp1a2,-4
+MyList,GO Biological Processes,19,GO:0006836,neurotransmitter transport,19_GO:0051179 localization,-6.2,19,10,21160,145,46,6,13,5,20614|20910|22348|72961|98660|104015,Snap25|Stxbp1|Slc32a1|Slc17a7|Atp1a2|Synj1,-4
+MyList,Reactome Gene Sets,6,R-MMU-422475,Axon guidance,,-6.1,14,9.1,21160,238,46,7,15,5.3,11771|11772|15461|15519|22152|22240|65254,Ap2a1|Ap2a2|Hras|Hsp90aa1|Tubb3|Dpysl3|Dpysl5,-3.9
+MyList,GO Biological Processes,19,GO:0048168,regulation of neuronal synaptic plasticity,19_GO:0050789 regulation of biological process,-6.1,29,12,21160,79,46,5,11,4.6,12322|12323|13385|15461|26562,Camk2a|Camk2b|Dlg4|Hras|Ncdn,-3.9
+MyList,KEGG Pathway,24,mmu05022,Pathways of neurodegeneration - multiple diseases - Mus musculus (house mouse),,-6.1,8.6,7.9,21160,481,46,9,20,5.8,11938|12322|12323|13385|14682|15461|22152|22201|22334,Atp2a2|Camk2a|Camk2b|Dlg4|Gnaq|Hras|Tubb3|Uba1|Vdac2,-3.9
+MyList,Reactome Gene Sets,6,R-MMU-9675108,Nervous system development,,-6.1,13,9.1,21160,239,46,7,15,5.3,11771|11772|15461|15519|22152|22240|65254,Ap2a1|Ap2a2|Hras|Hsp90aa1|Tubb3|Dpysl3|Dpysl5,-3.9
+MyList,GO Biological Processes,19,GO:0051046,regulation of secretion,19_GO:0051179 localization,-6.1,6.4,7.2,21160,796,46,11,24,6.3,11938|12322|14672|14682|14683|14687|18195|19349|20614|20910|68585,Atp2a2|Camk2a|Gna11|Gnaq|Gnas|Gnaz|Nsf|Rab7|Snap25|Stxbp1|Rtn4,-3.9
+MyList,GO Biological Processes,19,GO:0006812,monoatomic cation transport,19_GO:0051179 localization,-6.1,6.3,7.2,21160,798,46,11,24,6.3,11938|11964|12322|12323|18195|20614|22348|72961|98660|108664|234267,Atp2a2|Atp6v1a|Camk2a|Camk2b|Nsf|Snap25|Slc32a1|Slc17a7|Atp1a2|Atp6v1h|Gpm6a,-3.9
+MyList,GO Biological Processes,19,GO:0070050,neuron cellular homeostasis,19_GO:0042592 homeostatic process,-6,28,11,21160,82,46,5,11,4.6,11938|11964|17754|72961|108664,Atp2a2|Atp6v1a|Map1a|Slc17a7|Atp6v1h,-3.9
+MyList,KEGG Pathway,24,mmu04921,Oxytocin signaling pathway - Mus musculus (house mouse),,-6,18,9.9,21160,153,46,6,13,5,12322|12323|13629|14682|14683|15461,Camk2a|Camk2b|Eef2|Gnaq|Gnas|Hras,-3.9
+MyList,KEGG Pathway,24,mmu04261,Adrenergic signaling in cardiomyocytes - Mus musculus (house mouse),,-6,18,9.8,21160,156,46,6,13,5,11938|12322|12323|14682|14683|98660,Atp2a2|Camk2a|Camk2b|Gnaq|Gnas|Atp1a2,-3.8
+MyList,KEGG Pathway,24,mmu04540,Gap junction - Mus musculus (house mouse),,-5.9,27,11,21160,86,46,5,11,4.6,14672|14682|14683|15461|22152,Gna11|Gnaq|Gnas|Hras|Tubb3,-3.8
+MyList,KEGG Pathway,24,mmu04020,Calcium signaling pathway - Mus musculus (house mouse),,-5.9,13,8.7,21160,254,46,7,15,5.3,11938|12322|12323|14672|14682|14683|22334,Atp2a2|Camk2a|Camk2b|Gna11|Gnaq|Gnas|Vdac2,-3.8
+MyList,Reactome Gene Sets,6,R-MMU-983712,Ion channel transport,,-5.8,17,9.4,21160,167,46,6,13,5,11938|11964|12322|12323|98660|108664,Atp2a2|Atp6v1a|Camk2a|Camk2b|Atp1a2|Atp6v1h,-3.7
+MyList,KEGG Pathway,24,mmu04022,cGMP-PKG signaling pathway - Mus musculus (house mouse),,-5.7,16,9.2,21160,172,46,6,13,5,11938|14672|14674|14682|22334|98660,Atp2a2|Gna11|Gna13|Gnaq|Vdac2|Atp1a2,-3.6
+MyList,GO Biological Processes,19,GO:0099537,trans-synaptic signaling,19_GO:0050789 regulation of biological process,-5.7,9.1,7.7,21160,403,46,8,17,5.6,13385|20614|20910|50997|72961|104015|235380|269060,Dlg4|Snap25|Stxbp1|Mpp2|Slc17a7|Synj1|Dmxl2|Dagla,-3.6
+MyList,KEGG Pathway,24,mmu04916,Melanogenesis - Mus musculus (house mouse),,-5.6,23,10,21160,100,46,5,11,4.6,12322|12323|14682|14683|15461,Camk2a|Camk2b|Gnaq|Gnas|Hras,-3.6
+MyList,GO Biological Processes,19,GO:1903829,positive regulation of protein localization,19_GO:0051179 localization,-5.6,7.4,7.2,21160,556,46,9,20,5.8,13385|14672|14682|14683|15461|15519|17754|20614|68585,Dlg4|Gna11|Gnaq|Gnas|Hras|Hsp90aa1|Map1a|Snap25|Rtn4,-3.6
+MyList,GO Biological Processes,19,GO:0007267,cell-cell signaling,19_GO:0050789 regulation of biological process,-5.6,6.4,6.9,21160,719,46,10,22,6.1,13385|14672|14682|20614|20910|50997|72961|104015|235380|269060,Dlg4|Gna11|Gnaq|Snap25|Stxbp1|Mpp2|Slc17a7|Synj1|Dmxl2|Dagla,-3.6
+MyList,GO Biological Processes,19,GO:0048812,neuron projection morphogenesis,19_GO:0032502 developmental process,-5.6,7.4,7.2,21160,559,46,9,20,5.8,12322|12799|13385|17754|20614|20910|22152|65254|234267,Camk2a|Cnp|Dlg4|Map1a|Snap25|Stxbp1|Tubb3|Dpysl5|Gpm6a,-3.5
+MyList,GO Biological Processes,19,GO:0099072,regulation of postsynaptic membrane neurotransmitter receptor levels,19_GO:0065007 biological regulation,-5.5,22,10,21160,103,46,5,11,4.6,11771|11772|12322|13385|15519,Ap2a1|Ap2a2|Camk2a|Dlg4|Hsp90aa1,-3.5
+MyList,GO Biological Processes,19,GO:0120039,plasma membrane bounded cell projection morphogenesis,19_GO:0032502 developmental process,-5.5,7.3,7.1,21160,565,46,9,20,5.8,12322|12799|13385|17754|20614|20910|22152|65254|234267,Camk2a|Cnp|Dlg4|Map1a|Snap25|Stxbp1|Tubb3|Dpysl5|Gpm6a,-3.5
+MyList,GO Biological Processes,19,GO:0019725,cellular homeostasis,19_GO:0042592 homeostatic process,-5.5,6.3,6.8,21160,732,46,10,22,6.1,11938|11964|15275|17754|19349|68585|72961|98660|108664|235380,Atp2a2|Atp6v1a|Hk1|Map1a|Rab7|Rtn4|Slc17a7|Atp1a2|Atp6v1h|Dmxl2,-3.5
+MyList,Reactome Gene Sets,6,R-MMU-416993,Trafficking of GluR2-containing AMPA receptors,,-5.5,99,17,21160,14,46,3,6.5,3.6,11771|11772|18195,Ap2a1|Ap2a2|Nsf,-3.5
+MyList,GO Biological Processes,19,GO:0007006,mitochondrial membrane organization,19_GO:0009987 cellular process,-5.4,21,9.8,21160,109,46,5,11,4.6,12322|12799|15519|15525|22334,Camk2a|Cnp|Hsp90aa1|Hspa4|Vdac2,-3.4
+MyList,GO Biological Processes,19,GO:0007215,glutamate receptor signaling pathway,19_GO:0050896 response to stimulus,-5.3,36,12,21160,51,46,4,8.7,4.2,12322|13385|14682|18823,Camk2a|Dlg4|Gnaq|Plp1,-3.4
+MyList,KEGG Pathway,24,mmu04725,Cholinergic synapse - Mus musculus (house mouse),,-5.3,20,9.6,21160,113,46,5,11,4.6,12322|12323|14672|14682|15461,Camk2a|Camk2b|Gna11|Gnaq|Hras,-3.4
+MyList,Reactome Gene Sets,6,R-MMU-5578775,Ion homeostasis,,-5.3,35,12,21160,52,46,4,8.7,4.2,11938|12322|12323|98660,Atp2a2|Camk2a|Camk2b|Atp1a2,-3.4
+MyList,KEGG Pathway,24,mmu04724,Glutamatergic synapse - Mus musculus (house mouse),,-5.3,20,9.5,21160,116,46,5,11,4.6,13385|14682|14683|26562|72961,Dlg4|Gnaq|Gnas|Ncdn|Slc17a7,-3.3
+MyList,KEGG Pathway,24,mmu04066,HIF-1 signaling pathway - Mus musculus (house mouse),,-5.3,20,9.4,21160,117,46,5,11,4.6,12322|12323|15275|18597|56421,Camk2a|Camk2b|Hk1|Pdha1|Pfkp,-3.3
+MyList,GO Biological Processes,19,GO:0120035,regulation of plasma membrane bounded cell projection organization,19_GO:0050789 regulation of biological process,-5.3,5.9,6.5,21160,782,46,10,22,6.1,11771|12323|13385|15461|15519|20614|22240|65254|68585|234267,Ap2a1|Camk2b|Dlg4|Hras|Hsp90aa1|Snap25|Dpysl3|Dpysl5|Rtn4|Gpm6a,-3.3
+MyList,Reactome Gene Sets,6,R-MMU-936837,Ion transport by P-type ATPases,,-5.2,34,11,21160,54,46,4,8.7,4.2,11938|12322|12323|98660,Atp2a2|Camk2a|Camk2b|Atp1a2,-3.3
+MyList,Reactome Gene Sets,6,R-MMU-2132295,MHC class II antigen presentation,,-5.2,19,9.3,21160,120,46,5,11,4.6,11771|11772|13424|19349|22152,Ap2a1|Ap2a2|Dync1h1|Rab7|Tubb3,-3.3
+MyList,GO Biological Processes,19,GO:0061564,axon development,19_GO:0032502 developmental process,-5.2,7.9,7,21160,466,46,8,17,5.6,12799|17754|18823|20614|20910|22152|65254|68585,Cnp|Map1a|Plp1|Snap25|Stxbp1|Tubb3|Dpysl5|Rtn4,-3.3
+MyList,GO Biological Processes,19,GO:0031344,regulation of cell projection organization,19_GO:0050789 regulation of biological process,-5.2,5.8,6.4,21160,798,46,10,22,6.1,11771|12323|13385|15461|15519|20614|22240|65254|68585|234267,Ap2a1|Camk2b|Dlg4|Hras|Hsp90aa1|Snap25|Dpysl3|Dpysl5|Rtn4|Gpm6a,-3.3
+MyList,KEGG Pathway,24,mmu01200,Carbon metabolism - Mus musculus (house mouse),,-5.2,19,9.2,21160,122,46,5,11,4.6,11429|15275|18293|18597|56421,Aco2|Hk1|Ogdh|Pdha1|Pfkp,-3.3
+MyList,GO Biological Processes,19,GO:0060627,regulation of vesicle-mediated transport,19_GO:0051179 localization,-5.2,6.6,6.6,21160,628,46,9,20,5.8,11771|11938|13385|18195|19349|20910|26562|72961|104015,Ap2a1|Atp2a2|Dlg4|Nsf|Rab7|Stxbp1|Ncdn|Slc17a7|Synj1,-3.2
+MyList,GO Biological Processes,19,GO:0016050,vesicle organization,19_GO:0009987 cellular process,-5.1,9.4,7.3,21160,342,46,7,15,5.3,11964|13385|19349|20614|20910|72961|108664,Atp6v1a|Dlg4|Rab7|Snap25|Stxbp1|Slc17a7|Atp6v1h,-3.2
+MyList,Reactome Gene Sets,6,R-MMU-1266738,Developmental Biology,,-5,7.5,6.8,21160,489,46,8,17,5.6,11771|11772|13385|15461|15519|22152|22240|65254,Ap2a1|Ap2a2|Dlg4|Hras|Hsp90aa1|Tubb3|Dpysl3|Dpysl5,-3.2
+MyList,GO Biological Processes,19,GO:0097401,synaptic vesicle lumen acidification,19_GO:0042592 homeostatic process,-5,69,14,21160,20,46,3,6.5,3.6,11964|72961|108664,Atp6v1a|Slc17a7|Atp6v1h,-3.1
+MyList,Reactome Gene Sets,6,R-MMU-109582,Hemostasis,,-4.9,7.3,6.7,21160,505,46,8,17,5.6,11938|14672|14674|14682|14683|15461|22152|269060,Atp2a2|Gna11|Gna13|Gnaq|Gnas|Hras|Tubb3|Dagla,-3.1
+MyList,GO Biological Processes,19,GO:0048667,cell morphogenesis involved in neuron differentiation,19_GO:0032502 developmental process,-4.9,7.2,6.6,21160,509,46,8,17,5.6,12322|12799|13385|17754|20614|20910|22152|65254,Camk2a|Cnp|Dlg4|Map1a|Snap25|Stxbp1|Tubb3|Dpysl5,-3
+MyList,KEGG Pathway,24,mmu04720,Long-term potentiation - Mus musculus (house mouse),,-4.9,27,10,21160,67,46,4,8.7,4.2,12322|12323|14682|15461,Camk2a|Camk2b|Gnaq|Hras,-3
+MyList,Reactome Gene Sets,6,R-MMU-438066,"Unblocking of NMDA receptors, glutamate binding and activation",,-4.8,63,14,21160,22,46,3,6.5,3.6,12322|12323|13385,Camk2a|Camk2b|Dlg4,-3
+MyList,Reactome Gene Sets,6,R-MMU-3371571,HSF1-dependent transactivation,,-4.8,63,14,21160,22,46,3,6.5,3.6,12322|12323|15519,Camk2a|Camk2b|Hsp90aa1,-3
+MyList,GO Biological Processes,19,GO:1902600,proton transmembrane transport,19_GO:0051179 localization,-4.8,16,8.4,21160,143,46,5,11,4.6,11964|22348|72961|98660|108664,Atp6v1a|Slc32a1|Slc17a7|Atp1a2|Atp6v1h,-3
+MyList,GO Biological Processes,19,GO:0048259,regulation of receptor-mediated endocytosis,19_GO:0051179 localization,-4.8,16,8.4,21160,144,46,5,11,4.6,11771|13385|18195|26562|104015,Ap2a1|Dlg4|Nsf|Ncdn|Synj1,-3
+MyList,KEGG Pathway,24,mmu05230,Central carbon metabolism in cancer - Mus musculus (house mouse),,-4.8,27,10,21160,69,46,4,8.7,4.2,15275|15461|18597|56421,Hk1|Hras|Pdha1|Pfkp,-3
+MyList,GO Biological Processes,19,GO:0036465,synaptic vesicle recycling,19_GO:0051179 localization,-4.8,27,10,21160,69,46,4,8.7,4.2,11771|11772|19349|104015,Ap2a1|Ap2a2|Rab7|Synj1,-3
+MyList,GO Biological Processes,19,GO:0007268,chemical synaptic transmission,19_GO:0050789 regulation of biological process,-4.8,8.5,6.9,21160,379,46,7,15,5.3,13385|20614|20910|50997|72961|104015|235380,Dlg4|Snap25|Stxbp1|Mpp2|Slc17a7|Synj1|Dmxl2,-3
+MyList,GO Biological Processes,19,GO:0098916,anterograde trans-synaptic signaling,19_GO:0050789 regulation of biological process,-4.8,8.5,6.9,21160,379,46,7,15,5.3,13385|20614|20910|50997|72961|104015|235380,Dlg4|Snap25|Stxbp1|Mpp2|Slc17a7|Synj1|Dmxl2,-3
+MyList,GO Biological Processes,19,GO:0016082,synaptic vesicle priming,19_GO:0051179 localization,-4.8,60,13,21160,23,46,3,6.5,3.6,20614|20910|104015,Snap25|Stxbp1|Synj1,-3
+MyList,WikiPathways,27,WP385,Myometrial relaxation and contraction pathways,,-4.7,15,8.2,21160,150,46,5,11,4.6,11938|12322|12323|14682|14683,Atp2a2|Camk2a|Camk2b|Gnaq|Gnas,-2.9
+MyList,GO Biological Processes,19,GO:0006886,intracellular protein transport,19_GO:0051179 localization,-4.7,6.8,6.4,21160,539,46,8,17,5.6,11771|11772|15519|15525|17754|18195|19349|20910,Ap2a1|Ap2a2|Hsp90aa1|Hspa4|Map1a|Nsf|Rab7|Stxbp1,-2.9
+MyList,Reactome Gene Sets,6,R-MMU-428930,Thromboxane signalling through TP receptor,,-4.7,58,13,21160,24,46,3,6.5,3.6,14672|14674|14682,Gna11|Gna13|Gnaq,-2.9
+MyList,KEGG Pathway,24,mmu05010,Alzheimer disease - Mus musculus (house mouse),,-4.7,8.3,6.8,21160,389,46,7,15,5.3,11938|14682|15461|20168|22152|22334|68585,Atp2a2|Gnaq|Hras|Rtn3|Tubb3|Vdac2|Rtn4,-2.9
+MyList,KEGG Pathway,24,mmu05200,Pathways in cancer - Mus musculus (house mouse),,-4.7,6.7,6.3,21160,548,46,8,17,5.6,12322|12323|14672|14674|14682|14683|15461|15519,Camk2a|Camk2b|Gna11|Gna13|Gnaq|Gnas|Hras|Hsp90aa1,-2.9
+MyList,GO Biological Processes,19,GO:1903532,positive regulation of secretion by cell,19_GO:0051179 localization,-4.6,8.1,6.6,21160,400,46,7,15,5.3,14672|14682|14683|19349|20614|20910|68585,Gna11|Gnaq|Gnas|Rab7|Snap25|Stxbp1|Rtn4,-2.8
+MyList,GO Biological Processes,19,GO:0050803,regulation of synapse structure or activity,19_GO:0065007 biological regulation,-4.6,8,6.6,21160,401,46,7,15,5.3,12323|13385|14674|20614|68585|72961|234267,Camk2b|Dlg4|Gna13|Snap25|Rtn4|Slc17a7|Gpm6a,-2.8
+MyList,KEGG Pathway,24,mmu04934,Cushing syndrome - Mus musculus (house mouse),,-4.6,14,7.9,21160,162,46,5,11,4.6,12322|12323|14672|14682|14683,Camk2a|Camk2b|Gna11|Gnaq|Gnas,-2.8
+MyList,KEGG Pathway,24,mmu05012,Parkinson disease - Mus musculus (house mouse),,-4.6,10,7.1,21160,274,46,6,13,5,12322|12323|14683|22152|22201|22334,Camk2a|Camk2b|Gnas|Tubb3|Uba1|Vdac2,-2.8
+MyList,GO Biological Processes,19,GO:0007212,G protein-coupled dopamine receptor signaling pathway,19_GO:0050896 response to stimulus,-4.6,51,12,21160,27,46,3,6.5,3.6,14672|14682|14683,Gna11|Gnaq|Gnas,-2.8
+MyList,GO Biological Processes,19,GO:0006090,pyruvate metabolic process,19_GO:0009987 cellular process,-4.5,22,9.1,21160,82,46,4,8.7,4.2,15275|18293|18597|56421,Hk1|Ogdh|Pdha1|Pfkp,-2.7
+MyList,GO Biological Processes,19,GO:0046034,ATP metabolic process,19_GO:0009987 cellular process,-4.5,14,7.7,21160,169,46,5,11,4.6,11964|15275|18293|56421|98660,Atp6v1a|Hk1|Ogdh|Pfkp|Atp1a2,-2.7
+MyList,GO Biological Processes,19,GO:0035235,ionotropic glutamate receptor signaling pathway,19_GO:0050896 response to stimulus,-4.4,46,12,21160,30,46,3,6.5,3.6,12322|13385|18823,Camk2a|Dlg4|Plp1,-2.7
+MyList,WikiPathways,27,WP434,TCA cycle,,-4.4,45,11,21160,31,46,3,6.5,3.6,11429|18293|18597,Aco2|Ogdh|Pdha1,-2.6
+MyList,GO Biological Processes,19,GO:0034220,monoatomic ion transmembrane transport,19_GO:0051179 localization,-4.4,5.3,5.7,21160,788,46,9,20,5.8,11938|11964|20614|22334|22348|72961|98660|108664|234267,Atp2a2|Atp6v1a|Snap25|Vdac2|Slc32a1|Slc17a7|Atp1a2|Atp6v1h|Gpm6a,-2.6
+MyList,Reactome Gene Sets,6,R-MMU-456926,Thrombin signalling through proteinase activated receptors (PARs),,-4.3,43,11,21160,32,46,3,6.5,3.6,14672|14674|14682,Gna11|Gna13|Gnaq,-2.6
+MyList,KEGG Pathway,24,mmu00020,Citrate cycle (TCA cycle) - Mus musculus (house mouse),,-4.3,43,11,21160,32,46,3,6.5,3.6,11429|18293|18597,Aco2|Ogdh|Pdha1,-2.6
+MyList,GO Biological Processes,19,GO:0006839,mitochondrial transport,19_GO:0051179 localization,-4.3,13,7.3,21160,183,46,5,11,4.6,12322|12799|15519|15525|22334,Camk2a|Cnp|Hsp90aa1|Hspa4|Vdac2,-2.6
+MyList,KEGG Pathway,24,mmu04145,Phagosome - Mus musculus (house mouse),,-4.3,13,7.3,21160,183,46,5,11,4.6,11964|13424|19349|22152|108664,Atp6v1a|Dync1h1|Rab7|Tubb3|Atp6v1h,-2.6
+MyList,Reactome Gene Sets,6,R-MMU-437239,Recycling pathway of L1,,-4.3,42,11,21160,33,46,3,6.5,3.6,11771|11772|22152,Ap2a1|Ap2a2|Tubb3,-2.6
+MyList,Reactome Gene Sets,6,R-MMU-392518,Signal amplification,,-4.3,42,11,21160,33,46,3,6.5,3.6,14672|14674|14682,Gna11|Gna13|Gnaq,-2.6
+MyList,GO Biological Processes,19,GO:0051047,positive regulation of secretion,19_GO:0051179 localization,-4.3,7.1,6.1,21160,452,46,7,15,5.3,14672|14682|14683|19349|20614|20910|68585,Gna11|Gnaq|Gnas|Rab7|Snap25|Stxbp1|Rtn4,-2.6
+MyList,KEGG Pathway,24,mmu05016,Huntington disease - Mus musculus (house mouse),,-4.3,9,6.6,21160,308,46,6,13,5,11771|11772|13385|14682|22152|22334,Ap2a1|Ap2a2|Dlg4|Gnaq|Tubb3|Vdac2,-2.6
+MyList,GO Biological Processes,19,GO:0002090,regulation of receptor internalization,19_GO:0051179 localization,-4.3,19,8.4,21160,95,46,4,8.7,4.2,13385|18195|26562|104015,Dlg4|Nsf|Ncdn|Synj1,-2.5
+MyList,GO Biological Processes,19,GO:0006099,tricarboxylic acid cycle,19_GO:0009987 cellular process,-4.3,41,11,21160,34,46,3,6.5,3.6,11429|18293|18597,Aco2|Ogdh|Pdha1,-2.5
+MyList,Reactome Gene Sets,6,R-MMU-5673000,RAF activation,,-4.3,41,11,21160,34,46,3,6.5,3.6,12322|12323|15461,Camk2a|Camk2b|Hras,-2.5
+MyList,Reactome Gene Sets,6,R-MMU-442755,Activation of NMDA receptors and postsynaptic events,,-4.3,41,11,21160,34,46,3,6.5,3.6,12322|12323|13385,Camk2a|Camk2b|Dlg4,-2.5
+MyList,KEGG Pathway,24,mmu01210,2-Oxocarboxylic acid metabolism - Mus musculus (house mouse),,-4.3,41,11,21160,34,46,3,6.5,3.6,11429|18293|18597,Aco2|Ogdh|Pdha1,-2.5
+MyList,GO Biological Processes,19,GO:0098662,inorganic cation transmembrane transport,19_GO:0051179 localization,-4.2,5.8,5.7,21160,632,46,8,17,5.6,11938|11964|20614|22348|72961|98660|108664|234267,Atp2a2|Atp6v1a|Snap25|Slc32a1|Slc17a7|Atp1a2|Atp6v1h|Gpm6a,-2.5
+MyList,GO Biological Processes,19,GO:0031346,positive regulation of cell projection organization,19_GO:0048518 positive regulation of biological process,-4.2,6.9,6,21160,465,46,7,15,5.3,11771|12323|13385|15461|15519|22240|234267,Ap2a1|Camk2b|Dlg4|Hras|Hsp90aa1|Dpysl3|Gpm6a,-2.5
+MyList,Reactome Gene Sets,6,R-MMU-5576891,Cardiac conduction,,-4.2,19,8.2,21160,98,46,4,8.7,4.2,11938|12322|12323|98660,Atp2a2|Camk2a|Camk2b|Atp1a2,-2.5
+MyList,GO Biological Processes,19,GO:0009205,purine ribonucleoside triphosphate metabolic process,19_GO:0009987 cellular process,-4.2,12,7.1,21160,194,46,5,11,4.6,11964|15275|18293|56421|98660,Atp6v1a|Hk1|Ogdh|Pfkp|Atp1a2,-2.5
+MyList,KEGG Pathway,24,mmu04713,Circadian entrainment - Mus musculus (house mouse),,-4.2,19,8.2,21160,99,46,4,8.7,4.2,12322|12323|14682|14683,Camk2a|Camk2b|Gnaq|Gnas,-2.5
+MyList,GO Biological Processes,19,GO:0098655,monoatomic cation transmembrane transport,19_GO:0051179 localization,-4.2,5.7,5.7,21160,642,46,8,17,5.6,11938|11964|20614|22348|72961|98660|108664|234267,Atp2a2|Atp6v1a|Snap25|Slc32a1|Slc17a7|Atp1a2|Atp6v1h|Gpm6a,-2.5
+MyList,GO Biological Processes,19,GO:0031503,protein-containing complex localization,19_GO:0051179 localization,-4.2,12,7,21160,198,46,5,11,4.6,11771|11772|12322|13385|19349,Ap2a1|Ap2a2|Camk2a|Dlg4|Rab7,-2.5
+MyList,GO Biological Processes,19,GO:0006734,NADH metabolic process,19_GO:0009987 cellular process,-4.1,37,10,21160,37,46,3,6.5,3.6,15275|18293|56421,Hk1|Ogdh|Pfkp,-2.4
+MyList,GO Biological Processes,19,GO:0009199,ribonucleoside triphosphate metabolic process,19_GO:0009987 cellular process,-4.1,11,6.9,21160,201,46,5,11,4.6,11964|15275|18293|56421|98660,Atp6v1a|Hk1|Ogdh|Pfkp|Atp1a2,-2.4
+MyList,Reactome Gene Sets,6,R-MMU-2262752,Cellular responses to stress,,-4.1,6.7,5.9,21160,480,46,7,15,5.3,11964|12322|12323|13424|15519|22152|108664,Atp6v1a|Camk2a|Camk2b|Dync1h1|Hsp90aa1|Tubb3|Atp6v1h,-2.4
+MyList,GO Biological Processes,19,GO:0030900,forebrain development,19_GO:0032502 developmental process,-4.1,6.7,5.9,21160,480,46,7,15,5.3,12799|14682|18293|22348|68585|98660|235380,Cnp|Gnaq|Ogdh|Slc32a1|Rtn4|Atp1a2|Dmxl2,-2.4
+MyList,GO Biological Processes,19,GO:0009144,purine nucleoside triphosphate metabolic process,19_GO:0009987 cellular process,-4.1,11,6.9,21160,202,46,5,11,4.6,11964|15275|18293|56421|98660,Atp6v1a|Hk1|Ogdh|Pfkp|Atp1a2,-2.4
+MyList,GO Biological Processes,19,GO:0030001,metal ion transport,19_GO:0051179 localization,-4.1,5.6,5.6,21160,662,46,8,17,5.6,11938|12322|12323|18195|20614|72961|98660|234267,Atp2a2|Camk2a|Camk2b|Nsf|Snap25|Slc17a7|Atp1a2|Gpm6a,-2.4
+MyList,GO Biological Processes,19,GO:0048169,regulation of long-term neuronal synaptic plasticity,19_GO:0050789 regulation of biological process,-4.1,35,10,21160,39,46,3,6.5,3.6,12323|13385|15461,Camk2b|Dlg4|Hras,-2.4
+MyList,KEGG Pathway,24,mmu05146,Amoebiasis - Mus musculus (house mouse),,-4.1,17,7.8,21160,108,46,4,8.7,4.2,14672|14682|14683|19349,Gna11|Gnaq|Gnas|Rab7,-2.4
+MyList,GO Biological Processes,19,GO:0072657,protein localization to membrane,19_GO:0051179 localization,-4,6.4,5.7,21160,503,46,7,15,5.3,12322|13385|15519|15525|18195|19349|20910,Camk2a|Dlg4|Hsp90aa1|Hspa4|Nsf|Rab7|Stxbp1,-2.3
+MyList,GO Biological Processes,19,GO:0021700,developmental maturation,19_GO:0032502 developmental process,-4,7.9,6.1,21160,349,46,6,13,5,11964|13385|14682|20910|72961|108664,Atp6v1a|Dlg4|Gnaq|Stxbp1|Slc17a7|Atp6v1h,-2.3
+MyList,GO Biological Processes,19,GO:1903351,cellular response to dopamine,19_GO:0050896 response to stimulus,-4,33,9.6,21160,42,46,3,6.5,3.6,14672|14682|14683,Gna11|Gnaq|Gnas,-2.3
+MyList,KEGG Pathway,24,mmu05415,Diabetic cardiomyopathy - Mus musculus (house mouse),,-4,11,6.6,21160,217,46,5,11,4.6,11938|12322|12323|18597|22334,Atp2a2|Camk2a|Camk2b|Pdha1|Vdac2,-2.3
+MyList,KEGG Pathway,24,mmu05417,Lipid and atherosclerosis - Mus musculus (house mouse),,-4,11,6.6,21160,217,46,5,11,4.6,12322|12323|15461|15519|15525,Camk2a|Camk2b|Hras|Hsp90aa1|Hspa4,-2.3
+MyList,GO Biological Processes,19,GO:0009141,nucleoside triphosphate metabolic process,19_GO:0009987 cellular process,-4,11,6.6,21160,218,46,5,11,4.6,11964|15275|18293|56421|98660,Atp6v1a|Hk1|Ogdh|Pfkp|Atp1a2,-2.3
+MyList,GO Biological Processes,19,GO:0030100,regulation of endocytosis,19_GO:0051179 localization,-4,7.8,6,21160,352,46,6,13,5,11771|13385|18195|26562|72961|104015,Ap2a1|Dlg4|Nsf|Ncdn|Slc17a7|Synj1,-2.3
+MyList,KEGG Pathway,24,mmu04972,Pancreatic secretion - Mus musculus (house mouse),,-3.9,16,7.5,21160,115,46,4,8.7,4.2,11938|14682|14683|98660,Atp2a2|Gnaq|Gnas|Atp1a2,-2.3
+MyList,KEGG Pathway,24,mmu04928,"Parathyroid hormone synthesis, secretion and action - Mus musculus (house mouse)",,-3.9,16,7.5,21160,116,46,4,8.7,4.2,14672|14674|14682|14683,Gna11|Gna13|Gnaq|Gnas,-2.3
+MyList,GO Biological Processes,19,GO:1903350,response to dopamine,19_GO:0050896 response to stimulus,-3.9,31,9.4,21160,44,46,3,6.5,3.6,14672|14682|14683,Gna11|Gnaq|Gnas,-2.3
+MyList,KEGG Pathway,24,mmu04962,Vasopressin-regulated water reabsorption - Mus musculus (house mouse),,-3.9,31,9.4,21160,44,46,3,6.5,3.6,13424|14683|18195,Dync1h1|Gnas|Nsf,-2.3
+MyList,KEGG Pathway,24,mmu04935,"Growth hormone synthesis, secretion and action - Mus musculus (house mouse)",,-3.9,16,7.5,21160,117,46,4,8.7,4.2,14672|14682|14683|15461,Gna11|Gnaq|Gnas|Hras,-2.2
+MyList,KEGG Pathway,24,mmu04024,cAMP signaling pathway - Mus musculus (house mouse),,-3.9,10,6.5,21160,224,46,5,11,4.6,11938|12322|12323|14683|98660,Atp2a2|Camk2a|Camk2b|Gnas|Atp1a2,-2.2
+MyList,GO Biological Processes,19,GO:0090150,establishment of protein localization to membrane,19_GO:0051179 localization,-3.9,10,6.5,21160,225,46,5,11,4.6,12322|15519|15525|18195|19349,Camk2a|Hsp90aa1|Hspa4|Nsf|Rab7,-2.2
+MyList,GO Biological Processes,19,GO:0042391,regulation of membrane potential,19_GO:0065007 biological regulation,-3.9,6.1,5.6,21160,524,46,7,15,5.3,11938|13385|14672|14682|50997|72961|98660,Atp2a2|Dlg4|Gna11|Gnaq|Mpp2|Slc17a7|Atp1a2,-2.2
+MyList,Reactome Gene Sets,6,R-MMU-9856530,High laminar flow shear stress activates signaling by PIEZO1 and PECAM1:CDH5:KDR in endothelial cells,,-3.9,31,9.3,21160,45,46,3,6.5,3.6,14672|14682|14683,Gna11|Gnaq|Gnas,-2.2
+MyList,KEGG Pathway,24,mmu04919,Thyroid hormone signaling pathway - Mus musculus (house mouse),,-3.9,15,7.3,21160,120,46,4,8.7,4.2,11938|15461|56421|98660,Atp2a2|Hras|Pfkp|Atp1a2,-2.2
+MyList,GO Biological Processes,19,GO:0071870,cellular response to catecholamine stimulus,19_GO:0050896 response to stimulus,-3.9,30,9.2,21160,46,46,3,6.5,3.6,14672|14682|14683,Gna11|Gnaq|Gnas,-2.2
+MyList,GO Biological Processes,19,GO:0071868,cellular response to monoamine stimulus,19_GO:0050896 response to stimulus,-3.9,30,9.2,21160,46,46,3,6.5,3.6,14672|14682|14683,Gna11|Gnaq|Gnas,-2.2
+MyList,GO Biological Processes,19,GO:0009166,nucleotide catabolic process,19_GO:0009987 cellular process,-3.8,15,7.3,21160,122,46,4,8.7,4.2,12799|15275|18293|56421,Cnp|Hk1|Ogdh|Pfkp,-2.2
+MyList,GO Biological Processes,19,GO:0120034,positive regulation of plasma membrane bounded cell projection assembly,19_GO:0048518 positive regulation of biological process,-3.8,15,7.3,21160,122,46,4,8.7,4.2,15461|15519|22240|234267,Hras|Hsp90aa1|Dpysl3|Gpm6a,-2.2
+MyList,GO Biological Processes,19,GO:0032024,positive regulation of insulin secretion,19_GO:0051179 localization,-3.8,15,7.3,21160,122,46,4,8.7,4.2,14672|14682|14683|20614,Gna11|Gnaq|Gnas|Snap25,-2.2
+MyList,Reactome Gene Sets,6,R-MMU-112310,Neurotransmitter release cycle,,-3.8,29,9.1,21160,47,46,3,6.5,3.6,20910|22348|72961,Stxbp1|Slc32a1|Slc17a7,-2.2
+MyList,Reactome Gene Sets,6,R-MMU-373755,Semaphorin interactions,,-3.8,29,9.1,21160,47,46,3,6.5,3.6,15519|22240|65254,Hsp90aa1|Dpysl3|Dpysl5,-2.2
+MyList,GO Biological Processes,19,GO:0050796,regulation of insulin secretion,19_GO:0051179 localization,-3.8,9.8,6.3,21160,234,46,5,11,4.6,14672|14682|14683|14687|20614,Gna11|Gnaq|Gnas|Gnaz|Snap25,-2.2
+MyList,GO Biological Processes,19,GO:1904951,positive regulation of establishment of protein localization,19_GO:0051179 localization,-3.8,7.4,5.8,21160,375,46,6,13,5,14672|14682|14683|15461|15519|20614,Gna11|Gnaq|Gnas|Hras|Hsp90aa1|Snap25,-2.2
+MyList,GO Biological Processes,19,GO:0098660,inorganic ion transmembrane transport,19_GO:0051179 localization,-3.8,5.1,5.2,21160,728,46,8,17,5.6,11938|11964|20614|22348|72961|98660|108664|234267,Atp2a2|Atp6v1a|Snap25|Slc32a1|Slc17a7|Atp1a2|Atp6v1h|Gpm6a,-2.2
+MyList,GO Biological Processes,19,GO:0008217,regulation of blood pressure,19_GO:0032501 multicellular organismal process,-3.8,9.7,6.3,21160,236,46,5,11,4.6,14672|14674|14682|14683|98660,Gna11|Gna13|Gnaq|Gnas|Atp1a2,-2.2
+MyList,WikiPathways,27,WP157,Glycolysis and gluconeogenesis,,-3.8,28,8.9,21160,49,46,3,6.5,3.6,15275|18597|56421,Hk1|Pdha1|Pfkp,-2.1
+MyList,GO Biological Processes,19,GO:0006091,generation of precursor metabolites and energy,19_GO:0009987 cellular process,-3.8,7.2,5.7,21160,383,46,6,13,5,11429|14683|15275|18293|18597|56421,Aco2|Gnas|Hk1|Ogdh|Pdha1|Pfkp,-2.1
+MyList,Reactome Gene Sets,6,R-MMU-3371497,HSP90 chaperone cycle for steroid hormone receptors (SHR) in the presence of ligand,,-3.8,28,8.8,21160,50,46,3,6.5,3.6,13424|15519|22152,Dync1h1|Hsp90aa1|Tubb3,-2.1
+MyList,KEGG Pathway,24,mmu04750,Inflammatory mediator regulation of TRP channels - Mus musculus (house mouse),,-3.7,14,7,21160,130,46,4,8.7,4.2,12322|12323|14682|14683,Camk2a|Camk2b|Gnaq|Gnas,-2.1
+MyList,Reactome Gene Sets,6,R-MMU-388396,GPCR downstream signalling,,-3.7,5.8,5.3,21160,556,46,7,15,5.3,14672|14674|14682|14683|14687|15461|269060,Gna11|Gna13|Gnaq|Gnas|Gnaz|Hras|Dagla,-2.1
+MyList,GO Biological Processes,19,GO:0044089,positive regulation of cellular component biogenesis,19_GO:0048518 positive regulation of biological process,-3.7,5.8,5.3,21160,560,46,7,15,5.3,13385|13424|15461|15519|19349|22240|234267,Dlg4|Dync1h1|Hras|Hsp90aa1|Rab7|Dpysl3|Gpm6a,-2.1
+MyList,GO Biological Processes,19,GO:0007188,adenylate cyclase-modulating G protein-coupled receptor signaling pathway,19_GO:0050896 response to stimulus,-3.7,9.3,6.1,21160,247,46,5,11,4.6,14672|14674|14682|14683|14687,Gna11|Gna13|Gnaq|Gnas|Gnaz,-2.1
+MyList,GO Biological Processes,19,GO:0071869,response to catecholamine,19_GO:0050896 response to stimulus,-3.7,27,8.6,21160,52,46,3,6.5,3.6,14672|14682|14683,Gna11|Gnaq|Gnas,-2.1
+MyList,GO Biological Processes,19,GO:0050807,regulation of synapse organization,19_GO:0050789 regulation of biological process,-3.7,7,5.6,21160,393,46,6,13,5,12323|13385|14674|20614|68585|234267,Camk2b|Dlg4|Gna13|Snap25|Rtn4|Gpm6a,-2.1
+MyList,KEGG Pathway,24,mmu04915,Estrogen signaling pathway - Mus musculus (house mouse),,-3.7,14,6.9,21160,134,46,4,8.7,4.2,14682|14683|15461|15519,Gnaq|Gnas|Hras|Hsp90aa1,-2.1
+MyList,GO Biological Processes,19,GO:0071867,response to monoamine,19_GO:0050896 response to stimulus,-3.7,26,8.5,21160,53,46,3,6.5,3.6,14672|14682|14683,Gna11|Gnaq|Gnas,-2.1
+MyList,KEGG Pathway,24,mmu05132,Salmonella infection - Mus musculus (house mouse),,-3.7,9.1,6.1,21160,252,46,5,11,4.6,13424|15461|15519|19349|22152,Dync1h1|Hras|Hsp90aa1|Rab7|Tubb3,-2.1
+MyList,KEGG Pathway,24,mmu04728,Dopaminergic synapse - Mus musculus (house mouse),,-3.7,14,6.8,21160,136,46,4,8.7,4.2,12322|12323|14682|14683,Camk2a|Camk2b|Gnaq|Gnas,-2
+MyList,Reactome Gene Sets,6,R-MMU-9006934,Signaling by Receptor Tyrosine Kinases,,-3.7,6.9,5.6,21160,400,46,6,13,5,11771|11772|11964|15461|15519|108664,Ap2a1|Ap2a2|Atp6v1a|Hras|Hsp90aa1|Atp6v1h,-2
+MyList,KEGG Pathway,24,mmu05163,Human cytomegalovirus infection - Mus musculus (house mouse),,-3.7,9.1,6,21160,254,46,5,11,4.6,14672|14674|14682|14683|15461,Gna11|Gna13|Gnaq|Gnas|Hras,-2
+MyList,GO Biological Processes,19,GO:0006096,glycolytic process,19_GO:0009987 cellular process,-3.7,26,8.4,21160,54,46,3,6.5,3.6,15275|18293|56421,Hk1|Ogdh|Pfkp,-2
+MyList,GO Biological Processes,19,GO:0006753,nucleoside phosphate metabolic process,19_GO:0009987 cellular process,-3.6,5.6,5.2,21160,575,46,7,15,5.3,11964|12799|15275|18293|18597|56421|98660,Atp6v1a|Cnp|Hk1|Ogdh|Pdha1|Pfkp|Atp1a2,-2
+MyList,GO Biological Processes,19,GO:0050890,cognition,19_GO:0032501 multicellular organismal process,-3.6,6.8,5.5,21160,403,46,6,13,5,14683|17754|20614|72961|98660|104015,Gnas|Map1a|Snap25|Slc17a7|Atp1a2|Synj1,-2
+MyList,GO Biological Processes,19,GO:0007409,axonogenesis,19_GO:0032502 developmental process,-3.6,6.8,5.5,21160,405,46,6,13,5,12799|17754|20614|20910|22152|65254,Cnp|Map1a|Snap25|Stxbp1|Tubb3|Dpysl5,-2
+MyList,GO Biological Processes,19,GO:0010975,regulation of neuron projection development,19_GO:0032502 developmental process,-3.6,5.6,5.2,21160,578,46,7,15,5.3,11771|12323|13385|20614|22240|65254|68585,Ap2a1|Camk2b|Dlg4|Snap25|Dpysl3|Dpysl5|Rtn4,-2
+MyList,GO Biological Processes,19,GO:1901292,nucleoside phosphate catabolic process,19_GO:0009987 cellular process,-3.6,13,6.7,21160,142,46,4,8.7,4.2,12799|15275|18293|56421,Cnp|Hk1|Ogdh|Pfkp,-2
+MyList,GO Biological Processes,19,GO:0051668,localization within membrane,19_GO:0051179 localization,-3.6,5.5,5.1,21160,587,46,7,15,5.3,12322|13385|15519|15525|18195|19349|20910,Camk2a|Dlg4|Hsp90aa1|Hspa4|Nsf|Rab7|Stxbp1,-2
+MyList,GO Biological Processes,19,GO:0007420,brain development,19_GO:0032502 developmental process,-3.6,4.7,4.9,21160,784,46,8,17,5.6,12799|14682|18293|20168|22348|68585|98660|235380,Cnp|Gnaq|Ogdh|Rtn3|Slc32a1|Rtn4|Atp1a2|Dmxl2,-2
+MyList,Reactome Gene Sets,6,R-MMU-372790,Signaling by GPCR,,-3.6,5.5,5.1,21160,589,46,7,15,5.3,14672|14674|14682|14683|14687|15461|269060,Gna11|Gna13|Gnaq|Gnas|Gnaz|Hras|Dagla,-2
+MyList,KEGG Pathway,24,mmu04270,Vascular smooth muscle contraction - Mus musculus (house mouse),,-3.6,13,6.6,21160,144,46,4,8.7,4.2,14672|14674|14682|14683,Gna11|Gna13|Gnaq|Gnas,-2
+MyList,GO Biological Processes,19,GO:0048488,synaptic vesicle endocytosis,19_GO:0051179 localization,-3.6,24,8.1,21160,58,46,3,6.5,3.6,11771|11772|104015,Ap2a1|Ap2a2|Synj1,-2
+MyList,GO Biological Processes,19,GO:0046032,ADP catabolic process,19_GO:0009987 cellular process,-3.6,24,8.1,21160,58,46,3,6.5,3.6,15275|18293|56421,Hk1|Ogdh|Pfkp,-2
+MyList,Reactome Gene Sets,6,R-MMU-422356,Regulation of insulin secretion,,-3.5,23,8,21160,59,46,3,6.5,3.6,14672|14682|14683,Gna11|Gnaq|Gnas,-1.9
+MyList,Reactome Gene Sets,6,R-MMU-187037,Signaling by NTRK1 (TRKA),,-3.5,23,8,21160,59,46,3,6.5,3.6,11771|11772|15461,Ap2a1|Ap2a2|Hras,-1.9
+MyList,GO Biological Processes,19,GO:0046902,regulation of mitochondrial membrane permeability,19_GO:0051179 localization,-3.5,23,8,21160,59,46,3,6.5,3.6,12322|12799|22334,Camk2a|Cnp|Vdac2,-1.9
+MyList,GO Biological Processes,19,GO:0055086,nucleobase-containing small molecule metabolic process,19_GO:0009987 cellular process,-3.5,5.4,5.1,21160,600,46,7,15,5.3,11964|12799|15275|18293|18597|56421|98660,Atp6v1a|Cnp|Hk1|Ogdh|Pdha1|Pfkp|Atp1a2,-1.9
+MyList,Reactome Gene Sets,6,R-MMU-373760,L1CAM interactions,,-3.5,23,8,21160,60,46,3,6.5,3.6,11771|11772|22152,Ap2a1|Ap2a2|Tubb3,-1.9
+MyList,GO Biological Processes,19,GO:0019674,NAD metabolic process,19_GO:0009987 cellular process,-3.5,23,8,21160,60,46,3,6.5,3.6,15275|18293|56421,Hk1|Ogdh|Pfkp,-1.9
+MyList,Reactome Gene Sets,6,R-MMU-397014,Muscle contraction,,-3.5,12,6.4,21160,152,46,4,8.7,4.2,11938|12322|12323|98660,Atp2a2|Camk2a|Camk2b|Atp1a2,-1.9
+MyList,GO Biological Processes,19,GO:0009117,nucleotide metabolic process,19_GO:0009987 cellular process,-3.5,6.4,5.3,21160,433,46,6,13,5,11964|12799|15275|18293|56421|98660,Atp6v1a|Cnp|Hk1|Ogdh|Pfkp|Atp1a2,-1.9
+MyList,GO Biological Processes,19,GO:0009181,purine ribonucleoside diphosphate catabolic process,19_GO:0009987 cellular process,-3.5,22,7.8,21160,62,46,3,6.5,3.6,15275|18293|56421,Hk1|Ogdh|Pfkp,-1.9
+MyList,GO Biological Processes,19,GO:0019364,pyridine nucleotide catabolic process,19_GO:0009987 cellular process,-3.5,22,7.8,21160,62,46,3,6.5,3.6,15275|18293|56421,Hk1|Ogdh|Pfkp,-1.9
+MyList,GO Biological Processes,19,GO:0009137,purine nucleoside diphosphate catabolic process,19_GO:0009987 cellular process,-3.5,22,7.8,21160,62,46,3,6.5,3.6,15275|18293|56421,Hk1|Ogdh|Pfkp,-1.9
+MyList,GO Biological Processes,19,GO:0090276,regulation of peptide hormone secretion,19_GO:0051179 localization,-3.5,8.3,5.7,21160,278,46,5,11,4.6,14672|14682|14683|14687|20614,Gna11|Gnaq|Gnas|Gnaz|Snap25,-1.9
+MyList,KEGG Pathway,24,mmu04723,Retrograde endocannabinoid signaling - Mus musculus (house mouse),,-3.5,12,6.4,21160,153,46,4,8.7,4.2,14682|22348|72961|269060,Gnaq|Slc32a1|Slc17a7|Dagla,-1.9
+MyList,GO Biological Processes,19,GO:0030168,platelet activation,19_GO:0032501 multicellular organismal process,-3.5,22,7.8,21160,63,46,3,6.5,3.6,14674|14683|20910,Gna13|Gnas|Stxbp1,-1.9
+MyList,KEGG Pathway,24,mmu04929,GnRH secretion - Mus musculus (house mouse),,-3.5,22,7.8,21160,63,46,3,6.5,3.6,14672|14682|15461,Gna11|Gnaq|Hras,-1.9
+MyList,GO Biological Processes,19,GO:0046031,ADP metabolic process,19_GO:0009987 cellular process,-3.5,22,7.8,21160,63,46,3,6.5,3.6,15275|18293|56421,Hk1|Ogdh|Pfkp,-1.9
+MyList,GO Biological Processes,19,GO:0055082,intracellular chemical homeostasis,19_GO:0042592 homeostatic process,-3.5,5.2,5,21160,619,46,7,15,5.3,11938|11964|15275|19349|68585|98660|235380,Atp2a2|Atp6v1a|Hk1|Rab7|Rtn4|Atp1a2|Dmxl2,-1.9
+MyList,GO Biological Processes,19,GO:0002791,regulation of peptide secretion,19_GO:0051179 localization,-3.4,8.1,5.6,21160,283,46,5,11,4.6,14672|14682|14683|14687|20614,Gna11|Gnaq|Gnas|Gnaz|Snap25,-1.9
+MyList,GO Biological Processes,19,GO:1990778,protein localization to cell periphery,19_GO:0051179 localization,-3.4,8.1,5.6,21160,283,46,5,11,4.6,12322|13385|18195|19349|20910,Camk2a|Dlg4|Nsf|Rab7|Stxbp1,-1.9
+MyList,Reactome Gene Sets,6,R-MMU-9860931,Response of endothelial cells to shear stress,,-3.4,22,7.7,21160,64,46,3,6.5,3.6,14672|14682|14683,Gna11|Gnaq|Gnas,-1.9
+MyList,Reactome Gene Sets,6,R-MMU-9855142,Cellular responses to mechanical stimuli,,-3.4,22,7.7,21160,64,46,3,6.5,3.6,14672|14682|14683,Gna11|Gnaq|Gnas,-1.9
+MyList,GO Biological Processes,19,GO:0140238,presynaptic endocytosis,19_GO:0051179 localization,-3.4,22,7.7,21160,64,46,3,6.5,3.6,11771|11772|104015,Ap2a1|Ap2a2|Synj1,-1.9
+MyList,GO Biological Processes,19,GO:0090087,regulation of peptide transport,19_GO:0051179 localization,-3.4,8.1,5.6,21160,285,46,5,11,4.6,14672|14682|14683|14687|20614,Gna11|Gnaq|Gnas|Gnaz|Snap25,-1.9
+MyList,GO Biological Processes,19,GO:0090277,positive regulation of peptide hormone secretion,19_GO:0051179 localization,-3.4,12,6.3,21160,157,46,4,8.7,4.2,14672|14682|14683|20614,Gna11|Gnaq|Gnas|Snap25,-1.9
+MyList,GO Biological Processes,19,GO:0048260,positive regulation of receptor-mediated endocytosis,19_GO:0051179 localization,-3.4,21,7.6,21160,65,46,3,6.5,3.6,11771|18195|104015,Ap2a1|Nsf|Synj1,-1.9
+MyList,GO Biological Processes,19,GO:0009150,purine ribonucleotide metabolic process,19_GO:0009987 cellular process,-3.4,8,5.6,21160,289,46,5,11,4.6,11964|15275|18293|56421|98660,Atp6v1a|Hk1|Ogdh|Pfkp|Atp1a2,-1.8
+MyList,GO Biological Processes,19,GO:0009191,ribonucleoside diphosphate catabolic process,19_GO:0009987 cellular process,-3.4,21,7.6,21160,66,46,3,6.5,3.6,15275|18293|56421,Hk1|Ogdh|Pfkp,-1.8
+MyList,GO Biological Processes,19,GO:0072526,pyridine-containing compound catabolic process,19_GO:0009987 cellular process,-3.4,21,7.6,21160,66,46,3,6.5,3.6,15275|18293|56421,Hk1|Ogdh|Pfkp,-1.8
+MyList,GO Biological Processes,19,GO:0070201,regulation of establishment of protein localization,19_GO:0051179 localization,-3.4,5.1,4.9,21160,635,46,7,15,5.3,14672|14682|14683|14687|15461|15519|20614,Gna11|Gnaq|Gnas|Gnaz|Hras|Hsp90aa1|Snap25,-1.8
+MyList,GO Biological Processes,19,GO:0002793,positive regulation of peptide secretion,19_GO:0051179 localization,-3.4,11,6.2,21160,161,46,4,8.7,4.2,14672|14682|14683|20614,Gna11|Gnaq|Gnas|Snap25,-1.8
+MyList,Reactome Gene Sets,6,R-MMU-1280218,Adaptive Immune System,,-3.4,5.1,4.9,21160,636,46,7,15,5.3,11771|11772|13424|15461|19349|22152|22201,Ap2a1|Ap2a2|Dync1h1|Hras|Rab7|Tubb3|Uba1,-1.8
+MyList,KEGG Pathway,24,mmu00010,Glycolysis / Gluconeogenesis - Mus musculus (house mouse),,-3.4,21,7.5,21160,67,46,3,6.5,3.6,15275|18597|56421,Hk1|Pdha1|Pfkp,-1.8
+MyList,KEGG Pathway,24,mmu04148,Efferocytosis - Mus musculus (house mouse),,-3.4,11,6.2,21160,163,46,4,8.7,4.2,11938|12322|12323|19349,Atp2a2|Camk2a|Camk2b|Rab7,-1.8
+MyList,GO Biological Processes,19,GO:0009134,nucleoside diphosphate catabolic process,19_GO:0009987 cellular process,-3.4,20,7.4,21160,68,46,3,6.5,3.6,15275|18293|56421,Hk1|Ogdh|Pfkp,-1.8
+MyList,KEGG Pathway,24,mmu05031,Amphetamine addiction - Mus musculus (house mouse),,-3.3,20,7.4,21160,69,46,3,6.5,3.6,12322|12323|14683,Camk2a|Camk2b|Gnas,-1.8
+MyList,GO Biological Processes,19,GO:0009179,purine ribonucleoside diphosphate metabolic process,19_GO:0009987 cellular process,-3.3,20,7.3,21160,70,46,3,6.5,3.6,15275|18293|56421,Hk1|Ogdh|Pfkp,-1.8
+MyList,Reactome Gene Sets,6,R-MMU-163685,Integration of energy metabolism,,-3.3,20,7.3,21160,70,46,3,6.5,3.6,14672|14682|14683,Gna11|Gnaq|Gnas,-1.8
+MyList,GO Biological Processes,19,GO:0009135,purine nucleoside diphosphate metabolic process,19_GO:0009987 cellular process,-3.3,20,7.3,21160,70,46,3,6.5,3.6,15275|18293|56421,Hk1|Ogdh|Pfkp,-1.8
+MyList,GO Biological Processes,19,GO:0016079,synaptic vesicle exocytosis,19_GO:0051179 localization,-3.3,20,7.3,21160,70,46,3,6.5,3.6,20614|20910|104015,Snap25|Stxbp1|Synj1,-1.8
+MyList,Reactome Gene Sets,6,R-MMU-166520,Signaling by NTRKs,,-3.3,19,7.3,21160,71,46,3,6.5,3.6,11771|11772|15461,Ap2a1|Ap2a2|Hras,-1.8
+MyList,KEGG Pathway,24,mmu04927,Cortisol synthesis and secretion - Mus musculus (house mouse),,-3.3,19,7.2,21160,72,46,3,6.5,3.6,14672|14682|14683,Gna11|Gnaq|Gnas,-1.7
+MyList,Reactome Gene Sets,6,R-MMU-9663891,Selective autophagy,,-3.3,19,7.2,21160,73,46,3,6.5,3.6,13424|22152|22334,Dync1h1|Tubb3|Vdac2,-1.7
+MyList,WikiPathways,27,WP5298,Dravet syndrome Scn1a A1783V point mutation model,,-3.3,19,7.2,21160,73,46,3,6.5,3.6,12322|20910|72961,Camk2a|Stxbp1|Slc17a7,-1.7
+MyList,GO Biological Processes,19,GO:0009259,ribonucleotide metabolic process,19_GO:0009987 cellular process,-3.3,7.4,5.3,21160,311,46,5,11,4.6,11964|15275|18293|56421|98660,Atp6v1a|Hk1|Ogdh|Pfkp|Atp1a2,-1.7
+MyList,GO Biological Processes,19,GO:0055117,regulation of cardiac muscle contraction,19_GO:0032501 multicellular organismal process,-3.3,19,7.1,21160,74,46,3,6.5,3.6,11938|15519|98660,Atp2a2|Hsp90aa1|Atp1a2,-1.7
+MyList,KEGG Pathway,24,mmu04918,Thyroid hormone synthesis - Mus musculus (house mouse),,-3.3,19,7.1,21160,74,46,3,6.5,3.6,14682|14683|98660,Gnaq|Gnas|Atp1a2,-1.7
+MyList,GO Biological Processes,19,GO:0140029,exocytic process,19_GO:0051179 localization,-3.3,19,7.1,21160,74,46,3,6.5,3.6,20614|20910|104015,Snap25|Stxbp1|Synj1,-1.7
+MyList,GO Biological Processes,19,GO:0072655,establishment of protein localization to mitochondrion,19_GO:0051179 localization,-3.3,19,7.1,21160,74,46,3,6.5,3.6,15275|15519|15525,Hk1|Hsp90aa1|Hspa4,-1.7
+MyList,KEGG Pathway,24,mmu05214,Glioma - Mus musculus (house mouse),,-3.3,19,7.1,21160,74,46,3,6.5,3.6,12322|12323|15461,Camk2a|Camk2b|Hras,-1.7
+MyList,GO Biological Processes,19,GO:0051650,establishment of vesicle localization,19_GO:0051179 localization,-3.2,11,5.9,21160,175,46,4,8.7,4.2,19349|20614|20910|104015,Rab7|Snap25|Stxbp1|Synj1,-1.7
+MyList,WikiPathways,27,WP572,EGFR1 signaling pathway,,-3.2,11,5.9,21160,175,46,4,8.7,4.2,11771|12322|15461|20910,Ap2a1|Camk2a|Hras|Stxbp1,-1.7
+MyList,KEGG Pathway,24,mmu04217,Necroptosis - Mus musculus (house mouse),,-3.2,10,5.9,21160,177,46,4,8.7,4.2,12322|12323|15519|22334,Camk2a|Camk2b|Hsp90aa1|Vdac2,-1.7
+MyList,Reactome Gene Sets,6,R-MMU-9837999,Mitochondrial protein degradation,,-3.2,18,7,21160,76,46,3,6.5,3.6,11429|18293|18597,Aco2|Ogdh|Pdha1,-1.7
+MyList,GO Biological Processes,19,GO:0051222,positive regulation of protein transport,19_GO:0051179 localization,-3.2,7.2,5.2,21160,318,46,5,11,4.6,14672|14682|14683|15519|20614,Gna11|Gnaq|Gnas|Hsp90aa1|Snap25,-1.7
+MyList,KEGG Pathway,24,mmu05152,Tuberculosis - Mus musculus (house mouse),,-3.2,10,5.8,21160,180,46,4,8.7,4.2,12322|12323|19349|108664,Camk2a|Camk2b|Rab7|Atp6v1h,-1.7
+MyList,GO Biological Processes,19,GO:0090559,regulation of membrane permeability,19_GO:0065007 biological regulation,-3.2,18,6.9,21160,77,46,3,6.5,3.6,12322|12799|22334,Camk2a|Cnp|Vdac2,-1.7
+MyList,GO Biological Processes,19,GO:0019693,ribose phosphate metabolic process,19_GO:0009987 cellular process,-3.2,7.2,5.2,21160,320,46,5,11,4.6,11964|15275|18293|56421|98660,Atp6v1a|Hk1|Ogdh|Pfkp|Atp1a2,-1.7
+MyList,GO Biological Processes,19,GO:0098657,import into cell,19_GO:0051179 localization,-3.2,4.7,4.6,21160,683,46,7,15,5.3,11771|11772|15461|19349|98660|104015|108664,Ap2a1|Ap2a2|Hras|Rab7|Atp1a2|Synj1|Atp6v1h,-1.7
+MyList,KEGG Pathway,24,mmu04360,Axon guidance - Mus musculus (house mouse),,-3.2,10,5.8,21160,181,46,4,8.7,4.2,12322|12323|15461|65254,Camk2a|Camk2b|Hras|Dpysl5,-1.7
+MyList,GO Biological Processes,19,GO:0006813,potassium ion transport,19_GO:0051179 localization,-3.2,10,5.8,21160,182,46,4,8.7,4.2,18195|20614|72961|98660,Nsf|Snap25|Slc17a7|Atp1a2,-1.7
+MyList,GO Biological Processes,19,GO:0021537,telencephalon development,19_GO:0032502 developmental process,-3.2,7.1,5.2,21160,324,46,5,11,4.6,18293|22348|68585|98660|235380,Ogdh|Slc32a1|Rtn4|Atp1a2|Dmxl2,-1.7
+MyList,Reactome Gene Sets,6,R-MMU-3371556,Cellular response to heat stress,,-3.2,17,6.8,21160,79,46,3,6.5,3.6,12322|12323|15519,Camk2a|Camk2b|Hsp90aa1,-1.6
+MyList,GO Biological Processes,19,GO:0050806,positive regulation of synaptic transmission,19_GO:0048518 positive regulation of biological process,-3.2,7,5.1,21160,327,46,5,11,4.6,12323|13385|20614|20910|50997,Camk2b|Dlg4|Snap25|Stxbp1|Mpp2,-1.6
+MyList,GO Biological Processes,19,GO:0006897,endocytosis,19_GO:0051179 localization,-3.1,5.5,4.8,21160,500,46,6,13,5,11771|11772|15461|19349|104015|108664,Ap2a1|Ap2a2|Hras|Rab7|Synj1|Atp6v1h,-1.6
+MyList,GO Biological Processes,19,GO:0022406,membrane docking,19_GO:0009987 cellular process,-3.1,17,6.7,21160,82,46,3,6.5,3.6,11938|19349|20910,Atp2a2|Rab7|Stxbp1,-1.6
+MyList,GO Biological Processes,19,GO:0009185,ribonucleoside diphosphate metabolic process,19_GO:0009987 cellular process,-3.1,17,6.7,21160,82,46,3,6.5,3.6,15275|18293|56421,Hk1|Ogdh|Pfkp,-1.6
+MyList,GO Biological Processes,19,GO:0051648,vesicle localization,19_GO:0051179 localization,-3.1,9.6,5.6,21160,191,46,4,8.7,4.2,19349|20614|20910|104015,Rab7|Snap25|Stxbp1|Synj1,-1.6
+MyList,GO Biological Processes,19,GO:0072521,purine-containing compound metabolic process,19_GO:0009987 cellular process,-3.1,5.4,4.7,21160,510,46,6,13,5,11964|15275|18293|18597|56421|98660,Atp6v1a|Hk1|Ogdh|Pdha1|Pfkp|Atp1a2,-1.6
+MyList,KEGG Pathway,24,mmu04012,ErbB signaling pathway - Mus musculus (house mouse),,-3.1,16,6.6,21160,84,46,3,6.5,3.6,12322|12323|15461,Camk2a|Camk2b|Hras,-1.6
+MyList,Reactome Gene Sets,6,R-MMU-380320,Recruitment of NuMA to mitotic centrosomes,,-3.1,16,6.6,21160,85,46,3,6.5,3.6,13424|15519|22152,Dync1h1|Hsp90aa1|Tubb3,-1.6
+MyList,GO Biological Processes,19,GO:0070585,protein localization to mitochondrion,19_GO:0051179 localization,-3.1,16,6.6,21160,85,46,3,6.5,3.6,15275|15519|15525,Hk1|Hsp90aa1|Hspa4,-1.6
+MyList,GO Biological Processes,19,GO:0050714,positive regulation of protein secretion,19_GO:0051179 localization,-3.1,9.4,5.5,21160,195,46,4,8.7,4.2,14672|14682|14683|20614,Gna11|Gnaq|Gnas|Snap25,-1.6
+MyList,GO Biological Processes,19,GO:0050708,regulation of protein secretion,19_GO:0051179 localization,-3.1,6.7,5,21160,343,46,5,11,4.6,14672|14682|14683|14687|20614,Gna11|Gnaq|Gnas|Gnaz|Snap25,-1.6
+MyList,GO Biological Processes,19,GO:1904888,cranial skeletal system development,19_GO:0032502 developmental process,-3.1,16,6.5,21160,86,46,3,6.5,3.6,14672|14682|14683,Gna11|Gnaq|Gnas,-1.6
+MyList,Reactome Gene Sets,6,R-MMU-416476,G alpha (q) signalling events,,-3.1,9.3,5.5,21160,197,46,4,8.7,4.2,14672|14682|15461|269060,Gna11|Gnaq|Hras|Dagla,-1.6
+MyList,GO Biological Processes,19,GO:0009132,nucleoside diphosphate metabolic process,19_GO:0009987 cellular process,-3,16,6.5,21160,87,46,3,6.5,3.6,15275|18293|56421,Hk1|Ogdh|Pfkp,-1.5
+MyList,KEGG Pathway,24,mmu04970,Salivary secretion - Mus musculus (house mouse),,-3,16,6.5,21160,87,46,3,6.5,3.6,14682|14683|98660,Gnaq|Gnas|Atp1a2,-1.5
+MyList,GO Biological Processes,19,GO:0046434,organophosphate catabolic process,19_GO:0009987 cellular process,-3,9.2,5.5,21160,199,46,4,8.7,4.2,12799|15275|18293|56421,Cnp|Hk1|Ogdh|Pfkp,-1.5
+MyList,GO Biological Processes,19,GO:0046883,regulation of hormone secretion,19_GO:0051179 localization,-3,6.6,4.9,21160,350,46,5,11,4.6,14672|14682|14683|14687|20614,Gna11|Gnaq|Gnas|Gnaz|Snap25,-1.5
+MyList,GO Biological Processes,19,GO:0046887,positive regulation of hormone secretion,19_GO:0051179 localization,-3,9.1,5.4,21160,202,46,4,8.7,4.2,14672|14682|14683|20614,Gna11|Gnaq|Gnas|Snap25,-1.5
+MyList,Reactome Gene Sets,6,R-MMU-199991,Membrane Trafficking,,-3,5.2,4.6,21160,533,46,6,13,5,11771|11772|13424|18195|19349|22152,Ap2a1|Ap2a2|Dync1h1|Nsf|Rab7|Tubb3,-1.5
+MyList,GO Biological Processes,19,GO:0006942,regulation of striated muscle contraction,19_GO:0032501 multicellular organismal process,-3,15,6.3,21160,91,46,3,6.5,3.6,11938|15519|98660,Atp2a2|Hsp90aa1|Atp1a2,-1.5
+MyList,Reactome Gene Sets,6,R-MMU-6807878,COPI-mediated anterograde transport,,-3,15,6.3,21160,91,46,3,6.5,3.6,13424|18195|22152,Dync1h1|Nsf|Tubb3,-1.5
+MyList,GO Biological Processes,19,GO:0007611,learning or memory,19_GO:0032501 multicellular organismal process,-3,6.4,4.8,21160,357,46,5,11,4.6,17754|20614|72961|98660|104015,Map1a|Snap25|Slc17a7|Atp1a2|Synj1,-1.5
+MyList,GO Biological Processes,19,GO:0005996,monosaccharide metabolic process,19_GO:0009987 cellular process,-3,8.9,5.3,21160,206,46,4,8.7,4.2,15275|18597|56421|98660,Hk1|Pdha1|Pfkp|Atp1a2,-1.5
+MyList,GO Biological Processes,19,GO:0007612,learning,19_GO:0032501 multicellular organismal process,-3,8.9,5.3,21160,206,46,4,8.7,4.2,17754|20614|98660|104015,Map1a|Snap25|Atp1a2|Synj1,-1.5
+MyList,GO Biological Processes,19,GO:0010256,endomembrane system organization,19_GO:0009987 cellular process,-3,5.1,4.5,21160,539,46,6,13,5,11938|20168|20614|20910|22334|68585,Atp2a2|Rtn3|Snap25|Stxbp1|Vdac2|Rtn4,-1.5
+MyList,GO Biological Processes,19,GO:0050905,neuromuscular process,19_GO:0032501 multicellular organismal process,-3,8.9,5.3,21160,207,46,4,8.7,4.2,12323|13385|15519|17754,Camk2b|Dlg4|Hsp90aa1|Map1a,-1.5
+MyList,GO Biological Processes,19,GO:0009154,purine ribonucleotide catabolic process,19_GO:0009987 cellular process,-3,15,6.3,21160,92,46,3,6.5,3.6,15275|18293|56421,Hk1|Ogdh|Pfkp,-1.5
+MyList,GO Biological Processes,19,GO:0051963,regulation of synapse assembly,19_GO:0032502 developmental process,-3,8.8,5.3,21160,209,46,4,8.7,4.2,13385|14674|20614|68585,Dlg4|Gna13|Snap25|Rtn4,-1.5
+MyList,GO Biological Processes,19,GO:0051223,regulation of protein transport,19_GO:0051179 localization,-2.9,5,4.5,21160,550,46,6,13,5,14672|14682|14683|14687|15519|20614,Gna11|Gnaq|Gnas|Gnaz|Hsp90aa1|Snap25,-1.4
+MyList,WikiPathways,27,WP662,Amino acid metabolism,,-2.9,14,6.1,21160,96,46,3,6.5,3.6,11429|18293|18597,Aco2|Ogdh|Pdha1,-1.4
+MyList,GO Biological Processes,19,GO:0007269,neurotransmitter secretion,19_GO:0051179 localization,-2.9,14,6.1,21160,96,46,3,6.5,3.6,20614|20910|104015,Snap25|Stxbp1|Synj1,-1.4
+MyList,GO Biological Processes,19,GO:0099643,signal release from synapse,19_GO:0051179 localization,-2.9,14,6.1,21160,96,46,3,6.5,3.6,20614|20910|104015,Snap25|Stxbp1|Synj1,-1.4
+MyList,GO Biological Processes,19,GO:0010720,positive regulation of cell development,19_GO:0032502 developmental process,-2.9,4.9,4.4,21160,559,46,6,13,5,12323|13385|14683|15519|68585|104015,Camk2b|Dlg4|Gnas|Hsp90aa1|Rtn4|Synj1,-1.4
+MyList,GO Biological Processes,19,GO:0006163,purine nucleotide metabolic process,19_GO:0009987 cellular process,-2.9,6.1,4.7,21160,374,46,5,11,4.6,11964|15275|18293|56421|98660,Atp6v1a|Hk1|Ogdh|Pfkp|Atp1a2,-1.4
+MyList,GO Biological Processes,19,GO:0120032,regulation of plasma membrane bounded cell projection assembly,19_GO:0050789 regulation of biological process,-2.9,8.4,5.2,21160,218,46,4,8.7,4.2,15461|15519|22240|234267,Hras|Hsp90aa1|Dpysl3|Gpm6a,-1.4
+MyList,Reactome Gene Sets,6,R-MMU-194315,Signaling by Rho GTPases,,-2.9,4.9,4.4,21160,562,46,6,13,5,13385|13424|14674|15519|19349|22152,Dlg4|Dync1h1|Gna13|Hsp90aa1|Rab7|Tubb3,-1.4
+MyList,GO Biological Processes,19,GO:0060491,regulation of cell projection assembly,19_GO:0050789 regulation of biological process,-2.9,8.3,5.1,21160,221,46,4,8.7,4.2,15461|15519|22240|234267,Hras|Hsp90aa1|Dpysl3|Gpm6a,-1.4
+MyList,GO Biological Processes,19,GO:0050821,protein stabilization,19_GO:0065007 biological regulation,-2.9,8.3,5.1,21160,221,46,4,8.7,4.2,14682|15519|20910|68585,Gnaq|Hsp90aa1|Stxbp1|Rtn4,-1.4
+MyList,GO Biological Processes,19,GO:0048814,regulation of dendrite morphogenesis,19_GO:0032502 developmental process,-2.9,14,6,21160,100,46,3,6.5,3.6,12323|13385|65254,Camk2b|Dlg4|Dpysl5,-1.4
+MyList,GO Biological Processes,19,GO:0051129,negative regulation of cellular component organization,19_GO:0048519 negative regulation of biological process,-2.9,4.1,4.2,21160,778,46,7,15,5.3,13385|17754|20910|22240|22334|65254|68585,Dlg4|Map1a|Stxbp1|Dpysl3|Vdac2|Dpysl5|Rtn4,-1.4
+MyList,Reactome Gene Sets,6,R-MMU-5653656,Vesicle-mediated transport,,-2.9,4.9,4.4,21160,567,46,6,13,5,11771|11772|13424|18195|19349|22152,Ap2a1|Ap2a2|Dync1h1|Nsf|Rab7|Tubb3,-1.4
+MyList,GO Biological Processes,19,GO:0009261,ribonucleotide catabolic process,19_GO:0009987 cellular process,-2.9,14,6,21160,101,46,3,6.5,3.6,15275|18293|56421,Hk1|Ogdh|Pfkp,-1.4
+MyList,GO Biological Processes,19,GO:0051640,organelle localization,19_GO:0051179 localization,-2.9,4.8,4.3,21160,571,46,6,13,5,11938|13424|19349|20614|20910|104015,Atp2a2|Dync1h1|Rab7|Snap25|Stxbp1|Synj1,-1.4
+MyList,GO Biological Processes,19,GO:0017157,regulation of exocytosis,19_GO:0051179 localization,-2.8,8.2,5.1,21160,225,46,4,8.7,4.2,11938|18195|19349|20910,Atp2a2|Nsf|Rab7|Stxbp1,-1.4
+MyList,KEGG Pathway,24,mmu05142,Chagas disease - Mus musculus (house mouse),,-2.8,13,5.9,21160,103,46,3,6.5,3.6,14672|14682|14683,Gna11|Gnaq|Gnas,-1.4
+MyList,Reactome Gene Sets,6,R-MMU-9716542,"Signaling by Rho GTPases, Miro GTPases and RHOBTB3",,-2.8,4.8,4.3,21160,577,46,6,13,5,13385|13424|14674|15519|19349|22152,Dlg4|Dync1h1|Gna13|Hsp90aa1|Rab7|Tubb3,-1.4
+MyList,GO Biological Processes,19,GO:0006195,purine nucleotide catabolic process,19_GO:0009987 cellular process,-2.8,13,5.9,21160,104,46,3,6.5,3.6,15275|18293|56421,Hk1|Ogdh|Pfkp,-1.4
+MyList,GO Biological Processes,19,GO:0006906,vesicle fusion,19_GO:0051179 localization,-2.8,13,5.9,21160,104,46,3,6.5,3.6,19349|20614|20910,Rab7|Snap25|Stxbp1,-1.4
+MyList,GO Biological Processes,19,GO:1905475,regulation of protein localization to membrane,19_GO:0051179 localization,-2.8,8,5,21160,230,46,4,8.7,4.2,12322|12323|13385|15461,Camk2a|Camk2b|Dlg4|Hras,-1.3
+MyList,GO Biological Processes,19,GO:0090174,organelle membrane fusion,19_GO:0009987 cellular process,-2.8,13,5.8,21160,106,46,3,6.5,3.6,19349|20614|20910,Rab7|Snap25|Stxbp1,-1.3
+MyList,WikiPathways,27,WP539,Wnt signaling pathway,,-2.8,13,5.7,21160,108,46,3,6.5,3.6,12322|12323|13385,Camk2a|Camk2b|Dlg4,-1.3
+MyList,GO Biological Processes,19,GO:0032787,monocarboxylic acid metabolic process,19_GO:0009987 cellular process,-2.8,4.6,4.2,21160,595,46,6,13,5,15275|18293|18597|18823|56421|269060,Hk1|Ogdh|Pdha1|Plp1|Pfkp|Dagla,-1.3
+MyList,Reactome Gene Sets,6,R-MMU-76002,"Platelet activation, signaling and aggregation",,-2.7,7.7,4.9,21160,239,46,4,8.7,4.2,14672|14674|14682|269060,Gna11|Gna13|Gnaq|Dagla,-1.3
+MyList,Reactome Gene Sets,6,R-MMU-3858494,Beta-catenin independent WNT signaling,,-2.7,12,5.6,21160,111,46,3,6.5,3.6,11771|11772|12322,Ap2a1|Ap2a2|Camk2a,-1.3
+MyList,GO Biological Processes,19,GO:0046928,regulation of neurotransmitter secretion,19_GO:0051179 localization,-2.7,12,5.6,21160,112,46,3,6.5,3.6,11938|12322|20910,Atp2a2|Camk2a|Stxbp1,-1.3
+MyList,Reactome Gene Sets,6,R-MMU-5673001,RAF/MAP kinase cascade,,-2.7,7.4,4.7,21160,250,46,4,8.7,4.2,12322|12323|13385|15461,Camk2a|Camk2b|Dlg4|Hras,-1.2
+MyList,GO Biological Processes,19,GO:0060249,anatomical structure homeostasis,19_GO:0042592 homeostatic process,-2.7,7.3,4.7,21160,252,46,4,8.7,4.2,14683|17754|19349|26562,Gnas|Map1a|Rab7|Ncdn,-1.2
+MyList,GO Biological Processes,19,GO:0001894,tissue homeostasis,19_GO:0042592 homeostatic process,-2.7,7.3,4.7,21160,252,46,4,8.7,4.2,14683|17754|19349|26562,Gnas|Map1a|Rab7|Ncdn,-1.2
+MyList,Reactome Gene Sets,6,R-MMU-5684996,MAPK1/MAPK3 signaling,,-2.6,7.2,4.6,21160,256,46,4,8.7,4.2,12322|12323|13385|15461,Camk2a|Camk2b|Dlg4|Hras,-1.2
+MyList,KEGG Pathway,24,mmu04722,Neurotrophin signaling pathway - Mus musculus (house mouse),,-2.6,11,5.4,21160,121,46,3,6.5,3.6,12322|12323|15461,Camk2a|Camk2b|Hras,-1.2
+MyList,Reactome Gene Sets,6,R-MMU-8856688,Golgi-to-ER retrograde transport,,-2.6,11,5.3,21160,123,46,3,6.5,3.6,13424|18195|22152,Dync1h1|Nsf|Tubb3,-1.2
+MyList,GO Biological Processes,19,GO:0072523,purine-containing compound catabolic process,19_GO:0009987 cellular process,-2.6,11,5.3,21160,123,46,3,6.5,3.6,15275|18293|56421,Hk1|Ogdh|Pfkp,-1.2
+MyList,GO Biological Processes,19,GO:0007005,mitochondrion organization,19_GO:0009987 cellular process,-2.6,5.3,4.2,21160,434,46,5,11,4.6,12322|12799|15519|15525|22334,Camk2a|Cnp|Hsp90aa1|Hspa4|Vdac2,-1.2
+MyList,GO Biological Processes,19,GO:0005975,carbohydrate metabolic process,19_GO:0009987 cellular process,-2.6,5.3,4.2,21160,434,46,5,11,4.6,15275|18293|18597|56421|98660,Hk1|Ogdh|Pdha1|Pfkp|Atp1a2,-1.2
+MyList,Reactome Gene Sets,6,R-MMU-446203,Asparagine N-linked glycosylation,,-2.6,7,4.6,21160,261,46,4,8.7,4.2,13424|15275|18195|22152,Dync1h1|Hk1|Nsf|Tubb3,-1.2
+MyList,GO Biological Processes,19,GO:0016052,carbohydrate catabolic process,19_GO:0009987 cellular process,-2.6,11,5.3,21160,124,46,3,6.5,3.6,15275|18293|56421,Hk1|Ogdh|Pfkp,-1.2
+MyList,GO Biological Processes,19,GO:0051656,establishment of organelle localization,19_GO:0051179 localization,-2.6,5.3,4.2,21160,437,46,5,11,4.6,13424|19349|20614|20910|104015,Dync1h1|Rab7|Snap25|Stxbp1|Synj1,-1.2
+MyList,KEGG Pathway,24,mmu04071,Sphingolipid signaling pathway - Mus musculus (house mouse),,-2.6,11,5.2,21160,126,46,3,6.5,3.6,14674|14682|15461,Gna13|Gnaq|Hras,-1.1
+MyList,Reactome Gene Sets,6,R-MMU-9612973,Autophagy,,-2.6,11,5.2,21160,126,46,3,6.5,3.6,13424|22152|22334,Dync1h1|Tubb3|Vdac2,-1.1
+MyList,KEGG Pathway,24,mmu04611,Platelet activation - Mus musculus (house mouse),,-2.6,11,5.2,21160,126,46,3,6.5,3.6,14674|14682|14683,Gna13|Gnaq|Gnas,-1.1
+MyList,Reactome Gene Sets,6,R-MMU-1632852,Macroautophagy,,-2.6,11,5.2,21160,126,46,3,6.5,3.6,13424|22152|22334,Dync1h1|Tubb3|Vdac2,-1.1
+MyList,GO Biological Processes,19,GO:0010959,regulation of metal ion transport,19_GO:0051179 localization,-2.6,5.2,4.2,21160,442,46,5,11,4.6,12322|14682|14683|18823|98660,Camk2a|Gnaq|Gnas|Plp1|Atp1a2,-1.1
+MyList,GO Biological Processes,19,GO:0019362,pyridine nucleotide metabolic process,19_GO:0009987 cellular process,-2.6,11,5.2,21160,128,46,3,6.5,3.6,15275|18293|56421,Hk1|Ogdh|Pfkp,-1.1
+MyList,GO Biological Processes,19,GO:0046496,nicotinamide nucleotide metabolic process,19_GO:0009987 cellular process,-2.6,11,5.2,21160,128,46,3,6.5,3.6,15275|18293|56421,Hk1|Ogdh|Pfkp,-1.1
+MyList,KEGG Pathway,24,mmu04144,Endocytosis - Mus musculus (house mouse),,-2.6,6.8,4.5,21160,270,46,4,8.7,4.2,11771|11772|15461|19349,Ap2a1|Ap2a2|Hras|Rab7,-1.1
+MyList,GO Biological Processes,19,GO:0030003,intracellular monoatomic cation homeostasis,19_GO:0042592 homeostatic process,-2.6,5.1,4.1,21160,448,46,5,11,4.6,11938|11964|19349|98660|235380,Atp2a2|Atp6v1a|Rab7|Atp1a2|Dmxl2,-1.1
+MyList,GO Biological Processes,19,GO:0008306,associative learning,19_GO:0032501 multicellular organismal process,-2.5,11,5.1,21160,130,46,3,6.5,3.6,17754|20614|98660,Map1a|Snap25|Atp1a2,-1.1
+MyList,GO Biological Processes,19,GO:0006816,calcium ion transport,19_GO:0051179 localization,-2.5,6.7,4.4,21160,274,46,4,8.7,4.2,11938|12322|12323|234267,Atp2a2|Camk2a|Camk2b|Gpm6a,-1.1
+MyList,GO Biological Processes,19,GO:0051588,regulation of neurotransmitter transport,19_GO:0051179 localization,-2.5,10,5.1,21160,133,46,3,6.5,3.6,11938|12322|20910,Atp2a2|Camk2a|Stxbp1,-1.1
+MyList,GO Biological Processes,19,GO:0001508,action potential,19_GO:0065007 biological regulation,-2.5,10,5.1,21160,133,46,3,6.5,3.6,14672|14682|98660,Gna11|Gnaq|Atp1a2,-1.1
+MyList,Reactome Gene Sets,6,R-MMU-913531,Interferon Signaling,,-2.5,10,5.1,21160,133,46,3,6.5,3.6,12322|12323|22152,Camk2a|Camk2b|Tubb3,-1.1
+MyList,GO Biological Processes,19,GO:0006873,intracellular monoatomic ion homeostasis,19_GO:0042592 homeostatic process,-2.5,5,4.1,21160,459,46,5,11,4.6,11938|11964|19349|98660|235380,Atp2a2|Atp6v1a|Rab7|Atp1a2|Dmxl2,-1.1
+MyList,Reactome Gene Sets,6,R-MMU-5683057,MAPK family signaling cascades,,-2.5,6.6,4.4,21160,279,46,4,8.7,4.2,12322|12323|13385|15461,Camk2a|Camk2b|Dlg4|Hras,-1.1
+MyList,GO Biological Processes,19,GO:0021761,limbic system development,19_GO:0032502 developmental process,-2.5,10,5,21160,135,46,3,6.5,3.6,18293|22348|98660,Ogdh|Slc32a1|Atp1a2,-1.1
+MyList,KEGG Pathway,24,mmu04726,Serotonergic synapse - Mus musculus (house mouse),,-2.5,10,5,21160,136,46,3,6.5,3.6,14682|14683|15461,Gnaq|Gnas|Hras,-1.1
+MyList,GO Biological Processes,19,GO:0007626,locomotory behavior,19_GO:0032501 multicellular organismal process,-2.5,6.5,4.4,21160,282,46,4,8.7,4.2,12799|13385|20614|98660,Cnp|Dlg4|Snap25|Atp1a2,-1.1
+MyList,GO Biological Processes,19,GO:0007596,blood coagulation,19_GO:0032501 multicellular organismal process,-2.5,10,5,21160,137,46,3,6.5,3.6,14674|14683|20910,Gna13|Gnas|Stxbp1,-1.1
+MyList,GO Biological Processes,19,GO:0050817,coagulation,19_GO:0032501 multicellular organismal process,-2.5,10,5,21160,137,46,3,6.5,3.6,14674|14683|20910,Gna13|Gnas|Stxbp1,-1.1
+MyList,GO Biological Processes,19,GO:0072524,pyridine-containing compound metabolic process,19_GO:0009987 cellular process,-2.5,10,5,21160,138,46,3,6.5,3.6,15275|18293|56421,Hk1|Ogdh|Pfkp,-1
+MyList,GO Biological Processes,19,GO:0098876,vesicle-mediated transport to the plasma membrane,19_GO:0051179 localization,-2.5,9.9,4.9,21160,139,46,3,6.5,3.6,12322|18195|19349,Camk2a|Nsf|Rab7,-1
+MyList,KEGG Pathway,24,mmu04371,Apelin signaling pathway - Mus musculus (house mouse),,-2.5,9.9,4.9,21160,139,46,3,6.5,3.6,14674|14682|15461,Gna13|Gnaq|Hras,-1
+MyList,GO Biological Processes,19,GO:0008015,blood circulation,19_GO:0032501 multicellular organismal process,-2.5,4.9,4,21160,472,46,5,11,4.6,14672|14674|14682|14683|98660,Gna11|Gna13|Gnaq|Gnas|Atp1a2,-1
+MyList,GO Biological Processes,19,GO:0007599,hemostasis,19_GO:0065007 biological regulation,-2.5,9.9,4.9,21160,140,46,3,6.5,3.6,14674|14683|20910,Gna13|Gnas|Stxbp1,-1
+MyList,GO Biological Processes,19,GO:0050767,regulation of neurogenesis,19_GO:0032502 developmental process,-2.5,4.9,4,21160,473,46,5,11,4.6,12323|13385|65254|68585|104015,Camk2b|Dlg4|Dpysl5|Rtn4|Synj1,-1
+MyList,KEGG Pathway,24,mmu05017,Spinocerebellar ataxia - Mus musculus (house mouse),,-2.4,9.8,4.9,21160,141,46,3,6.5,3.6,11938|14682|22334,Atp2a2|Gnaq|Vdac2,-1
+MyList,GO Biological Processes,19,GO:0048284,organelle fusion,19_GO:0009987 cellular process,-2.4,9.7,4.9,21160,142,46,3,6.5,3.6,19349|20614|20910,Rab7|Snap25|Stxbp1,-1
+MyList,GO Biological Processes,19,GO:0015980,energy derivation by oxidation of organic compounds,19_GO:0009987 cellular process,-2.4,6.3,4.2,21160,293,46,4,8.7,4.2,11429|14683|18293|18597,Aco2|Gnas|Ogdh|Pdha1,-1
+MyList,Reactome Gene Sets,6,R-MMU-199977,ER to Golgi Anterograde Transport,,-2.4,9.5,4.8,21160,145,46,3,6.5,3.6,13424|18195|22152,Dync1h1|Nsf|Tubb3,-0.99
+MyList,GO Biological Processes,19,GO:0050773,regulation of dendrite development,19_GO:0032502 developmental process,-2.4,9.5,4.8,21160,146,46,3,6.5,3.6,12323|13385|65254,Camk2b|Dlg4|Dpysl5,-0.99
+MyList,GO Biological Processes,19,GO:0006006,glucose metabolic process,19_GO:0009987 cellular process,-2.4,9.5,4.8,21160,146,46,3,6.5,3.6,15275|18597|56421,Hk1|Pdha1|Pfkp,-0.99
+MyList,GO Biological Processes,19,GO:0032984,protein-containing complex disassembly,19_GO:0009987 cellular process,-2.4,9.4,4.8,21160,147,46,3,6.5,3.6,11938|18195|104015,Atp2a2|Nsf|Synj1,-0.98
+MyList,GO Biological Processes,19,GO:0051402,neuron apoptotic process,19_GO:0009987 cellular process,-2.4,9.3,4.7,21160,148,46,3,6.5,3.6,15461|15525|20910,Hras|Hspa4|Stxbp1,-0.97
+MyList,KEGG Pathway,24,mmu04072,Phospholipase D signaling pathway - Mus musculus (house mouse),,-2.4,9.3,4.7,21160,149,46,3,6.5,3.6,14674|14683|15461,Gna13|Gnas|Hras,-0.96
+MyList,GO Biological Processes,19,GO:0045055,regulated exocytosis,19_GO:0051179 localization,-2.3,9,4.6,21160,153,46,3,6.5,3.6,20614|20910|104015,Snap25|Stxbp1|Synj1,-0.93
+MyList,GO Biological Processes,19,GO:0016358,dendrite development,19_GO:0032502 developmental process,-2.3,9,4.6,21160,153,46,3,6.5,3.6,12322|13385|17754,Camk2a|Dlg4|Map1a,-0.93
+MyList,GO Biological Processes,19,GO:0051051,negative regulation of transport,19_GO:0051179 localization,-2.3,4.6,3.8,21160,502,46,5,11,4.6,13385|14682|14687|19349|98660,Dlg4|Gnaq|Gnaz|Rab7|Atp1a2,-0.93
+MyList,GO Biological Processes,19,GO:1901888,regulation of cell junction assembly,19_GO:0050789 regulation of biological process,-2.3,5.9,4.1,21160,311,46,4,8.7,4.2,13385|14674|20614|68585,Dlg4|Gna13|Snap25|Rtn4,-0.92
+MyList,GO Biological Processes,19,GO:0061025,membrane fusion,19_GO:0009987 cellular process,-2.3,8.9,4.6,21160,155,46,3,6.5,3.6,19349|20614|20910,Rab7|Snap25|Stxbp1,-0.92
+MyList,GO Biological Processes,19,GO:0003013,circulatory system process,19_GO:0032501 multicellular organismal process,-2.3,4.6,3.8,21160,505,46,5,11,4.6,14672|14674|14682|14683|98660,Gna11|Gna13|Gnaq|Gnas|Atp1a2,-0.92
+MyList,Reactome Gene Sets,6,R-MMU-6798695,Neutrophil degranulation,,-2.3,4.5,3.8,21160,506,46,5,11,4.6,11772|13424|13629|15519|19349,Ap2a2|Dync1h1|Eef2|Hsp90aa1|Rab7,-0.92
+MyList,KEGG Pathway,24,mmu04150,mTOR signaling pathway - Mus musculus (house mouse),,-2.3,8.7,4.6,21160,158,46,3,6.5,3.6,11964|15461|108664,Atp6v1a|Hras|Atp6v1h,-0.9
+MyList,Reactome Gene Sets,6,R-MMU-69275,G2/M Transition,,-2.3,8.7,4.5,21160,159,46,3,6.5,3.6,13424|15519|22152,Dync1h1|Hsp90aa1|Tubb3,-0.89
+MyList,WikiPathways,27,WP65,Insulin signaling,,-2.3,8.7,4.5,21160,159,46,3,6.5,3.6,15461|20614|20910,Hras|Snap25|Stxbp1,-0.89
+MyList,GO Biological Processes,19,GO:0050769,positive regulation of neurogenesis,19_GO:0032502 developmental process,-2.3,5.8,4,21160,319,46,4,8.7,4.2,12323|13385|68585|104015,Camk2b|Dlg4|Rtn4|Synj1,-0.89
+MyList,Reactome Gene Sets,6,R-MMU-453274,Mitotic G2-G2/M phases,,-2.3,8.6,4.5,21160,161,46,3,6.5,3.6,13424|15519|22152,Dync1h1|Hsp90aa1|Tubb3,-0.88
+MyList,GO Biological Processes,19,GO:0042063,gliogenesis,19_GO:0032502 developmental process,-2.3,5.7,4,21160,322,46,4,8.7,4.2,12799|15461|18823|68585,Cnp|Hras|Plp1|Rtn4,-0.87
+MyList,GO Biological Processes,19,GO:0007189,adenylate cyclase-activating G protein-coupled receptor signaling pathway,19_GO:0050896 response to stimulus,-2.3,8.5,4.5,21160,162,46,3,6.5,3.6,14674|14682|14683,Gna13|Gnaq|Gnas,-0.87
+MyList,GO Biological Processes,19,GO:0043269,regulation of monoatomic ion transport,19_GO:0051179 localization,-2.3,4.4,3.7,21160,521,46,5,11,4.6,12322|14682|14683|18823|98660,Camk2a|Gnaq|Gnas|Plp1|Atp1a2,-0.87
+MyList,GO Biological Processes,19,GO:0071805,potassium ion transmembrane transport,19_GO:0051179 localization,-2.3,8.4,4.4,21160,164,46,3,6.5,3.6,20614|72961|98660,Snap25|Slc17a7|Atp1a2,-0.86
+MyList,GO Biological Processes,19,GO:1904375,regulation of protein localization to cell periphery,19_GO:0051179 localization,-2.3,8.3,4.4,21160,166,46,3,6.5,3.6,12322|12323|15461,Camk2a|Camk2b|Hras,-0.84
+MyList,GO Biological Processes,19,GO:0009060,aerobic respiration,19_GO:0009987 cellular process,-2.2,8.2,4.4,21160,168,46,3,6.5,3.6,11429|18293|18597,Aco2|Ogdh|Pdha1,-0.83
+MyList,GO Biological Processes,19,GO:0055080,monoatomic cation homeostasis,19_GO:0042592 homeostatic process,-2.2,4.3,3.6,21160,536,46,5,11,4.6,11938|11964|19349|98660|235380,Atp2a2|Atp6v1a|Rab7|Atp1a2|Dmxl2,-0.82
+MyList,GO Biological Processes,19,GO:0006937,regulation of muscle contraction,19_GO:0032501 multicellular organismal process,-2.2,8.1,4.3,21160,170,46,3,6.5,3.6,11938|15519|98660,Atp2a2|Hsp90aa1|Atp1a2,-0.82
+MyList,Reactome Gene Sets,6,R-MMU-948021,Transport to the Golgi and subsequent modification,,-2.2,8,4.3,21160,173,46,3,6.5,3.6,13424|18195|22152,Dync1h1|Nsf|Tubb3,-0.8
+MyList,GO Biological Processes,19,GO:0034655,nucleobase-containing compound catabolic process,19_GO:0009987 cellular process,-2.2,5.4,3.8,21160,341,46,4,8.7,4.2,12799|15275|18293|56421,Cnp|Hk1|Ogdh|Pfkp,-0.79
+MyList,GO Biological Processes,19,GO:0050801,monoatomic ion homeostasis,19_GO:0042592 homeostatic process,-2.2,4.2,3.5,21160,549,46,5,11,4.6,11938|11964|19349|98660|235380,Atp2a2|Atp6v1a|Rab7|Atp1a2|Dmxl2,-0.78
+MyList,GO Biological Processes,19,GO:0007613,memory,19_GO:0032501 multicellular organismal process,-2.2,7.8,4.2,21160,177,46,3,6.5,3.6,17754|20614|72961,Map1a|Snap25|Slc17a7,-0.77
+MyList,Reactome Gene Sets,6,R-MMU-6811442,Intra-Golgi and retrograde Golgi-to-ER traffic,,-2.2,7.8,4.2,21160,178,46,3,6.5,3.6,13424|18195|22152,Dync1h1|Nsf|Tubb3,-0.76
+MyList,GO Biological Processes,19,GO:0019318,hexose metabolic process,19_GO:0009987 cellular process,-2.1,7.6,4.2,21160,182,46,3,6.5,3.6,15275|18597|56421,Hk1|Pdha1|Pfkp,-0.74
+MyList,Reactome Gene Sets,6,R-MMU-5617833,Cilium Assembly,,-2.1,7.6,4.2,21160,182,46,3,6.5,3.6,13424|15519|22152,Dync1h1|Hsp90aa1|Tubb3,-0.74
+MyList,GO Biological Processes,19,GO:0033365,protein localization to organelle,19_GO:0051179 localization,-2.1,3.5,3.3,21160,799,46,6,13,5,13385|15275|15519|15525|19349|68585,Dlg4|Hk1|Hsp90aa1|Hspa4|Rab7|Rtn4,-0.73
+MyList,KEGG Pathway,24,mmu05165,Human papillomavirus infection - Mus musculus (house mouse),,-2.1,5.1,3.7,21160,359,46,4,8.7,4.2,11964|14683|15461|108664,Atp6v1a|Gnas|Hras|Atp6v1h,-0.72
+MyList,Reactome Gene Sets,6,R-MMU-68877,Mitotic Prometaphase,,-2.1,7.4,4.1,21160,186,46,3,6.5,3.6,13424|15519|22152,Dync1h1|Hsp90aa1|Tubb3,-0.72
+MyList,GO Biological Processes,19,GO:0072594,establishment of protein localization to organelle,19_GO:0051179 localization,-2.1,5.1,3.7,21160,362,46,4,8.7,4.2,15275|15519|15525|19349,Hk1|Hsp90aa1|Hspa4|Rab7,-0.71
+MyList,GO Biological Processes,19,GO:0031647,regulation of protein stability,19_GO:0065007 biological regulation,-2.1,5,3.6,21160,365,46,4,8.7,4.2,14682|15519|20910|68585,Gnaq|Hsp90aa1|Stxbp1|Rtn4,-0.7
+MyList,GO Biological Processes,19,GO:0099175,regulation of postsynapse organization,19_GO:0050789 regulation of biological process,-2.1,7.2,4,21160,191,46,3,6.5,3.6,12323|14674|68585,Camk2b|Gna13|Rtn4,-0.69
+MyList,GO Biological Processes,19,GO:0051960,regulation of nervous system development,19_GO:0032502 developmental process,-2.1,4,3.4,21160,581,46,5,11,4.6,12323|13385|65254|68585|104015,Camk2b|Dlg4|Dpysl5|Rtn4|Synj1,-0.69
+MyList,GO Biological Processes,19,GO:0042176,regulation of protein catabolic process,19_GO:0050789 regulation of biological process,-2.1,4.9,3.6,21160,374,46,4,8.7,4.2,15519|17754|18195|19349,Hsp90aa1|Map1a|Nsf|Rab7,-0.67
+MyList,GO Biological Processes,19,GO:0045807,positive regulation of endocytosis,19_GO:0051179 localization,-2,6.9,3.9,21160,199,46,3,6.5,3.6,11771|18195|104015,Ap2a1|Nsf|Synj1,-0.64
+MyList,GO Biological Processes,19,GO:0051962,positive regulation of nervous system development,19_GO:0032502 developmental process,-2,4.8,3.5,21160,384,46,4,8.7,4.2,12323|13385|68585|104015,Camk2b|Dlg4|Rtn4|Synj1,-0.63
+MyList,GO Biological Processes,19,GO:0008016,regulation of heart contraction,19_GO:0032501 multicellular organismal process,-2,6.8,3.9,21160,202,46,3,6.5,3.6,11938|15519|98660,Atp2a2|Hsp90aa1|Atp1a2,-0.63
+MyList,Reactome Gene Sets,6,R-MMU-9006931,Signaling by Nuclear Receptors,,-2,6.8,3.9,21160,203,46,3,6.5,3.6,15461|15519|18597,Hras|Hsp90aa1|Pdha1,-0.62
+MyList,KEGG Pathway,24,mmu05205,Proteoglycans in cancer - Mus musculus (house mouse),,-2,6.8,3.9,21160,204,46,3,6.5,3.6,12322|12323|15461,Camk2a|Camk2b|Hras,-0.62
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04721,Synaptic vesicle cycle - Mus musculus (house mouse),,-15,1.2e+02,30,21160,77,19,8,42,11,11771|11772|11964|20614|20910|22348|72961|108664,Ap2a1|Ap2a2|Atp6v1a|Snap25|Stxbp1|Slc32a1|Slc17a7|Atp6v1h,-11
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0099504,synaptic vesicle cycle,19_GO:0051179 localization,-14,59,23,21160,171,19,9,47,11,11771|11772|11964|20614|20910|22348|72961|104015|108664,Ap2a1|Ap2a2|Atp6v1a|Snap25|Stxbp1|Slc32a1|Slc17a7|Synj1|Atp6v1h,-10
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0099003,vesicle-mediated transport in synapse,19_GO:0051179 localization,-13,51,21,21160,196,19,9,47,11,11771|11772|11964|20614|20910|22348|72961|104015|108664,Ap2a1|Ap2a2|Atp6v1a|Snap25|Stxbp1|Slc32a1|Slc17a7|Synj1|Atp6v1h,-9.9
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-112315,Transmission across Chemical Synapses,,-11,45,19,21160,196,19,8,42,11,11771|11772|12322|12323|13385|20910|22348|72961,Ap2a1|Ap2a2|Camk2a|Camk2b|Dlg4|Stxbp1|Slc32a1|Slc17a7,-8.1
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04730,Long-term depression - Mus musculus (house mouse),,-11,1.1e+02,26,21160,60,19,6,32,11,14672|14674|14682|14683|14687|15461,Gna11|Gna13|Gnaq|Gnas|Gnaz|Hras,-7.7
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-399721,"Glutamate binding, activation of AMPA receptors and synaptic plasticity",,-11,2.1e+02,32,21160,27,19,5,26,10,11771|11772|12322|12323|13385,Ap2a1|Ap2a2|Camk2a|Camk2b|Dlg4,-7.5
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-399719,Trafficking of AMPA receptors,,-11,2.1e+02,32,21160,27,19,5,26,10,11771|11772|12322|12323|13385,Ap2a1|Ap2a2|Camk2a|Camk2b|Dlg4,-7.5
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0016188,synaptic vesicle maturation,19_GO:0032502 developmental process,-10,1.9e+02,31,21160,29,19,5,26,10,11964|13385|20910|72961|108664,Atp6v1a|Dlg4|Stxbp1|Slc17a7|Atp6v1h,-7.4
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04911,Insulin secretion - Mus musculus (house mouse),,-10,78,21,21160,86,19,6,32,11,12322|12323|14672|14682|14683|20614,Camk2a|Camk2b|Gna11|Gnaq|Gnas|Snap25,-7
+MyList_MCODE_ALL,WikiPathways,27,WP232,G protein signaling pathways,,-9.9,74,21,21160,90,19,6,32,11,14672|14674|14682|14683|14687|15461,Gna11|Gna13|Gnaq|Gnas|Gnaz|Hras,-6.9
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04912,GnRH signaling pathway - Mus musculus (house mouse),,-9.9,74,21,21160,90,19,6,32,11,12322|12323|14672|14682|14683|15461,Camk2a|Camk2b|Gna11|Gnaq|Gnas|Hras,-6.9
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-112316,Neuronal System,,-9.9,28,15,21160,314,19,8,42,11,11771|11772|12322|12323|13385|20910|22348|72961,Ap2a1|Ap2a2|Camk2a|Camk2b|Dlg4|Stxbp1|Slc32a1|Slc17a7,-6.9
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-382551,Transport of small molecules,,-8.9,16,11,21160,638,19,9,47,11,11771|11772|11964|12322|12323|14683|22348|72961|108664,Ap2a1|Ap2a2|Atp6v1a|Camk2a|Camk2b|Gnas|Slc32a1|Slc17a7|Atp6v1h,-6
+MyList_MCODE_ALL,WikiPathways,27,WP553,Calcium regulation in cardiac cells,,-8.6,46,16,21160,145,19,6,32,11,12322|12323|14672|14682|14683|14687,Camk2a|Camk2b|Gna11|Gnaq|Gnas|Gnaz,-5.8
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0099536,synaptic signaling,19_GO:0050789 regulation of biological process,-8.5,19,12,21160,461,19,8,42,11,13385|14672|14682|20614|20910|72961|104015|235380,Dlg4|Gna11|Gnaq|Snap25|Stxbp1|Slc17a7|Synj1|Dmxl2,-5.8
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04916,Melanogenesis - Mus musculus (house mouse),,-7.6,56,16,21160,100,19,5,26,10,12322|12323|14682|14683|15461,Camk2a|Camk2b|Gnaq|Gnas|Hras,-5
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04925,Aldosterone synthesis and secretion - Mus musculus (house mouse),,-7.6,54,16,21160,103,19,5,26,10,12322|12323|14672|14682|14683,Camk2a|Camk2b|Gna11|Gnaq|Gnas,-5
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04725,Cholinergic synapse - Mus musculus (house mouse),,-7.4,49,15,21160,113,19,5,26,10,12322|12323|14672|14682|15461,Camk2a|Camk2b|Gna11|Gnaq|Hras,-4.8
+MyList_MCODE_ALL,GO Biological Processes,19,GO:1990806,ligand-gated ion channel signaling pathway,19_GO:0050896 response to stimulus,-7.2,99,20,21160,45,19,4,21,9.4,12322|13385|14672|14682,Camk2a|Dlg4|Gna11|Gnaq,-4.7
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0007267,cell-cell signaling,19_GO:0050789 regulation of biological process,-7,12,9.3,21160,719,19,8,42,11,13385|14672|14682|20614|20910|72961|104015|235380,Dlg4|Gna11|Gnaq|Snap25|Stxbp1|Slc17a7|Synj1|Dmxl2,-4.6
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-112314,Neurotransmitter receptors and postsynaptic signal transmission,,-7,42,14,21160,134,19,5,26,10,11771|11772|12322|12323|13385,Ap2a1|Ap2a2|Camk2a|Camk2b|Dlg4,-4.6
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0006836,neurotransmitter transport,19_GO:0051179 localization,-6.8,38,14,21160,145,19,5,26,10,20614|20910|22348|72961|104015,Snap25|Stxbp1|Slc32a1|Slc17a7|Synj1,-4.4
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04921,Oxytocin signaling pathway - Mus musculus (house mouse),,-6.7,36,13,21160,153,19,5,26,10,12322|12323|14682|14683|15461,Camk2a|Camk2b|Gnaq|Gnas|Hras,-4.3
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04961,Endocrine and other factor-regulated calcium reabsorption - Mus musculus (house mouse),,-6.6,73,17,21160,61,19,4,21,9.4,11771|11772|14682|14683,Ap2a1|Ap2a2|Gnaq|Gnas,-4.3
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04934,Cushing syndrome - Mus musculus (house mouse),,-6.6,34,13,21160,162,19,5,26,10,12322|12323|14672|14682|14683,Camk2a|Camk2b|Gna11|Gnaq|Gnas,-4.3
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-8953897,Cellular responses to stimuli,,-6.6,14,9.5,21160,543,19,7,37,11,11964|12322|12323|14672|14682|14683|108664,Atp6v1a|Camk2a|Camk2b|Gna11|Gnaq|Gnas|Atp6v1h,-4.3
+MyList_MCODE_ALL,KEGG Pathway,24,mmu05200,Pathways in cancer - Mus musculus (house mouse),,-6.5,14,9.4,21160,548,19,7,37,11,12322|12323|14672|14674|14682|14683|15461,Camk2a|Camk2b|Gna11|Gna13|Gnaq|Gnas|Hras,-4.2
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04720,Long-term potentiation - Mus musculus (house mouse),,-6.5,66,16,21160,67,19,4,21,9.4,12322|12323|14682|15461,Camk2a|Camk2b|Gnaq|Hras,-4.2
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0016050,vesicle organization,19_GO:0009987 cellular process,-6.4,20,10,21160,342,19,6,32,11,11964|13385|20614|20910|72961|108664,Atp6v1a|Dlg4|Snap25|Stxbp1|Slc17a7|Atp6v1h,-4.1
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0021700,developmental maturation,19_GO:0032502 developmental process,-6.4,19,10,21160,349,19,6,32,11,11964|13385|14682|20910|72961|108664,Atp6v1a|Dlg4|Gnaq|Stxbp1|Slc17a7|Atp6v1h,-4.1
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04971,Gastric acid secretion - Mus musculus (house mouse),,-6.3,59,15,21160,75,19,4,21,9.4,12322|12323|14682|14683,Camk2a|Camk2b|Gnaq|Gnas,-4
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0048168,regulation of neuronal synaptic plasticity,19_GO:0050789 regulation of biological process,-6.2,56,15,21160,79,19,4,21,9.4,12322|12323|13385|15461,Camk2a|Camk2b|Dlg4|Hras,-4
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0097401,synaptic vesicle lumen acidification,19_GO:0042592 homeostatic process,-6.2,1.7e+02,22,21160,20,19,3,16,8.4,11964|72961|108664,Atp6v1a|Slc17a7|Atp6v1h,-4
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0007268,chemical synaptic transmission,19_GO:0050789 regulation of biological process,-6.2,18,9.8,21160,379,19,6,32,11,13385|20614|20910|72961|104015|235380,Dlg4|Snap25|Stxbp1|Slc17a7|Synj1|Dmxl2,-4
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0098916,anterograde trans-synaptic signaling,19_GO:0050789 regulation of biological process,-6.2,18,9.8,21160,379,19,6,32,11,13385|20614|20910|72961|104015|235380,Dlg4|Snap25|Stxbp1|Slc17a7|Synj1|Dmxl2,-4
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-438066,"Unblocking of NMDA receptors, glutamate binding and activation",,-6,1.5e+02,21,21160,22,19,3,16,8.4,12322|12323|13385,Camk2a|Camk2b|Dlg4,-3.9
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04540,Gap junction - Mus musculus (house mouse),,-6,52,14,21160,86,19,4,21,9.4,14672|14682|14683|15461,Gna11|Gnaq|Gnas|Hras,-3.9
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0048167,regulation of synaptic plasticity,19_GO:0050789 regulation of biological process,-6,17,9.5,21160,402,19,6,32,11,12322|12323|13385|15461|20614|20910,Camk2a|Camk2b|Dlg4|Hras|Snap25|Stxbp1,-3.9
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0099537,trans-synaptic signaling,19_GO:0050789 regulation of biological process,-6,17,9.5,21160,403,19,6,32,11,13385|20614|20910|72961|104015|235380,Dlg4|Snap25|Stxbp1|Slc17a7|Synj1|Dmxl2,-3.9
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0016082,synaptic vesicle priming,19_GO:0051179 localization,-6,1.5e+02,21,21160,23,19,3,16,8.4,20614|20910|104015,Snap25|Stxbp1|Synj1,-3.8
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-428930,Thromboxane signalling through TP receptor,,-5.9,1.4e+02,20,21160,24,19,3,16,8.4,14672|14674|14682,Gna11|Gna13|Gnaq,-3.8
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0050796,regulation of insulin secretion,19_GO:0051179 localization,-5.8,24,11,21160,234,19,5,26,10,14672|14682|14683|14687|20614,Gna11|Gnaq|Gnas|Gnaz|Snap25,-3.7
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04713,Circadian entrainment - Mus musculus (house mouse),,-5.8,45,13,21160,99,19,4,21,9.4,12322|12323|14682|14683,Camk2a|Camk2b|Gnaq|Gnas,-3.7
+MyList_MCODE_ALL,GO Biological Processes,19,GO:1903530,regulation of secretion by cell,19_GO:0051179 localization,-5.8,11,8.1,21160,711,19,7,37,11,12322|14672|14682|14683|14687|20614|20910,Camk2a|Gna11|Gnaq|Gnas|Gnaz|Snap25|Stxbp1,-3.7
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0007212,G protein-coupled dopamine receptor signaling pathway,19_GO:0050896 response to stimulus,-5.8,1.2e+02,19,21160,27,19,3,16,8.4,14672|14682|14683,Gna11|Gnaq|Gnas,-3.7
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0099072,regulation of postsynaptic membrane neurotransmitter receptor levels,19_GO:0065007 biological regulation,-5.7,43,13,21160,103,19,4,21,9.4,11771|11772|12322|13385,Ap2a1|Ap2a2|Camk2a|Dlg4,-3.6
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04922,Glucagon signaling pathway - Mus musculus (house mouse),,-5.7,43,13,21160,104,19,4,21,9.4,12322|12323|14682|14683,Camk2a|Camk2b|Gnaq|Gnas,-3.6
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0007188,adenylate cyclase-modulating G protein-coupled receptor signaling pathway,19_GO:0050896 response to stimulus,-5.7,23,10,21160,247,19,5,26,10,14672|14674|14682|14683|14687,Gna11|Gna13|Gnaq|Gnas|Gnaz,-3.6
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04020,Calcium signaling pathway - Mus musculus (house mouse),,-5.6,22,10,21160,254,19,5,26,10,12322|12323|14672|14682|14683,Camk2a|Camk2b|Gna11|Gnaq|Gnas,-3.6
+MyList_MCODE_ALL,KEGG Pathway,24,mmu05163,Human cytomegalovirus infection - Mus musculus (house mouse),,-5.6,22,10,21160,254,19,5,26,10,14672|14674|14682|14683|15461,Gna11|Gna13|Gnaq|Gnas|Hras,-3.6
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-456926,Thrombin signalling through proteinase activated receptors (PARs),,-5.5,1e+02,18,21160,32,19,3,16,8.4,14672|14674|14682,Gna11|Gna13|Gnaq,-3.5
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04724,Glutamatergic synapse - Mus musculus (house mouse),,-5.5,38,12,21160,116,19,4,21,9.4,13385|14682|14683|72961,Dlg4|Gnaq|Gnas|Slc17a7,-3.5
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04928,"Parathyroid hormone synthesis, secretion and action - Mus musculus (house mouse)",,-5.5,38,12,21160,116,19,4,21,9.4,14672|14674|14682|14683,Gna11|Gna13|Gnaq|Gnas,-3.5
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04935,"Growth hormone synthesis, secretion and action - Mus musculus (house mouse)",,-5.5,38,12,21160,117,19,4,21,9.4,14672|14682|14683|15461,Gna11|Gnaq|Gnas|Hras,-3.5
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-392518,Signal amplification,,-5.5,1e+02,17,21160,33,19,3,16,8.4,14672|14674|14682,Gna11|Gna13|Gnaq,-3.5
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0051046,regulation of secretion,19_GO:0051179 localization,-5.5,9.8,7.6,21160,796,19,7,37,11,12322|14672|14682|14683|14687|20614|20910,Camk2a|Gna11|Gnaq|Gnas|Gnaz|Snap25|Stxbp1,-3.5
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0006812,monoatomic cation transport,19_GO:0051179 localization,-5.4,9.8,7.6,21160,798,19,7,37,11,11964|12322|12323|20614|22348|72961|108664,Atp6v1a|Camk2a|Camk2b|Snap25|Slc32a1|Slc17a7|Atp6v1h,-3.5
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-442755,Activation of NMDA receptors and postsynaptic events,,-5.4,98,17,21160,34,19,3,16,8.4,12322|12323|13385,Camk2a|Camk2b|Dlg4,-3.5
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-5673000,RAF activation,,-5.4,98,17,21160,34,19,3,16,8.4,12322|12323|15461,Camk2a|Camk2b|Hras,-3.5
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0090276,regulation of peptide hormone secretion,19_GO:0051179 localization,-5.4,20,9.6,21160,278,19,5,26,10,14672|14682|14683|14687|20614,Gna11|Gnaq|Gnas|Gnaz|Snap25,-3.4
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0032024,positive regulation of insulin secretion,19_GO:0051179 localization,-5.4,37,12,21160,122,19,4,21,9.4,14672|14682|14683|20614,Gna11|Gnaq|Gnas|Snap25,-3.4
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0002791,regulation of peptide secretion,19_GO:0051179 localization,-5.4,20,9.5,21160,283,19,5,26,10,14672|14682|14683|14687|20614,Gna11|Gnaq|Gnas|Gnaz|Snap25,-3.4
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0090087,regulation of peptide transport,19_GO:0051179 localization,-5.4,20,9.4,21160,285,19,5,26,10,14672|14682|14683|14687|20614,Gna11|Gnaq|Gnas|Gnaz|Snap25,-3.4
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04750,Inflammatory mediator regulation of TRP channels - Mus musculus (house mouse),,-5.3,34,11,21160,130,19,4,21,9.4,12322|12323|14682|14683,Camk2a|Camk2b|Gnaq|Gnas,-3.4
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0048169,regulation of long-term neuronal synaptic plasticity,19_GO:0050789 regulation of biological process,-5.3,86,16,21160,39,19,3,16,8.4,12323|13385|15461,Camk2b|Dlg4|Hras,-3.3
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04728,Dopaminergic synapse - Mus musculus (house mouse),,-5.2,33,11,21160,136,19,4,21,9.4,12322|12323|14682|14683,Camk2a|Camk2b|Gnaq|Gnas,-3.3
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-388396,GPCR downstream signalling,,-5.2,12,7.9,21160,556,19,6,32,11,14672|14674|14682|14683|14687|15461,Gna11|Gna13|Gnaq|Gnas|Gnaz|Hras,-3.3
+MyList_MCODE_ALL,GO Biological Processes,19,GO:1903829,positive regulation of protein localization,19_GO:0051179 localization,-5.2,12,7.9,21160,556,19,6,32,11,13385|14672|14682|14683|15461|20614,Dlg4|Gna11|Gnaq|Gnas|Hras|Snap25,-3.3
+MyList_MCODE_ALL,GO Biological Processes,19,GO:1903351,cellular response to dopamine,19_GO:0050896 response to stimulus,-5.2,80,15,21160,42,19,3,16,8.4,14672|14682|14683,Gna11|Gnaq|Gnas,-3.2
+MyList_MCODE_ALL,GO Biological Processes,19,GO:1902600,proton transmembrane transport,19_GO:0051179 localization,-5.1,31,11,21160,143,19,4,21,9.4,11964|22348|72961|108664,Atp6v1a|Slc32a1|Slc17a7|Atp6v1h,-3.2
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04270,Vascular smooth muscle contraction - Mus musculus (house mouse),,-5.1,31,11,21160,144,19,4,21,9.4,14672|14674|14682|14683,Gna11|Gna13|Gnaq|Gnas,-3.2
+MyList_MCODE_ALL,GO Biological Processes,19,GO:1903350,response to dopamine,19_GO:0050896 response to stimulus,-5.1,76,15,21160,44,19,3,16,8.4,14672|14682|14683,Gna11|Gnaq|Gnas,-3.2
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-9856530,High laminar flow shear stress activates signaling by PIEZO1 and PECAM1:CDH5:KDR in endothelial cells,,-5.1,74,15,21160,45,19,3,16,8.4,14672|14682|14683,Gna11|Gnaq|Gnas,-3.2
+MyList_MCODE_ALL,WikiPathways,27,WP385,Myometrial relaxation and contraction pathways,,-5.1,30,11,21160,150,19,4,21,9.4,12322|12323|14682|14683,Camk2a|Camk2b|Gnaq|Gnas,-3.2
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-372790,Signaling by GPCR,,-5,11,7.6,21160,589,19,6,32,11,14672|14674|14682|14683|14687|15461,Gna11|Gna13|Gnaq|Gnas|Gnaz|Hras,-3.2
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0071870,cellular response to catecholamine stimulus,19_GO:0050896 response to stimulus,-5,73,15,21160,46,19,3,16,8.4,14672|14682|14683,Gna11|Gnaq|Gnas,-3.2
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0071868,cellular response to monoamine stimulus,19_GO:0050896 response to stimulus,-5,73,15,21160,46,19,3,16,8.4,14672|14682|14683,Gna11|Gnaq|Gnas,-3.2
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-112310,Neurotransmitter release cycle,,-5,71,14,21160,47,19,3,16,8.4,20910|22348|72961,Stxbp1|Slc32a1|Slc17a7,-3.1
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04261,Adrenergic signaling in cardiomyocytes - Mus musculus (house mouse),,-5,29,10,21160,156,19,4,21,9.4,12322|12323|14682|14683,Camk2a|Camk2b|Gnaq|Gnas,-3.1
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0090277,positive regulation of peptide hormone secretion,19_GO:0051179 localization,-5,28,10,21160,157,19,4,21,9.4,14672|14682|14683|20614,Gna11|Gnaq|Gnas|Snap25,-3.1
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0050708,regulation of protein secretion,19_GO:0051179 localization,-5,16,8.5,21160,343,19,5,26,10,14672|14682|14683|14687|20614,Gna11|Gnaq|Gnas|Gnaz|Snap25,-3.1
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0002793,positive regulation of peptide secretion,19_GO:0051179 localization,-4.9,28,10,21160,161,19,4,21,9.4,14672|14682|14683|20614,Gna11|Gnaq|Gnas|Snap25,-3.1
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0046883,regulation of hormone secretion,19_GO:0051179 localization,-4.9,16,8.4,21160,350,19,5,26,10,14672|14682|14683|14687|20614,Gna11|Gnaq|Gnas|Gnaz|Snap25,-3.1
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0007215,glutamate receptor signaling pathway,19_GO:0050896 response to stimulus,-4.9,66,14,21160,51,19,3,16,8.4,12322|13385|14682,Camk2a|Dlg4|Gnaq,-3
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0071869,response to catecholamine,19_GO:0050896 response to stimulus,-4.9,64,14,21160,52,19,3,16,8.4,14672|14682|14683,Gna11|Gnaq|Gnas,-3
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-983712,Ion channel transport,,-4.9,27,10,21160,167,19,4,21,9.4,11964|12322|12323|108664,Atp6v1a|Camk2a|Camk2b|Atp6v1h,-3
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0070201,regulation of establishment of protein localization,19_GO:0051179 localization,-4.9,11,7.3,21160,635,19,6,32,11,14672|14682|14683|14687|15461|20614,Gna11|Gnaq|Gnas|Gnaz|Hras|Snap25,-3
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0071867,response to monoamine,19_GO:0050896 response to stimulus,-4.9,63,14,21160,53,19,3,16,8.4,14672|14682|14683,Gna11|Gnaq|Gnas,-3
+MyList_MCODE_ALL,WikiPathways,27,WP572,EGFR1 signaling pathway,,-4.8,25,9.7,21160,175,19,4,21,9.4,11771|12322|15461|20910,Ap2a1|Camk2a|Hras|Stxbp1,-3
+MyList_MCODE_ALL,GO Biological Processes,19,GO:1904951,positive regulation of establishment of protein localization,19_GO:0051179 localization,-4.8,15,8.1,21160,375,19,5,26,10,14672|14682|14683|15461|20614,Gna11|Gnaq|Gnas|Hras|Snap25,-3
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0048488,synaptic vesicle endocytosis,19_GO:0051179 localization,-4.7,58,13,21160,58,19,3,16,8.4,11771|11772|104015,Ap2a1|Ap2a2|Synj1,-2.9
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-422356,Regulation of insulin secretion,,-4.7,57,13,21160,59,19,3,16,8.4,14672|14682|14683,Gna11|Gnaq|Gnas,-2.9
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-187037,Signaling by NTRK1 (TRKA),,-4.7,57,13,21160,59,19,3,16,8.4,11771|11772|15461,Ap2a1|Ap2a2|Hras,-2.9
+MyList_MCODE_ALL,GO Biological Processes,19,GO:1903532,positive regulation of secretion by cell,19_GO:0051179 localization,-4.7,14,7.8,21160,400,19,5,26,10,14672|14682|14683|20614|20910,Gna11|Gnaq|Gnas|Snap25|Stxbp1,-2.9
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-9006934,Signaling by Receptor Tyrosine Kinases,,-4.7,14,7.8,21160,400,19,5,26,10,11771|11772|11964|15461|108664,Ap2a1|Ap2a2|Atp6v1a|Hras|Atp6v1h,-2.9
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0050803,regulation of synapse structure or activity,19_GO:0065007 biological regulation,-4.7,14,7.8,21160,401,19,5,26,10,12323|13385|14674|20614|72961,Camk2b|Dlg4|Gna13|Snap25|Slc17a7,-2.9
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0030168,platelet activation,19_GO:0032501 multicellular organismal process,-4.6,53,12,21160,63,19,3,16,8.4,14674|14683|20910,Gna13|Gnas|Stxbp1,-2.8
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04929,GnRH secretion - Mus musculus (house mouse),,-4.6,53,12,21160,63,19,3,16,8.4,14672|14682|15461,Gna11|Gnaq|Hras,-2.8
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0050714,positive regulation of protein secretion,19_GO:0051179 localization,-4.6,23,9.2,21160,195,19,4,21,9.4,14672|14682|14683|20614,Gna11|Gnaq|Gnas|Snap25,-2.8
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-9855142,Cellular responses to mechanical stimuli,,-4.6,52,12,21160,64,19,3,16,8.4,14672|14682|14683,Gna11|Gnaq|Gnas,-2.8
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-9860931,Response of endothelial cells to shear stress,,-4.6,52,12,21160,64,19,3,16,8.4,14672|14682|14683,Gna11|Gnaq|Gnas,-2.8
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0140238,presynaptic endocytosis,19_GO:0051179 localization,-4.6,52,12,21160,64,19,3,16,8.4,11771|11772|104015,Ap2a1|Ap2a2|Synj1,-2.8
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0031503,protein-containing complex localization,19_GO:0051179 localization,-4.6,22,9.1,21160,198,19,4,21,9.4,11771|11772|12322|13385,Ap2a1|Ap2a2|Camk2a|Dlg4,-2.8
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0046887,positive regulation of hormone secretion,19_GO:0051179 localization,-4.6,22,9,21160,202,19,4,21,9.4,14672|14682|14683|20614,Gna11|Gnaq|Gnas|Snap25,-2.8
+MyList_MCODE_ALL,KEGG Pathway,24,mmu05031,Amphetamine addiction - Mus musculus (house mouse),,-4.5,48,12,21160,69,19,3,16,8.4,12322|12323|14683,Camk2a|Camk2b|Gnas,-2.7
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0036465,synaptic vesicle recycling,19_GO:0051179 localization,-4.5,48,12,21160,69,19,3,16,8.4,11771|11772|104015,Ap2a1|Ap2a2|Synj1,-2.7
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-163685,Integration of energy metabolism,,-4.5,48,12,21160,70,19,3,16,8.4,14672|14682|14683,Gna11|Gnaq|Gnas,-2.7
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0016079,synaptic vesicle exocytosis,19_GO:0051179 localization,-4.5,48,12,21160,70,19,3,16,8.4,20614|20910|104015,Snap25|Stxbp1|Synj1,-2.7
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-166520,Signaling by NTRKs,,-4.5,47,12,21160,71,19,3,16,8.4,11771|11772|15461,Ap2a1|Ap2a2|Hras,-2.7
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04927,Cortisol synthesis and secretion - Mus musculus (house mouse),,-4.5,46,12,21160,72,19,3,16,8.4,14672|14682|14683,Gna11|Gnaq|Gnas,-2.7
+MyList_MCODE_ALL,WikiPathways,27,WP5298,Dravet syndrome Scn1a A1783V point mutation model,,-4.4,46,11,21160,73,19,3,16,8.4,12322|20910|72961,Camk2a|Stxbp1|Slc17a7,-2.7
+MyList_MCODE_ALL,KEGG Pathway,24,mmu05214,Glioma - Mus musculus (house mouse),,-4.4,45,11,21160,74,19,3,16,8.4,12322|12323|15461,Camk2a|Camk2b|Hras,-2.7
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0140029,exocytic process,19_GO:0051179 localization,-4.4,45,11,21160,74,19,3,16,8.4,20614|20910|104015,Snap25|Stxbp1|Synj1,-2.7
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0051047,positive regulation of secretion,19_GO:0051179 localization,-4.4,12,7.3,21160,452,19,5,26,10,14672|14682|14683|20614|20910,Gna11|Gnaq|Gnas|Snap25|Stxbp1,-2.6
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0050804,modulation of chemical synaptic transmission,19_GO:0050789 regulation of biological process,-4.4,8.7,6.5,21160,772,19,6,32,11,12322|12323|13385|15461|20614|20910,Camk2a|Camk2b|Dlg4|Hras|Snap25|Stxbp1,-2.6
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0099177,regulation of trans-synaptic signaling,19_GO:0050789 regulation of biological process,-4.4,8.6,6.5,21160,773,19,6,32,11,12322|12323|13385|15461|20614|20910,Camk2a|Camk2b|Dlg4|Hras|Snap25|Stxbp1,-2.6
+MyList_MCODE_ALL,GO Biological Processes,19,GO:1905475,regulation of protein localization to membrane,19_GO:0051179 localization,-4.3,19,8.4,21160,230,19,4,21,9.4,12322|12323|13385|15461,Camk2a|Camk2b|Dlg4|Hras,-2.6
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0008217,regulation of blood pressure,19_GO:0032501 multicellular organismal process,-4.3,19,8.3,21160,236,19,4,21,9.4,14672|14674|14682|14683,Gna11|Gna13|Gnaq|Gnas,-2.6
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0070050,neuron cellular homeostasis,19_GO:0042592 homeostatic process,-4.3,41,11,21160,82,19,3,16,8.4,11964|72961|108664,Atp6v1a|Slc17a7|Atp6v1h,-2.6
+MyList_MCODE_ALL,KEGG Pathway,24,mmu05022,Pathways of neurodegeneration - multiple diseases - Mus musculus (house mouse),,-4.3,12,7,21160,481,19,5,26,10,12322|12323|13385|14682|15461,Camk2a|Camk2b|Dlg4|Gnaq|Hras,-2.5
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04012,ErbB signaling pathway - Mus musculus (house mouse),,-4.3,40,11,21160,84,19,3,16,8.4,12322|12323|15461,Camk2a|Camk2b|Hras,-2.5
+MyList_MCODE_ALL,GO Biological Processes,19,GO:1904888,cranial skeletal system development,19_GO:0032502 developmental process,-4.2,39,11,21160,86,19,3,16,8.4,14672|14682|14683,Gna11|Gnaq|Gnas,-2.5
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0006897,endocytosis,19_GO:0051179 localization,-4.2,11,6.9,21160,500,19,5,26,10,11771|11772|15461|104015|108664,Ap2a1|Ap2a2|Hras|Synj1|Atp6v1h,-2.5
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-5673001,RAF/MAP kinase cascade,,-4.2,18,8,21160,250,19,4,21,9.4,12322|12323|13385|15461,Camk2a|Camk2b|Dlg4|Hras,-2.5
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-109582,Hemostasis,,-4.2,11,6.8,21160,505,19,5,26,10,14672|14674|14682|14683|15461,Gna11|Gna13|Gnaq|Gnas|Hras,-2.5
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-5684996,MAPK1/MAPK3 signaling,,-4.2,17,7.9,21160,256,19,4,21,9.4,12322|12323|13385|15461,Camk2a|Camk2b|Dlg4|Hras,-2.5
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0099643,signal release from synapse,19_GO:0051179 localization,-4.1,35,10,21160,96,19,3,16,8.4,20614|20910|104015,Snap25|Stxbp1|Synj1,-2.4
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0007269,neurotransmitter secretion,19_GO:0051179 localization,-4.1,35,10,21160,96,19,3,16,8.4,20614|20910|104015,Snap25|Stxbp1|Synj1,-2.4
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-5683057,MAPK family signaling cascades,,-4,16,7.5,21160,279,19,4,21,9.4,12322|12323|13385|15461,Camk2a|Camk2b|Dlg4|Hras,-2.3
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0051223,regulation of protein transport,19_GO:0051179 localization,-4,10,6.5,21160,550,19,5,26,10,14672|14682|14683|14687|20614,Gna11|Gnaq|Gnas|Gnaz|Snap25,-2.3
+MyList_MCODE_ALL,KEGG Pathway,24,mmu05142,Chagas disease - Mus musculus (house mouse),,-4,32,9.6,21160,103,19,3,16,8.4,14672|14682|14683,Gna11|Gnaq|Gnas,-2.3
+MyList_MCODE_ALL,WikiPathways,27,WP539,Wnt signaling pathway,,-3.9,31,9.4,21160,108,19,3,16,8.4,12322|12323|13385,Camk2a|Camk2b|Dlg4,-2.3
+MyList_MCODE_ALL,KEGG Pathway,24,mmu05146,Amoebiasis - Mus musculus (house mouse),,-3.9,31,9.4,21160,108,19,3,16,8.4,14672|14682|14683,Gna11|Gnaq|Gnas,-2.3
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0048858,cell projection morphogenesis,19_GO:0032502 developmental process,-3.9,9.7,6.3,21160,575,19,5,26,10,12322|12323|13385|20614|20910,Camk2a|Camk2b|Dlg4|Snap25|Stxbp1,-2.2
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-3858494,Beta-catenin independent WNT signaling,,-3.9,30,9.2,21160,111,19,3,16,8.4,11771|11772|12322,Ap2a1|Ap2a2|Camk2a,-2.2
+MyList_MCODE_ALL,KEGG Pathway,24,mmu05016,Huntington disease - Mus musculus (house mouse),,-3.8,14,7.1,21160,308,19,4,21,9.4,11771|11772|13385|14682,Ap2a1|Ap2a2|Dlg4|Gnaq,-2.2
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0051222,positive regulation of protein transport,19_GO:0051179 localization,-3.8,14,7,21160,318,19,4,21,9.4,14672|14682|14683|20614,Gna11|Gnaq|Gnas|Snap25,-2.1
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04722,Neurotrophin signaling pathway - Mus musculus (house mouse),,-3.8,28,8.8,21160,121,19,3,16,8.4,12322|12323|15461,Camk2a|Camk2b|Hras,-2.1
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0050806,positive regulation of synaptic transmission,19_GO:0048518 positive regulation of biological process,-3.7,14,6.9,21160,327,19,4,21,9.4,12323|13385|20614|20910,Camk2b|Dlg4|Snap25|Stxbp1,-2.1
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04071,Sphingolipid signaling pathway - Mus musculus (house mouse),,-3.7,27,8.6,21160,126,19,3,16,8.4,14674|14682|15461,Gna13|Gnaq|Hras,-2.1
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04611,Platelet activation - Mus musculus (house mouse),,-3.7,27,8.6,21160,126,19,3,16,8.4,14674|14682|14683,Gna13|Gnaq|Gnas,-2.1
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0060627,regulation of vesicle-mediated transport,19_GO:0051179 localization,-3.7,8.9,6,21160,628,19,5,26,10,11771|13385|20910|72961|104015,Ap2a1|Dlg4|Stxbp1|Slc17a7|Synj1,-2.1
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0098662,inorganic cation transmembrane transport,19_GO:0051179 localization,-3.7,8.8,6,21160,632,19,5,26,10,11964|20614|22348|72961|108664,Atp6v1a|Snap25|Slc32a1|Slc17a7|Atp6v1h,-2.1
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0098655,monoatomic cation transmembrane transport,19_GO:0051179 localization,-3.7,8.7,5.9,21160,642,19,5,26,10,11964|20614|22348|72961|108664,Atp6v1a|Snap25|Slc32a1|Slc17a7|Atp6v1h,-2.1
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04915,Estrogen signaling pathway - Mus musculus (house mouse),,-3.7,25,8.3,21160,134,19,3,16,8.4,14682|14683|15461,Gnaq|Gnas|Hras,-2
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04726,Serotonergic synapse - Mus musculus (house mouse),,-3.6,25,8.3,21160,136,19,3,16,8.4,14682|14683|15461,Gnaq|Gnas|Hras,-2
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0007596,blood coagulation,19_GO:0032501 multicellular organismal process,-3.6,24,8.2,21160,137,19,3,16,8.4,14674|14683|20910,Gna13|Gnas|Stxbp1,-2
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0050817,coagulation,19_GO:0032501 multicellular organismal process,-3.6,24,8.2,21160,137,19,3,16,8.4,14674|14683|20910,Gna13|Gnas|Stxbp1,-2
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0030100,regulation of endocytosis,19_GO:0051179 localization,-3.6,13,6.6,21160,352,19,4,21,9.4,11771|13385|72961|104015,Ap2a1|Dlg4|Slc17a7|Synj1,-2
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04371,Apelin signaling pathway - Mus musculus (house mouse),,-3.6,24,8.2,21160,139,19,3,16,8.4,14674|14682|15461,Gna13|Gnaq|Hras,-2
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0007599,hemostasis,19_GO:0065007 biological regulation,-3.6,24,8.1,21160,140,19,3,16,8.4,14674|14683|20910,Gna13|Gnas|Stxbp1,-2
+MyList_MCODE_ALL,KEGG Pathway,24,mmu05165,Human papillomavirus infection - Mus musculus (house mouse),,-3.6,12,6.5,21160,359,19,4,21,9.4,11964|14683|15461|108664,Atp6v1a|Gnas|Hras|Atp6v1h,-2
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0010817,regulation of hormone levels,19_GO:0065007 biological regulation,-3.6,8.2,5.7,21160,676,19,5,26,10,14672|14682|14683|14687|20614,Gna11|Gnaq|Gnas|Gnaz|Snap25,-2
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0098657,import into cell,19_GO:0051179 localization,-3.6,8.2,5.7,21160,683,19,5,26,10,11771|11772|15461|104015|108664,Ap2a1|Ap2a2|Hras|Synj1|Atp6v1h,-2
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0048259,regulation of receptor-mediated endocytosis,19_GO:0051179 localization,-3.6,23,8,21160,144,19,3,16,8.4,11771|13385|104015,Ap2a1|Dlg4|Synj1,-2
+MyList_MCODE_ALL,GO Biological Processes,19,GO:1901699,cellular response to nitrogen compound,19_GO:0050896 response to stimulus,-3.5,8,5.6,21160,696,19,5,26,10,12322|14672|14682|14683|15461,Camk2a|Gna11|Gnaq|Gnas|Hras,-1.9
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04072,Phospholipase D signaling pathway - Mus musculus (house mouse),,-3.5,22,7.9,21160,149,19,3,16,8.4,14674|14683|15461,Gna13|Gnas|Hras,-1.9
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04723,Retrograde endocannabinoid signaling - Mus musculus (house mouse),,-3.5,22,7.8,21160,153,19,3,16,8.4,14682|22348|72961,Gnaq|Slc32a1|Slc17a7,-1.9
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0045055,regulated exocytosis,19_GO:0051179 localization,-3.5,22,7.8,21160,153,19,3,16,8.4,20614|20910|104015,Snap25|Stxbp1|Synj1,-1.9
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04150,mTOR signaling pathway - Mus musculus (house mouse),,-3.4,21,7.6,21160,158,19,3,16,8.4,11964|15461|108664,Atp6v1a|Hras|Atp6v1h,-1.9
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0050807,regulation of synapse organization,19_GO:0050789 regulation of biological process,-3.4,11,6.2,21160,393,19,4,21,9.4,12323|13385|14674|20614,Camk2b|Dlg4|Gna13|Snap25,-1.9
+MyList_MCODE_ALL,WikiPathways,27,WP65,Insulin signaling,,-3.4,21,7.6,21160,159,19,3,16,8.4,15461|20614|20910,Hras|Snap25|Stxbp1,-1.9
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0098660,inorganic ion transmembrane transport,19_GO:0051179 localization,-3.4,7.6,5.5,21160,728,19,5,26,10,11964|20614|22348|72961|108664,Atp6v1a|Snap25|Slc32a1|Slc17a7|Atp6v1h,-1.9
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0007189,adenylate cyclase-activating G protein-coupled receptor signaling pathway,19_GO:0050896 response to stimulus,-3.4,21,7.5,21160,162,19,3,16,8.4,14674|14682|14683,Gna13|Gnaq|Gnas,-1.8
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0050890,cognition,19_GO:0032501 multicellular organismal process,-3.4,11,6.1,21160,403,19,4,21,9.4,14683|20614|72961|104015,Gnas|Snap25|Slc17a7|Synj1,-1.8
+MyList_MCODE_ALL,GO Biological Processes,19,GO:1904375,regulation of protein localization to cell periphery,19_GO:0051179 localization,-3.4,20,7.4,21160,166,19,3,16,8.4,12322|12323|15461,Camk2a|Camk2b|Hras,-1.8
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04022,cGMP-PKG signaling pathway - Mus musculus (house mouse),,-3.3,19,7.3,21160,172,19,3,16,8.4,14672|14674|14682,Gna11|Gna13|Gnaq,-1.8
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0051650,establishment of vesicle localization,19_GO:0051179 localization,-3.3,19,7.2,21160,175,19,3,16,8.4,20614|20910|104015,Snap25|Stxbp1|Synj1,-1.8
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0120035,regulation of plasma membrane bounded cell projection organization,19_GO:0050789 regulation of biological process,-3.3,7.1,5.2,21160,782,19,5,26,10,11771|12323|13385|15461|20614,Ap2a1|Camk2b|Dlg4|Hras|Snap25,-1.7
+MyList_MCODE_ALL,KEGG Pathway,24,mmu05152,Tuberculosis - Mus musculus (house mouse),,-3.3,19,7.1,21160,180,19,3,16,8.4,12322|12323|108664,Camk2a|Camk2b|Atp6v1h,-1.7
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0034220,monoatomic ion transmembrane transport,19_GO:0051179 localization,-3.3,7.1,5.2,21160,788,19,5,26,10,11964|20614|22348|72961|108664,Atp6v1a|Snap25|Slc32a1|Slc17a7|Atp6v1h,-1.7
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04360,Axon guidance - Mus musculus (house mouse),,-3.3,18,7.1,21160,181,19,3,16,8.4,12322|12323|15461,Camk2a|Camk2b|Hras,-1.7
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0031344,regulation of cell projection organization,19_GO:0050789 regulation of biological process,-3.2,7,5.2,21160,798,19,5,26,10,11771|12323|13385|15461|20614,Ap2a1|Camk2b|Dlg4|Hras|Snap25,-1.7
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0051648,vesicle localization,19_GO:0051179 localization,-3.2,17,6.9,21160,191,19,3,16,8.4,20614|20910|104015,Snap25|Stxbp1|Synj1,-1.7
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0031346,positive regulation of cell projection organization,19_GO:0048518 positive regulation of biological process,-3.2,9.6,5.6,21160,465,19,4,21,9.4,11771|12323|13385|15461,Ap2a1|Camk2b|Dlg4|Hras,-1.6
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-416476,G alpha (q) signalling events,,-3.2,17,6.7,21160,197,19,3,16,8.4,14672|14682|15461,Gna11|Gnaq|Hras,-1.6
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0008015,blood circulation,19_GO:0032501 multicellular organismal process,-3.1,9.4,5.6,21160,472,19,4,21,9.4,14672|14674|14682|14683,Gna11|Gna13|Gnaq|Gnas,-1.6
+MyList_MCODE_ALL,KEGG Pathway,24,mmu05205,Proteoglycans in cancer - Mus musculus (house mouse),,-3.1,16,6.6,21160,204,19,3,16,8.4,12322|12323|15461,Camk2a|Camk2b|Hras,-1.6
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-2262752,Cellular responses to stress,,-3.1,9.3,5.5,21160,480,19,4,21,9.4,11964|12322|12323|108664,Atp6v1a|Camk2a|Camk2b|Atp6v1h,-1.6
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0051963,regulation of synapse assembly,19_GO:0032502 developmental process,-3.1,16,6.5,21160,209,19,3,16,8.4,13385|14674|20614,Dlg4|Gna13|Snap25,-1.6
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-1266738,Developmental Biology,,-3.1,9.1,5.4,21160,489,19,4,21,9.4,11771|11772|13385|15461,Ap2a1|Ap2a2|Dlg4|Hras,-1.6
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04015,Rap1 signaling pathway - Mus musculus (house mouse),,-3.1,16,6.4,21160,214,19,3,16,8.4,14682|14683|15461,Gnaq|Gnas|Hras,-1.6
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-195721,Signaling by WNT,,-3.1,16,6.4,21160,214,19,3,16,8.4,11771|11772|12322,Ap2a1|Ap2a2|Camk2a,-1.6
+MyList_MCODE_ALL,KEGG Pathway,24,mmu05417,Lipid and atherosclerosis - Mus musculus (house mouse),,-3,15,6.4,21160,217,19,3,16,8.4,12322|12323|15461,Camk2a|Camk2b|Hras,-1.5
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0003013,circulatory system process,19_GO:0032501 multicellular organismal process,-3,8.8,5.3,21160,505,19,4,21,9.4,14672|14674|14682|14683,Gna11|Gna13|Gnaq|Gnas,-1.5
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0048667,cell morphogenesis involved in neuron differentiation,19_GO:0032502 developmental process,-3,8.8,5.3,21160,509,19,4,21,9.4,12322|13385|20614|20910,Camk2a|Dlg4|Snap25|Stxbp1,-1.5
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04024,cAMP signaling pathway - Mus musculus (house mouse),,-3,15,6.3,21160,224,19,3,16,8.4,12322|12323|14683,Camk2a|Camk2b|Gnas,-1.5
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0023061,signal release,19_GO:0051179 localization,-3,15,6.3,21160,225,19,3,16,8.4,20614|20910|104015,Snap25|Stxbp1|Synj1,-1.5
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0042391,regulation of membrane potential,19_GO:0065007 biological regulation,-3,8.5,5.2,21160,524,19,4,21,9.4,13385|14672|14682|72961,Dlg4|Gna11|Gnaq|Slc17a7,-1.5
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-422475,Axon guidance,,-2.9,14,6.1,21160,238,19,3,16,8.4,11771|11772|15461,Ap2a1|Ap2a2|Hras,-1.4
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-9675108,Nervous system development,,-2.9,14,6,21160,239,19,3,16,8.4,11771|11772|15461,Ap2a1|Ap2a2|Hras,-1.4
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-76002,"Platelet activation, signaling and aggregation",,-2.9,14,6,21160,239,19,3,16,8.4,14672|14674|14682,Gna11|Gna13|Gnaq,-1.4
+MyList_MCODE_ALL,KEGG Pathway,24,mmu05170,Human immunodeficiency virus 1 infection - Mus musculus (house mouse),,-2.9,14,6,21160,241,19,3,16,8.4,14672|14682|15461,Gna11|Gnaq|Hras,-1.4
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0010720,positive regulation of cell development,19_GO:0032502 developmental process,-2.9,8,5,21160,559,19,4,21,9.4,12323|13385|14683|104015,Camk2b|Dlg4|Gnas|Synj1,-1.4
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0048812,neuron projection morphogenesis,19_GO:0032502 developmental process,-2.9,8,5,21160,559,19,4,21,9.4,12322|13385|20614|20910,Camk2a|Dlg4|Snap25|Stxbp1,-1.4
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0006887,exocytosis,19_GO:0051179 localization,-2.9,13,5.9,21160,251,19,3,16,8.4,20614|20910|104015,Snap25|Stxbp1|Synj1,-1.4
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0120039,plasma membrane bounded cell projection morphogenesis,19_GO:0032502 developmental process,-2.8,7.9,5,21160,565,19,4,21,9.4,12322|13385|20614|20910,Camk2a|Dlg4|Snap25|Stxbp1,-1.4
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0010975,regulation of neuron projection development,19_GO:0032502 developmental process,-2.8,7.7,4.9,21160,578,19,4,21,9.4,11771|12323|13385|20614,Ap2a1|Camk2b|Dlg4|Snap25,-1.3
+MyList_MCODE_ALL,KEGG Pathway,24,mmu04144,Endocytosis - Mus musculus (house mouse),,-2.8,12,5.6,21160,270,19,3,16,8.4,11771|11772|15461,Ap2a1|Ap2a2|Hras,-1.3
+MyList_MCODE_ALL,KEGG Pathway,24,mmu05012,Parkinson disease - Mus musculus (house mouse),,-2.7,12,5.6,21160,274,19,3,16,8.4,12322|12323|14683,Camk2a|Camk2b|Gnas,-1.3
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0022604,regulation of cell morphogenesis,19_GO:0032502 developmental process,-2.7,12,5.5,21160,283,19,3,16,8.4,12323|13385|14674,Camk2b|Dlg4|Gna13,-1.3
+MyList_MCODE_ALL,GO Biological Processes,19,GO:1990778,protein localization to cell periphery,19_GO:0051179 localization,-2.7,12,5.5,21160,283,19,3,16,8.4,12322|13385|20910,Camk2a|Dlg4|Stxbp1,-1.3
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0042060,wound healing,19_GO:0050896 response to stimulus,-2.7,12,5.4,21160,290,19,3,16,8.4,14674|14683|20910,Gna13|Gnas|Stxbp1,-1.2
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0030001,metal ion transport,19_GO:0051179 localization,-2.6,6.7,4.5,21160,662,19,4,21,9.4,12322|12323|20614|72961,Camk2a|Camk2b|Snap25|Slc17a7,-1.2
+MyList_MCODE_ALL,GO Biological Processes,19,GO:1901888,regulation of cell junction assembly,19_GO:0050789 regulation of biological process,-2.6,11,5.2,21160,311,19,3,16,8.4,13385|14674|20614,Dlg4|Gna13|Snap25,-1.1
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0071375,cellular response to peptide hormone stimulus,19_GO:0050896 response to stimulus,-2.6,11,5.1,21160,317,19,3,16,8.4,12322|14683|15461,Camk2a|Gnas|Hras,-1.1
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0050769,positive regulation of neurogenesis,19_GO:0032502 developmental process,-2.6,10,5.1,21160,319,19,3,16,8.4,12323|13385|104015,Camk2b|Dlg4|Synj1,-1.1
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0019725,cellular homeostasis,19_GO:0042592 homeostatic process,-2.4,6.1,4.2,21160,732,19,4,21,9.4,11964|72961|108664|235380,Atp6v1a|Slc17a7|Atp6v1h|Dmxl2,-1
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0007611,learning or memory,19_GO:0032501 multicellular organismal process,-2.4,9.4,4.8,21160,357,19,3,16,8.4,20614|72961|104015,Snap25|Slc17a7|Synj1,-1
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0050878,regulation of body fluid levels,19_GO:0065007 biological regulation,-2.4,9.3,4.8,21160,360,19,3,16,8.4,14674|14683|20910,Gna13|Gnas|Stxbp1,-0.99
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0061024,membrane organization,19_GO:0009987 cellular process,-2.4,6,4.1,21160,748,19,4,21,9.4,12322|13385|20614|20910,Camk2a|Dlg4|Snap25|Stxbp1,-0.99
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0051962,positive regulation of nervous system development,19_GO:0032502 developmental process,-2.3,8.7,4.6,21160,384,19,3,16,8.4,12323|13385|104015,Camk2b|Dlg4|Synj1,-0.92
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0051656,establishment of organelle localization,19_GO:0051179 localization,-2.2,7.6,4.2,21160,437,19,3,16,8.4,20614|20910|104015,Snap25|Stxbp1|Synj1,-0.78
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0010959,regulation of metal ion transport,19_GO:0051179 localization,-2.2,7.6,4.2,21160,442,19,3,16,8.4,12322|14682|14683,Camk2a|Gnaq|Gnas,-0.76
+MyList_MCODE_ALL,Reactome Gene Sets,6,R-MMU-1280215,Cytokine Signaling in Immune system,,-2.2,7.5,4.2,21160,444,19,3,16,8.4,12322|12323|15461,Camk2a|Camk2b|Hras,-0.76
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0043086,negative regulation of catalytic activity,19_GO:0065007 biological regulation,-2.1,7.3,4.1,21160,456,19,3,16,8.4,12322|14682|15461,Camk2a|Gnaq|Hras,-0.73
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0032940,secretion by cell,19_GO:0051179 localization,-2.1,7.3,4.1,21160,460,19,3,16,8.4,20614|20910|104015,Snap25|Stxbp1|Synj1,-0.72
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0009611,response to wounding,19_GO:0050896 response to stimulus,-2.1,7.2,4,21160,465,19,3,16,8.4,14674|14683|20910,Gna13|Gnas|Stxbp1,-0.71
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0050767,regulation of neurogenesis,19_GO:0032502 developmental process,-2.1,7.1,4,21160,473,19,3,16,8.4,12323|13385|104015,Camk2b|Dlg4|Synj1,-0.69
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0030900,forebrain development,19_GO:0032502 developmental process,-2.1,7,4,21160,480,19,3,16,8.4,14682|22348|235380,Gnaq|Slc32a1|Dmxl2,-0.67
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0043434,response to peptide hormone,19_GO:0050896 response to stimulus,-2.1,6.9,3.9,21160,482,19,3,16,8.4,12322|14683|15461,Camk2a|Gnas|Hras,-0.67
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0098609,cell-cell adhesion,19_GO:0009987 cellular process,-2,6.8,3.9,21160,488,19,3,16,8.4,13385|14683|20910,Dlg4|Gnas|Stxbp1,-0.66
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0051051,negative regulation of transport,19_GO:0051179 localization,-2,6.7,3.8,21160,502,19,3,16,8.4,13385|14682|14687,Dlg4|Gnaq|Gnaz,-0.63
+MyList_MCODE_ALL,GO Biological Processes,19,GO:0072657,protein localization to membrane,19_GO:0051179 localization,-2,6.6,3.8,21160,503,19,3,16,8.4,12322|13385|20910,Camk2a|Dlg4|Stxbp1,-0.62
+MyList_SUB1_MCODE_1,Reactome Gene Sets,6,R-MMU-112315,Transmission across Chemical Synapses,,-11,93,23,21160,196,7,6,86,13,12322|12323|13385|20910|22348|72961,Camk2a|Camk2b|Dlg4|Stxbp1|Slc32a1|Slc17a7,-8.1
+MyList_SUB1_MCODE_1,Reactome Gene Sets,6,R-MMU-112316,Neuronal System,,-10,58,18,21160,314,7,6,86,13,12322|12323|13385|20910|22348|72961,Camk2a|Camk2b|Dlg4|Stxbp1|Slc32a1|Slc17a7,-7.1
+MyList_SUB1_MCODE_1,KEGG Pathway,24,mmu04721,Synaptic vesicle cycle - Mus musculus (house mouse),,-8.2,1.6e+02,25,21160,77,7,4,57,19,20614|20910|22348|72961,Snap25|Stxbp1|Slc32a1|Slc17a7,-5.6
+MyList_SUB1_MCODE_1,Reactome Gene Sets,6,R-MMU-438066,"Unblocking of NMDA receptors, glutamate binding and activation",,-7.5,4.1e+02,35,21160,22,7,3,43,19,12322|12323|13385,Camk2a|Camk2b|Dlg4,-4.9
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0048167,regulation of synaptic plasticity,19_GO:0050789 regulation of biological process,-7.3,38,13,21160,402,7,5,71,17,12322|12323|13385|20614|20910,Camk2a|Camk2b|Dlg4|Snap25|Stxbp1,-4.8
+MyList_SUB1_MCODE_1,Reactome Gene Sets,6,R-MMU-399721,"Glutamate binding, activation of AMPA receptors and synaptic plasticity",,-7.2,3.4e+02,32,21160,27,7,3,43,19,12322|12323|13385,Camk2a|Camk2b|Dlg4,-4.7
+MyList_SUB1_MCODE_1,Reactome Gene Sets,6,R-MMU-399719,Trafficking of AMPA receptors,,-7.2,3.4e+02,32,21160,27,7,3,43,19,12322|12323|13385,Camk2a|Camk2b|Dlg4,-4.7
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0006836,neurotransmitter transport,19_GO:0051179 localization,-7.1,83,18,21160,145,7,4,57,19,20614|20910|22348|72961,Snap25|Stxbp1|Slc32a1|Slc17a7,-4.7
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0016188,synaptic vesicle maturation,19_GO:0032502 developmental process,-7.1,3.1e+02,31,21160,29,7,3,43,19,13385|20910|72961,Dlg4|Stxbp1|Slc17a7,-4.6
+MyList_SUB1_MCODE_1,Reactome Gene Sets,6,R-MMU-442755,Activation of NMDA receptors and postsynaptic events,,-6.9,2.7e+02,28,21160,34,7,3,43,19,12322|12323|13385,Camk2a|Camk2b|Dlg4,-4.5
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0099504,synaptic vesicle cycle,19_GO:0051179 localization,-6.8,71,17,21160,171,7,4,57,19,20614|20910|22348|72961,Snap25|Stxbp1|Slc32a1|Slc17a7,-4.4
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0099003,vesicle-mediated transport in synapse,19_GO:0051179 localization,-6.6,62,16,21160,196,7,4,57,19,20614|20910|22348|72961,Snap25|Stxbp1|Slc32a1|Slc17a7,-4.3
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0048858,cell projection morphogenesis,19_GO:0032502 developmental process,-6.5,26,11,21160,575,7,5,71,17,12322|12323|13385|20614|20910,Camk2a|Camk2b|Dlg4|Snap25|Stxbp1,-4.2
+MyList_SUB1_MCODE_1,Reactome Gene Sets,6,R-MMU-112310,Neurotransmitter release cycle,,-6.4,1.9e+02,24,21160,47,7,3,43,19,20910|22348|72961,Stxbp1|Slc32a1|Slc17a7,-4.2
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0050804,modulation of chemical synaptic transmission,19_GO:0050789 regulation of biological process,-5.9,20,9.6,21160,772,7,5,71,17,12322|12323|13385|20614|20910,Camk2a|Camk2b|Dlg4|Snap25|Stxbp1,-3.8
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0099177,regulation of trans-synaptic signaling,19_GO:0050789 regulation of biological process,-5.9,20,9.6,21160,773,7,5,71,17,12322|12323|13385|20614|20910,Camk2a|Camk2b|Dlg4|Snap25|Stxbp1,-3.8
+MyList_SUB1_MCODE_1,WikiPathways,27,WP5298,Dravet syndrome Scn1a A1783V point mutation model,,-5.9,1.2e+02,19,21160,73,7,3,43,19,12322|20910|72961,Camk2a|Stxbp1|Slc17a7,-3.8
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0006812,monoatomic cation transport,19_GO:0051179 localization,-5.8,19,9.4,21160,798,7,5,71,17,12322|12323|20614|22348|72961,Camk2a|Camk2b|Snap25|Slc32a1|Slc17a7,-3.7
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0048168,regulation of neuronal synaptic plasticity,19_GO:0050789 regulation of biological process,-5.8,1.1e+02,18,21160,79,7,3,43,19,12322|12323|13385,Camk2a|Camk2b|Dlg4,-3.7
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0050806,positive regulation of synaptic transmission,19_GO:0048518 positive regulation of biological process,-5.7,37,12,21160,327,7,4,57,19,12323|13385|20614|20910,Camk2b|Dlg4|Snap25|Stxbp1,-3.6
+MyList_SUB1_MCODE_1,KEGG Pathway,24,mmu04911,Insulin secretion - Mus musculus (house mouse),,-5.6,1.1e+02,18,21160,86,7,3,43,19,12322|12323|20614,Camk2a|Camk2b|Snap25,-3.6
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0016050,vesicle organization,19_GO:0009987 cellular process,-5.6,35,12,21160,342,7,4,57,19,13385|20614|20910|72961,Dlg4|Snap25|Stxbp1|Slc17a7,-3.6
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0098916,anterograde trans-synaptic signaling,19_GO:0050789 regulation of biological process,-5.5,32,11,21160,379,7,4,57,19,13385|20614|20910|72961,Dlg4|Snap25|Stxbp1|Slc17a7,-3.5
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0007268,chemical synaptic transmission,19_GO:0050789 regulation of biological process,-5.5,32,11,21160,379,7,4,57,19,13385|20614|20910|72961,Dlg4|Snap25|Stxbp1|Slc17a7,-3.5
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0050803,regulation of synapse structure or activity,19_GO:0065007 biological regulation,-5.4,30,11,21160,401,7,4,57,19,12323|13385|20614|72961,Camk2b|Dlg4|Snap25|Slc17a7,-3.4
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0099537,trans-synaptic signaling,19_GO:0050789 regulation of biological process,-5.4,30,11,21160,403,7,4,57,19,13385|20614|20910|72961,Dlg4|Snap25|Stxbp1|Slc17a7,-3.4
+MyList_SUB1_MCODE_1,WikiPathways,27,WP539,Wnt signaling pathway,,-5.4,84,16,21160,108,7,3,43,19,12322|12323|13385,Camk2a|Camk2b|Dlg4,-3.4
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0099536,synaptic signaling,19_GO:0050789 regulation of biological process,-5.1,26,10,21160,461,7,4,57,19,13385|20614|20910|72961,Dlg4|Snap25|Stxbp1|Slc17a7,-3.2
+MyList_SUB1_MCODE_1,Reactome Gene Sets,6,R-MMU-112314,Neurotransmitter receptors and postsynaptic signal transmission,,-5.1,68,14,21160,134,7,3,43,19,12322|12323|13385,Camk2a|Camk2b|Dlg4,-3.2
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0048667,cell morphogenesis involved in neuron differentiation,19_GO:0032502 developmental process,-5,24,9.5,21160,509,7,4,57,19,12322|13385|20614|20910,Camk2a|Dlg4|Snap25|Stxbp1,-3.1
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0048812,neuron projection morphogenesis,19_GO:0032502 developmental process,-4.8,22,9,21160,559,7,4,57,19,12322|13385|20614|20910,Camk2a|Dlg4|Snap25|Stxbp1,-3
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0120039,plasma membrane bounded cell projection morphogenesis,19_GO:0032502 developmental process,-4.8,21,8.9,21160,565,7,4,57,19,12322|13385|20614|20910,Camk2a|Dlg4|Snap25|Stxbp1,-3
+MyList_SUB1_MCODE_1,Reactome Gene Sets,6,R-MMU-382551,Transport of small molecules,,-4.6,19,8.4,21160,638,7,4,57,19,12322|12323|22348|72961,Camk2a|Camk2b|Slc32a1|Slc17a7,-2.8
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0030001,metal ion transport,19_GO:0051179 localization,-4.5,18,8.2,21160,662,7,4,57,19,12322|12323|20614|72961,Camk2a|Camk2b|Snap25|Slc17a7,-2.7
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0007267,cell-cell signaling,19_GO:0050789 regulation of biological process,-4.4,17,7.8,21160,719,7,4,57,19,13385|20614|20910|72961,Dlg4|Snap25|Stxbp1|Slc17a7,-2.6
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:1905475,regulation of protein localization to membrane,19_GO:0051179 localization,-4.4,39,11,21160,230,7,3,43,19,12322|12323|13385,Camk2a|Camk2b|Dlg4,-2.6
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0061024,membrane organization,19_GO:0009987 cellular process,-4.3,16,7.7,21160,748,7,4,57,19,12322|13385|20614|20910,Camk2a|Dlg4|Snap25|Stxbp1,-2.6
+MyList_SUB1_MCODE_1,Reactome Gene Sets,6,R-MMU-5673001,RAF/MAP kinase cascade,,-4.3,36,10,21160,250,7,3,43,19,12322|12323|13385,Camk2a|Camk2b|Dlg4,-2.5
+MyList_SUB1_MCODE_1,Reactome Gene Sets,6,R-MMU-5684996,MAPK1/MAPK3 signaling,,-4.2,35,10,21160,256,7,3,43,19,12322|12323|13385,Camk2a|Camk2b|Dlg4,-2.5
+MyList_SUB1_MCODE_1,Reactome Gene Sets,6,R-MMU-5683057,MAPK family signaling cascades,,-4.1,33,9.6,21160,279,7,3,43,19,12322|12323|13385,Camk2a|Camk2b|Dlg4,-2.4
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:1990778,protein localization to cell periphery,19_GO:0051179 localization,-4.1,32,9.6,21160,283,7,3,43,19,12322|13385|20910,Camk2a|Dlg4|Stxbp1,-2.4
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0021700,developmental maturation,19_GO:0032502 developmental process,-3.8,26,8.6,21160,349,7,3,43,19,13385|20910|72961,Dlg4|Stxbp1|Slc17a7,-2.2
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0050807,regulation of synapse organization,19_GO:0050789 regulation of biological process,-3.7,23,8,21160,393,7,3,43,19,12323|13385|20614,Camk2b|Dlg4|Snap25,-2.1
+MyList_SUB1_MCODE_1,KEGG Pathway,24,mmu05022,Pathways of neurodegeneration - multiple diseases - Mus musculus (house mouse),,-3.4,19,7.2,21160,481,7,3,43,19,12322|12323|13385,Camk2a|Camk2b|Dlg4,-1.9
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0072657,protein localization to membrane,19_GO:0051179 localization,-3.4,18,7,21160,503,7,3,43,19,12322|13385|20910,Camk2a|Dlg4|Stxbp1,-1.8
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0010975,regulation of neuron projection development,19_GO:0032502 developmental process,-3.2,16,6.5,21160,578,7,3,43,19,12323|13385|20614,Camk2b|Dlg4|Snap25,-1.7
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0051668,localization within membrane,19_GO:0051179 localization,-3.2,15,6.5,21160,587,7,3,43,19,12322|13385|20910,Camk2a|Dlg4|Stxbp1,-1.6
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0060627,regulation of vesicle-mediated transport,19_GO:0051179 localization,-3.1,14,6.2,21160,628,7,3,43,19,13385|20910|72961,Dlg4|Stxbp1|Slc17a7,-1.6
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0098662,inorganic cation transmembrane transport,19_GO:0051179 localization,-3.1,14,6.2,21160,632,7,3,43,19,20614|22348|72961,Snap25|Slc32a1|Slc17a7,-1.6
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0098655,monoatomic cation transmembrane transport,19_GO:0051179 localization,-3.1,14,6.1,21160,642,7,3,43,19,20614|22348|72961,Snap25|Slc32a1|Slc17a7,-1.5
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:1903530,regulation of secretion by cell,19_GO:0051179 localization,-2.9,13,5.8,21160,711,7,3,43,19,12322|20614|20910,Camk2a|Snap25|Stxbp1,-1.4
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0098660,inorganic ion transmembrane transport,19_GO:0051179 localization,-2.9,12,5.7,21160,728,7,3,43,19,20614|22348|72961,Snap25|Slc32a1|Slc17a7,-1.4
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0120035,regulation of plasma membrane bounded cell projection organization,19_GO:0050789 regulation of biological process,-2.8,12,5.5,21160,782,7,3,43,19,12323|13385|20614,Camk2b|Dlg4|Snap25,-1.3
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0034220,monoatomic ion transmembrane transport,19_GO:0051179 localization,-2.8,12,5.5,21160,788,7,3,43,19,20614|22348|72961,Snap25|Slc32a1|Slc17a7,-1.3
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0051046,regulation of secretion,19_GO:0051179 localization,-2.8,11,5.4,21160,796,7,3,43,19,12322|20614|20910,Camk2a|Snap25|Stxbp1,-1.3
+MyList_SUB1_MCODE_1,GO Biological Processes,19,GO:0031344,regulation of cell projection organization,19_GO:0050789 regulation of biological process,-2.8,11,5.4,21160,798,7,3,43,19,12323|13385|20614,Camk2b|Dlg4|Snap25,-1.3
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu04730,Long-term depression - Mus musculus (house mouse),,-15,3.5e+02,46,21160,60,6,6,1e+02,15,14672|14674|14682|14683|14687|15461,Gna11|Gna13|Gnaq|Gnas|Gnaz|Hras,-11
+MyList_SUB1_MCODE_2,WikiPathways,27,WP232,G protein signaling pathways,,-14,2.4e+02,37,21160,90,6,6,1e+02,15,14672|14674|14682|14683|14687|15461,Gna11|Gna13|Gnaq|Gnas|Gnaz|Hras,-11
+MyList_SUB1_MCODE_2,Reactome Gene Sets,6,R-MMU-388396,GPCR downstream signalling,,-9.5,38,15,21160,556,6,6,1e+02,15,14672|14674|14682|14683|14687|15461,Gna11|Gna13|Gnaq|Gnas|Gnaz|Hras,-6.6
+MyList_SUB1_MCODE_2,Reactome Gene Sets,6,R-MMU-372790,Signaling by GPCR,,-9.3,36,14,21160,589,6,6,1e+02,15,14672|14674|14682|14683|14687|15461,Gna11|Gna13|Gnaq|Gnas|Gnaz|Hras,-6.5
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0007188,adenylate cyclase-modulating G protein-coupled receptor signaling pathway,19_GO:0050896 response to stimulus,-8.9,71,19,21160,247,6,5,83,15,14672|14674|14682|14683|14687,Gna11|Gna13|Gnaq|Gnas|Gnaz,-6.1
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu05163,Human cytomegalovirus infection - Mus musculus (house mouse),,-8.8,69,18,21160,254,6,5,83,15,14672|14674|14682|14683|15461,Gna11|Gna13|Gnaq|Gnas|Hras,-6
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu04540,Gap junction - Mus musculus (house mouse),,-8.4,1.6e+02,26,21160,86,6,4,67,19,14672|14682|14683|15461,Gna11|Gnaq|Gnas|Hras,-5.7
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu04912,GnRH signaling pathway - Mus musculus (house mouse),,-8.3,1.6e+02,25,21160,90,6,4,67,19,14672|14682|14683|15461,Gna11|Gnaq|Gnas|Hras,-5.6
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu04928,"Parathyroid hormone synthesis, secretion and action - Mus musculus (house mouse)",,-7.9,1.2e+02,22,21160,116,6,4,67,19,14672|14674|14682|14683,Gna11|Gna13|Gnaq|Gnas,-5.2
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu04935,"Growth hormone synthesis, secretion and action - Mus musculus (house mouse)",,-7.9,1.2e+02,22,21160,117,6,4,67,19,14672|14682|14683|15461,Gna11|Gnaq|Gnas|Hras,-5.2
+MyList_SUB1_MCODE_2,Reactome Gene Sets,6,R-MMU-428930,Thromboxane signalling through TP receptor,,-7.6,4.4e+02,36,21160,24,6,3,50,20,14672|14674|14682,Gna11|Gna13|Gnaq,-5
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu04270,Vascular smooth muscle contraction - Mus musculus (house mouse),,-7.5,98,20,21160,144,6,4,67,19,14672|14674|14682|14683,Gna11|Gna13|Gnaq|Gnas,-4.9
+MyList_SUB1_MCODE_2,WikiPathways,27,WP553,Calcium regulation in cardiac cells,,-7.5,97,20,21160,145,6,4,67,19,14672|14682|14683|14687,Gna11|Gnaq|Gnas|Gnaz,-4.9
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0007212,G protein-coupled dopamine receptor signaling pathway,19_GO:0050896 response to stimulus,-7.4,3.9e+02,34,21160,27,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-4.9
+MyList_SUB1_MCODE_2,Reactome Gene Sets,6,R-MMU-109582,Hemostasis,,-7.4,35,13,21160,505,6,5,83,15,14672|14674|14682|14683|15461,Gna11|Gna13|Gnaq|Gnas|Hras,-4.8
+MyList_SUB1_MCODE_2,Reactome Gene Sets,6,R-MMU-456926,Thrombin signalling through proteinase activated receptors (PARs),,-7.2,3.3e+02,31,21160,32,6,3,50,20,14672|14674|14682,Gna11|Gna13|Gnaq,-4.7
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu05200,Pathways in cancer - Mus musculus (house mouse),,-7.2,32,12,21160,548,6,5,83,15,14672|14674|14682|14683|15461,Gna11|Gna13|Gnaq|Gnas|Hras,-4.7
+MyList_SUB1_MCODE_2,Reactome Gene Sets,6,R-MMU-392518,Signal amplification,,-7.2,3.2e+02,31,21160,33,6,3,50,20,14672|14674|14682,Gna11|Gna13|Gnaq,-4.7
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0070201,regulation of establishment of protein localization,19_GO:0051179 localization,-6.9,28,12,21160,635,6,5,83,15,14672|14682|14683|14687|15461,Gna11|Gnaq|Gnas|Gnaz|Hras,-4.4
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:1903351,cellular response to dopamine,19_GO:0050896 response to stimulus,-6.8,2.5e+02,27,21160,42,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-4.4
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:1903350,response to dopamine,19_GO:0050896 response to stimulus,-6.8,2.4e+02,27,21160,44,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-4.4
+MyList_SUB1_MCODE_2,Reactome Gene Sets,6,R-MMU-9856530,High laminar flow shear stress activates signaling by PIEZO1 and PECAM1:CDH5:KDR in endothelial cells,,-6.7,2.4e+02,26,21160,45,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-4.4
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0071868,cellular response to monoamine stimulus,19_GO:0050896 response to stimulus,-6.7,2.3e+02,26,21160,46,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-4.4
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0071870,cellular response to catecholamine stimulus,19_GO:0050896 response to stimulus,-6.7,2.3e+02,26,21160,46,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-4.4
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0050796,regulation of insulin secretion,19_GO:0051179 localization,-6.7,60,15,21160,234,6,4,67,19,14672|14682|14683|14687,Gna11|Gnaq|Gnas|Gnaz,-4.3
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0008217,regulation of blood pressure,19_GO:0032501 multicellular organismal process,-6.7,60,15,21160,236,6,4,67,19,14672|14674|14682|14683,Gna11|Gna13|Gnaq|Gnas,-4.3
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0071869,response to catecholamine,19_GO:0050896 response to stimulus,-6.6,2e+02,25,21160,52,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-4.2
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0071867,response to monoamine,19_GO:0050896 response to stimulus,-6.5,2e+02,24,21160,53,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-4.2
+MyList_SUB1_MCODE_2,Reactome Gene Sets,6,R-MMU-422356,Regulation of insulin secretion,,-6.4,1.8e+02,23,21160,59,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-4.1
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0090276,regulation of peptide hormone secretion,19_GO:0051179 localization,-6.4,51,14,21160,278,6,4,67,19,14672|14682|14683|14687,Gna11|Gnaq|Gnas|Gnaz,-4.1
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0002791,regulation of peptide secretion,19_GO:0051179 localization,-6.3,50,14,21160,283,6,4,67,19,14672|14682|14683|14687,Gna11|Gnaq|Gnas|Gnaz,-4.1
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0090087,regulation of peptide transport,19_GO:0051179 localization,-6.3,49,14,21160,285,6,4,67,19,14672|14682|14683|14687,Gna11|Gnaq|Gnas|Gnaz,-4.1
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu04929,GnRH secretion - Mus musculus (house mouse),,-6.3,1.7e+02,22,21160,63,6,3,50,20,14672|14682|15461,Gna11|Gnaq|Hras,-4.1
+MyList_SUB1_MCODE_2,Reactome Gene Sets,6,R-MMU-9860931,Response of endothelial cells to shear stress,,-6.3,1.7e+02,22,21160,64,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-4.1
+MyList_SUB1_MCODE_2,Reactome Gene Sets,6,R-MMU-9855142,Cellular responses to mechanical stimuli,,-6.3,1.7e+02,22,21160,64,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-4.1
+MyList_SUB1_MCODE_2,Reactome Gene Sets,6,R-MMU-163685,Integration of energy metabolism,,-6.2,1.5e+02,21,21160,70,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-4
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu04927,Cortisol synthesis and secretion - Mus musculus (house mouse),,-6.1,1.5e+02,21,21160,72,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-3.9
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0050708,regulation of protein secretion,19_GO:0051179 localization,-6,41,13,21160,343,6,4,67,19,14672|14682|14683|14687,Gna11|Gnaq|Gnas|Gnaz,-3.9
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0046883,regulation of hormone secretion,19_GO:0051179 localization,-6,40,12,21160,350,6,4,67,19,14672|14682|14683|14687,Gna11|Gnaq|Gnas|Gnaz,-3.8
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:1904888,cranial skeletal system development,19_GO:0032502 developmental process,-5.9,1.2e+02,19,21160,86,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-3.8
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu04911,Insulin secretion - Mus musculus (house mouse),,-5.9,1.2e+02,19,21160,86,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-3.8
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:1904951,positive regulation of establishment of protein localization,19_GO:0051179 localization,-5.8,38,12,21160,375,6,4,67,19,14672|14682|14683|15461,Gna11|Gnaq|Gnas|Hras,-3.7
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu04916,Melanogenesis - Mus musculus (house mouse),,-5.7,1.1e+02,18,21160,100,6,3,50,20,14682|14683|15461,Gnaq|Gnas|Hras,-3.6
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu04925,Aldosterone synthesis and secretion - Mus musculus (house mouse),,-5.7,1e+02,17,21160,103,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-3.6
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu05142,Chagas disease - Mus musculus (house mouse),,-5.7,1e+02,17,21160,103,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-3.6
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu05146,Amoebiasis - Mus musculus (house mouse),,-5.6,98,17,21160,108,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-3.6
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu04725,Cholinergic synapse - Mus musculus (house mouse),,-5.5,94,17,21160,113,6,3,50,20,14672|14682|15461,Gna11|Gnaq|Hras,-3.5
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0008015,blood circulation,19_GO:0032501 multicellular organismal process,-5.5,30,11,21160,472,6,4,67,19,14672|14674|14682|14683,Gna11|Gna13|Gnaq|Gnas,-3.5
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0032024,positive regulation of insulin secretion,19_GO:0051179 localization,-5.4,87,16,21160,122,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-3.4
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu04611,Platelet activation - Mus musculus (house mouse),,-5.4,84,16,21160,126,6,3,50,20,14674|14682|14683,Gna13|Gnaq|Gnas,-3.4
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu04071,Sphingolipid signaling pathway - Mus musculus (house mouse),,-5.4,84,16,21160,126,6,3,50,20,14674|14682|15461,Gna13|Gnaq|Hras,-3.4
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0003013,circulatory system process,19_GO:0032501 multicellular organismal process,-5.3,28,10,21160,505,6,4,67,19,14672|14674|14682|14683,Gna11|Gna13|Gnaq|Gnas,-3.4
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu04915,Estrogen signaling pathway - Mus musculus (house mouse),,-5.3,79,15,21160,134,6,3,50,20,14682|14683|15461,Gnaq|Gnas|Hras,-3.4
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu04726,Serotonergic synapse - Mus musculus (house mouse),,-5.3,78,15,21160,136,6,3,50,20,14682|14683|15461,Gnaq|Gnas|Hras,-3.3
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu04371,Apelin signaling pathway - Mus musculus (house mouse),,-5.3,76,15,21160,139,6,3,50,20,14674|14682|15461,Gna13|Gnaq|Hras,-3.3
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0051223,regulation of protein transport,19_GO:0051179 localization,-5.2,26,9.9,21160,550,6,4,67,19,14672|14682|14683|14687,Gna11|Gnaq|Gnas|Gnaz,-3.3
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu04072,Phospholipase D signaling pathway - Mus musculus (house mouse),,-5.2,71,14,21160,149,6,3,50,20,14674|14683|15461,Gna13|Gnas|Hras,-3.3
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:1903829,positive regulation of protein localization,19_GO:0051179 localization,-5.2,25,9.8,21160,556,6,4,67,19,14672|14682|14683|15461,Gna11|Gnaq|Gnas|Hras,-3.3
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu04921,Oxytocin signaling pathway - Mus musculus (house mouse),,-5.1,69,14,21160,153,6,3,50,20,14682|14683|15461,Gnaq|Gnas|Hras,-3.2
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0090277,positive regulation of peptide hormone secretion,19_GO:0051179 localization,-5.1,67,14,21160,157,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-3.2
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0002793,positive regulation of peptide secretion,19_GO:0051179 localization,-5.1,66,14,21160,161,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-3.2
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu04934,Cushing syndrome - Mus musculus (house mouse),,-5.1,65,14,21160,162,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-3.2
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0007189,adenylate cyclase-activating G protein-coupled receptor signaling pathway,19_GO:0050896 response to stimulus,-5.1,65,14,21160,162,6,3,50,20,14674|14682|14683,Gna13|Gnaq|Gnas,-3.2
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu04022,cGMP-PKG signaling pathway - Mus musculus (house mouse),,-5,62,13,21160,172,6,3,50,20,14672|14674|14682,Gna11|Gna13|Gnaq,-3.1
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0010817,regulation of hormone levels,19_GO:0065007 biological regulation,-4.8,21,8.8,21160,676,6,4,67,19,14672|14682|14683|14687,Gna11|Gnaq|Gnas|Gnaz,-3
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0050714,positive regulation of protein secretion,19_GO:0051179 localization,-4.8,54,13,21160,195,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-3
+MyList_SUB1_MCODE_2,Reactome Gene Sets,6,R-MMU-416476,G alpha (q) signalling events,,-4.8,54,13,21160,197,6,3,50,20,14672|14682|15461,Gna11|Gnaq|Hras,-3
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:1901699,cellular response to nitrogen compound,19_GO:0050896 response to stimulus,-4.8,20,8.7,21160,696,6,4,67,19,14672|14682|14683|15461,Gna11|Gnaq|Gnas|Hras,-3
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0046887,positive regulation of hormone secretion,19_GO:0051179 localization,-4.8,52,12,21160,202,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-3
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:1903530,regulation of secretion by cell,19_GO:0051179 localization,-4.7,20,8.6,21160,711,6,4,67,19,14672|14682|14683|14687,Gna11|Gnaq|Gnas|Gnaz,-2.9
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu04015,Rap1 signaling pathway - Mus musculus (house mouse),,-4.7,49,12,21160,214,6,3,50,20,14682|14683|15461,Gnaq|Gnas|Hras,-2.9
+MyList_SUB1_MCODE_2,Reactome Gene Sets,6,R-MMU-76002,"Platelet activation, signaling and aggregation",,-4.6,44,11,21160,239,6,3,50,20,14672|14674|14682,Gna11|Gna13|Gnaq,-2.8
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0051046,regulation of secretion,19_GO:0051179 localization,-4.6,18,8.1,21160,796,6,4,67,19,14672|14682|14683|14687,Gna11|Gnaq|Gnas|Gnaz,-2.8
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu05170,Human immunodeficiency virus 1 infection - Mus musculus (house mouse),,-4.5,44,11,21160,241,6,3,50,20,14672|14682|15461,Gna11|Gnaq|Hras,-2.8
+MyList_SUB1_MCODE_2,KEGG Pathway,24,mmu04020,Calcium signaling pathway - Mus musculus (house mouse),,-4.5,42,11,21160,254,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-2.7
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0051222,positive regulation of protein transport,19_GO:0051179 localization,-4.2,33,9.8,21160,318,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-2.5
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:1903532,positive regulation of secretion by cell,19_GO:0051179 localization,-3.9,26,8.7,21160,400,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-2.2
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0051047,positive regulation of secretion,19_GO:0051179 localization,-3.7,23,8.1,21160,452,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-2.1
+MyList_SUB1_MCODE_2,Reactome Gene Sets,6,R-MMU-8953897,Cellular responses to stimuli,,-3.5,19,7.3,21160,543,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-1.9
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0001501,skeletal system development,19_GO:0032502 developmental process,-3.5,19,7.3,21160,554,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-1.9
+MyList_SUB1_MCODE_2,GO Biological Processes,19,GO:0071407,cellular response to organic cyclic compound,19_GO:0050896 response to stimulus,-3.4,18,7.1,21160,581,6,3,50,20,14672|14682|14683,Gna11|Gnaq|Gnas,-1.8
+MyList_SUB1_MCODE_3,GO Biological Processes,19,GO:0048488,synaptic vesicle endocytosis,19_GO:0051179 localization,-7.7,3.6e+02,33,21160,58,3,3,1e+02,27,11771|11772|104015,Ap2a1|Ap2a2|Synj1,-5
+MyList_SUB1_MCODE_3,GO Biological Processes,19,GO:0140238,presynaptic endocytosis,19_GO:0051179 localization,-7.6,3.3e+02,31,21160,64,3,3,1e+02,27,11771|11772|104015,Ap2a1|Ap2a2|Synj1,-5
+MyList_SUB1_MCODE_3,GO Biological Processes,19,GO:0036465,synaptic vesicle recycling,19_GO:0051179 localization,-7.5,3.1e+02,30,21160,69,3,3,1e+02,27,11771|11772|104015,Ap2a1|Ap2a2|Synj1,-4.9
+MyList_SUB1_MCODE_3,GO Biological Processes,19,GO:0099504,synaptic vesicle cycle,19_GO:0051179 localization,-6.3,1.2e+02,19,21160,171,3,3,1e+02,27,11771|11772|104015,Ap2a1|Ap2a2|Synj1,-4.1
+MyList_SUB1_MCODE_3,GO Biological Processes,19,GO:0099003,vesicle-mediated transport in synapse,19_GO:0051179 localization,-6.1,1.1e+02,18,21160,196,3,3,1e+02,27,11771|11772|104015,Ap2a1|Ap2a2|Synj1,-3.9
+MyList_SUB1_MCODE_3,GO Biological Processes,19,GO:0006897,endocytosis,19_GO:0051179 localization,-4.9,42,11,21160,500,3,3,1e+02,27,11771|11772|104015,Ap2a1|Ap2a2|Synj1,-3
+MyList_SUB1_MCODE_3,GO Biological Processes,19,GO:0098657,import into cell,19_GO:0051179 localization,-4.5,31,9.5,21160,683,3,3,1e+02,27,11771|11772|104015,Ap2a1|Ap2a2|Synj1,-2.7
+MyList_SUB4_MCODE_4,GO Biological Processes,19,GO:0019725,cellular homeostasis,19_GO:0042592 homeostatic process,-4.4,29,9.2,21160,732,3,3,1e+02,27,11964|108664|235380,Atp6v1a|Atp6v1h|Dmxl2,-2.6
