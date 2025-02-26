@@ -361,9 +361,28 @@ elif page == "MOUSE DATA":
         # 📌 Display Title
         st.title("Mouse palmitoylome - proteins common across multiple publications.")
         st.write("" "")
-        st.write("""   Analysis of 184 palmitoylated proteins common in at least 6 out of 8 (75%) publications (see Data Summary for reference).""")
+        st.write("""   Analysis of 184 palmitoylated proteins common in at least 6 out of 8 (75%) publications (homogenates + synaptic fractions, see Data Summary for reference).""")
         st.write("" "")
-        st.write("""1. Metascape - Network of enriched terms colored by cluster, where nodes that share the same cluster are typically close to each other.
+          # 📌 Display Title
+        st.write("1. Metascape - Bar graph of enriched terms across input gene lists, colored by p-values.")
+      
+        # 📌 GitHub Raw PDF URL
+        GITHUB_PDF_URL2 = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/2_Enrichment_heatmap_HeatmapSelectedGO.png"  # Replace with your actual URL
+        try:
+            response = requests.get(GITHUB_PDF_URL2, timeout=10)  # Prevent long waits
+            response.raise_for_status()  # Check if URL is valid (200 OK)
+        
+            # Open the image
+            image = Image.open(BytesIO(response.content))
+        
+            image = image.convert("RGBA")  # Keep original quality
+            st.image(image, use_container_width=True)  # Display without modification
+        
+        except requests.exceptions.RequestException as e:
+            st.error(f"❌ Error loading image: {e}")
+    
+    
+        st.write("""2. Metascape - Network of enriched terms colored by cluster, where nodes that share the same cluster are typically close to each other.
                        In the GONetwork (Gene Ontology Network), nodes (representing biological terms, pathways, or functions) are colored by cluster. If multiple nodes share the same color, it means they belong to the same 
                        functional cluster—they are grouped based on shared genes.
                        
@@ -385,24 +404,6 @@ elif page == "MOUSE DATA":
             unsafe_allow_html=True
         )
 
-      # 📌 Display Title
-        st.write("2. Metascape - Bar graph of enriched terms across input gene lists, colored by p-values.")
-      
-        # 📌 GitHub Raw PDF URL
-        GITHUB_PDF_URL2 = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/2_Enrichment_heatmap_HeatmapSelectedGO.png"  # Replace with your actual URL
-        try:
-            response = requests.get(GITHUB_PDF_URL2, timeout=10)  # Prevent long waits
-            response.raise_for_status()  # Check if URL is valid (200 OK)
-        
-            # Open the image
-            image = Image.open(BytesIO(response.content))
-        
-            image = image.convert("RGBA")  # Keep original quality
-            st.image(image, use_container_width=True)  # Display without modification
-        
-        except requests.exceptions.RequestException as e:
-            st.error(f"❌ Error loading image: {e}")
-    
     
       # 📌 Display Title
         st.write("3. Metascape - Protein-protein interaction network according to Molecular Complex Detection (MCODE). Algorithm identified densely connected network components.")
