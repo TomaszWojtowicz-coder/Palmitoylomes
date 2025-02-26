@@ -364,6 +364,11 @@ elif page == "MOUSE DATA":
         st.write("""   Analysis of 184 palmitoylated proteins common in at least 6 out of 8 (75%) publications (homogenates + synaptic fractions, see Data Summary for reference).""")
         st.write("" "")
           # 📌 Display Title
+        st.write("List of proteins:")
+        occurence_table_path= "Gene_occurence_table_6_8.xlsx"
+        occurence_table = pd.read_excel(occurence_table_path, engine="openpyxl")
+        st.dataframe(occurence_table, use_container_width=True)
+        
         st.write("1. Metascape - Bar graph of enriched terms across input gene lists, colored by p-values.")
       
         # 📌 GitHub Raw PDF URL
