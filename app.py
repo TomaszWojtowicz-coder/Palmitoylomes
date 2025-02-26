@@ -377,6 +377,7 @@ elif page == "MOUSE DATA":
 
 
         st.write(" Interactive version of static figure shown above. Double click node to read description. HITS columns shows gene IDs in the cluster. Used SHIFT or Drag to select multiple clusters.")       
+        st.write(" Cluster's colours - as in legend above.")       
         st.write("" "")
         # Embed the hosted HTML file in Streamlit
         st.markdown(
