@@ -367,11 +367,11 @@ elif page == "MOUSE DATA":
                        In the GONetwork (Gene Ontology Network), nodes (representing biological terms, pathways, or functions) are colored by cluster. If multiple nodes share the same color, it means they belong to the same 
                        functional cluster—they are grouped based on shared genes.
                        
-                       •  Nodes with the same color = Functionally related terms.
-                       •  Highly connected nodes = More essential GO terms.
-                       •  Edges between clusters = Some functional overlap between biological processes.
-
             """)
+        st.write(" - Nodes with the same color = Functionally related terms.")
+        st.write(" - Highly connected nodes = More essential GO terms.")
+        st.write(" - Edges between clusters = Some functional overlap between biological processes.")
+
         imagex = Image.open("1_MOUSE_Go_Network.png")  # Replace with an actual file
         st.image(imagex, use_container_width=True)
 
