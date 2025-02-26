@@ -373,15 +373,13 @@ elif page == "MOUSE DATA":
         st.title("Mouse palmitoylome - Metascape Analysis")
         st.write("Analysis of 184 palmitoylated proteins common in at least 6 out of 8 publications.")
 
-        # Path to your HTML file
-        html_file_path = "static/GoNetwork_Mouse/Enrichment_GO/GONetwork.html"
         
-        # Check if the file exists before embedding
-        if os.path.exists(html_file_path):
-            st.markdown(f'<iframe src="{html_file_path}" width="100%" height="800"></iframe>', unsafe_allow_html=True)
-        else:
-            st.error(f"File {html_file_path} not found. Please check the path.")
-        
+        # Embed the hosted HTML file in Streamlit
+        st.markdown(
+            '<iframe src="http://localhost:8000/GoNetwork_Mouse/Enrichment_GO/GONetwork.html#/" width="100%" height="800"></iframe>',
+            unsafe_allow_html=True
+        )
+
       # 📌 Display Title
         st.write("2. Metascape - Bar graph of enriched terms across input gene lists, colored by p-values.")
       
