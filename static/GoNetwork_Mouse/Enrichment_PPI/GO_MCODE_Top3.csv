@@ -1,7 +1,0 @@
-Network,Annotation
-MyList,mmu04721|Synaptic vesicle cycle - Mus musculus (house mouse)|-13.2;GO:0099504|synaptic vesicle cycle|-11.5;GO:0099003|vesicle-mediated transport in synapse|-10.9
-MyList_MCODE_ALL,mmu04721|Synaptic vesicle cycle - Mus musculus (house mouse)|-14.8;GO:0099504|synaptic vesicle cycle|-14.0;GO:0099003|vesicle-mediated transport in synapse|-13.4
-MyList_SUB1_MCODE_1,R-MMU-112315|Transmission across Chemical Synapses|-11.4;R-MMU-112316|Neuronal System|-10.2;mmu04721|Synaptic vesicle cycle - Mus musculus (house mouse)|-8.2
-MyList_SUB1_MCODE_2,mmu04730|Long-term depression - Mus musculus (house mouse)|-15.4;WP232|G protein signaling pathways|-14.3;R-MMU-388396|GPCR downstream signalling|-9.5
-MyList_SUB1_MCODE_3,GO:0048488|synaptic vesicle endocytosis|-7.7;GO:0140238|presynaptic endocytosis|-7.6;GO:0036465|synaptic vesicle recycling|-7.5
-MyList_SUB4_MCODE_4,GO:0019725|cellular homeostasis|-4.4
