@@ -1,0 +1,12 @@
+_MEMBER_MyList,_LogP_MyList,GO,Description,_PATTERN_,_RANK_,CHILD_GO_MyList
+1,-10.330382760283692,GO:0032502,developmental process,M1,1,GO:0048858 cell projection morphogenesis
+1,-10.314135313675168,GO:0051179,localization,M1,1,GO:0099504 synaptic vesicle cycle
+1,-8.56559900204463,GO:0050789,regulation of biological process,M1,1,GO:0050804 modulation of chemical synaptic transmission
+1,-6.86917365873878,GO:0009987,cellular process,M1,1,GO:0061024 membrane organization
+1,-6.761554822804131,GO:0050896,response to stimulus,M1,1,GO:1990806 ligand-gated ion channel signaling pathway
+1,-6.33289434217543,GO:0065007,biological regulation,M1,1,GO:0099072 regulation of postsynaptic membrane neurotransmitter receptor levels
+1,-6.087196901712444,GO:0042592,homeostatic process,M1,1,GO:0019725 cellular homeostasis
+1,-4.7597426816377055,GO:0032501,multicellular organismal process,M1,1,GO:0050890 cognition
+1,-4.4228696387317274,GO:0048518,positive regulation of biological process,M1,1,GO:0050806 positive regulation of synaptic transmission
+1,-2.8182024338072265,GO:0048519,negative regulation of biological process,M1,1,GO:0051129 negative regulation of cellular component organization
+1,-2.3588488632804205,GO:0040007,growth,M1,1,GO:0048640 negative regulation of developmental growth
