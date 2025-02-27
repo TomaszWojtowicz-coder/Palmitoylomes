@@ -372,7 +372,11 @@ elif page == "MOUSE DATA":
         st.write("1. Metascape - Bar graph of enriched terms across input gene lists, colored by p-values.")
       
         # 📌 GitHub Raw PDF URL
-        <iframe src="http://127.0.0.1:8000/GoNetwork_Mouse/Enrichment_GO/GONetwork.html#/" width="100%" height="800"></iframe>
+        st.markdown(
+            '<iframe src="http://127.0.0.1:8000/GoNetwork_Mouse/Enrichment_GO/GONetwork.html" '
+            'width="100%" height="800" style="border:none;"></iframe>',
+            unsafe_allow_html=True
+        )
 
 
 
