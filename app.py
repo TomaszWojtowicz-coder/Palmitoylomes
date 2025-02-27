@@ -372,7 +372,7 @@ elif page == "MOUSE DATA":
         st.write("1. Metascape - Bar graph of enriched terms across input gene lists, colored by p-values.")
       
         # 📌 GitHub Raw PDF URL
-      #GITHUB_PDF_URL2 = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/2_Enrichment_heatmap_HeatmapSelectedGO.png"  # Replace with your actual URL
+        GITHUB_PDF_URL2 = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/2_Enrichment_heatmap_HeatmapSelectedGO.png"  # Replace with your actual URL
         try:
             response = requests.get(GITHUB_PDF_URL2, timeout=10)  # Prevent long waits
             response.raise_for_status()  # Check if URL is valid (200 OK)
