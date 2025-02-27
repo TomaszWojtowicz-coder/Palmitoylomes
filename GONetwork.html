@@ -6,8 +6,8 @@
     <title>Cytoscape Session Viewer</title>
     <meta name="description" content="Viewer for JSON files exported from Cytoscape 3">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- Stylesheets -->
+
+    <!-- Corrected Stylesheets -->
     <link rel="stylesheet" href="https://tomaszwojtowicz-coder.github.io/Palmitoylomes/CyJS/styles/dc4be20e.vendor.css">
     <link rel="stylesheet" href="https://tomaszwojtowicz-coder.github.io/Palmitoylomes/CyJS/styles/dcab8a36.main.css">
 </head>
@@ -21,21 +21,11 @@
         <div class="loading">
             <span us-spinner="{radius:30, width:3, length: 100}"></span>
         </div>
-        <div class="summary" ng-show="overlayState.show">
-            <h3>Network:</h3>
-            <select class="form-control" id="network-selector" ng-options="networkName for networkName in networkNames" ng-change="switchNetwork()" ng-model="currentNetwork"></select>
-            <h3>Visual Style:</h3>
-            <select class="form-control" id="vs-selector" ng-options="styleName for styleName in visualStyleNames" ng-change="switchVS()" ng-model="currentVS"></select>
-            <h3>Layout:</h3>
-            <select class="form-control" id="layout-selector" ng-options="layoutName for layoutName in LAYOUTS" ng-change="switchLayout()" ng-model="currentLayout"></select>
-        </div>
     </script>
 
-    <!-- Main Scripts -->
+    <!-- Corrected JavaScript Paths -->
     <script src="https://tomaszwojtowicz-coder.github.io/Palmitoylomes/GONetwork.js"></script>
     <script src="https://tomaszwojtowicz-coder.github.io/Palmitoylomes/GONetwork.style.js"></script>
-    
-    <!-- CyJS Scripts -->
     <script src="https://tomaszwojtowicz-coder.github.io/Palmitoylomes/CyJS/scripts/initialize.js"></script>
     <script src="https://tomaszwojtowicz-coder.github.io/Palmitoylomes/CyJS/scripts/65d77273.vendor.js"></script>
     <script src="https://tomaszwojtowicz-coder.github.io/Palmitoylomes/CyJS/scripts/1d327552.scripts.js"></script>
