@@ -372,21 +372,26 @@ elif page == "MOUSE DATA":
         st.write("1. Metascape - Bar graph of enriched terms across input gene lists, colored by p-values.")
       
         # 📌 GitHub Raw PDF URL
-        GITHUB_PDF_URL2 = "https://raw.githubusercontent.com/TomaszWojtowicz-coder/Palmitoylomes/main/2_Enrichment_heatmap_HeatmapSelectedGO.png"  # Replace with your actual URL
-        try:
-            response = requests.get(GITHUB_PDF_URL2, timeout=10)  # Prevent long waits
-            response.raise_for_status()  # Check if URL is valid (200 OK)
-        
-            # Open the image
-            image = Image.open(BytesIO(response.content))
-        
-            image = image.convert("RGBA")  # Keep original quality
-            st.image(image, use_container_width=True)  # Display without modification
-        
-        except requests.exceptions.RequestException as e:
-            st.error(f"❌ Error loading image: {e}")
-    
-    
+        <iframe src="http://127.0.0.1:8000/GoNetwork_Mouse/Enrichment_GO/GONetwork.html#/" width="100%" height="800"></iframe>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         st.write("""2. Metascape - Network of enriched terms colored by cluster, where nodes that share the same cluster are typically close to each other.
                        In the GONetwork (Gene Ontology Network), nodes (representing biological terms, pathways, or functions) are colored by cluster. If multiple nodes share the same color, it means they belong to the same 
                        functional cluster—they are grouped based on shared genes.
