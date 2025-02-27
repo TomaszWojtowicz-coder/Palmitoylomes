@@ -404,11 +404,11 @@ elif page == "MOUSE DATA":
         st.write("" "")
         # Embed the hosted HTML file in Streamlit
         st.markdown(
-            '<iframe src="https://tomaszwojtowicz-coder.github.io/Palmitoylomes/GONetwork.html" width="100%" height="800"></iframe>',
+            '<iframe src="https://tomaszwojtowicz-coder.github.io/Palmitoylomes/Enrichment_GO/GONetwork.html" width="100%" height="800"></iframe>',
             unsafe_allow_html=True
         )
 
-    
+
       # 📌 Display Title
         st.write("3. Metascape - Protein-protein interaction network according to Molecular Complex Detection (MCODE). Algorithm identified densely connected network components.")
       
