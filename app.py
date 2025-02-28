@@ -234,7 +234,7 @@ elif page == "PROJECT DESCRIPTION":
     Main1 = resize_image("Main1.png")
     
     # Create three equal columns
-    spacer1, col1, col2, col3, spacer2 = st.columns([1, 0.15, 0.15, 0.15, 1])
+    spacer1, col1, col2, col3, spacer2 = st.columns([0.5, 0.25, 0.25, 0.25, 0.5])
     
     # Display title and images in each column
     with col1:
