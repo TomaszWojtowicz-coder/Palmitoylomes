@@ -239,18 +239,13 @@ elif page == "PROJECT DESCRIPTION":
     # Display title and images in each column
     with col1:
         st.write("Tables of proteins and genes")  
-        st.image(Main1, use_column_width=True)  
+        st.image(Main1, use_container_width=True)  
     with col2:
         st.write("Term enrichment analysis")  
-        st.image(Main2, use_column_width=True)  
+        st.image(Main2, use_container_width=True)  
     with col3:
         st.write("Graphical representation of protein clusters")  
-        st.image(Main3, use_column_width=True)  
-
-
-
-
-
+        st.image(Main3, use_container_width=True)  
 
     
     # Load and display the logo in a column
