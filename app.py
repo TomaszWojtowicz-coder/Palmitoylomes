@@ -219,20 +219,32 @@ elif page == "PROJECT DESCRIPTION":
     
     st.write("")  
     st.write("**Comments, suggestions:**")  # Bold header for clarity
-   
-    Main1 = "Main3.png"
-    Main2 = "Main2.png"
-    Main3 = "Main1.png"
+
+
+    
+    # Load and resize images (reduce size by 50%)
+    def resize_image(image_path, factor=0.5):
+        img = Image.open(image_path)
+        new_size = (int(img.width * factor), int(img.height * factor))
+        return img.resize(new_size)
+    
+    # Example image placeholders (replace with actual image paths)
+    Main1 = resize_image("Main3.png")
+    Main2 = resize_image("Main2.png")
+    Main3 = resize_image("Main1.png")
     
     # Create three equal columns
     col1, col2, col3 = st.columns(3)  
     
-    # Display images in each column
+    # Display title and images in each column
     with col1:
+        st.write("Tables of proteins and genes")  
         st.image(Main1, use_column_width=True)  
     with col2:
+        st.write("Term enrichment analysis")  
         st.image(Main2, use_column_width=True)  
     with col3:
+        st.write("Graphical representation of protein clusters")  
         st.image(Main3, use_column_width=True)  
 
 
