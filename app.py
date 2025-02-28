@@ -213,7 +213,7 @@ elif page == "PROJECT DESCRIPTION":
     - **Protein Identification**: Gene IDs corresponding to palmitoylated proteins were mapped to protein names and key characteristics using the UniProt database.  
     - **Data Visualization**: Tools like Cytoscape and Metascape were used to visualize enriched pathways and analyze protein interactions.  
 
-    ***)
+    """)
 
     
     
@@ -244,7 +244,7 @@ elif page == "PROJECT DESCRIPTION":
         st.image(Main3, use_container_width=True)  
 
     
-    st.write(***
+    st.write("""
   
     **HOW TO USE**  
     - Use the left dropdown menu for aggregated data or individual protein data. Tables and graphics in most cases are interactive.  
