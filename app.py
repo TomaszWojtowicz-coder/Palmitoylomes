@@ -229,9 +229,9 @@ elif page == "PROJECT DESCRIPTION":
         return img.resize(new_size)
     
     # Example image placeholders (replace with actual image paths)
-    Main1 = resize_image("Main3.png")
+    Main3 = resize_image("Main3.png")
     Main2 = resize_image("Main2.png")
-    Main3 = resize_image("Main1.png")
+    Main1 = resize_image("Main1.png")
     
     # Create three equal columns
     col1, col2, col3 = st.columns(3)  
