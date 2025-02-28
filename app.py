@@ -219,6 +219,21 @@ elif page == "PROJECT DESCRIPTION":
     
     st.write("")  
     st.write("**Comments, suggestions:**")  # Bold header for clarity
+
+    col3, col4, col5 = st.columns([1, 3])  # Adjust ratio as needed
+    
+    with col3:
+        st.image(Main3)  # Display logo once
+    with col4:
+        st.image(Main2)  # Display logo once
+    with col5:
+        st.image(Main1)  # Display logo once
+
+
+
+
+
+
     
     # Load and display the logo in a column
     logo_path4 = "Nencki.jpg"
