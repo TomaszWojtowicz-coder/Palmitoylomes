@@ -219,15 +219,21 @@ elif page == "PROJECT DESCRIPTION":
     
     st.write("")  
     st.write("**Comments, suggestions:**")  # Bold header for clarity
-
-    col3, col4, col5 = st.columns([1, 3])  # Adjust ratio as needed
+   
+    Main1 = "Main3.png"
+    Main2 = "Main2.png"
+    Main3 = "Main1.png"
     
+    # Create three equal columns
+    col1, col2, col3 = st.columns(3)  
+    
+    # Display images in each column
+    with col1:
+        st.image(Main1, use_column_width=True)  
+    with col2:
+        st.image(Main2, use_column_width=True)  
     with col3:
-        st.image(Main3)  # Display logo once
-    with col4:
-        st.image(Main2)  # Display logo once
-    with col5:
-        st.image(Main1)  # Display logo once
+        st.image(Main3, use_column_width=True)  
 
 
 
