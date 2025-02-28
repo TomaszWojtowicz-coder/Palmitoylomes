@@ -248,11 +248,11 @@ elif page == "PROJECT DESCRIPTION":
   
     **HOW TO USE**  
     - Use the left dropdown menu for aggregated data or individual protein data. Tables and graphics in most cases are interactive.  
-    
+    """)
     st.write("")  
     st.write("**Comments, suggestions:**")  # Bold header for clarity
 
-    """)
+    
     
     
     # Load and display the logo in a column
