@@ -207,20 +207,9 @@ elif page == "PROJECT DESCRIPTION":
     - Integrate published palmitoylomes obtained via mass spectrometry into a searchable database as a useful research tool.  
     - Identify proteins that are consistently reported in their palmitoylated form.  
     - Characterize protein families that undergo palmitoylation.  
-    
-    **Methods**  
-    - **Data Collection**: Proteomic analysis results from published studies on brain tissue samples were gathered and merged.  
-    - **Protein Identification**: Gene IDs corresponding to palmitoylated proteins were mapped to protein names and key characteristics using the UniProt database.  
-    - **Data Visualization**: Tools like Cytoscape and Metascape were used to visualize enriched pathways and analyze protein interactions.  
-    
-    **HOW TO USE**  
-    - Use the left dropdown menu for aggregated data or individual protein data. Tables and graphics in most cases are interactive.  
     """)
     
-    st.write("")  
-    st.write("**Comments, suggestions:**")  # Bold header for clarity
-
-
+    
     
     # Load and resize images (reduce size by 50%)
     def resize_image(image_path, factor=0.5):
@@ -229,12 +218,12 @@ elif page == "PROJECT DESCRIPTION":
         return img.resize(new_size)
     
     # Example image placeholders (replace with actual image paths)
-    Main3 = resize_image("Main3.png")
+    Main1 = resize_image("Main3.png")
     Main2 = resize_image("Main2.png")
-    Main1 = resize_image("Main1.png")
+    Main3 = resize_image("Main1.png")
     
     # Create three equal columns
-    spacer1, col1, col2, col3, spacer2 = st.columns([0.5, 0.25, 0.25, 0.25, 0.5])
+    spacer1, col1, col2, col3, spacer2 = st.columns([0.5, 0.35, 0.35, 0.35, 0.5])
     
     # Display title and images in each column
     with col1:
@@ -247,6 +236,23 @@ elif page == "PROJECT DESCRIPTION":
         st.write("Graphical representation of protein clusters")  
         st.image(Main3, use_container_width=True)  
 
+    
+    
+    st.write("""
+    
+    **Methods**  
+    - **Data Collection**: Proteomic analysis results from published studies on brain tissue samples were gathered and merged.  
+    - **Protein Identification**: Gene IDs corresponding to palmitoylated proteins were mapped to protein names and key characteristics using the UniProt database.  
+    - **Data Visualization**: Tools like Cytoscape and Metascape were used to visualize enriched pathways and analyze protein interactions.  
+    
+    **HOW TO USE**  
+    - Use the left dropdown menu for aggregated data or individual protein data. Tables and graphics in most cases are interactive.  
+    
+    st.write("")  
+    st.write("**Comments, suggestions:**")  # Bold header for clarity
+
+    """)
+    
     
     # Load and display the logo in a column
     logo_path4 = "Nencki.jpg"
