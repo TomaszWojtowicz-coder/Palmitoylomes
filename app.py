@@ -207,7 +207,14 @@ elif page == "PROJECT DESCRIPTION":
     - Integrate published palmitoylomes obtained via mass spectrometry into a searchable database as a useful research tool.  
     - Identify proteins that are consistently reported in their palmitoylated form.  
     - Characterize protein families that undergo palmitoylation.  
-    """)
+        
+    **Methods**  
+    - **Data Collection**: Proteomic analysis results from published studies on brain tissue samples were gathered and merged.  
+    - **Protein Identification**: Gene IDs corresponding to palmitoylated proteins were mapped to protein names and key characteristics using the UniProt database.  
+    - **Data Visualization**: Tools like Cytoscape and Metascape were used to visualize enriched pathways and analyze protein interactions.  
+
+    ***)
+
     
     
     
@@ -237,14 +244,8 @@ elif page == "PROJECT DESCRIPTION":
         st.image(Main3, use_container_width=True)  
 
     
-    
-    st.write("""
-    
-    **Methods**  
-    - **Data Collection**: Proteomic analysis results from published studies on brain tissue samples were gathered and merged.  
-    - **Protein Identification**: Gene IDs corresponding to palmitoylated proteins were mapped to protein names and key characteristics using the UniProt database.  
-    - **Data Visualization**: Tools like Cytoscape and Metascape were used to visualize enriched pathways and analyze protein interactions.  
-    
+    st.write(***
+  
     **HOW TO USE**  
     - Use the left dropdown menu for aggregated data or individual protein data. Tables and graphics in most cases are interactive.  
     
