@@ -214,36 +214,6 @@ elif page == "PROJECT DESCRIPTION":
     - **Data Visualization**: Tools like Cytoscape and Metascape were used to visualize enriched pathways and analyze protein interactions.  
 
     """)
-
-    
-    
-    
-    # Load and resize images (reduce size by 50%)
-    def resize_image(image_path, factor=0.5):
-        img = Image.open(image_path)
-        new_size = (int(img.width * factor), int(img.height * factor))
-        return img.resize(new_size)
-    
-    # Example image placeholders (replace with actual image paths)
-    Main1 = resize_image("Main3.png")
-    Main2 = resize_image("Main2.png")
-    Main3 = resize_image("Main1.png")
-    
-    # Create three equal columns
-    spacer1, col1, col2, col3, spacer2 = st.columns([0.5, 0.32, 0.35, 0.35, 0.5])
-    
-    # Display title and images in each column
-    with col1:
-        st.write("Tables of proteins and genes")  
-        st.image(Main1, use_container_width=True)  
-    with col2:
-        st.write("Term enrichment analysis")  
-        st.image(Main2, use_container_width=True)  
-    with col3:
-        st.write("Graphical representation of protein clusters")  
-        st.image(Main3, use_container_width=True)  
-
-    
     st.write("""
   
     **HOW TO USE**  
@@ -252,9 +222,7 @@ elif page == "PROJECT DESCRIPTION":
     st.write("")  
     st.write("**Comments, suggestions:**")  # Bold header for clarity
 
-    
-    
-    
+ 
     # Load and display the logo in a column
     logo_path4 = "Nencki.jpg"
     image4 = Image.open(logo_path4)
