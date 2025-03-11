@@ -224,13 +224,13 @@ elif page == "PROJECT DESCRIPTION":
     image2 = Image.open(logo_path2)
     
     # Create two columns: one for the logo, one for the text
-    col1, col2 = st.columns([1, 3])  # Adjust ratio as needed
+    col5, col6 = st.columns([1, 3])  # Adjust ratio as needed
     
-    with col1:
+    with col5:
         # Display the logo
         st.image(image2)
     
-    with col2:
+    with col6:
         # Display the text next to the logo
         st.markdown(
             """
